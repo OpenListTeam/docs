@@ -46,7 +46,7 @@ alist中的任务管理可以分为：
 
 ## POST 获取任务信息
 
-POST /api/admin/task/upload/info
+POST /api/task/upload/info
 
 ### 请求参数
 
@@ -104,7 +104,7 @@ POST /api/admin/task/upload/info
 
 ## GET 获取已完成任务
 
-GET /api/admin/task/upload/done
+GET /api/task/upload/done
 
 ### 请求参数
 
@@ -161,7 +161,7 @@ GET /api/admin/task/upload/done
 
 ## GET 获取未完成任务
 
-GET /api/admin/task/upload/undone
+GET /api/task/upload/undone
 
 ### 请求参数
 
@@ -218,7 +218,7 @@ GET /api/admin/task/upload/undone
 
 ## POST 删除任务
 
-POST /api/admin/task/upload/delete
+POST /api/task/upload/delete
 
 ### 请求参数
 
@@ -257,7 +257,7 @@ POST /api/admin/task/upload/delete
 
 ## POST 取消任务
 
-POST /api/admin/task/upload/cancel
+POST /api/task/upload/cancel
 
 ### 请求参数
 
@@ -296,7 +296,7 @@ POST /api/admin/task/upload/cancel
 
 ## POST 清除已完成任务
 
-POST /api/admin/task/upload/clear_done
+POST /api/task/upload/clear_done
 
 ### 请求参数
 
@@ -334,7 +334,7 @@ POST /api/admin/task/upload/clear_done
 
 ## POST 清除已成功任务
 
-POST /api/admin/task/upload/clear_succeeded
+POST /api/task/upload/clear_succeeded
 
 ### 请求参数
 
@@ -372,7 +372,7 @@ POST /api/admin/task/upload/clear_succeeded
 
 ## POST 重试任务
 
-POST /api/admin/task/upload/retry
+POST /api/task/upload/retry
 
 ### 请求参数
 
@@ -411,7 +411,7 @@ POST /api/admin/task/upload/retry
 
 ## POST 重试已失败任务
 
-POST /api/admin/task/upload/retry_failed
+POST /api/task/upload/retry_failed
 
 ### 请求参数
 
@@ -449,7 +449,7 @@ POST /api/admin/task/upload/retry_failed
 
 ## POST 删除多个任务
 
-POST /api/admin/task/upload/delete_some
+POST /api/task/upload/delete_some
 
 ### 请求参数
 
@@ -498,7 +498,7 @@ POST /api/admin/task/upload/delete_some
 
 ## POST 取消多个任务
 
-POST /api/admin/task/upload/cancel_some
+POST /api/task/upload/cancel_some
 
 ### 请求参数
 
@@ -547,7 +547,7 @@ POST /api/admin/task/upload/cancel_some
 
 ## POST 重试多个任务
 
-POST /api/admin/task/upload/retry_some
+POST /api/task/upload/retry_some
 
 ### 请求参数
 
