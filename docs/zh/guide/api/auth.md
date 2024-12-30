@@ -22,7 +22,7 @@ star: true
 
 POST /api/auth/login
 
-获取某个用户的临时JWt token，有效期默认48小时
+获取某个用户的临时JWt token, 有效期默认48小时
 
 > Body 请求参数
 
@@ -277,3 +277,146 @@ GET /api/me
 | »» permission | integer | true | none | 权限             | none |
 | »» sso_id     | string  | true | none | sso id           | none |
 | »» otp        | boolean | true | none | 是否开启二步验证 | none |
+
+## GET 列出当前用户 SFTP 公钥
+
+GET /api/me/sshkey/list
+
+### 请求参数
+
+| 名称          | 位置   | 类型   | 必选 | 中文名 | 说明 |
+| ------------- | ------ | ------ | ---- | ------ | ---- |
+| Authorization | header | string | 是   |        | none |
+
+### 返回示例
+
+> 成功
+
+```json
+{
+  "code": 200,
+  "message": "success",
+  "data": {
+    "content": [
+      {
+        "id": 1,
+        "title": "Test-SSH-Key",
+        "fingerprint": "SHA256:aAFI5C******************************KD6hYhs",
+        "added_time": "2024-12-15T20:09:28.1777368+08:00",
+        "last_used_time": "2024-12-15T20:10:07.7846528+08:00"
+      },
+      {
+        "id": 2,
+        "title": "Test-SSH-Key-2",
+        "fingerprint": "SHA256:P2zrSs******************************h0Q5BOQ",
+        "added_time": "2024-12-20T20:09:28.1777368+08:00",
+        "last_used_time": "2024-12-25T20:10:07.7846528+08:00"
+      },
+    ],
+    "total": 2
+  }
+}
+```
+
+### 返回结果
+
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
+
+### 返回数据结构
+
+状态码 **200**
+
+| 名称          | 类型    | 必选 | 约束 | 中文名           | 说明 |
+| ------------- | ------- | ---- | ---- | ---------------- | ---- |
+| » code        | integer | true | none | 状态码           | none |
+| » message     | string  | true | none | 信息             | none |
+| » data        | object  | true | none | 数据             | none |
+| »» content    | [object] | true | none |                | none |
+| »»» id        | integer | true | none | 公钥主键          | none |
+| »»» title     | string | true | none | 公钥名称        | none |
+| »»» fingerprint | string | true | none | 公钥指纹        | none |
+| »»» added_time | string | true | none | 添加时间        | none |
+| »»» last_used_time | string | true | none | 上次认证时间  | none |
+| »» total      | integer | true | none | 总数             | none |
+
+## POST 给当前用户添加 SFTP 公钥
+
+POST /api/me/sshkey/add
+
+### 请求参数
+
+| 名称          | 位置   | 类型   | 必选 | 中文名 | 说明 |
+| ------------- | ------ | ------ | ---- | ------ | ---- |
+| Authorization | header | string | 是   |        | none |
+| body          | body   | object | 否   |        | none |
+| » title       | body   | string | 是   | 公钥名  | none |
+| » key         | body   | string | 是   | 公钥内容 | none |
+
+### 返回示例
+
+> 成功
+
+```json
+{
+  "code": 200,
+  "message": "success",
+  "data": null
+}
+```
+
+### 返回结果
+
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
+
+### 返回数据结构
+
+状态码 **200**
+
+| 名称          | 类型    | 必选 | 约束 | 中文名           | 说明 |
+| ------------- | ------- | ---- | ---- | ---------------- | ---- |
+| » code        | integer | true | none | 状态码           | none |
+| » message     | string  | true | none | 信息             | none |
+| » data        | null    | true | none |                 | none |
+
+## POST 删除当前用户的 SFTP 公钥
+
+POST /api/me/sshkey/delete
+
+### 请求参数
+
+| 名称          | 位置   | 类型   | 必选 | 中文名 | 说明 |
+| ------------- | ------ | ------ | ---- | ------ | ---- |
+| Authorization | header | string | 是  |        | none |
+| id            | query  | integer | 是   | 公钥主键 | none |
+
+### 返回示例
+
+> 成功
+
+```json
+{
+  "code": 200,
+  "message": "success",
+  "data": null
+}
+```
+
+### 返回结果
+
+| 状态码 | 状态码含义                                              | 说明 | 数据模型 |
+| ------ | ------------------------------------------------------- | ---- | -------- |
+| 200    | [OK](https://tools.ietf.org/html/rfc7231#section-6.3.1) | 成功 | Inline   |
+
+### 返回数据结构
+
+状态码 **200**
+
+| 名称          | 类型    | 必选 | 约束 | 中文名           | 说明 |
+| ------------- | ------- | ---- | ---- | ---------------- | ---- |
+| » code        | integer | true | none | 状态码           | none |
+| » message     | string  | true | none | 信息             | none |
+| » data        | null    | true | none |                 | none |
