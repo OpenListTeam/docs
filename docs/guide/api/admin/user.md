@@ -407,7 +407,7 @@ GET /api/admin/user/sshkey/list
 | 名称          | 位置   | 类型   | 必选 | 中文名 | 说明 |
 | ------------- | ------ | ------ | ---- | ------ | ---- |
 | Authorization | header | string | 是   |        | none |
-| uid           | query  | string | 是   |        | none |
+| uid           | query  | string | 是   | 用户id | none |
 
 ### 返回示例
 
