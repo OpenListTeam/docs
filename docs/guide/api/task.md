@@ -471,11 +471,10 @@ POST /api/task/upload/delete_some
 
 ### 请求参数
 
-| 名称          | 位置   | 类型   | 必选 | 说明   |
-| ------------- | ------ | ------ | ---- | ------ |
-| Authorization | header | string | 是   | none   |
-|               | body   | array  | 是   | none   |
-| »             | body   | string | 是   | 任务id |
+| 名称          | 位置   | 类型     | 必选 | 说明   |
+| ------------- | ------ | -------- | ---- | ------ |
+| Authorization | header | string   | 是   | none   |
+| body          | body   | [string] | 是   | 任务id |
 
 ### 请求体示例
 
@@ -511,7 +510,7 @@ POST /api/task/upload/delete_some
 | --------- | -------- | ----- | ---- | -------- | ------------------------------------------ |
 | » code    | integer  | true  | none | 状态码   | none                                       |
 | » message | string   | true  | none | 信息     | none                                       |
-| » data    | [object] | true  | none |          | 不在此对象中的任务表示删除成功且无错误信息 |
+| » data    | object | true  | none |          | 不在此对象中的任务表示删除成功且无错误信息 |
 | »» 任务id | string   | false | none | 错误信息 | none                                       |
 
 ## POST 取消多个任务
@@ -523,8 +522,7 @@ POST /api/task/upload/cancel_some
 | 名称          | 位置   | 类型   | 必选 | 说明   |
 | ------------- | ------ | ------ | ---- | ------ |
 | Authorization | header | string | 是   | none   |
-|               | body   | array  | 是   | none   |
-| »             | body   | string | 是   | 任务id |
+| body          | body   | [string] | 是   | 任务id |
 
 ### 请求体示例
 
@@ -560,7 +558,7 @@ POST /api/task/upload/cancel_some
 | --------- | -------- | ----- | ---- | -------- | ------------------------------------------ |
 | » code    | integer  | true  | none | 状态码   | none                                       |
 | » message | string   | true  | none | 信息     | none                                       |
-| » data    | [object] | true  | none |          | 不在此对象中的任务表示取消成功且无错误信息 |
+| » data    | object | true  | none |          | 不在此对象中的任务表示取消成功且无错误信息 |
 | »» 任务id | string   | false | none | 错误信息 | none                                       |
 
 ## POST 重试多个任务
@@ -572,8 +570,7 @@ POST /api/task/upload/retry_some
 | 名称          | 位置   | 类型   | 必选 | 说明   |
 | ------------- | ------ | ------ | ---- | ------ |
 | Authorization | header | string | 是   | none   |
-|               | body   | array  | 是   | none   |
-| »             | body   | string | 是   | 任务id |
+| body          | body   | [string]  | 是   | 任务id   |
 
 ### 请求体示例
 
@@ -609,5 +606,5 @@ POST /api/task/upload/retry_some
 | --------- | -------- | ----- | ---- | -------- | ------------------------------------------ |
 | » code    | integer  | true  | none | 状态码   | none                                       |
 | » message | string   | true  | none | 信息     | none                                       |
-| » data    | [object] | true  | none |          | 不在此对象中的任务表示重试成功且无错误信息 |
+| » data    | object | true  | none |          | 不在此对象中的任务表示重试成功且无错误信息 |
 | »» 任务id | string   | false | none | 错误信息 | none                                       |
