@@ -72,6 +72,9 @@ POST /api/task/upload/info
       "state": "succeeded",
       "status": "",
       "progress": 100,
+      "start_time": "2024-12-30T18:32:12.4250369+08:00",
+      "end_time": "2024-12-30T18:32:15.7954633+08:00",
+      "total_bytes": 15273462,
       "error": ""
     }
   ]
@@ -100,6 +103,9 @@ POST /api/task/upload/info
 | »» state        | string   | false | none | 任务完成状态     | none                            |
 | »» status       | string   | false | none |                  | none                            |
 | »» progress     | float    | false | none | 进度             | none                            |
+| »» start_time   | string \| null   | false | none | 任务开始时间  | 为null表示任务未开始       |
+| »» end_time     | string \| null   | false | none | 任务结束时间  | 为null表示任务未结束       |
+| »» total_bytes  | integer  | false | none | 总传输字节数    | 任务开始之前可能为0         |
 | »» error        | string   | false | none | 错误信息         | none                            |
 
 ## GET 获取已完成任务
@@ -129,6 +135,9 @@ GET /api/task/upload/done
       "state": "succeeded",
       "status": "",
       "progress": 100,
+      "start_time": "2024-12-30T18:32:12.4250369+08:00",
+      "end_time": "2024-12-30T18:32:15.7954633+08:00",
+      "total_bytes": 15273462,
       "error": ""
     }
   ]
@@ -157,6 +166,9 @@ GET /api/task/upload/done
 | »» state        | string   | false | none | 任务完成状态     | none                            |
 | »» status       | string   | false | none |                  | none                            |
 | »» progress     | float    | false | none | 进度             | none                            |
+| »» start_time   | string   | false | none | 任务开始时间  | none    |
+| »» end_time     | string   | false | none | 任务结束时间  | none    |
+| »» total_bytes  | integer  | false | none | 总传输字节数    | none      |
 | »» error        | string   | false | none | 错误信息         | none                            |
 
 ## GET 获取未完成任务
@@ -185,7 +197,10 @@ GET /api/task/upload/undone
       "creator_role": 1,
       "state": "succeeded",
       "status": "",
-      "progress": 100,
+      "progress": 50,
+      "start_time": "2024-12-30T18:32:12.4250369+08:00",
+      "end_time": null,
+      "total_bytes": 15273462,
       "error": ""
     }
   ]
@@ -214,6 +229,9 @@ GET /api/task/upload/undone
 | »» state        | string   | false | none | 任务完成状态     | none                            |
 | »» status       | string   | false | none |                  | none                            |
 | »» progress     | float    | false | none | 进度             | none                            |
+| »» start_time   | string \| null   | false | none | 任务开始时间  | 为null表示任务未开始       |
+| »» end_time     | null   | false | none | 任务结束时间  | none  |
+| »» total_bytes  | integer  | false | none | 总传输字节数    | 任务开始之前可能为0         |
 | »» error        | string   | false | none | 错误信息         | none                            |
 
 ## POST 删除任务
