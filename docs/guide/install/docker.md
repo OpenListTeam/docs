@@ -18,6 +18,76 @@ star: true
 
 # Use Docker
 
+## Install
+
+#### **docker cli**
+
+```bash
+docker run -d --restart=unless-stopped -v /etc/alist:/opt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="alist" xhofe/alist:latest
+```
+
+#### **docker compose**
+
+```yaml
+version: '3.3'
+services:
+  alist:
+    image: 'xhofe/alist:beta'
+    container_name: alist
+    volumes:
+      - '/etc/alist:/opt/alist/data'
+    ports:
+      - '5244:5244'
+    environment:
+      - PUID=0
+      - PGID=0
+      - UMASK=022
+    restart: unless-stopped
+```
+
+#### **Env**
+
+| Name        | Default | Desc                                                                                                                       |
+|:------------|:--------|----------------------------------------------------------------------------------------------------------------------------|
+| `PUID`      | `0`     | User UID                                                                                                                   |
+| `PGID`      | `0`     | User GID                                                                                                                   |
+| `UMASK`     | `022`   | https://en.wikipedia.org/wiki/Umask                                                                                        |
+| `RUN_ARIA2` |         | Whether to run ARIA2 concurrently, default is `true` if aria2 is pre-installed, otherwise it is `false`.                   |
+| `TZ`        |         | Default is the UTC time zone. If you want to specify a time zone, you can set this variable, for example: `Asia/Shanghai`. |
+
+#### **Image Versions**
+
+Stable version: `xhofe/alist:latest` or specify a specific version, such as `xhofe/alist:v3.41.0` `xhofe/alist:v3.40.0`
+
+Latest image version, please refer to https://hub.docker.com/r/xhofe/alist/tags
+
+Dev version: `xhofe/alist:beta`
+
+Pre-installed environment image suffix:
+
+| Suffix   | Desc                                                                    |
+|:---------|-------------------------------------------------------------------------|
+| `aio`    | An image that includes all of the following pre-installed environments. |
+| `ffmpeg` | Pre-installed FFmpeg image for generating thumbnail for local storage   |
+| `aria2`  | Pre-installed aria2 image for offline downloading.                      |
+
+You can append a suffix using the `-` symbol after any of the mirror tags to switch to an image with the corresponding environment. For example, `xhofe/alist:latest-aio` `xhofe/alist:beta-aria2` `xhofe/alist:v3.40.0-ffmpeg`
+
+If the thumbnail generation function still does not work when using the pre-installed ffmpeg, please confirm:
+
++ You are using local storage
++ Switched to grid view
++ The thumbnail switch in local storage driver settings is enabled
++ The configuration path for the thumbnail cache folder in local storage is correct, for example, `data/thumbnail`
+
+When using a pre-installed aria2 mirror, you might see errors like the following in the alist logs:
+
+```
+ERRO[2022-11-20 12:05:19] error [unaligned 64-bit atomic operation] while run task  [download http://xxx.com/xxx.png to [/ftp](/)]
+```
+
+The solution is, if the CPU architecture is 64-bit, you can try to manually pull a 64-bit image or rebuild the container. If the CPU architecture is 32-bit, there is currently no available solution.
+
 ## See the admin's info:
 
 #### Lower than v3.25.0
@@ -37,196 +107,7 @@ docker exec -it alist ./alist admin random
 docker exec -it alist ./alist admin set NEW_PASSWORD
 ```
 
-## **Release version**
-
-#### **docker-cli**
-
-```bash
-docker run -d --restart=unless-stopped -v /etc/alist:/opt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="alist" xhofe/alist:latest
-```
-
-#### **docker-compose**
-
-```bash
-mkdir /etc/alist
-cd /etc/alist
-wget https://alist.nn.ci/docker-compose.yml
-docker-compose up -d
-```
-
-**Alternatively, you can manually create a `docker-compose.yml` file with the following content.**
-
-```yaml
-version: '3.3'
-services:
-    alist:
-        image: 'xhofe/alist:latest'
-        container_name: alist
-        volumes:
-            - '/etc/alist:/opt/alist/data'
-        ports:
-            - '5244:5244'
-        environment:
-            - PUID=0
-            - PGID=0
-            - UMASK=022
-        restart: unless-stopped
-```
-After the service runs, the default time zone for the container is UTC time zone. If you want to specify the time zone for the container to run, you can achieve this by passing this variable:`-e "TZ=Asia/Shanghai"`。
-
-### **Offline download with aria2**
-
-If you want to use aria2 to offline download, we recommend you to use this [image](https://hub.docker.com/r/xhofe/alist-aria2), which carries a pre-installed aria2.
-
-### **Dev version**
-Just for amd64/arm64. Not recommended, this may can't work properly.
-
-#### **docker-cli**
-
-```bash
-docker run -d --restart=unless-stopped -v /etc/alist:/opt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="alist" xhofe/alist:beta
-```
-
-#### **docker-compose**
-
-```yaml
-version: '3.3'
-services:
-    alist:
-        image: 'xhofe/alist:beta'
-        container_name: alist
-        volumes:
-            - '/etc/alist:/opt/alist/data'
-        ports:
-            - '5244:5244'
-        environment:
-            - PUID=0
-            - PGID=0
-            - UMASK=022
-        restart: unless-stopped
-```
-
-### **Specify version**
-See https://hub.docker.com/r/xhofe/alist for details
-
-### **Image with built-in ffmpeg**
-
-You can switch to image with out-of-the-box ffmpeg environment by adding `-ffmpeg` to any image tag.
-
-If the thumbnail feature is still not working, please verify the following:
-
-+ You are using local storage
-+ Switched to grid view
-+ The thumbnail switch in local storage driver settings is enabled
-+ The configuration path for the thumbnail cache folder in local storage is correct, for example, `data/thumbnail`
-
-::: tabs#Docker-ffmpeg
-
-@tab latest
-
-**docker-cli**
-
-```bash
-docker run -d --restart=unless-stopped -v /etc/alist:/opt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="alist" xhofe/alist:latest-ffmpeg
-```
-
-**docker-compose**
-
-```bash
-version: '3.3'
-services:
-    alist:
-        image: 'xhofe/alist:latest-ffmpeg'
-        container_name: alist
-        volumes:
-            - '/etc/alist:/opt/alist/data'
-        ports:
-            - '5244:5244'
-        environment:
-            - PUID=0
-            - PGID=0
-            - UMASK=022
-        restart: unless-stopped
-```
-
-@tab beta
-
-**docker-cli**
-
-```bash
-docker run -d --restart=unless-stopped -v /etc/alist:/opt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="alist" xhofe/alist:beta-ffmpeg
-```
-
-**docker-compose**
-
-```bash
-version: '3.3'
-services:
-    alist:
-        image: 'xhofe/alist:beta-ffmpeg'
-        container_name: alist
-        volumes:
-            - '/etc/alist:/opt/alist/data'
-        ports:
-            - '5244:5244'
-        environment:
-            - PUID=0
-            - PGID=0
-            - UMASK=022
-        restart: unless-stopped
-```
-
-:::
-
-### **User / Group Identifiers**
-
-When using volumes (`-v` flags) permissions issues can arise between the host OS and the container, we avoid this issue by allowing you to specify the user `PUID` and group `PGID`.
-
-Ensure any volume directories on the host are owned by the same user you specify and any permissions issues will vanish like magic.
-
-In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as below:
-
-```bash
-  $ id username
-    uid=1000(dockeruser) gid=1000(dockergroup) groups=1000(dockergroup)
-```
-
-### **Manually build Docker image**
-
-Install Docker, clone the repository, and navigate to the root directory of the repository, no additional preparation is needed.
-
-::: tabs#Docker-build
-
-@tab basic
-
-```bash
-docker build -t xhofe/alist:latest .
-```
-
-@tab with ffmpeg
-
-```bash
-docker build -t xhofe/alist:latest-ffmpeg --build-arg INSTALL_FFMPEG=true .
-```
-
-:::
-
-## **Additional notes about the offline download feature**
-
-If the image is not pulled using the '''docker pull --platform''' parameter, docker may pull the 32-bit image on the 64-bit operating system, which may cause the offline download function to be unavailable even under normal configuration.
-
-When an error occurs, you will see a similar error log in Alist's log file.
-
-```ERRO[2022-11-20 12:05:19] error [unaligned 64-bit atomic operation] while run task  [download http://pic.rmb.bdstatic.com/bjh/34ee946f7a74435a167ca4351d723374.png to [/ftp](/)]```
-
-Solution, if the CPU architecture is 64-bit, try to manually pull the 64-bit docker image, rebuild the container, and try again.
-
-If the CPU architecture is 32-bit, there is currently no solution available.
-
-
-
-## **How to update Docker installation?**
-
+## **Update**
 ::: details docker-cli update
 1. docker ps -a #View the container (find the ID of the Alist container)
 2. docker stop ID #Stop Alist running, otherwise it cannot be deleted (this time the ID of the Alist container is d429749a6e69, it is different for each installation)
@@ -252,3 +133,31 @@ A: The reason is that your docker has set up a mirror, and the latest version ca
 
 - If deletion doesn’t work, you can consider replacing it with a `mirror acceleration address`
 - Or simple and rude: when downloading, replace `xhofe/alist:latest` with `xhofe/alist:v3.16.3` (specify the version, the latest when writing the tutorial is 3.16.3)
+
+### **Compile Image**
+
+Install Docker, clone the repository, then navigate to the root directory of the repository. No further preparation is required.
+
+::: tabs#Docker-build
+
+@tab basic
+
+```bash
+docker build -t xhofe/alist:latest .
+```
+
+@tab build-arg
+
+```bash
+docker build -t xhofe/alist:latest-ffmpeg --build-arg INSTALL_FFMPEG=true .
+```
+
+:::
+
+
+Available build args:
+
+|                       | Desc           |
+|:----------------------|----------------|
+| `INSTALL_FFMPEG=true` | Install ffmpeg |
+| `INSTALL_ARIA2=true`  | Install aria2  |
