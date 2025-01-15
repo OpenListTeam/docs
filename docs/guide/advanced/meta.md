@@ -17,7 +17,7 @@ star: true
 ---
 
 # Meta
-The configuration in the meta information is only valid for `Guest`, if you want to have the corresponding permissions for the newly created ordinary users, please go to `User`-->`User Account` to modify the relative permissions
+The configuration in the meta information is valid for `All Roles`, if you want to have the corresponding permissions for users, please go to `User`-->`User Account` to modify the relative permissions
 
 ### **Path**
 
@@ -37,7 +37,7 @@ Password required to access this path
 
 
 ### **Write**
-Allow guest to make directory, new file and upload files.
+Allow user to make directory, new file and upload files.
 
 <br/>
 
