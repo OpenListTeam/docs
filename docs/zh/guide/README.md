@@ -72,6 +72,7 @@ category:
 - [x] [网易云音乐云盘](../guide/drivers/163music.md)
 - [x] [6盘](../guide/drivers/halalcloud.md)
 - [x] [联想家庭储存链接分享](https://pc.lenovo.com.cn)
+- [x] [Misskey](https://misskey-hub.net/cn/docs/for-users/features/drive/)
 
 ## Discussion
 

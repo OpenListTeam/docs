@@ -74,6 +74,7 @@ A file list program that supports multiple storage, and supports web browsing an
 - [x] [163 Music Drive](../guide/drivers/163music.md)
 - [x] [halalcloud](../guide/drivers/halalcloud.md)
 - [x] [LenovoNasShare](https://pc.lenovo.com.cn)
+- [x] [Misskey](https://misskey-hub.net/cn/docs/for-users/features/drive/)
 
 ### Discussion
 
