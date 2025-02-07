@@ -38,7 +38,6 @@ fi
 # 配置部分
 #######################
 # GitHub 相关配置
-GH_PROXY=''  # 可以修改为其他代理地址，如果不需要代理可以设置为空
 GH_DOWNLOAD_URL="${GH_PROXY}https://github.com/alist-org/alist/releases/latest/download"
 #######################
 
@@ -190,10 +189,27 @@ INSTALL() {
   # 保存当前目录
   CURRENT_DIR=$(pwd)
   
+    # 询问是否使用代理
+    echo -e "${GREEN_COLOR}是否使用 GitHub 代理？（默认无代理）${RES}"
+    echo -e "${GREEN_COLOR}代理地址必须为 https 开头，斜杠 / 结尾 ${RES}"
+    echo -e "${GREEN_COLOR}例如：https://ghproxy.com/ ${RES}"
+    read -p "请输入代理地址或直接按回车继续: " proxy_input
+
+  # 如果用户输入了代理地址，则使用代理拼接下载链接
+  if [ -n "$proxy_input" ]; then
+    GH_PROXY="$proxy_input"
+    GH_DOWNLOAD_URL="${GH_PROXY}https://github.com/alist-org/alist/releases/latest/download"
+    echo -e "${GREEN_COLOR}已使用代理地址: $GH_PROXY${RES}"
+  else
+    # 如果不需要代理，直接使用默认链接
+    GH_DOWNLOAD_URL="https://github.com/alist-org/alist/releases/latest/download"
+    echo -e "${GREEN_COLOR}使用默认 GitHub 地址进行下载${RES}"
+  fi
+
   # 下载 Alist 程序
   echo -e "\r\n${GREEN_COLOR}下载 Alist ...${RES}"
   
-  # 使用 GitHub 源下载
+  # 使用拼接后的 GitHub 下载地址
   if ! download_file "${GH_DOWNLOAD_URL}/alist-linux-musl-$ARCH.tar.gz" "/tmp/alist.tar.gz"; then
     echo -e "${RED_COLOR}下载失败！${RES}"
     exit 1
@@ -226,6 +242,7 @@ INSTALL() {
   # 清理临时文件
   rm -f /tmp/alist*
 }
+
 
 INIT() {
   if [ ! -f "$INSTALL_PATH/alist" ]; then
@@ -303,6 +320,23 @@ UPDATE() {
     fi
 
     echo -e "${GREEN_COLOR}开始更新 Alist ...${RES}"
+
+    # 询问是否使用代理
+    echo -e "${GREEN_COLOR}是否使用 GitHub 代理？（默认无代理）${RES}"
+    echo -e "${GREEN_COLOR}代理地址必须为 https 开头，斜杠 / 结尾 ${RES}"
+    echo -e "${GREEN_COLOR}例如：https://ghproxy.com/ ${RES}"
+    read -p "请输入代理地址或直接按回车继续: " proxy_input
+
+    # 如果用户输入了代理地址，则使用代理拼接下载链接
+    if [ -n "$proxy_input" ]; then
+        GH_PROXY="$proxy_input"
+        GH_DOWNLOAD_URL="${GH_PROXY}https://github.com/alist-org/alist/releases/latest/download"
+        echo -e "${GREEN_COLOR}已使用代理地址: $GH_PROXY${RES}"
+    else
+        # 如果不需要代理，直接使用默认链接
+        GH_DOWNLOAD_URL="https://github.com/alist-org/alist/releases/latest/download"
+        echo -e "${GREEN_COLOR}使用默认 GitHub 地址进行下载${RES}"
+    fi
 
     # 停止 Alist 服务
     echo -e "${GREEN_COLOR}停止 Alist 进程${RES}\r\n"
