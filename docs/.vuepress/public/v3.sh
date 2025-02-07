@@ -38,7 +38,7 @@ fi
 # 配置部分
 #######################
 # GitHub 相关配置
-GH_PROXY='https://mirror.ghproxy.com/'  # 可以修改为其他代理地址，如果不需要代理可以设置为空
+GH_PROXY=''  # 可以修改为其他代理地址，如果不需要代理可以设置为空
 GH_DOWNLOAD_URL="${GH_PROXY}https://github.com/alist-org/alist/releases/latest/download"
 #######################
 
