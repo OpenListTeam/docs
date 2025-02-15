@@ -1,7 +1,7 @@
 {
   "official": [
-    { "type": "github", "repo": "alist-org/alist-proxy" },
-    { "type": "github", "repo": "alist-org/with_aria2" }
+    { "type": "github", "repo": "AlistGo/alist-proxy" },
+    { "type": "github", "repo": "AlistGo/with_aria2" }
   ],
   "community": [
     { "type": "github", "repo": "jinzhi0123/picgo-plugin-alist" },
