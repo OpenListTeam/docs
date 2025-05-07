@@ -21,6 +21,10 @@ star: true
 
 ## 参数说明
 
+### 地址
+
+Cloudreve V4 服务器的地址，如：`https://www.example.com`，最好删掉后面的斜线`/`。
+
 ### 鉴权
 
 Cloudreve V4 使用 Token 进行鉴权，这意味着挂载鉴权方式分为：

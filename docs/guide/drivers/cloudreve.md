@@ -21,6 +21,10 @@ star: true
 
 ## Parameters
 
+### Address
+
+The address of the Cloudreve V3 server, such as: `https://www.example.com`. It is better to remove the slash `/` after it.
+
 ### Authentication
 
 Cloudreve V3 supports authentication using Cookie. This means the mounting authentication methods are divided into:

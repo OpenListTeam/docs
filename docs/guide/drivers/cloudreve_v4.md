@@ -21,6 +21,10 @@ star: true
 
 ## Parameter Explanation
 
+### Address
+
+The address of the Cloudreve V4 server, such as: `https://www.example.com`. It is better to remove the slash `/` after it.
+
 ### Authentication
 
 Cloudreve V4 supports authentication using Token. This means the mounting authentication methods are divided into:
