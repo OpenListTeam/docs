@@ -79,6 +79,10 @@ Enable Cloudreve V4 server to calculate the size of each folder. Enabling this f
 
 Enable Cloudreve V4 server to generate thumbnails for each file. Enabling this feature may cause server errors or slow performance, and it is `disabled` by default.
 
+### Enable Version Upload
+
+Enable overwrite upload and keep the previous version, which consumes extra space. Disabled by default, delete the existing file before overwriting upload.
+
 ### Custom UA
 
 Used to customize the `User-Agent` header information used in requests. Leaving it blank will use Alist default settings.
