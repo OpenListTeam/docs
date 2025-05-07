@@ -57,7 +57,7 @@ You may need to log in anew to see this request.
 
 ### Root Folder Path
 
-Cloudreve V4 uses a custom URI as the path, which can be obtained from the `?path=` in the web link.
+Cloudreve V4 uses a custom URI as the path, which can be obtained from the `?path=` in the web link. The obtained parameters may need to be [URL decoded](https://www.google.com/search?q=URL+decode).
 
 #### Mounting My Files
 

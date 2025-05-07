@@ -41,7 +41,7 @@ Only the string following cloudreve-session= is required.
 
 ### Root Folder Path
 
-Default is `/`, which can be obtained from the `?path=` in the web link.
+Default is `/`, which can be obtained from the `?path=` in the web link. The obtained parameters may need to be [URL decoded](https://www.google.com/search?q=URL+decode).
 
 ### Enable Folder Size
 

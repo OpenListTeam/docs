@@ -58,7 +58,7 @@ Token 获取方法：
 
 ### 根文件夹路径
 
-Cloudreve V4 采用自定义 URI 作为路径。可从网页链接的 `?path=` 中获取。
+Cloudreve V4 采用自定义 URI 作为路径。可从网页链接的 `?path=` 中获取。获取到的参数可能需要 [URL 解码](https://www.bing.com/search?q=URL+%E8%A7%A3%E7%A0%81)。
 
 #### 挂载「我的文件」
 
