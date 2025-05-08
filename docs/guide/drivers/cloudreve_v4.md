@@ -73,7 +73,7 @@ Supports mounting folder-type shares, the path should be filled as: `cloudreve:/
 
 - ShareID is the parameter after `/s/` in the share link.
 
-- Currently, Cloudreve V4 does not support creating password-protected shares.
+- Currently, Cloudreve V4 does not support creating password-protected shares. However, if the data is migrated from V3, the previously created sharing password will be retained. The URI of the share link with the password (`/s/{shareID}/{sharePassword}`) is `cloudreve://{shareID}:{sharePassword}@share`.
 
 ### Enable Folder Size
 
