@@ -12,27 +12,27 @@ const raw = [
   {
     key: "mac_arm64",
     label: "MacOS (Apple Silicon)",
-    url: `https://bugo-1301111475.cos.ap-guangzhou.myqcloud.com/Alist/alist-desktop_aarch64.dmg`,
+    url: `https://github.com/alist-org/desktop-release/releases/latest/download/alist-desktop_${version}_aarch64.dmg`,
   },
   {
     key: "mac_x64",
     label: "MacOS (Intel)",
-    url: `https://bugo-1301111475.cos.ap-guangzhou.myqcloud.com/Alist/alist-desktop_x64.dmg`,
+    url: `https://github.com/alist-org/desktop-release/releases/latest/download/alist-desktop_${version}_x64.dmg`,
   },
   {
     key: "win_x64",
     label: "Windows (X64)",
-    url: `https://bugo-1301111475.cos.ap-guangzhou.myqcloud.com/Alist/alist-desktop_x64-setup.exe`,
+    url: `https://github.com/alist-org/desktop-release/releases/latest/download/alist-desktop_${version}_x64_en-US.msi`,
   },
   {
     key: "win_arm64",
     label: "Windows (ARM64)",
-    url: `https://bugo-1301111475.cos.ap-guangzhou.myqcloud.com/Alist/alist-desktop_arm64-setup.exe`,
+    url: `https://github.com/alist-org/desktop-release/releases/latest/download/alist-desktop_${version}_arm64-setup.exe`,
   },
   {
     key: "linux",
     label: "Linux",
-    url: `https://bugo-1301111475.cos.ap-guangzhou.myqcloud.com/Alist/alist-desktop_amd64.deb`,
+    url: `https://github.com/alist-org/desktop-release/releases/latest/download/alist-desktop_${version}_amd64.deb`,
   },
 ] as const
 
@@ -77,7 +77,7 @@ if (location.pathname.startsWith("/zh/")) {
 
 function down() {
   const href = raw.find((item) => item.key === plat.value)?.url
-  window.open(`${href}`, "_blank")
+  window.open(`${proxy}${href}`, "_blank")
 }
 
 function handleSelect(key) {
@@ -85,7 +85,7 @@ function handleSelect(key) {
 }
 
 function openWebsite() {
-  window.open("https://desktop.alistgo.com/zh", "_blank")
+  window.open("https://ad.nn.ci/", "_blank")
 }
 </script>
 

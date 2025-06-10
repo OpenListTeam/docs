@@ -1,27 +1,70 @@
 <script setup lang="ts">
 import { usePageData } from "@vuepress/client"
-import { computed } from 'vue'
+import { computed } from "vue"
 
 const pageData = usePageData()
-const isChinese = computed(() => {
+
+const isZh = computed(() => {
   return pageData.value.path.startsWith("/zh/")
 })
-const backgroundImage = computed(() => isChinese.value ? '/img/ss/new_bgc_zh.png' : '/img/ss/new_bgc_en.png')
-const jumpUrl = computed(() =>
-  isChinese.value
-    ? 'https://zh.okaapps.com/vidhub-alist'
-    : 'https://okaapps.com/vidhub-alist'
-)
 
-console.log('当前图片:', backgroundImage.value)
+const vidHubEn = {
+  title: "VidHub - An elegant cloud video player within the Apple ecosystem.",
+  hero: [
+    "Support for iPhone, iPad, Mac, and Apple TV.",
+    "Supports various cloud storage providers such as Aliyun, Baidu Cloud, OneDrive, Google Drive, Dropbox, Alist, mounted with different cloud drives like Quark Cloud, pikpak, 115, and more.",
+  ],
+  url: "https://apps.apple.com/app/apple-store/id1659622164?pt=118612019&ct=alist&mt=8",
+  tag: "Free",
+  new_site: "Open the new site",
+}
+
+const vidHubCN = {
+  title: "VidHub - 苹果生态下优雅的网盘视频播放器",
+  hero: [
+    "iPhone，iPad，Mac，Apple TV全平台支持,",
+    "直接挂载阿里云盘、百度网盘、OneDrive、GoogleDrive、Dropbox、Alist挂载各种夸克云盘，pikpak, 115等等。",
+  ],
+  url: "https://zh.okaapps.com/product/1659622164?ref=alist",
+  tag: "免费",
+  new_site: "打开新站点",
+}
+
+const vidHub = computed(() => {
+  if (isZh.value) return vidHubCN
+  return vidHubEn
+})
+
+const isApple = computed(() => {
+  if (navigator.platform) return /Mac|iPod|iPhone|iPad/.test(navigator.platform)
+  return /Mac|iPod|iPhone|iPad/.test(navigator.userAgent)
+})
 </script>
 
 <template>
   <div class="ads-container">
-    <div class="vidhub-new-bgc">
-      <a :href="jumpUrl" target="_blank" rel="noopener">
-        <img :src="backgroundImage" :alt="isChinese ? 'VidHub 背景' : 'VidHub Background'" />
+    <div class="wwads-container">
+      <div
+        class="wwads wwads-cn wwads-horizontal"
+        data-id="213"
+        style="width: 100% !important"
+        v-if="!isApple"
+      ></div>
+      <a v-else class="vidhub" :href="vidHub.url" target="_blank">
+        <div>
+          <img src="/img/ss/vidhub-logo.png" alt="" />
+          <div>
+            <div class="title">
+              <span>{{ vidHub.title }}</span>
+              <span class="tag">{{ vidHub.tag }}</span>
+            </div>
+            <div class="hero" v-for="hero in vidHub.hero" :key="hero">
+              {{ hero }}
+            </div>
+          </div>
+        </div>
       </a>
+      <a class="new_site" href="https://alistgo.com" target="_blank">{{ vidHub.new_site }}</a>
     </div>
   </div>
 </template>
@@ -145,35 +188,5 @@ console.log('当前图片:', backgroundImage.value)
     margin: unset;
   }
   max-width: var(--home-page-width);
-}
-
-.vidhub-new-bgc {
-  // width: 100%;
-  // max-width: 100%;
-  // 以上为展示图片圆角，暂时先注释
-  margin: 10px auto;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: none;
-  height: auto;
-  border-radius: 10px;
-}
-.vidhub-new-bgc img {
-  width: 100%;
-  max-height: 200px;
-  height: auto;
-  display: block;
-  object-fit: contain;//cover 为正常宽展示，但是图片宽高过大会被拉伸，先用contain
-}
-.vidhub-new-bgc a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  color: inherit;
 }
 </style>

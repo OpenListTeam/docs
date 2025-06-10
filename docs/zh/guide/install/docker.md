@@ -23,7 +23,7 @@ star: true
 #### **docker cli**
 
 ```bash
-docker run -d --restart=unless-stopped -v /etc/alist:/opt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="alist" alist666/alist:latest
+docker run -d --restart=unless-stopped -v /etc/alist:/opt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="alist" xhofe/alist:latest
 ```
 
 #### **docker compose**
@@ -32,7 +32,7 @@ docker run -d --restart=unless-stopped -v /etc/alist:/opt/alist/data -p 5244:524
 version: '3.3'
 services:
   alist:
-    image: 'alist666/alist:beta'
+    image: 'xhofe/alist:beta'
     container_name: alist
     volumes:
       - '/etc/alist:/opt/alist/data'
@@ -57,11 +57,11 @@ services:
 
 #### **镜像版本**
 
-稳定版：`alist666/alist:latest` 或指定本版，如 `alist666/alist:v3.41.0` `alist666/alist:v3.40.0`
+稳定版：`xhofe/alist:latest` 或指定本版，如 `xhofe/alist:v3.41.0` `xhofe/alist:v3.40.0`
 
-最新镜像版本，请参阅 https://hub.docker.com/r/alist666/alist/tags
+最新镜像版本，请参阅 https://hub.docker.com/r/xhofe/alist/tags
 
-开发版：`alist666/alist:beta`
+开发版：`xhofe/alist:beta`
 
 预装环境镜像后缀:
 
@@ -71,7 +71,7 @@ services:
 | `ffmpeg`  | 预装 ffmpeg 的镜像，用于本地存储缩略图 |
 | `aria2`   | 预装 aria2 的镜像，用于离线下载     |
 
-你可以在上述任意镜像标签后面，使用 `-` 符号附加后缀以切换到附带环境的镜像。如 `alist666/alist:latest-aio` `alist666/alist:beta-aria2` `alist666/alist:v3.40.0-ffmpeg`
+你可以在上述任意镜像标签后面，使用 `-` 符号附加后缀以切换到附带环境的镜像。如 `xhofe/alist:latest-aio` `xhofe/alist:beta-aria2` `xhofe/alist:v3.40.0-ffmpeg`
 
 如果使用预装 ffmpeg 镜像缩略图功能仍无法使用，请确认:
 
@@ -118,7 +118,7 @@ docker exec -it alist ./alist admin set NEW_PASSWORD
 
 3. docker rm ID #删除Alist容器(数据还在只要你不手动删除)
 
-4. docker pull alist666/alist:latest
+4. docker pull xhofe/alist:latest
 
 5. [输入安装命令点击查看](#docker-cli)
 
@@ -135,12 +135,12 @@ docker exec -it alist ./alist admin set NEW_PASSWORD
 
 :::
 
-Q：我的版本是v3.x.x 怎么也升级不到最新版 `docker pull alist666/alist:latest`拉取最新不行 改成docker-compose安装还是3.x.x版本
+Q：我的版本是v3.x.x 怎么也升级不到最新版 `docker pull xhofe/alist:latest`拉取最新不行 改成docker-compose安装还是3.x.x版本
 
 A：原因是你的docker设置了镜像，从镜像更新不到最新版本，改一下/etc/docker/daemon.json，删除"registry-mirrors": ["镜像加速器地址"]
 
 - 删除若不行，可以考虑更换一个`镜像加速地址`
-- 或者简单粗暴：下载时将`alist666/alist:latest` 替换为`alist666/alist:v3.16.3`（指定版本，写教程时最新的是3.16.3）
+- 或者简单粗暴：下载时将`xhofe/alist:latest` 替换为`xhofe/alist:v3.16.3`（指定版本，写教程时最新的是3.16.3）
 
 ### **编译镜像**
 
@@ -151,13 +151,13 @@ A：原因是你的docker设置了镜像，从镜像更新不到最新版本，�
 @tab basic
 
 ```bash
-docker build -t alist666/alist:latest .
+docker build -t xhofe/alist:latest .
 ```
 
 @tab build-arg
 
 ```bash
-docker build -t alist666/alist:latest-ffmpeg --build-arg INSTALL_FFMPEG=true .
+docker build -t xhofe/alist:latest-ffmpeg --build-arg INSTALL_FFMPEG=true .
 ```
 
 :::

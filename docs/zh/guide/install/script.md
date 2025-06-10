@@ -27,7 +27,7 @@ star: true
 @tab 正式版
 **安装**
 ```bash
-curl -fsSL "https://alistgo.com/v3.sh" -o v3.sh && bash v3.sh
+curl -fsSL "https://alist.nn.ci/v3.sh" -o v3.sh && bash v3.sh
 ```
 ![v3-install](/img/guide/v3-install.png)
 
@@ -41,17 +41,17 @@ curl -fsSL "https://alistgo.com/v3.sh" -o v3.sh && bash v3.sh
 @tab 测试版
 **安装**
 ```bash
-curl -fsSL "https://alistgo.com/beta.sh" | bash -s install
+curl -fsSL "https://alist.nn.ci/beta.sh" | bash -s install
 ```
 
 **更新**
 ```bash
-curl -fsSL "https://alistgo.com/beta.sh" | bash -s update
+curl -fsSL "https://alist.nn.ci/beta.sh" | bash -s update
 ```
 
 **卸载**
 ```bash
-curl -fsSL "https://alistgo.com/beta.sh" | bash -s uninstall
+curl -fsSL "https://alist.nn.ci/beta.sh" | bash -s uninstall
 ```
 
 :::
@@ -65,21 +65,21 @@ curl -fsSL "https://alistgo.com/beta.sh" | bash -s uninstall
 @tab 正式版
 ```bash
 # Install
-curl -fsSL "https://alistgo.com/v3.sh" -o v3.sh && bash v3.sh install /root
+curl -fsSL "https://alist.nn.ci/v3.sh" -o v3.sh && bash v3.sh install /root
 # update
-curl -fsSL "https://alistgo.com/v3.sh" -o v3.sh && bash v3.sh update /root
+curl -fsSL "https://alist.nn.ci/v3.sh" -o v3.sh && bash v3.sh update /root
 # Uninstall
-curl -fsSL "https://alistgo.com/v3.sh" -o v3.sh && bash v3.sh uninstall /root
+curl -fsSL "https://alist.nn.ci/v3.sh" -o v3.sh && bash v3.sh uninstall /root
 ```
 
 @tab 测试版
 ```bash
 # Install
-curl -fsSL "https://alistgo.com/beta.sh" | bash -s install /root
+curl -fsSL "https://alist.nn.ci/beta.sh" | bash -s install /root
 # update
-curl -fsSL "https://alistgo.com/beta.sh" | bash -s update /root
+curl -fsSL "https://alist.nn.ci/beta.sh" | bash -s update /root
 # Uninstall
-curl -fsSL "https://alistgo.com/beta.sh" | bash -s uninstall /root
+curl -fsSL "https://alist.nn.ci/beta.sh" | bash -s uninstall /root
 ```
 
 :::

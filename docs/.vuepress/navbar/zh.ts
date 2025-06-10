@@ -16,7 +16,7 @@ export const zh = navbar([
         link: "https://github.com/alist-org/alist/discussions",
       },
       { text: "Telegram", link: "https://t.me/alist_chat" },
-      { text: "微信/QQ", link: "zh/community/"  },
+      { text: "Discord", link: "https://discord.gg/F4ymsH4xv2" },
     ],
   },
   {
@@ -25,7 +25,7 @@ export const zh = navbar([
     children: [
       { text: "演示", link: "https://alist.pages.dev/" },
       { text: "V2", link: "https://alist-doc.nn.ci" },
-      // { text: "桌面版", link: "https://ad.nn.ci/" },
+      { text: "桌面版", link: "https://ad.nn.ci/" },
     ],
   },
   {

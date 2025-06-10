@@ -17,7 +17,9 @@ export const zh = sidebar({
       text: "配置",
       icon: "iconfont icon-config",
       prefix: "config/",
-      children: ["", "configuration"],
+      children: [
+        "config",
+      ],
     },
     {
       text: "常见问题",

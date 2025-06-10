@@ -32,26 +32,27 @@ import Desktop from "@Desktop";
 
 ## **查看激活 Key**
 
-购买渠道查看方式如下
+两种不同购买渠道查看方式如下
 
 ::: tabs#Desktop
 
-@tab 官网
+@tab 面包多
 
+面包多购买的可以在多种不同渠道查看
 
-<!-- ：**https://mbd.pub/o/bread/ZJaTl5xy** -->
-1. 进入官网 ==> **https://desktop.alistgo.com/zh** 
-2. 首页购买 ==> 获取激活key
+1. 面包多：**https://mbd.pub/o/bread/ZJaTl5xy**
+2. 支付宝账单 ==> 商家订单号
+3. 微信账单 ==> 商户单号
 
-![](/img/desktop/new_get_key.png)
+![](/img/desktop/key_mbd.png)
 
 激活时 **`不需要`** 勾选 :black_square_button: **Lemon Squeezey**
 
 ![](/img/desktop/logIn_mbd.png)
 
 @tab Lemon Squeezy
-<!-- ：**https://app.lemonsqueezy.com/my-orders** -->
-Lemon Squeezy
+
+Lemon Squeezy：**https://app.lemonsqueezy.com/my-orders**
 
 ![](/img/desktop/key_lemonsqueezy.png)
 
@@ -69,17 +70,17 @@ Lemon Squeezy
 
 ::: tabs#Desktop
 
-@tab 官网
+@tab 面包多
 
-输入在官网购买的`key` 将不再使用的设备进行反激活踢下线
+输入在面包多购买的`key` 将不再使用的设备进行反激活踢下线
 
-<!-- - **https://ad.nn.ci/zh/usage** -->
+- **https://ad.nn.ci/zh/usage**
 
 ![](/img/desktop/mianbaoduo.png)
 
 @tab Lemon Squeezy
-<!-- 在 **https://app.lemonsqueezy.com/my-orders** 登录购买[ :lemon:Lemon Squeezy](https://store.nn.ci/buy/51dca247-20df-4991-8104-54ca534bcc82) 时的邮箱，然后 -->
-按照下图教程操作
+
+在 **https://app.lemonsqueezy.com/my-orders** 登录购买[ :lemon:Lemon Squeezy](https://store.nn.ci/buy/51dca247-20df-4991-8104-54ca534bcc82) 时的邮箱，然后按照下图教程操作
 
 ![](/img/desktop/lemonsqueezy.png)
 

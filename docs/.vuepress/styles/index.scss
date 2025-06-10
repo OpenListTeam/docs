@@ -25,18 +25,3 @@ html[data-theme="dark"] .wwads {
 html[data-theme="dark"] .wwads-text {
   color: #9e9e9e !important;
 }
-.qr-img-row {
-  display: flex;
-  align-items: center;
-  gap: 24px; /* 两张图片的间距 */
-}
-.qr-img-row + .qr-img-row {
-  margin-top: 20px;
-}
-.qr-img {
-  max-width: 300px !important;
-  height: auto;
-  cursor: pointer;
-  transition: box-shadow 0.2s;
-  z-index: 1;
-}
