@@ -39,8 +39,8 @@ Two different purchasing channels are as follows
 @tab mbd
 
 MBD purchases can be viewed in a variety of different channels
-
-1. mbd：**https://mbd.pub/o/bread/ZJaTl5xy**
+<!-- ：**https://mbd.pub/o/bread/ZJaTl5xy** -->
+1. mbd
 2. Alipay Bills ==> Merchant Order No.
 3. Wechat Bills ==> Merchant Order No.
 
@@ -51,8 +51,8 @@ Activation **`Not Required`** Select :black_square_button:   **Lemon Squeezey**
 ![](/img/desktop/logIn_mbd.png)
 
 @tab Lemon Squeezy
-
-Lemon Squeezy：**https://app.lemonsqueezy.com/my-orders**
+<!-- ：**https://app.lemonsqueezy.com/my-orders** -->
+Lemon Squeezy
 
 ![](/img/desktop/key_lemonsqueezy.png)
 
@@ -74,14 +74,14 @@ Activation **`required`** Select :white_check_mark: **Lemon Squeezey**
 
 Enter the `key` purchased on mbd to deactivate the device that is no longer in use and kick it offline.
 
-- **https://ad.nn.ci/zh/usage**
+<!-- - **https://ad.nn.ci/zh/usage** -->
 
 ![](/img/desktop/mianbaoduo.png)
 
 @tab Lemon Squeezy
-
-Log in to **https://app.lemonsqueezy.com/my-orders**
-log in with the email address you used when you purchased [:lemon:Lemon Squeezy](https://store.nn.ci/buy/51dca247-20df-4991-8104-54ca534bcc82) and follow the instructions below.
+<!-- Log in to **https://app.lemonsqueezy.com/my-orders**
+log in with the email address you used when you purchased [:lemon:Lemon Squeezy](https://store.nn.ci/buy/51dca247-20df-4991-8104-54ca534bcc82) and  -->
+follow the instructions below.
 
 ![](/img/desktop/lemonsqueezy.png)
 

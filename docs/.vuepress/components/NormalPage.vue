@@ -9,15 +9,15 @@
             <span>{{ spStr }}</span>
           </a>
         </div>
-        <div class="wwads wwads-cn wwads-horizontal" data-id="213" style="width:100% !important" v-else>
-        </div>
+        <!-- <div class="wwads wwads-cn wwads-horizontal" data-id="213" style="width:100% !important;display: none;" v-else>
+        </div> -->
         <ApiSelect v-if="isTool" />
       </div>
     </template>
     <template #contentAfter>
       <div class="bottom-wwads">
-        <div class="wwads wwads-cn wwads-horizontal" data-id="213" style="width:90% !important" v-if="showMingdao">
-        </div>
+        <!-- <div class="wwads wwads-cn wwads-horizontal" data-id="213" style="width:90% !important;display: none;" v-if="showMingdao">
+        </div> -->
       </div>
     </template>
   </NormalPage>

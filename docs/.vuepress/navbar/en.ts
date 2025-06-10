@@ -16,7 +16,7 @@ export const en = navbar([
         link: "https://github.com/alist-org/alist/discussions",
       },
       { text: "Telegram", link: "https://t.me/alist_chat" },
-      { text: "Discord", link: "https://discord.gg/F4ymsH4xv2" },
+      { text: "Wechat/QQ", link: "/community/" }
     ],
   },
   {
@@ -25,7 +25,7 @@ export const en = navbar([
     children: [
       { text: "Demo", link: "https://alist.pages.dev/" },
       { text: "V2", link: "https://alist-doc.nn.ci" },
-      { text: "Desktop", link: "https://ad.nn.ci/" },
+      // { text: "Desktop", link: "https://ad.nn.ci/" },
     ],
   },
   {
