@@ -8,11 +8,11 @@ const core = ref<Releases>();
 const web = ref<Map<string, Release>>();
 
 async function fetchCore() {
-  const resp = await fetch('https://api.github.com/repos/alist-org/alist/releases')
+  const resp = await fetch('https://api.github.com/repos/OpenListTeam/OpenList/releases')
   core.value = await resp.json()
 }
 async function fetchWeb() {
-  const resp = await fetch('https://api.github.com/repos/alist-org/alist-web/releases')
+  const resp = await fetch('https://api.github.com/repos/OpenListTeam/OpenList-Frontend/releases')
   const releases = await resp.json()
   web.value = new Map(releases.map((release: Release) => [`v${release.tag_name}`, release]))
 }
