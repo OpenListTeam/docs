@@ -18,6 +18,8 @@ star: true
 
 # 使用 Docker
 
+注意：OpenList 官方 Docker 镜像尚未发布。此处 Docker 镜像地址尚未更新。
+
 ## **安装**
 
 #### **docker cli**

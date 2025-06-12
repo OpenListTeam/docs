@@ -18,6 +18,8 @@ star: true
 
 # Use Docker
 
+Note: The official OpenList Docker image has not yet been released. The Docker image address here has not been updated.
+
 ## Install
 
 #### **docker cli**
