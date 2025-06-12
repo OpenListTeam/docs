@@ -20,6 +20,9 @@ star: true
 
 # PaaS
 
+N/A
+
+<!-- 
 For specific usage, please refer to the `README.md` in the corresponding repository.
 
 ### Claw Cloud Run
@@ -36,3 +39,4 @@ https://github.com/alist-org/alist-heroku-postgres
 
 ### **Sealos**
 [![](https://raw.githubusercontent.com/labring-actions/templates/main/Deploy-on-Sealos.svg)](https://cloud.sealos.io/?openapp=system-template%3FtemplateName%3Dalist)
+-->
