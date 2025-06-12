@@ -43,7 +43,7 @@ Whether to enable package download, default is true. 【Not recommended especial
 
 Any content you want which are automatically placed at the beginning of the head of the web page
 
-- How to configure PWA（Desktop、Android、IOS）：**[alist/issues/6724](https://github.com/alist-org/alist/issues/6724#issuecomment-2220251541)**
+- How to configure PWA（Desktop、Android、IOS）：**[OpenList/issues/6724](https://github.com/OpenListTeam/OpenList/issues)**
 
 <br/>
 
@@ -107,7 +107,7 @@ The scope of the three methods`Sign All` > `Meta Information Add Password` > Add
 
 ## **Forward direct link params**
 
-You can check it out yourself：**https://github.com/alist-org/alist/issues/3123**
+You can check it out yourself：**https://github.com/OpenListTeam/OpenList/issues/3123**
 
 <br/>
 
@@ -115,9 +115,9 @@ You can check it out yourself：**https://github.com/alist-org/alist/issues/3123
 
 ### **Filename char mapping**
 
-Mainly to map some special characters so that Alist can work normally
+Mainly to map some special characters so that OpenList can work normally
 
-For example, the `/` symbol is a path symbol in the Alist program. Some people’s files have `/` symbols that cause the file to be disconnected halfway and cannot be viewed. We can use this method to map and convert.
+For example, the `/` symbol is a path symbol in the OpenList program. Some people’s files have `/` symbols that cause the file to be disconnected halfway and cannot be viewed. We can use this method to map and convert.
 
 ```json
 {"/": "|","xx1":"xx1","xx2":"xx2"}
