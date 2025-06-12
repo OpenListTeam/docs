@@ -21,13 +21,13 @@ star: true
 
 ## 这个是什么？
 
-这个是收集一些`OpenList`使用期间的一些错误码，然后如何解决（网络问题或者网盘更改API以及其它一些问题可能会无法当时解决需要人为去干预）
+这个是收集一些 `OpenList` 使用期间的一些错误码，然后如何解决（网络问题或者网盘更改 API 以及其它一些问题可能会无法当时解决需要人为去干预）
 
 <br/>
 
 -----
 
-<Badge text="Q" type="warning" vertical="middle" />：阿里云盘open出现 **TooManyRequests** 、**Too Many Requests**
+<Badge text="Q" type="warning" vertical="middle" />：阿里云盘 open 出现 **TooManyRequests** 、**Too Many Requests**
 
 <br/>
 
@@ -35,7 +35,7 @@ star: true
 
 -----
 
-<Badge text="Q" type="warning" vertical="middle" />：阿里云盘open出现 **ExceedCapacityForbidden** 
+<Badge text="Q" type="warning" vertical="middle" />：阿里云盘 open 出现 **ExceedCapacityForbidden** 
 
 <br/>
 
@@ -43,13 +43,13 @@ star: true
 
 -----
 
-<Badge text="Q" type="warning" vertical="middle" />：Token is expired（**出现在登录OpenList账号时**）
+<Badge text="Q" type="warning" vertical="middle" />：Token is expired（**出现在登录 OpenList 账号时**）
 
 <br/>
 
-<Badge text="A" type="info" vertical="middle" />：是指你`OpenList`登录有效期到了默认是`48`小时，可以在修改`config.json`配置文件中
+<Badge text="A" type="info" vertical="middle" />：是指你 `OpenList` 登录有效期到了默认是 `48` 小时，可以在修改 `config.json` 配置文件中
 
-- 如果你登录的时候提示登录成功然后又显示这个提示，检查你是否使用了CDN加速等给OpenList进行了缓存导致的
+- 如果你登录的时候提示登录成功然后又显示这个提示，检查你是否使用了 CDN 加速等给 OpenList 进行了缓存导致的
 
 -----
 
@@ -57,7 +57,7 @@ star: true
 
 <br/>
 
-<Badge text="A" type="info" vertical="middle" />：一般是在添加`驱动`的时候刷新令牌(token)不对，更换正确的替换了即可解决。
+<Badge text="A" type="info" vertical="middle" />：一般是在添加`驱动`的时候刷新令牌 (token) 不对，更换正确的替换了即可解决。
 
 -----
 
@@ -115,7 +115,7 @@ star: true
 
 <br/>
 
-<Badge text="A" type="info" vertical="middle" />：对方的`OpenList`站点不允许挂载，[**查看详细说明**](../guide/drivers/Alist%20V2%20V3.md#链接)
+<Badge text="A" type="info" vertical="middle" />：对方的 `OpenList` 站点不允许挂载，[**查看详细说明**](../guide/drivers/Alist%20V2%20V3.md#链接)
 
 -----
 
@@ -149,11 +149,11 @@ star: true
 
 -----
 
-<Badge text="Q" type="warning" vertical="middle" />：failed get objs: failed to list objs: NotFound.FileId:The resource file_id cannot be found. file_id:634e704cefa78f92fefd4c779f7422d820082d041（**添加阿里云盘open**）
+<Badge text="Q" type="warning" vertical="middle" />：failed get objs: failed to list objs: NotFound.FileId:The resource file_id cannot be found. file_id:634e704cefa78f92fefd4c779f7422d820082d041（**添加阿里云盘 open**）
 
 <br/>
 
-<Badge text="A" type="info" vertical="middle" />：添加阿里云盘open存储时，`根文件夹ID`错误上述最后哪个ID就是错误的ID去获取正确的替换即可
+<Badge text="A" type="info" vertical="middle" />：添加阿里云盘 open 存储时，`根文件夹 ID`错误上述最后哪个 ID 就是错误的 ID 去获取正确的替换即可
 
 -----
 
@@ -169,7 +169,7 @@ star: true
 
 <br/>
 
-<Badge text="A" type="info" vertical="middle" />：连续登录输入6次密码错误就会锁定，重启OpenList即可重置。
+<Badge text="A" type="info" vertical="middle" />：连续登录输入 6 次密码错误就会锁定，重启 OpenList 即可重置。
 
 -----
 
@@ -181,27 +181,27 @@ star: true
 
 -----
 
-<Badge text="Q" type="warning" vertical="middle" />：failed get objs: failed to list objs: Unable to retrieve user's mysite URL（**添加onedrive_app时**）
+<Badge text="Q" type="warning" vertical="middle" />：failed get objs: failed to list objs: Unable to retrieve user's mysite URL（**添加 onedrive_app 时**）
 
 <br/>
 
-<Badge text="A" type="info" vertical="middle" />：新建的 `OneDrive`用户账号不是实时生效，会延时生效等待几小时后试试看 [**案例**](https://github.com/alist-org/docs/discussions/189#discussioncomment-5928892)
+<Badge text="A" type="info" vertical="middle" />：新建的 `OneDrive` 用户账号不是实时生效，会延时生效等待几小时后试试看 [**案例**](https://github.com/alist-org/docs/discussions/189#discussioncomment-5928892)
 
 -----
 
-<Badge text="Q" type="warning" vertical="middle" />：failed to start: listen tcp 0.0.0.0:5244: bind: address already in use （**启动OpenList程序时**）
+<Badge text="Q" type="warning" vertical="middle" />：failed to start: listen tcp 0.0.0.0:5244: bind: address already in use （**启动 OpenList 程序时**）
 
 <br/>
 
-<Badge text="A" type="info" vertical="middle" />：5244端口号已经被使用，排查是否被占用(一般来说你已经启动了一个5244端口的OpenList导致的)，或者修改OpenList启动的端口号,[**如何修改**](../config/configuration.md#port)
+<Badge text="A" type="info" vertical="middle" />：5244 端口号已经被使用，排查是否被占用(一般来说你已经启动了一个 5244 端口的 OpenList 导致的)，或者修改 OpenList 启动的端口号,[**如何修改**](../config/configuration.md#port)
 
 -----
 
-<Badge text="Q" type="warning" vertical="middle" />：**[OpenList上传文件时提示](why.md#为什么我在上传文件时得到-http-413-错误)**：Request failed with status code 413
+<Badge text="Q" type="warning" vertical="middle" />：**[OpenList 上传文件时提示](why.md#为什么我在上传文件时得到 -http-413- 错误)**：Request failed with status code 413
 
 <br/>
 
-<Badge text="A" type="info" vertical="middle" />：Nginx配置的文件大小所限制，修改Nginx的`client_max_body_size`就可以，如果你是宝塔搭建的去宝塔页面修改[示例](https://blog.csdn.net/u012514495/article/details/127981183)
+<Badge text="A" type="info" vertical="middle" />：Nginx 配置的文件大小所限制，修改 Nginx 的 `client_max_body_size` 就可以，如果你是宝塔搭建的去宝塔页面修改[示例](https://blog.csdn.net/u012514495/article/details/127981183)
 
 -----
 

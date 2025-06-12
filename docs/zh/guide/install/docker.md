@@ -92,16 +92,16 @@ ERRO[2022-11-20 12:05:19] error [unaligned 64-bit atomic operation] while run ta
 
 ## **查看管理员信息：**
 
-#### **低于v3.25.0版本**
+#### **低于 v3.25.0 版本**
 
 ```bash
 docker exec -it alist ./alist admin
 ```
 
 
-#### **高于v3.25.0版本**
+#### **高于 v3.25.0 版本**
 
-3.25.0以上版本将密码改成加密方式存储的hash值，无法直接反算出密码，如果忘记了密码只能通过重新 **`随机生成`** 或者 **`手动设置`**
+3.25.0 以上版本将密码改成加密方式存储的 hash 值，无法直接反算出密码，如果忘记了密码只能通过重新 **`随机生成`** 或者 **`手动设置`**
 
 ```bash
 # 随机生成一个密码
@@ -114,11 +114,11 @@ docker exec -it alist ./alist admin set NEW_PASSWORD
 ::: details docker-cli 更新
 
 
-1. docker ps -a #查看容器(找Alist容器的ID)
+1. docker ps -a # 查看容器 (找 Alist 容器的 ID)
 
-2. docker stop ID #停止Alist运行,不然无法删除(这次Alist容器的ID是d429749a6e69，每一次安装都不一样自己看)
+2. docker stop ID # 停止 Alist 运行,不然无法删除 (这次 Alist 容器的 ID 是 d429749a6e69，每一次安装都不一样自己看)
 
-3. docker rm ID #删除Alist容器(数据还在只要你不手动删除)
+3. docker rm ID # 删除 Alist 容器(数据还在只要你不手动删除)
 
 4. docker pull xhofe/alist:latest
 
@@ -137,12 +137,12 @@ docker exec -it alist ./alist admin set NEW_PASSWORD
 
 :::
 
-Q：我的版本是v3.x.x 怎么也升级不到最新版 `docker pull xhofe/alist:latest`拉取最新不行 改成docker-compose安装还是3.x.x版本
+Q：我的版本是v3.x.x 怎么也升级不到最新版 `docker pull xhofe/alist:latest` 拉取最新不行 改成 docker-compose 安装还是 3.x.x 版本
 
-A：原因是你的docker设置了镜像，从镜像更新不到最新版本，改一下/etc/docker/daemon.json，删除"registry-mirrors": ["镜像加速器地址"]
+A：原因是你的 docker 设置了镜像，从镜像更新不到最新版本，改一下 /etc/docker/daemon.json，删除 "registry-mirrors": ["镜像加速器地址"]
 
 - 删除若不行，可以考虑更换一个`镜像加速地址`
-- 或者简单粗暴：下载时将`xhofe/alist:latest` 替换为`xhofe/alist:v3.16.3`（指定版本，写教程时最新的是3.16.3）
+- 或者简单粗暴：下载时将 `xhofe/alist:latest` 替换为 `xhofe/alist:v3.16.3`（指定版本，写教程时最新的是 3.16.3）
 
 ### **编译镜像**
 

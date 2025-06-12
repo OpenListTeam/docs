@@ -40,15 +40,15 @@ features:
 
   - title: 打包下载/批量下载
     icon: iconfont icon-cache
-    details: 使用浏览器的 stream api 支持打包下载，无需使用服务器 / 使用Aria2进行批量下载支持文件夹
+    details: 使用浏览器的 stream api 支持打包下载，无需使用服务器 / 使用 Aria2 进行批量下载支持文件夹
 
   - title: 单点登录
     icon: font-icon icon fa-solid fa-repeat-1
-    details: 使用单点登录快速登录OpenList
+    details: 使用单点登录快速登录 OpenList
 
-  - title: 自动注册OpenList帐号
+  - title: 自动注册 OpenList 帐号
     icon: fa-solid fa-file-user
-    details: 使用单点登录自动注册为OpenList帐号快速注册
+    details: 使用单点登录自动注册为 OpenList 帐号快速注册
 
   - title: 离线下载
     icon: fa-solid fa-folder-arrow-down

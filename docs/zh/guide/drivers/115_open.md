@@ -23,7 +23,7 @@ headerDepth: 5
 
 ::: tip
 
-使用官方  [**115开放平台 API**](https://open.115.com) 开发
+使用官方  [**115 开放平台 API**](https://open.115.com) 开发
 
 :::
 
@@ -56,7 +56,7 @@ headerDepth: 5
 
 ::: warning Token 泄漏后处理方法
 
-如果不小心泄漏了 Token，可以前往115设备登录管理解除应用授权
+如果不小心泄漏了 Token，可以前往 115 设备登录管理解除应用授权
 
 - 115 APP：【**iOS** 、**Android**】版本 需要 ≥ 35.11.0
 - 115 网页端：**https://115.com/?mode=device_manage**
@@ -67,7 +67,7 @@ headerDepth: 5
 failed get objs: failed to list objs: code: 40140116, message: no auth
 ```
 
-一个帐号可以在同一个应用获取两次`Refresh token`，第三次获取后第一次获取到的`Refresh token`就会失效，使用第一个`Refresh token`会提示上面的错误
+一个帐号可以在同一个应用获取两次 `Refresh token`，第三次获取后第一次获取到的 `Refresh token` 就会失效，使用第一个 `Refresh token` 会提示上面的错误
 
 ![](/img/drivers/115/115_auth_b.png#light)
 ![](/img/drivers/115/115_auth_h.png#dark)
@@ -80,7 +80,7 @@ failed get objs: failed to list objs: code: 40140116, message: no auth
 
 ### **使用其他 APP ID 获取刷新令牌**
 
-例如使用自己申请的开发者应用ID获取刷新令牌，在获取刷新令牌前先填写应用`APP ID`再点击获取刷新令牌按钮
+例如使用自己申请的开发者应用 ID 获取刷新令牌，在获取刷新令牌前先填写应用 `APP ID` 再点击获取刷新令牌按钮
 
 ![](/img/drivers/115/115_b_t.png#light)
 ![](/img/drivers/115/115_h_t.png#dark)
@@ -95,7 +95,7 @@ failed get objs: failed to list objs: code: 40140116, message: no auth
 
 默认根目录ID为：`0`
 
-打开 115 网盘官网，点击进入要设置的文件夹时点击 URL 中 `cid`后面的数字
+打开 115 网盘官网，点击进入要设置的文件夹时点击 URL 中 `cid` 后面的数字
 
 如 <https://115.com/?cid=249163533602609229&offset=0&tab=&mode=wangpan>
 

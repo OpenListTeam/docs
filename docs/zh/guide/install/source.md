@@ -28,7 +28,7 @@ star: true
 
 ## **环境准备**
 
-首先，你需要一个有`git`，`nodejs`，`pnpm`，`golang>=1.20`，`gcc`的环境
+首先，你需要一个有 `git`，`nodejs`，`pnpm`，`golang>=1.20`，`gcc` 的环境
 
 ## **构建前端**
 
@@ -60,10 +60,10 @@ go build -ldflags="$ldflags" .
 
 ::: details 你可能需要的编译教程视频
 
-Windows版本：**https://www.bilibili.com/video/BV1Xr4y1z723**
-（虽然是V2版的，但是跟V3版本一样的..）
+Windows 版本：**https://www.bilibili.com/video/BV1Xr4y1z723**
+（虽然是 V2 版的，但是跟 V3 版本一样的..）
 
-Linux版本：**https://www.bilibili.com/video/BV1GW4y1s742**
+Linux 版本：**https://www.bilibili.com/video/BV1GW4y1s742**
 
 番外编译文档：**https://www.yuque.com/anwenya/alist/glqlhu**
 

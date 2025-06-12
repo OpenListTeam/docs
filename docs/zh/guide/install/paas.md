@@ -23,7 +23,7 @@ star: true
 N/A
 
 <!--
-具体用法请参考对应仓库中的`README.md`。
+具体用法请参考对应仓库中的 `README.md`。
 
 ### Claw Cloud Run
 [https://console.run.claw.cloud/signin](https://console.run.claw.cloud/signin?link=UTMO60WWUZKY)
