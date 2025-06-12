@@ -43,7 +43,7 @@ Then the directory ID is `66889900`
 
 Generate address：**https://www.febbox.com/open/clients**
 
-- The generated client ID and secret key are filled in in the opposite order to the AList, so be careful not to fill them in incorrectly.
+- The generated client ID and secret key are filled in in the opposite order to the OpenList, so be careful not to fill them in incorrectly.
 
 ![](/img/drivers/febbox/febox.png)
 

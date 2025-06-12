@@ -17,7 +17,7 @@ sticky: true
 # this page will appear in starred articles
 star: true
 ---
-# AList V2/V3
+# OpenList V2/V3
 
 
 
@@ -42,19 +42,19 @@ star: true
 
 ### **链接**
 
-你要挂载的AList链接
+你要挂载的OpenList链接
 
 
 
 
 
-::::tabs#AList
+::::tabs#OpenList
 
 @tab V3
 
 :::warning
 
-（**v3.16.3**）若是你挂载的AList"未"开启[**允许挂载**](../../config/site.md#允许挂载)，哪你将无法进行挂载，提示如下错误
+（**v3.16.3**）若是你挂载的OpenList"未"开启[**允许挂载**](../../config/site.md#允许挂载)，哪你将无法进行挂载，提示如下错误
 
 ```
 Failed init storage: the site does not allow mounted
@@ -82,7 +82,7 @@ failed get objs: failed to list objs: request failed,code: 400, message: Key: 'L
 
 （元信息密码选项**不是必填**，给有需要的人说明）
 
-你要挂载的AList路径有设置元信息密码
+你要挂载的OpenList路径有设置元信息密码
 
 - 例1：
   - 你挂载的路径是 `/a`
@@ -98,11 +98,11 @@ failed get objs: failed to list objs: request failed,code: 400, message: Key: 'L
 
 ## **用户名**
 
-你要挂载的`AList`用户名（账号）
+你要挂载的`OpenList`用户名（账号）
 
 ## **密码**
 
-你要挂载的`AList`用户名对应的密码
+你要挂载的`OpenList`用户名对应的密码
 
 :::tip 温馨提示
 
@@ -114,7 +114,7 @@ failed get objs: failed to list objs: request failed,code: 400, message: Key: 'L
 
    - 例^2^：[**根文件夹ID**](#根文件夹id)：`file`，用户名的访问权限文件夹没有`file`，这样访问也会提示错误
 
-2. `AList管理`在给予别人挂载的时,在新建用户时可以选择访问的文件夹，默认的`/`
+2. `OpenList管理`在给予别人挂载的时,在新建用户时可以选择访问的文件夹，默认的`/`
    - 用户挂载时候，[**根文件夹ID**](#根文件夹id) 建议写`/`，这样就不会因为管理给了不同访问文件夹权限而提示错误
 
 3. 最极端的情况，首选你知道此次添加的`用户名`能访问的有那文件夹权限，里面有没有，你想单独挂载的路径然后写到[**根文件夹ID**](#根文件夹id)
@@ -136,7 +136,7 @@ failed get objs: failed to list objs: request failed,code: 400, message: Key: 'L
 
 需要先启用 `Web代理` 或者 `Webdav本地代理` 才会生效
 
-- 目前仅适用于：`别名`、`中国移动云盘`、`AList V3`
+- 目前仅适用于：`别名`、`中国移动云盘`、`OpenList V3`
   - 具体功能说明：**https://github.com/alist-org/alist/pull/6496#issue-2309839607**
 
 

@@ -87,7 +87,7 @@ The default page size of the `alist` if `Pagination type` doesn't set to `All`, 
 
 ### **allow indexing**
 
-Whether to allow others to mount your AList to build the index, check it and enable it.
+Whether to allow others to mount your OpenList to build the index, check it and enable it.
 
 The default is off, use with caution.  (New features in version 3.8.0)
 
@@ -95,7 +95,7 @@ The default is off, use with caution.  (New features in version 3.8.0)
 
 ## **allow mounted**
 
-Do you allow others to mount your AList and then access it
+Do you allow others to mount your OpenList and then access it
 
 **It is enabled by default, it is recommended to turn it off if you don’t want others to mount it** (v3.16.3 new feature)
 

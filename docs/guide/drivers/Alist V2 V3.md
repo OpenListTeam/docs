@@ -17,7 +17,7 @@ sticky: true
 # this page will appear in starred articles
 star: true
 ---
-# AList V2/V3
+# OpenList V2/V3
 
 
 
@@ -42,15 +42,15 @@ First of all, you need to know whether the other party is V2 or V3.
 
 ### **Link**
 
-AList link you want to mount
+OpenList link you want to mount
 
 
 
-::::tabs#AList
+::::tabs#OpenList
 
 @tab V3
 
-(**v3.16.3**) If the AList you mounted is "not" enabled [**Allow Mount**](../../config/site.md#allow-mounted), you will not be able to To mount, the following error is prompted
+(**v3.16.3**) If the OpenList you mounted is "not" enabled [**Allow Mount**](../../config/site.md#allow-mounted), you will not be able to To mount, the following error is prompted
 
 ```
 Failed init storage: the site does not allow mounted
@@ -82,7 +82,7 @@ failed get objs: failed to list objs: request failed,code: 400, message: Key: 'L
 
 The Meta  password refers to the meta information password
 
-The AList path you want to mount has a meta information password set
+The OpenList path you want to mount has a meta information password set
 
 - example 1:
   - The path you mount is `/a`
@@ -98,11 +98,11 @@ The AList path you want to mount has a meta information password set
 
 ## **Username**
 
-`AList` user name (account) you want to mount
+`OpenList` user name (account) you want to mount
 
 ## **Password**
 
-The password corresponding to the `AList` username you want to mount
+The password corresponding to the `OpenList` username you want to mount
 
 :::tip Kind tips
 
@@ -114,7 +114,7 @@ It looks very troublesome, but you can understand it after a little operation. T
 
     -Example ^2^: [**root directory path**](#root directory path): `file`, the access permission folder of the user name does not have `file`, so access will prompt an error
 
-2. When `AList Management` is given to others to mount, you can choose the folder to access when creating a new user. The default `/`
+2. When `OpenList Management` is given to others to mount, you can choose the folder to access when creating a new user. The default `/`
     - When the user mounts, [**root directory path**](#root directory path) is recommended to write `/`, so as not to prompt an error because the management has given different access folder permissions
 
 3. In the most extreme case, it is preferred that you know that the `username` added this time can access the folder permissions, whether there is any, and then write the path you want to mount separately to [**root directory path** ](#root directory path)
@@ -134,7 +134,7 @@ You don’t need to write, it will be automatically filled after filling in `Use
 
 You need to enable `Web Proxy` or` Webdav Native Proxy` to take effect
 
-- Currently only applicable to：`alias`、`139Yun`、`AList V3`
+- Currently only applicable to：`alias`、`139Yun`、`OpenList V3`
   - Function Description：**https://github.com/alist-org/alist/pull/6496#issue-2309839607**
 
 

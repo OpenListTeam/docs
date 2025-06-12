@@ -29,7 +29,7 @@ secrets ID
 
 ::: warning matters needing attention
 
-1. Remember to write and save the background parameters of AList. After writing and saving, you have to go back to the bottom of the personal data and there will be a button that needs to be bound, otherwise it cannot be used
+1. Remember to write and save the background parameters of OpenList. After writing and saving, you have to go back to the bottom of the personal data and there will be a button that needs to be bound, otherwise it cannot be used
 
 2. Only one of the four types of single sign-on can be enabled temporarily. If you used other single sign-on methods before and then changed to a new single Unbind (just one click) and then bind the single sign-on method you want to use now.
 
@@ -73,7 +73,7 @@ Open **https://github.com/settings/developers** Click **`New OAuth App`**
 
 Remember to get **Client secrets** after filling it out, and then fill it in the Alist background.
 
-Remember to write and save the background parameters of AList. After writing and saving, you have to go back to the bottom of the personal data and there will be a button that needs to be bound, otherwise it cannot be used
+Remember to write and save the background parameters of OpenList. After writing and saving, you have to go back to the bottom of the personal data and there will be a button that needs to be bound, otherwise it cannot be used
 
 ### **Completely fill in the reference schematic**
 
@@ -111,7 +111,7 @@ Write the callback parameters well. Let’s go to the left column and find `Priv
 
 
 
-Remember to write and save the background parameters of AList. After writing and saving, you have to go back to the bottom of the personal data and there will be a button that needs to be bound, otherwise it cannot be used
+Remember to write and save the background parameters of OpenList. After writing and saving, you have to go back to the bottom of the personal data and there will be a button that needs to be bound, otherwise it cannot be used
 
 ### **Completely fill in the reference schematic**
 
@@ -146,11 +146,11 @@ After filling it out, we click `Certificate and Password` on the left column to 
 
 The client ID is in `Overview` at the top of the left column, find the application (client) ID, which is the client ID we need to fill in the Alist
 
-- We have got the client ID and secret key and fill them in the AList single sign-on configuration.
+- We have got the client ID and secret key and fill them in the OpenList single sign-on configuration.
 
 
 
-Remember to write and save the background parameters of AList. After writing and saving, you have to go back to the bottom of the personal data and there will be a button that needs to be bound, otherwise it cannot be used
+Remember to write and save the background parameters of OpenList. After writing and saving, you have to go back to the bottom of the personal data and there will be a button that needs to be bound, otherwise it cannot be used
 
 ### **Completely fill in the reference schematic**
 
@@ -187,11 +187,11 @@ After filling it out, click Create to get the OAuth client ID and secret key
 
 - (It doesn't matter if you accidentally close it here, just click on the name of the application we created and enter it in the upper right position to see it)
 
-We have got the client ID and secret key and fill them in the AList single sign-on configuration.
+We have got the client ID and secret key and fill them in the OpenList single sign-on configuration.
 
 
 
-Remember to write and save the background parameters of AList. After writing and saving, you have to go back to the bottom of the personal data and there will be a button that needs to be bound, otherwise it cannot be used
+Remember to write and save the background parameters of OpenList. After writing and saving, you have to go back to the bottom of the personal data and there will be a button that needs to be bound, otherwise it cannot be used
 
 #### **Agree to screen configuration**
 
@@ -219,7 +219,7 @@ After we enter `Casdoor`, we first create **Organization**^1^, **Token**^2^, **A
 
 Do not use the default organization (**app-built-in**) directly, because all users in this organization are global administrator accounts
 
-Then fill in the `AList` backstage single sign-on option one by one. The user’s parameters are ignored for the time being. They are filled in when the personal data is bound to the single sign-on.
+Then fill in the `OpenList` backstage single sign-on option one by one. The user’s parameters are ignored for the time being. They are filled in when the personal data is bound to the single sign-on.
 
 ![sso](/img/advanced/casdoor.png)
 
@@ -234,7 +234,7 @@ Then the `Casdoor` window will pop up, we can enter our registered user name
 
 #### **Access some other vendors on Casdoor**
 
-In addition to the four that `AList` has already connected to `GitHub Dingding Google Microsoft`, it is also connected to `QQ Baidu Feishu WeChat/Enterprise WeChat Douyin Bilibili` and so on, all [**click Check out all the manufacturers that can be accessed here**](https://casdoor.org/docs/provider/oauth/overview), of course, the four that `AList` has already accessed can also be added to `Casdoor`
+In addition to the four that `OpenList` has already connected to `GitHub Dingding Google Microsoft`, it is also connected to `QQ Baidu Feishu WeChat/Enterprise WeChat Douyin Bilibili` and so on, all [**click Check out all the manufacturers that can be accessed here**](https://casdoor.org/docs/provider/oauth/overview), of course, the four that `OpenList` has already accessed can also be added to `Casdoor`
 
 **View detailed tutorials on accessing other providers: [click to view](https://anwen-anyi.github.io/index/09-ssologin.html)**
 
@@ -245,13 +245,13 @@ In addition to the four that `AList` has already connected to `GitHub Dingding G
 @tab Authentik
 
 ## Authentik Setup
-**Create a Provider for AList**
+**Create a Provider for OpenList**
   1. Menu -> Applications -> Providers -> Create
   2. Select `OAuth2/OpenID Provider` and click next
-  3. Enter an application name, this guide assumes you will call the provider `AList`
+  3. Enter an application name, this guide assumes you will call the provider `OpenList`
   4. Select your authorization flow. The built-in `default-provider-authorization-implicit-consent` is acceptable
   5. Make note of the `Client ID` and `Client Secret` fields as provided by Authentik - save these values for later
-  6. For Redirect UDIs/Origins, enter the following, replacing [your.alist.domain] with the FQDN for your AList installation:
+  6. For Redirect UDIs/Origins, enter the following, replacing [your.alist.domain] with the FQDN for your OpenList installation:
 ```bash title="Callback" parameters
 https://your.alist.domain/api/auth/sso_callback\?method=sso_get_token
 https://your.alist.domain/api/auth/sso_callback\?method=get_sso_id
@@ -261,11 +261,11 @@ https://your.alist.domain/api/auth/sso_callback\?method=get_sso_id
   7. Make note of the signing key selected as you will need it later. This guide assumes you will use the default `authentik Self-signed Certificate`
   8. Save the new provider
 
-**Create an Application for AList**
+**Create an Application for OpenList**
   1. Menu -> Applications -> Application -> Create
-  2. Enter an application name, recommended `AList`
+  2. Enter an application name, recommended `OpenList`
   3. An application slug of `alist` will be automatically selected for you. This guide assumes you will keep this value
-  4. Select the provider by name you selected in Provider Setup step 3 - `AList`
+  4. Select the provider by name you selected in Provider Setup step 3 - `OpenList`
   5. Save the new application
 
 **Retrieve the JWT certificate**
@@ -273,7 +273,7 @@ https://your.alist.domain/api/auth/sso_callback\?method=get_sso_id
   2. Select the `>` next to the `authentik Self-signed Certificate`. If you chose another certificate for the application, select that certificate instead
   3. Click Download Certificate to get a copy of the public JWT key
 
-## AList Setup
+## OpenList Setup
 - **Sso login enabled:** `yes`
 - **Sso login platform:** `OIDC`
 - **Sso client id:** [Client ID from Authentik]
@@ -292,11 +292,11 @@ https://your.alist.domain/api/auth/sso_callback\?method=get_sso_id
 
 
 
-## **SSO automatically registers as an AList account**
+## **SSO automatically registers as an OpenList account**
 
-- ==AList Version > **v3.22.1** New Features==
+- ==OpenList Version > **v3.22.1** New Features==
 
-Before using single sign-on to register as an AList account, we need to bind the single sign-on of AList first, the binding method is explained above
+Before using single sign-on to register as an OpenList account, we need to bind the single sign-on of OpenList first, the binding method is explained above
 
 - Supports the `five` single sign-on methods mentioned above
 
@@ -319,7 +319,7 @@ Please refer to the detailed description below for how to fill in, the schematic
 
 ### **<i class="fa-solid fa-circle-1" style="color: #409eff;"></i>SSO auto register**
 
-If we want SSO single sign-on to be registered as an AList account, we need to enable this option before it can be used
+If we want SSO single sign-on to be registered as an OpenList account, we need to enable this option before it can be used
 
 <br/>
 
@@ -327,7 +327,7 @@ If we want SSO single sign-on to be registered as an AList account, we need to e
 
 ### **<i class="fa-solid fa-circle-2" style="color: #409eff;"></i>SSO default dir**
 
-That is to say, the default path used by the registered account is equivalent to the `Base path` in the AList user settings.
+That is to say, the default path used by the registered account is equivalent to the `Base path` in the OpenList user settings.
 
 It can be the root directory `/`, or the path `/path/test/Demo` specified by the user
 
@@ -362,7 +362,7 @@ I won’t say much about the examples, just add the permissions you need
 
 #### **<i class="fa-solid fa-circle-4" style="color: #409eff;"></i>Precautions and instructions**
 
-**4.1-There is already this user in the AList user database**
+**4.1-There is already this user in the OpenList user database**
 
 | username          | password | base_path | role | permission | opt_secret | github_id | disabled | sso_id      |
 | ----------------- | -------- | --------- | ---- | ---------- | ---------- | --------- | -------- | ----------- |
@@ -371,13 +371,13 @@ I won’t say much about the examples, just add the permissions you need
 
 As shown in the above table, a string of redundant ids is added after the newly registered single sign-on user name
 
-This is because the same user already exists in the AList user database, so the sso_id is also added after the user name
+This is because the same user already exists in the OpenList user database, so the sso_id is also added after the user name
 
-If your newly registered single sign-on user name does not exist in the AList user database, it will not add the sso_id after the name
+If your newly registered single sign-on user name does not exist in the OpenList user database, it will not add the sso_id after the name
 
 <br/>
 
-**4.2-What should I do if I don’t want the SSO account to be registered as an AList account?**
+**4.2-What should I do if I don’t want the SSO account to be registered as an OpenList account?**
 
 Just turn `SSO auto register` off,This will not affect the use of accounts that have been registered using Sso
 
@@ -385,10 +385,10 @@ Just turn `SSO auto register` off,This will not affect the use of accounts that 
 
 **4.3-If I turn off the single sign-on option, what should I do with the account registered with Sso?**
 
-Don't worry, after using single sign-on to register and log in to AList, log in in the background, and find `personal information` after logging in
+Don't worry, after using single sign-on to register and log in to OpenList, log in in the background, and find `personal information` after logging in
 
-- You can modify **`username`** and **`password`** by yourself, save it after modification, so that you can log in with the AList account normally
-- At this time, you can click `Unbind Single Sign-On Platform`, you can unbind or not unbind, and the subsequent [**default path**](#sso-default-dir) and [**default permissions**](#sso-default-permission) of this user can only be modified by the administrator in the AList background user
+- You can modify **`username`** and **`password`** by yourself, save it after modification, so that you can log in with the OpenList account normally
+- At this time, you can click `Unbind Single Sign-On Platform`, you can unbind or not unbind, and the subsequent [**default path**](#sso-default-dir) and [**default permissions**](#sso-default-permission) of this user can only be modified by the administrator in the OpenList background user
 
 <br/>
 
@@ -402,7 +402,7 @@ Don't worry, after using single sign-on to register and log in to AList, log in 
 }
 ```
 
-This is because [Single Sign-On Automatic Registration](#sso-auto-register) is not enabled for the AList account, and the single sign-on cannot be registered as an AList account
+This is because [Single Sign-On Automatic Registration](#sso-auto-register) is not enabled for the OpenList account, and the single sign-on cannot be registered as an OpenList account
 
 - If you are an administrator, you can turn it on
 - If you are a user, you can contact the administrator to enable
@@ -411,11 +411,11 @@ This is because [Single Sign-On Automatic Registration](#sso-auto-register) is n
 
 ## **Sso compatibility mode**
 
-AList single -point login is bound to Dingtalk, and then opens Alist in the **`Dingtalk`** application, When you log in, choose Dingtalk login and jump to your computer browser. After authorization, you find that there is no response, because the browser cannot jump to the Dingtalk application inner browser page
+OpenList single -point login is bound to Dingtalk, and then opens Alist in the **`Dingtalk`** application, When you log in, choose Dingtalk login and jump to your computer browser. After authorization, you find that there is no response, because the browser cannot jump to the Dingtalk application inner browser page
 
 At this time, you need to open the **`sso compatability mode`** again to click on the login to log in successfully
 
-**AList applied in Dingtalk and opened as shown in the figure：**
+**OpenList applied in Dingtalk and opened as shown in the figure：**
 
 ![](/img/advanced/sso_cm.png)
 
@@ -426,7 +426,7 @@ At this time, you need to open the **`sso compatability mode`** again to click o
 A picture teaches you to create a new application and add it
 
 - LOGO is not modified when the newly -built newly built, you can wait for the newly built and then modify ^(See_Figure_2)^ 
-- If you just browse AList in the Dingtalk application, you do n’t need a single -point login management, you do n’t need to set up a single -point login configuration, you can just add an application
+- If you just browse OpenList in the Dingtalk application, you do n’t need a single -point login management, you do n’t need to set up a single -point login configuration, you can just add an application
 
 ![](/img/advanced/sso_add_app.png)
 

@@ -72,7 +72,7 @@ GET /api/public/settings
     "robots_txt": "User-agent: *\nAllow: /",
     "search_index": "none",
     "settings_layout": "responsive",
-    "site_title": "AList",
+    "site_title": "OpenList",
     "sso_login_enabled": "false",
     "sso_login_platform": "",
     "version": "v3.25.1",

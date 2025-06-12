@@ -31,7 +31,7 @@ The path of folder you wanted to mount. For example:
 
 You need to use the `ffmpeg` tool to add, I will not (wait for replenishment) for the time being
 
-- You need to use AList version ≥ [**v3.12.0**](https://github.com/alist-org/alist/releases/tag/v3.12.0)
+- You need to use OpenList version ≥ [**v3.12.0**](https://github.com/alist-org/alist/releases/tag/v3.12.0)
   - Add thumbnail for video with ffmpeg  -  by [**@GodFinal**](https://github.com/GodFinal) and [**@Xhofe**](https://github.com/Xhofe) in [**#3556**](https://github.com/alist-org/alist/pull/3556) [**(309d6)**](https://github.com/alist-org/alist/commit/309d655)
   - Support both time and percent for video thumbnail  - by [**@1024th**](https://github.com/1024th) in [**#7802**](https://github.com/AlistGo/alist/pull/7802) [(**31a74**)](https://github.com/AlistGo/alist/commit/31a74708)
 

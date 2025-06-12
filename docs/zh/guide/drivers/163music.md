@@ -29,7 +29,7 @@ star: true
 
 进入 **https://music.163.com** 然后打开F12开发者模式
 
-随意打开一个请求只要携带 `Cookie` 找到以下两个参数填写进AList的 `Cookie` 中就可以使用
+随意打开一个请求只要携带 `Cookie` 找到以下两个参数填写进OpenList的 `Cookie` 中就可以使用
 
 - **__csrf** 、**MUSIC_U**
 

@@ -97,7 +97,7 @@ curl -fsSL "https://alist.example.com/beta.sh" | bash -s uninstall /root
 
 ## **获取密码**
 
-需要进入脚本安装AList的目录文件夹內执行如下命令
+需要进入脚本安装OpenList的目录文件夹內执行如下命令
 
 #### 低于v3.25.0版本
 
@@ -121,7 +121,7 @@ curl -fsSL "https://alist.example.com/beta.sh" | bash -s uninstall /root
 
 ## **一直在加载怎么办?**
 
-挂载了一些网盘但是不能用了重启了一下AList，发现进不去 网页提示：`获取设置失败：请稍后，正在加载存储`怎么办？
+挂载了一些网盘但是不能用了重启了一下OpenList，发现进不去 网页提示：`获取设置失败：请稍后，正在加载存储`怎么办？
 
 1. 等待几分钟
 2. 通过使用命令将`失效的/无法启动的`存储停止运行
@@ -131,7 +131,7 @@ curl -fsSL "https://alist.example.com/beta.sh" | bash -s uninstall /root
 :::tabs#stop
 @tab Linux
 
-如果通过命令停止 ==必须先进入你AList所在的文件夹输入命令==
+如果通过命令停止 ==必须先进入你OpenList所在的文件夹输入命令==
 
 如果我们不知道是那个存储原因导致的，可以通过命令列出所有的存储
 
@@ -142,7 +142,7 @@ curl -fsSL "https://alist.example.com/beta.sh" | bash -s uninstall /root
 ```bash{1}
 [root@OPSD-g8xXordx3B9f alist]# ./alist storage list
 INFO[2023-11-23 17:54:10] reading config file: data/config.json
-INFO[2023-11-23 17:54:10] load config from env with prefix: ALIST_
+INFO[2023-11-23 17:54:10] load config from env with prefix: OpenList_
 INFO[2023-11-23 17:54:10] init logrus...
 INFO[2023-11-23 17:54:10] Found 2 storages
 ┌─────────────────────────────────────────────────────────────────┐
@@ -155,7 +155,7 @@ INFO[2023-11-23 17:54:10] Found 2 storages
 
 输入查询命令后我们会进入另一种模式无法输入，如果添加的存储过多可以通过键盘的 ↑ 和 ↓ 来往下翻，等找到后可以按`Ctrl+C`退出
 
-例如我们是因为 `233` 这个存储停止的，我们就输入命令来停止，然后在 重启一下AList就可以了
+例如我们是因为 `233` 这个存储停止的，我们就输入命令来停止，然后在 重启一下OpenList就可以了
 
 ```bash
 ./alist storage disable /233
@@ -164,7 +164,7 @@ INFO[2023-11-23 17:54:10] Found 2 storages
 ```bash{1,5}
 [root@OPSD-g8xXordx3B9f alist]# ./alist storage disable /233
 INFO[2023-11-23 17:54:52] reading config file: data/config.json
-INFO[2023-11-23 17:54:52] load config from env with prefix: ALIST_
+INFO[2023-11-23 17:54:52] load config from env with prefix: OpenList_
 INFO[2023-11-23 17:54:52] init logrus...
 INFO[2023-11-23 17:54:52] Storage with mount path [/233] have been disabled
 ```
@@ -173,7 +173,7 @@ INFO[2023-11-23 17:54:52] Storage with mount path [/233] have been disabled
 
 @tab Windows
 
-如果通过命令停止 ==必须先进入你AList所在的文件夹输入命令==
+如果通过命令停止 ==必须先进入你OpenList所在的文件夹输入命令==
 
 如果我们不知道是那个存储原因导致的，可以通过命令列出所有的存储
 
@@ -184,7 +184,7 @@ alist.exe storage list
 ```bash{1}
 C:\Users\admin\Desktop\alist>alist.exe storage list
 INFO[2023-11-23 18:36:23] reading config file: data\config.json
-INFO[2023-11-23 18:36:23] load config from env with prefix: ALIST_
+INFO[2023-11-23 18:36:23] load config from env with prefix: OpenList_
 INFO[2023-11-23 18:36:23] init logrus...
 INFO[2023-11-23 18:36:23] Found 13 storages
 ┌──────────────────────────────────────────────────────────────────┐
@@ -192,13 +192,13 @@ INFO[2023-11-23 18:36:23] Found 13 storages
 │──────────────────────────────────────────────────────────────────│
 │ 1     AliyundriveOpen   /open                           true     │
 │ 9     Local             /code                           true     │
-│ 10    AList V3          /ceshi                          true     │
+│ 10    OpenList V3          /ceshi                          true     │
 └──────────────────────────────────────────────────────────────────┘
 ```
 
 输入查询命令后我们会进入另一种模式无法输入，如果添加的存储过多可以通过键盘的 ↑ 和 ↓ 来往下翻，等找到后可以按`Ctrl+C`退出
 
-例如我们是因为 `open` 这个存储停止的，我们就输入命令来停止，然后在 重启一下AList就可以了
+例如我们是因为 `open` 这个存储停止的，我们就输入命令来停止，然后在 重启一下OpenList就可以了
 
 ```bash
 alist.exe storage disable /open
@@ -207,7 +207,7 @@ alist.exe storage disable /open
 ```bash{1,5}
 C:\Users\admin\Desktop\alist>alist.exe storage disable /open
 INFO[2023-11-23 18:41:43] reading config file: data\config.json
-INFO[2023-11-23 18:41:43] load config from env with prefix: ALIST_
+INFO[2023-11-23 18:41:43] load config from env with prefix: OpenList_
 INFO[2023-11-23 18:41:43] init logrus...
 INFO[2023-11-23 18:41:43] Storage with mount path [/open] have been disabled
 ```
@@ -216,7 +216,7 @@ INFO[2023-11-23 18:41:43] Storage with mount path [/open] have been disabled
 
 @tab Mac
 
-如果通过命令停止 ==必须先进入你AList所在的文件夹输入命令==
+如果通过命令停止 ==必须先进入你OpenList所在的文件夹输入命令==
 
 由于暂时没有Mac设备，无法提供具体示例，但是命令都是一样的也可以参考 Linux 和 Windows
 
@@ -236,7 +236,7 @@ alist storage disable /Path
 
 @tab Docker
 
-这里的 `Docker` 目前只提供了使用文档命令安装的默认版本，==如果你搭建多个Docker版本的AList你需要修改个别参数喔~==
+这里的 `Docker` 目前只提供了使用文档命令安装的默认版本，==如果你搭建多个Docker版本的OpenList你需要修改个别参数喔~==
 
 如果我们不知道是那个存储原因导致的，可以通过命令列出所有的存储
 
@@ -247,7 +247,7 @@ docker exec -it alist ./alist storage list
 ```bash{1}
 [root@OPSD-g8xXordx3B9f alist]# docker exec -it alist ./alist storage list
 INFO[2023-11-23 11:50:08] reading config file: data/config.json
-INFO[2023-11-23 11:50:08] load config from env with prefix: ALIST_
+INFO[2023-11-23 11:50:08] load config from env with prefix: OpenList_
 INFO[2023-11-23 11:50:08] init logrus...
 INFO[2023-11-23 11:50:08] Found 8 storages
 ┌─────────────────────────────────────────────────────────────────┐
@@ -263,7 +263,7 @@ INFO[2023-11-23 11:50:08] Found 8 storages
 
 输入查询命令后我们会进入另一种模式无法输入，如果添加的存储过多可以通过键盘的 ↑ 和 ↓ 来往下翻，等找到后可以按`Ctrl+C`退出
 
-例如我们是因为 `pikpak` 这个存储停止的，我们就输入命令来停止，然后在 重启一下AList就可以了
+例如我们是因为 `pikpak` 这个存储停止的，我们就输入命令来停止，然后在 重启一下OpenList就可以了
 
 ```bash
 docker exec -it alist ./alist storage disable /pikpak
@@ -272,7 +272,7 @@ docker exec -it alist ./alist storage disable /pikpak
 ```bash{1,5}
 [root@OPSD-g8xXordx3B9f alist]# docker exec -it alist ./alist storage disable /pikpak
 INFO[2023-11-23 17:54:52] reading config file: data/config.json
-INFO[2023-11-23 17:54:52] load config from env with prefix: ALIST_
+INFO[2023-11-23 17:54:52] load config from env with prefix: OpenList_
 INFO[2023-11-23 17:54:52] init logrus...
 INFO[2023-11-23 17:54:52] Storage with mount path [/pikpak] have been disabled
 ```

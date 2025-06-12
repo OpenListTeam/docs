@@ -20,9 +20,9 @@ star: true
 
 ## **方法1-内置**
 
-使用`AList`后台的内置 `备份/恢复`选项
+使用`OpenList`后台的内置 `备份/恢复`选项
 
->1. 备份：进行AList数据进行备份（==**不包含索引**==）
+>1. 备份：进行OpenList数据进行备份（==**不包含索引**==）
 >
 >2. 恢复：恢复之前备份文件
 >
@@ -36,10 +36,10 @@ star: true
 
 ## **方法2-sqlite3**
 
-直接将`AList`目录下的 data/`data.db`数据库进行备份，等到了新环境直接进行替换即可(==**包含索引数据**==)
+直接将`OpenList`目录下的 data/`data.db`数据库进行备份，等到了新环境直接进行替换即可(==**包含索引数据**==)
 
 - 现在高版本如果有`data.db-shm`和`data.db-wal`这两个文件也要一起进行备份，恢复时也是一起替换
-- 建议停止运行AList再进行备份，这样`data.db-shm`和`data.db-wal`这两个文件会和`data.db`合并在一起
+- 建议停止运行OpenList再进行备份，这样`data.db-shm`和`data.db-wal`这两个文件会和`data.db`合并在一起
 
 ![](/img/advanced/sqlite3.png)
 

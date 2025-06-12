@@ -42,9 +42,9 @@ star: true
 
 :::
 
-::::danger AList ≥ 3.42.0
+::::danger OpenList ≥ 3.42.0
 
-AList版本 ≥ 3.42.0 的查看 [允许所有云盘调用其他云盘的离线下载工具](../../config/other.md)
+OpenList版本 ≥ 3.42.0 的查看 [允许所有云盘调用其他云盘的离线下载工具](../../config/other.md)
 
 - ≥ 3.42.0 以上版本如果要使用离线下载要在后台配置一下临时文件夹才可以使用（否则只会显示 **SimpleHttp**）
 
@@ -155,7 +155,7 @@ AList版本 ≥ 3.42.0 的查看 [允许所有云盘调用其他云盘的离线�
 
 ### **115、PikPak、迅雷(Pro)** <Badge text="v3.42.0" type="warning"/>
 
-<Badge text="v3.42.0" type="warning"/> 及以上版本支持在AList调用离线下载功能
+<Badge text="v3.42.0" type="warning"/> 及以上版本支持在OpenList调用离线下载功能
 
 在后台设置其他配置临时目录选项后，前端页面右下角选择 <span style="color: rgb(24, 144, 255);"><svg fill="none" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="toolbar-toggle hope-icon hope-c-XNyZK hope-c-PJLV hope-c-PJLV-ifkxHPo-css" height="1em" width="1em" style="overflow: visible;"><path fill="currentColor" d="M7 14a2 2 0 100-4 2 2 0 000 4zM14 12a2 2 0 11-4 0 2 2 0 014 0zM17 14a2 2 0 100-4 2 2 0 000 4z"></path><path fill="currentColor" fill-rule="evenodd" d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12zm-2 0c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2s10 4.477 10 10z" clip-rule="evenodd"></path></svg></span><span style="color: rgb(24, 144, 255);"><svg fill="currentColor" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="hope-icon hope-c-XNyZK hope-c-PJLV hope-c-PJLV-iipViGO-css" tips="offline_download" height="1em" width="1em" style="overflow: visible;"><path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" d="M421.83 293.82A144 144 0 00218.18 90.17M353.94 225.94a48 48 0 00-67.88-67.88"></path><path stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M192 464v-48M90.18 421.82l33.94-33.94M48 320h48"></path><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M286.06 158.06L172.92 271.19a32 32 0 01-45.25 0L105 248.57a32 32 0 010-45.26L218.18 90.17M421.83 293.82L308.69 407a32 32 0 01-45.26 0l-22.62-22.63a32 32 0 010-45.26l113.13-113.17M139.6 169.98l67.88 67.89M275.36 305.75l67.89 67.88"></path> </svg></span> 离线下载选项选择对应的驱动离线下载功能
 

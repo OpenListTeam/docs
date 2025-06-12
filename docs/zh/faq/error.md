@@ -1,6 +1,6 @@
 ---
 # This is the title of the article
-title: AList错误码整合
+title: OpenList错误码整合
 # This is the icon of the page
 icon: iconfont icon-question
 # This control sidebar order
@@ -21,7 +21,7 @@ star: true
 
 ## 这个是什么？
 
-这个是收集一些`AList`使用期间的一些错误码，然后如何解决（网络问题或者网盘更改API以及其它一些问题可能会无法当时解决需要人为去干预）
+这个是收集一些`OpenList`使用期间的一些错误码，然后如何解决（网络问题或者网盘更改API以及其它一些问题可能会无法当时解决需要人为去干预）
 
 <br/>
 
@@ -43,13 +43,13 @@ star: true
 
 -----
 
-<Badge text="Q" type="warning" vertical="middle" />：Token is expired（**出现在登录AList账号时**）
+<Badge text="Q" type="warning" vertical="middle" />：Token is expired（**出现在登录OpenList账号时**）
 
 <br/>
 
-<Badge text="A" type="info" vertical="middle" />：是指你`AList`登录有效期到了默认是`48`小时，可以在修改`config.json`配置文件中
+<Badge text="A" type="info" vertical="middle" />：是指你`OpenList`登录有效期到了默认是`48`小时，可以在修改`config.json`配置文件中
 
-- 如果你登录的时候提示登录成功然后又显示这个提示，检查你是否使用了CDN加速等给AList进行了缓存导致的
+- 如果你登录的时候提示登录成功然后又显示这个提示，检查你是否使用了CDN加速等给OpenList进行了缓存导致的
 
 -----
 
@@ -115,7 +115,7 @@ star: true
 
 <br/>
 
-<Badge text="A" type="info" vertical="middle" />：对方的`AList`站点不允许挂载，[**查看详细说明**](../guide/drivers/Alist%20V2%20V3.md#链接)
+<Badge text="A" type="info" vertical="middle" />：对方的`OpenList`站点不允许挂载，[**查看详细说明**](../guide/drivers/Alist%20V2%20V3.md#链接)
 
 -----
 
@@ -169,7 +169,7 @@ star: true
 
 <br/>
 
-<Badge text="A" type="info" vertical="middle" />：连续登录输入6次密码错误就会锁定，重启AList即可重置。
+<Badge text="A" type="info" vertical="middle" />：连续登录输入6次密码错误就会锁定，重启OpenList即可重置。
 
 -----
 
@@ -189,15 +189,15 @@ star: true
 
 -----
 
-<Badge text="Q" type="warning" vertical="middle" />：failed to start: listen tcp 0.0.0.0:5244: bind: address already in use （**启动AList程序时**）
+<Badge text="Q" type="warning" vertical="middle" />：failed to start: listen tcp 0.0.0.0:5244: bind: address already in use （**启动OpenList程序时**）
 
 <br/>
 
-<Badge text="A" type="info" vertical="middle" />：5244端口号已经被使用，排查是否被占用(一般来说你已经启动了一个5244端口的AList导致的)，或者修改AList启动的端口号,[**如何修改**](../config/configuration.md#port)
+<Badge text="A" type="info" vertical="middle" />：5244端口号已经被使用，排查是否被占用(一般来说你已经启动了一个5244端口的OpenList导致的)，或者修改OpenList启动的端口号,[**如何修改**](../config/configuration.md#port)
 
 -----
 
-<Badge text="Q" type="warning" vertical="middle" />：**[AList上传文件时提示](why.md#为什么我在上传文件时得到-http-413-错误)**：Request failed with status code 413
+<Badge text="Q" type="warning" vertical="middle" />：**[OpenList上传文件时提示](why.md#为什么我在上传文件时得到-http-413-错误)**：Request failed with status code 413
 
 <br/>
 

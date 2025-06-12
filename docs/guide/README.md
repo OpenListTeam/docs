@@ -56,7 +56,7 @@ A file list program that supports multiple storage, and supports web browsing an
 - [x] [Mega.nz](https://mega.nz)
 - [x] [Baidu photo](https://photo.baidu.com/)
 - [x] [TeraBox](https://www.terabox.com/)
-- [x] [AList v2/v3](../guide/drivers/Alist%20V2%20V3.md)
+- [x] [OpenList v2/v3](../guide/drivers/Alist%20V2%20V3.md)
 - [x] SMB
 - [x] [alias](../guide/advanced/alias.md)
 - [x] [115](https://115.com/)
@@ -93,4 +93,4 @@ Please go to our [discussion forum](https://github.com/Xhofe/alist/discussions) 
 
 ### License
 
-The `AList` is open-source software licensed under the AGPL-3.0 license.
+The `OpenList` is open-source software licensed under the AGPL-3.0 license.

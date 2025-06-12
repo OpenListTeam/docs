@@ -17,7 +17,7 @@ star: true
 ---
 
 
-# AList 系统架构对应表
+# OpenList 系统架构对应表
 
 | 文件名 | 操作系统 | CPU架构 | 说明 |
 |--------|----------|---------|------|
@@ -69,7 +69,7 @@ star: true
 
 <br/>
 
-## **Android 安装 AList**
+## **Android 安装 OpenList**
 
 有两种办法根据自己的需求选择
 

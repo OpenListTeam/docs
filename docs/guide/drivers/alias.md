@@ -185,7 +185,7 @@ This is because Windows is case-insensitive, video and Video will be considered 
 
 You need to enable `Web Proxy` or` Webdav Native Proxy` to take effect
 
-- Currently only applicable to：`alias`、`139Yun`、`AList V3`
+- Currently only applicable to：`alias`、`139Yun`、`OpenList V3`
   - Function Description：**https://github.com/alist-org/alist/pull/6496#issue-2309839607**
 
 <br/>

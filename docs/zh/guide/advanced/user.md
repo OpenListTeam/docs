@@ -92,12 +92,12 @@ A：可以新建一个[别名](alias.md)存储,将你需要给用户展示的路
 ## **Tips**
 
 1. 你是否在为游客能看到全部文件而发愁？[**点击查看这里如何设置**](../../faq/why.md#%E6%83%B3%E8%AE%A9%E6%B8%B8%E5%AE%A2%E7%99%BB%E5%BD%95%E5%90%8E%E6%89%8D%E8%83%BD%E7%9C%8B%E5%88%B0%E5%86%85%E5%AE%B9%E6%80%8E%E4%B9%88%E8%AE%BE%E7%BD%AE)
-2. **`Guest user is disabled, login please`**：为了保护您的AList安全，游客访问权限关闭了，若需要游客访问自行打开
+2. **`Guest user is disabled, login please`**：为了保护您的OpenList安全，游客访问权限关闭了，若需要游客访问自行打开
    - 后台 --> 用户 --> `guest` --> 停用取消勾选
 3. 关于 **`复制/上传`** 的问题
-   - 如果你上传(含离线下载上传)很大的文件，或者上传文件很多（几百上千），不建议您使用AList来进行操作,请前往相应的网盘官网直接操作最后
+   - 如果你上传(含离线下载上传)很大的文件，或者上传文件很多（几百上千），不建议您使用OpenList来进行操作,请前往相应的网盘官网直接操作最后
 4. 非admin权限用户在后台管理离线下载、复制、上传等操作
-   - 需要AList升级到<Badge text="v3.39.1" type="info" vertical="middle" />版本，同时admin也可以查看用户的任务进度以及操作
+   - 需要OpenList升级到<Badge text="v3.39.1" type="info" vertical="middle" />版本，同时admin也可以查看用户的任务进度以及操作
 
 ![](/img/advanced/user_manage.png)
 

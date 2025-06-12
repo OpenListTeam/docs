@@ -75,7 +75,7 @@ If you didn't find this feature, please update the version
    - How to use: Choose you want to offline the file to that directory, you choose to go to that directory and choose from the lower right corner <span style="color: rgb(24, 144, 255);"><svg fill="currentColor" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="hope-icon hope-c-XNyZK hope-c-PJLV hope-c-PJLV-iipViGO-css" tips="offline_download" height="1em" width="1em" style="overflow: visible;"><path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" d="M421.83 293.82A144 144 0 00218.18 90.17M353.94 225.94a48 48 0 00-67.88-67.88"></path><path stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M192 464v-48M90.18 421.82l33.94-33.94M48 320h48"></path><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M286.06 158.06L172.92 271.19a32 32 0 01-45.25 0L105 248.57a32 32 0 010-45.26L218.18 90.17M421.83 293.82L308.69 407a32 32 0 01-45.26 0l-22.62-22.63a32 32 0 010-45.26l113.13-113.17M139.6 169.98l67.88 67.89M275.36 305.75l67.89 67.88"></path></svg></span> Offline download
 
    - support `Aria2`、`qBittprrent`、`SimpleHttp`
-     - If you use offline download, you need to install AList the machine for installation software to use the machine to use it. Can't download it offline through different devices
+     - If you use offline download, you need to install OpenList the machine for installation software to use the machine to use it. Can't download it offline through different devices
 
 
 

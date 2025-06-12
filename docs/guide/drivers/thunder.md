@@ -30,14 +30,14 @@ ThunderExpert mainly provides more free settings and realizes more login methods
 Thunder X serves overseas users. As of the time of document release, only the Android version is available. Other versions have not yet been released.
 
 - Thunder X has sufficient speed even without membership. Future changes are unknown.
-- Using the APP may require a proxy, but not when mounted on AList.
+- Using the APP may require a proxy, but not when mounted on OpenList.
 
 -----
 
 Thunder Browser：Currently only supports mobile phones (Android, iOS)
 
 - **https://x.xunlei.com/**
-- If you log in to AList, the mobile phone will be kicked offline. On the contrary, if you log in to AList first and then log in to the mobile phone, AList will be kicked offline but there will be no prompt
+- If you log in to OpenList, the mobile phone will be kicked offline. On the contrary, if you log in to OpenList first and then log in to the mobile phone, OpenList will be kicked offline but there will be no prompt
 
 :::
 
@@ -459,7 +459,7 @@ Thunder  Browser Safe password
 
 ### **Remove way**
 
-**Trash**：Use AList to delete files and then move them to the Recycle Bin. If you delete them accidentally, you can restore them through Thunder Cloud Disk.
+**Trash**：Use OpenList to delete files and then move them to the Recycle Bin. If you delete them accidentally, you can restore them through Thunder Cloud Disk.
 
 **Delete**：Deleting it directly cannot restore it.
 
@@ -545,7 +545,7 @@ Thunder  Browser Safe password
 
 ### **Remove way**
 
-**Trash**：Use AList to delete files and then move them to the Recycle Bin. If you delete them accidentally, you can restore them through Thunder Cloud
+**Trash**：Use OpenList to delete files and then move them to the Recycle Bin. If you delete them accidentally, you can restore them through Thunder Cloud
 
 **Delete**：Deleting it directly cannot restore it.
 

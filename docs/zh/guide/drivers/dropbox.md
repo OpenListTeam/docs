@@ -27,8 +27,8 @@ Dropbox官网：https://www.dropbox.com/
 
 前往：**https://alist.example.com/tool/dropbox/request.html**
 
-- 有两种方式，一种是直接使用AList提供的，一种是自己新建应用
-  - 获取方式如下（推荐使用第二种^{右侧的}^因为AList提供的已经无法新建用户了）
+- 有两种方式，一种是直接使用OpenList提供的，一种是自己新建应用
+  - 获取方式如下（推荐使用第二种^{右侧的}^因为OpenList提供的已经无法新建用户了）
   - 使用右侧自建`客户端ID`和`秘钥`时，记得授权^{第三张图}^
 
 <div class="image-preview">  

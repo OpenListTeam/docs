@@ -20,7 +20,7 @@ star: true
 
 ## **logo**
 
-徽标显示在页面的左上角。 默认为 AList Logo
+徽标显示在页面的左上角。 默认为 OpenList Logo
 
 - 可以分别设置夜间和白天两个不同的，方法一行一个链接
 
@@ -28,7 +28,7 @@ star: true
 
 ## **网站图标**
 
-favicon 显示在浏览器选项卡中。 默认为 AList Logo
+favicon 显示在浏览器选项卡中。 默认为 OpenList Logo
 
 
 

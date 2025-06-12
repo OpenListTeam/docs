@@ -108,7 +108,7 @@ If there is a suitable addition, please add~
 
 ### **WebDav fill-in example**
 
-Give a few examples of filling in **`WebDav`**, the account password is the account password of your AList user
+Give a few examples of filling in **`WebDav`**, the account password is the account password of your OpenList user
 
 This is basically the way of writing, and the way of writing may be different for different software. If there is no separate path option, it is normal to add the `/dav` option after the site
 

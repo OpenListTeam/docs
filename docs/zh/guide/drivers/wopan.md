@@ -21,13 +21,13 @@ star: true
 
 云盘地址：**https://pan.wo.cn/**
 
-- :warning: AList 3.19.0版本及以上版本才能使用本驱动
+- :warning: OpenList 3.19.0版本及以上版本才能使用本驱动
 
 ::: tip
 
-AList挂载联通云盘使用的是Web端
+OpenList挂载联通云盘使用的是Web端
 
-如果你先使用工具获取了令牌，再去登录网页端联通云盘会将AList挂载的踢下线导致失效
+如果你先使用工具获取了令牌，再去登录网页端联通云盘会将OpenList挂载的踢下线导致失效
 
 登录手机端没问题，不会被踢下线，可以同时并存。
 
@@ -64,7 +64,7 @@ AList挂载联通云盘使用的是Web端
 家庭云：填写`Family ID` 未知(后续补充)
 
 
-### **AList挂载填写示例：**
+### **OpenList挂载填写示例：**
 
 将使用工具获取的 `refresh_token填入刷新令牌`，`access_token填入访问令牌`
 

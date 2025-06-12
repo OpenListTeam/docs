@@ -27,12 +27,12 @@ Dropbox Official：https://www.dropbox.com/
 
 Go to：**https://alist.example.com/tool/dropbox/request.html**
 
-- There are two ways, one is provided directly using AList, and the other is to create a new application by yourself
-  - The method of getting as follows (Recommend the first type^{right}^Because the AList provided can no longer create new users)
+- There are two ways, one is provided directly using OpenList, and the other is to create a new application by yourself
+  - The method of getting as follows (Recommend the first type^{right}^Because the OpenList provided can no longer create new users)
   - When using the self-built `client ID` and `secret key` on the right, remember to authorize^{the_third_picture}^
 
 <div class="image-preview">  
-    <img src="/img/drivers/dropbox/dropbox-1.png" alt="Use AList default to get token" title="Use AList default to get token"/>
+    <img src="/img/drivers/dropbox/dropbox-1.png" alt="Use OpenList default to get token" title="Use OpenList default to get token"/>
     <img src="/img/drivers/dropbox/dropbox-2.png" alt="Create your own new application to obtain the client to get token" title="Create your own new application to obtain the client to get token"/>
     <img src="/img/drivers/dropbox/dropbox-2-2.png" alt="Create your own new application to obtain the client to get token" title="Create your own new application to obtain the client to get token"/>
 </div>

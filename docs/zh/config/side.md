@@ -75,7 +75,7 @@ star: true
    - 使用方法：进入你想把文件离线到那个目录，你就进入到那个目录再从右下角选择<span style="color: rgb(24, 144, 255);"><svg fill="currentColor" stroke-width="0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="hope-icon hope-c-XNyZK hope-c-PJLV hope-c-PJLV-iipViGO-css" tips="offline_download" height="1em" width="1em" style="overflow: visible;"><path fill="none" stroke="currentColor" stroke-miterlimit="10" stroke-width="32" d="M421.83 293.82A144 144 0 00218.18 90.17M353.94 225.94a48 48 0 00-67.88-67.88"></path><path stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M192 464v-48M90.18 421.82l33.94-33.94M48 320h48"></path><path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32" d="M286.06 158.06L172.92 271.19a32 32 0 01-45.25 0L105 248.57a32 32 0 010-45.26L218.18 90.17M421.83 293.82L308.69 407a32 32 0 01-45.26 0l-22.62-22.63a32 32 0 010-45.26l113.13-113.17M139.6 169.98l67.88 67.89M275.36 305.75l67.89 67.88"></path></svg></span> 离线下载
 
    - 支持 `Aria2`、`qBittprrent`、`SimpleHttp`
-     - 如果使用离线下载AList在那儿，搭建AList的机器进行安装软件才能使用，不能跨设备进行离线下载
+     - 如果使用离线下载OpenList在那儿，搭建OpenList的机器进行安装软件才能使用，不能跨设备进行离线下载
 
 
 
@@ -93,7 +93,7 @@ star: true
 
    1. `Aria2 RPC 链接` 和 `Aria2 RPC 密钥` 这个Aria2是用来将云盘里面的文件下载到自己电脑本地，并非离线下载使用的Aria2
       - 这个Aria2是谁需要谁在自己本地安装使用，当然也支持推送到远程服务器的Aria2
-      - 离线下载使用的Aria2需要在搭建AList的机器安装才能进行离线下载
+      - 离线下载使用的Aria2需要在搭建OpenList的机器安装才能进行离线下载
 
    
 

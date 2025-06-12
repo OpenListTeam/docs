@@ -21,7 +21,7 @@ star: true
 ### **Initial config**
 
 ::: tip
-After modifying the configuration file, restart AList for changes to take effect
+After modifying the configuration file, restart OpenList for changes to take effect
 
 - Windows/MacOS: `<alist dir>/data/config.json`
 - Linux: one-click script directory, `/opt/alist/data/config.json` or `<alist dir>/data/config.json`
@@ -146,7 +146,7 @@ After modifying the configuration file, restart AList for changes to take effect
     "enable": false,
     "listen": ":5222"
   },
-  "last_launched_version": "AList version"
+  "last_launched_version": "OpenList version"
 }
 ```
 
@@ -154,7 +154,7 @@ After modifying the configuration file, restart AList for changes to take effect
 
 ### **force**
 
-By default AList reads the configuration from environment variables, set this field to `true` to force AList to read config from the configuration file.
+By default OpenList reads the configuration from environment variables, set this field to `true` to force OpenList to read config from the configuration file.
 
 <br/>
 
@@ -162,7 +162,7 @@ By default AList reads the configuration from environment variables, set this fi
 
 ### **site_url**
 
-The address of your AList server, such as `https://pan.example.com`. This address is essential for some features, and thus thry may not work properly if unset:
+The address of your OpenList server, such as `https://pan.example.com`. This address is essential for some features, and thus thry may not work properly if unset:
 
 - thumbnailing `LocalStorage`
 - previewing site after setting web proxy
@@ -185,7 +185,7 @@ Do not include the slash \(`/`\) at the end of the address. For example:
 
 ### **cdn**
 
-The address of the CDN. Included `$version` values will be dynamically replaced by the version of AList. Existing dist resources are hosted on both npm and GitHub, which can be found at:
+The address of the CDN. Included `$version` values will be dynamically replaced by the version of OpenList. Existing dist resources are hosted on both npm and GitHub, which can be found at:
 
 - https://www.npmjs.com/package/alist-web
 - https://github.com/alist-org/web-dist
@@ -340,10 +340,10 @@ The configuration of scheme. Set this field if using HTTPS.
 
 ### **temp_dir**
 
-The directory to keep temporary files. By default AList uses `data/temp`.
+The directory to keep temporary files. By default OpenList uses `data/temp`.
 
 ::: danger
-temp_dir is a temporary folder exclusive to alist. In order to prevent AList from generating garbage files when being interrupted, the directory will be cleared every time AList starts, so do not store anything in this directory or map this directory & subdirectories to directories in use when using Docker.
+temp_dir is a temporary folder exclusive to alist. In order to prevent OpenList from generating garbage files when being interrupted, the directory will be cleared every time OpenList starts, so do not store anything in this directory or map this directory & subdirectories to directories in use when using Docker.
 :::
 
 <br/>
@@ -381,7 +381,7 @@ The log configuration. Set this field to save detailed logs of disable.
 
 ```json
   "log": {
-    "enable": true,					// Whether AList should store logs
+    "enable": true,					// Whether OpenList should store logs
     "name": "data\\log\\log.log",	//The path and name of the log file
     "max_size": 10,					//the maximum size of a single log file, in MB. After reaching the specified size, the file will be automatically split.
     "max_backups": 5,				//the number of log backups to keep. Old backups will be deleted automatically when the limit is exceeded.
@@ -398,8 +398,8 @@ The log configuration. Set this field to save detailed logs of disable.
 
 **Time unit: second** (new feature of v3.19.0)
 
-Whether to delay AList startup.
-Generally this option is used when AList is configured to auto-start. The reason is that sometimes network takes some time to connect, so drivers requiring cannot start correctly after Alist starts.
+Whether to delay OpenList startup.
+Generally this option is used when OpenList is configured to auto-start. The reason is that sometimes network takes some time to connect, so drivers requiring cannot start correctly after Alist starts.
 
 <br/>
 
@@ -479,7 +479,7 @@ Configuration for background task threads.
 - **copy**: copy the task
 - **decompress**：decompress the task
 - **decompress_upload**：decompress upload the task
-- **task_persistant**：The task is persistent and will not be cancelled after restarting `AList`
+- **task_persistant**：The task is persistent and will not be cancelled after restarting `OpenList`
   - **download**：false
   - **transfer**：false
   - **upload**：false

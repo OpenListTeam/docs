@@ -23,7 +23,7 @@ star: true
 
 - 没有网页端，只有`Android`,`IOS`,`PC-Win64位`,`iPad`,`TV`
 
-- :warning: AList版本 > ==3.30.0== 以上版本才能使用本驱动
+- :warning: OpenList版本 > ==3.30.0== 以上版本才能使用本驱动
 
 <br/>
 

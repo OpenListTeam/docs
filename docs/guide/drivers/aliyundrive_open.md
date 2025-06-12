@@ -157,7 +157,7 @@ Rapid upload calculates the `sha1` value of the file (should be correct), you do
   - The premise is that the file to be transferred from the Alibaba Cloud disk to 115 in seconds, 115 already exists, otherwise it is a normal copy task.
   - If you want to transfer 115 cloud disk files to Alibaba Cloud Disk in seconds, you need to turn on the Rapid upload option of Alibaba Cloud Disk, otherwise it will be uploaded in normal mode.
 
-If you want to upload files using Second Transmission, it is recommended to build an AList locally on your home computer and add a `Local Storage` and `Alibaba Cloud Disk` to copy Second Transmission to save resources.
+If you want to upload files using Second Transmission, it is recommended to build an OpenList locally on your home computer and add a `Local Storage` and `Alibaba Cloud Disk` to copy Second Transmission to save resources.
 
 <br/>
 
@@ -167,7 +167,7 @@ If you want to upload files using Second Transmission, it is recommended to buil
 
 If you don’t set it, it will be deleted to the recycle bin by default. If there is not enough space, you need to manually clean up the recycle bin. If you delete the wrong file, please go to the Alibaba Cloud Disk official website client to retrieve and restore it.
 
-- Trash: Enter the cloud disk recycle bin after AList is deleted, which will occupy the cloud disk space, but it can be retrieved if it is deleted by mistake later.
+- Trash: Enter the cloud disk recycle bin after OpenList is deleted, which will occupy the cloud disk space, but it can be retrieved if it is deleted by mistake later.
 - Delete: direct deletion will not stay in the recycle bin, and will not occupy cloud disk space, but if deleted by mistake later, it cannot be retrieved.
   - Note: Please do not disclose the Token obtained by your Alibaba Cloud Disk Open, ==If you accidentally leak it, please immediately go to [**Other instructions¹**](#open-alibaba-cloud-disk-app-my-settings-gear-in-the-upper-right-corner-privacy-settings-authorization-management-click-alist-to-view) to deauthorize, and then re-scan the code to authorize a new refresh token , at the same time, all the previous acquisitions will become invalid after the authorization is deactivated, so as to protect the security of your account==
 
@@ -177,7 +177,7 @@ If you don’t set it, it will be deleted to the recycle bin by default. If ther
 
 ## **Drive type**
 
-You can choose the type of cloud disk, and you can choose a different type according to your needs. You can set it when adding a driver using AList of v3.25.1 and above. The default is the `default` type
+You can choose the type of cloud disk, and you can choose a different type according to your needs. You can set it when adding a driver using OpenList of v3.25.1 and above. The default is the `default` type
 
 - **default**: Have Intelligeent level users default to `Non-backup files`, No Have Intelligent User's default display is` Backup file`
 
@@ -203,7 +203,7 @@ That is, the IOS `live` photo cannot be downloaded because the non-IOS system ca
 
 ## **Internal upload**
 
-If the server you deploy AList on is Aliyun ECS for Beijing area, turn on this switch to improve the upload speed. Do not turn on this switch for servers that do not meet the requirements, otherwise you will have problems with inability to upload.
+If the server you deploy OpenList on is Aliyun ECS for Beijing area, turn on this switch to improve the upload speed. Do not turn on this switch for servers that do not meet the requirements, otherwise you will have problems with inability to upload.
 
 - **Internal upload** Can Alibaba Cloud ECS in non-Beijing areas be used? No, because Alibaba Cloud Disk is using object storage in the Beijing area
 
@@ -215,12 +215,12 @@ If the server you deploy AList on is Aliyun ECS for Beijing area, turn on this s
 
 ##### One、
 
-> AList only obtained cloud disk users (**name avatar¹**), (**access file permission²**) and (**write file permission³**), and did not obtain mobile phone number permission
+> OpenList only obtained cloud disk users (**name avatar¹**), (**access file permission²**) and (**write file permission³**), and did not obtain mobile phone number permission
 >
 > Details can be viewed in two ways:
 >
 > 1. **Prompt** when scanning the QR code to obtain the refresh token
-> 2. ###### Open **Alibaba Cloud Disk APP --> My --> Settings gear in the upper right corner --> Privacy Settings --> Authorization Management --> Click AList** to view
+> 2. ###### Open **Alibaba Cloud Disk APP --> My --> Settings gear in the upper right corner --> Privacy Settings --> Authorization Management --> Click OpenList** to view
 >
 >    - If you don't use it, you can manually cancel the permission at any time
 
@@ -259,7 +259,7 @@ If the server you deploy AList on is Aliyun ECS for Beijing area, turn on this s
 
 ##### Six、
 
-> Q: View video prompts in alipan `In the transcoding, please try again later` and linger prompts in AList: `failed link: failed get link: UserNotAllowedAccessResource:user not allowed access resource for violation`
+> Q: View video prompts in alipan `In the transcoding, please try again later` and linger prompts in OpenList: `failed link: failed get link: UserNotAllowedAccessResource:user not allowed access resource for violation`
 > A: The representative account has been frozen (in the past, it was unable to log in directly), Please look at the red content on the top
 
 ### **The default download method used**

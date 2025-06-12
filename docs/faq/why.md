@@ -68,7 +68,7 @@ For microsoft office online viewers, you need:
 
 Same as pdf preview, requires https+cors support,and:
 
-- AList use stream API of browser to support package download, so it requires browser support. Usually, it is supported by new browsers, such as Chrome, Firefox, Edge, etc.
+- OpenList use stream API of browser to support package download, so it requires browser support. Usually, it is supported by new browsers, such as Chrome, Firefox, Edge, etc.
 
 ### **Why does it shows `Uploading in the backend` when I upload a file?**
 
@@ -253,16 +253,16 @@ There is a high probability that your device that builds Alist is temporarily bl
 
 ### **Why doesn't PikPak have a name**
 
-Because PikPak's server does not set the filename in the `content-disposition` header, this is a PikPak problem and not an AList, so it cannot be fixed
+Because PikPak's server does not set the filename in the `content-disposition` header, this is a PikPak problem and not an OpenList, so it cannot be fixed
 
-### **How to query your own AList version number**
+### **How to query your own OpenList version number**
 
 1. Use the command `alist version`, the console will output
-2. AList Manage --> Settings --> Site --> `Version` option
+2. OpenList Manage --> Settings --> Site --> `Version` option
 
-Why is the old version of AList still after the update? Generally, docker encounters this problem. You can [**refer to the QA answer mentioned below**](../guide/install/docker.md#how-to-update-docker-installation)
+Why is the old version of OpenList still after the update? Generally, docker encounters this problem. You can [**refer to the QA answer mentioned below**](../guide/install/docker.md#how-to-update-docker-installation)
 
-### **AList's download "Download" option suddenly blank, no content**
+### **OpenList's download "Download" option suddenly blank, no content**
 
 Check your plug-ins, whether there are ad blocking plug-ins, for example: **AdGuard** and others
 

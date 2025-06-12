@@ -140,7 +140,7 @@ flowchart TB
 
 有会员改完 **`"User-Agent"`** 才会有用（选择官方和302）
 
-如果不改 **`"User-Agent"`**，可以开启 ==Web代理==，缺点是需要你搭建AList的机器中转，也就是说你需要大宽带帮你中转
+如果不改 **`"User-Agent"`**，可以开启 ==Web代理==，缺点是需要你搭建OpenList的机器中转，也就是说你需要大宽带帮你中转
 
 <div>
     <p style="text-align: center;"><span>网页302模式修改UA教程 : <br/></span>左侧为<span style="color:red;font-weight: bold;font-size: xx-large;">『官方』</span>接口，右侧为<span style="color:blue;font-weight: bold;font-size: xx-large;">『非官方-已无法使用』</span>接口</p>

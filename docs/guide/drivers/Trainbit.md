@@ -42,7 +42,7 @@ We open the home page and press F12, open the developer mode, select the network
 
 ## **matters needing attention**
 
-1. If you uploaded from `AList` to `trainbit`, a `.delete_suffix` will be added after the file suffix, don’t worry
+1. If you uploaded from `OpenList` to `trainbit`, a `.delete_suffix` will be added after the file suffix, don’t worry
 2. The official website says that the free user files will be deleted after 15 days of downloading, but the files are not deleted now, just in case, do not store important files, and the files will be lost when the time comes
 
 

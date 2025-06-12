@@ -134,7 +134,7 @@ Key: 'Storage.MountPath' Error:Field validation for 'MountPath' failed on the 'r
 
 - 302重定向：虽然不会消耗流量，但是不建议共享使用，有封禁账户的风险
 - 代理URL：会消耗搭建代理URL的流量
-- 本地代理：会消耗搭建AList设备的流量
+- 本地代理：会消耗搭建OpenList设备的流量
 
 ### **三种模式说明**
 
@@ -143,7 +143,7 @@ Key: 'Storage.MountPath' Error:Field validation for 'MountPath' failed on the 'r
 title: 302重定向、代理Url、本地代理
 ---
 flowchart LR
-	E(用户操作AList调用API <br/> 触发相关API操作云盘 <br/> 云盘接收到命令开始执行)
+	E(用户操作OpenList调用API <br/> 触发相关API操作云盘 <br/> 云盘接收到命令开始执行)
 	A[(云盘)]
 	B(你)
 	C[代理URL]
@@ -151,7 +151,7 @@ flowchart LR
 	E==>A==>E
     A==>|直接从云盘传给你中间无任何损耗 <br/> 302能下载多快就有多快|B
     A-->|云盘先发送给代理URL|C-->|再由代理URL转发给你 <br/> 转发给你后,你下载的速度 <br/> 取决于代理Url那一端上下载传转发的速度|B
-    A-->|云盘先发送给搭建AList的设备|D-->|由搭建AList的设备转发给你 <br/> 转发给你之后,你下载速度 <br/> 取决于搭建AList那一端下载然后上传转发的速度|B
+    A-->|云盘先发送给搭建OpenList的设备|D-->|由搭建OpenList的设备转发给你 <br/> 转发给你之后,你下载速度 <br/> 取决于搭建OpenList那一端下载然后上传转发的速度|B
 
 ```
 
@@ -169,8 +169,8 @@ flowchart LR
 
 Workers 代码可以在 https://github.com/alist-org/alist-proxy/blob/main/alist-proxy.js 找到，实际使用时需要替换其中的这两个变量：
 
-- ADDRESS: 你的 AList 地址，必须加上协议头，后面不能跟 `/`。如 `https://pan.example.com`；
-- TOKEN: 在 AList 管理页面中进入“其他设置”得到；
+- ADDRESS: 你的 OpenList 地址，必须加上协议头，后面不能跟 `/`。如 `https://pan.example.com`；
+- TOKEN: 在 OpenList 管理页面中进入“其他设置”得到；
 - WORKER_ADDRESS: 你的 Worker 地址，通常与 **下载代理URL** 相同。
 
 :warning: Cloudflare Workers 免费CDN支持兼容(不论国内还是国外)的只有 **http80端口** 和 **https443端口**，来自群友测试

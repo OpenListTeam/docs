@@ -17,8 +17,8 @@ star: true
 ---
 # 手动安装
 
-## **获取 AList**
-打开 [AList Release](https://github.com/Xhofe/alist/releases) 下载待部署系统对应的文件。最新版的前端已经和后端打包好了，不用再下载前端文件了。
+## **获取 OpenList**
+打开 [OpenList Release](https://github.com/Xhofe/alist/releases) 下载待部署系统对应的文件。最新版的前端已经和后端打包好了，不用再下载前端文件了。
 
 
 
@@ -121,7 +121,7 @@ alist server
 
 :::::tabs#os
 @tab Linux
-使用任意方式编辑 `/usr/lib/systemd/system/alist.service` 并添加如下内容，其中 path_alist 为 AList 所在的路径
+使用任意方式编辑 `/usr/lib/systemd/system/alist.service` 并添加如下内容，其中 path_alist 为 OpenList 所在的路径
 
 ```ini
 [Unit]
@@ -150,7 +150,7 @@ WantedBy=multi-user.target
 守护进程不配置? [**视频教程**](https://www.bilibili.com/video/BV1rF41197Qv?t=187.0)
 
 @tab macOS
-使用任意方式编辑 `~/Library/LaunchAgents/ci.nn.alist.plist` 并添加如下内容，修改 `path_alist` 为 AList 所在的路径，`path/to/working/dir` 为 AList的工作路径
+使用任意方式编辑 `~/Library/LaunchAgents/ci.nn.alist.plist` 并添加如下内容，修改 `path_alist` 为 OpenList 所在的路径，`path/to/working/dir` 为 OpenList的工作路径
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

@@ -20,7 +20,7 @@ star: true
 
 ## **Method 1-Built-in**
 
-Use `AList` to manage `Backup/Restore` options
+Use `OpenList` to manage `Backup/Restore` options
 
 > 1. Backup: Backup Alist data (==**does not include index**==) 
 >
@@ -35,7 +35,7 @@ Use `AList` to manage `Backup/Restore` options
 
 ## **Method 2-Sqlite3**
 
-Back up the data/`data.db` database in the` AList` directory, and wait for the new environment to replace it directly (==**contains index data**==)
+Back up the data/`data.db` database in the` OpenList` directory, and wait for the new environment to replace it directly (==**contains index data**==)
 
 - If there are two files, if there are `data.db-shm` and `data.db-wal`, they must be backup together.
 - It is recommended to stop running Alist and then backup, so that the two files of `data.db-shm` and`data.db-wal` will be merged with the `data.db`

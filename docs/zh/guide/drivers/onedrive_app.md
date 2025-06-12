@@ -166,9 +166,9 @@ https://entra.microsoft.com/TokenAuthorize?admin_consent=True&tenant={租户ID}#
 **config.yaml**
 
 ```yaml
-# 自己的AList站点，可以是本地也可以是远程服务器IP或者域名，但是结尾不能带 "/"
+# 自己的OpenList站点，可以是本地也可以是远程服务器IP或者域名，但是结尾不能带 "/"
 url: ALIST_URL
-# auth的三个参数是你AList管理员账号密码和刷新令牌
+# auth的三个参数是你OpenList管理员账号密码和刷新令牌
 auth:
     username: USERNAME
     password: PASSWORD

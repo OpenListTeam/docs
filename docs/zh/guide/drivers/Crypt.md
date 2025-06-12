@@ -142,7 +142,7 @@ star: true
 
 ### <i class="fa-solid fa-cloud-binary" style="color: #409eff;"></i> **加密后文件存储路径**
 
-也就是存储加密后的文件，可以是AList能挂载的驱动里面任意一款驱动
+也就是存储加密后的文件，可以是OpenList能挂载的驱动里面任意一款驱动
 
 <br/>
 
@@ -197,7 +197,7 @@ star: true
 
 ## **注意事项**
 
-启动AList时发现Crypt提示错误，是因为Crypt靠前启动时候找不到相关路径，可以通过给Crypt驱动填写[序号](common.md#序号)让Crypt启动靠后
+启动OpenList时发现Crypt提示错误，是因为Crypt靠前启动时候找不到相关路径，可以通过给Crypt驱动填写[序号](common.md#序号)让Crypt启动靠后
 
 <br/>
 

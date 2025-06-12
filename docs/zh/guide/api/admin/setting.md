@@ -196,7 +196,7 @@ POST /api/admin/setting/save
   },
   {
     "key": "site_title",
-    "value": "AList",
+    "value": "OpenList",
     "help": "",
     "type": "string",
     "options": "",

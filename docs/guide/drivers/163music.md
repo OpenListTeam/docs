@@ -29,7 +29,7 @@ star: true
 
 Open **https://music.163.com** and then open the F12 developer mode
 
-Open a request at will, just carry the `Cookie` to find the following two parameters and fill in the AList` Cookie`
+Open a request at will, just carry the `Cookie` to find the following two parameters and fill in the OpenList` Cookie`
 
 - **__csrf** 、**MUSIC_U**
 

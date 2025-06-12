@@ -67,7 +67,7 @@ star: true
 
 ## **2. TrollStore(巨魔)安装**
 
- ==需要AList版本 ≥ 3.12.2 及以上==，支持安装TrollStore(巨魔)的设备（不含越狱设备）
+ ==需要OpenList版本 ≥ 3.12.2 及以上==，支持安装TrollStore(巨魔)的设备（不含越狱设备）
 
 已经支持更多设备请查看下方表格，图表内容来自 [**TrollStore**](https://github.com/opa334/TrollStore)
 
@@ -129,7 +129,7 @@ flowchart TB
     subgraph A[原生流程]
     style A fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
     style B fill:#ff7575,stroke:#333,stroke-width:4px
-    C[1.AList点击下载]---|等待下载|D[2.找到软件]
+    C[1.OpenList点击下载]---|等待下载|D[2.找到软件]
     D---|右上角分享|F[3.找到巨魔图标]
     F---|点击巨魔图标|G[4.跳进巨魔软件进行安装]
     G---|安装好软件|H[5.手动删除下载的软件]

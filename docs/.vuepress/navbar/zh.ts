@@ -5,7 +5,7 @@ export const zh = navbar([
   { text: "使用指南", icon: "iconfont icon-creative", link: "/zh/guide/" },
   { text: "配置", icon: "iconfont icon-config", link: "/zh/config/" },
   { text: "常见问题", icon: "iconfont icon-question", link: "/zh/faq/" },
-  // { text: "定价", icon: "iconfont icon-tag", link: "/zh/pricing" },
+  { text: "定价", icon: "iconfont icon-tag", link: "/zh/pricing" },
   // { text: "工具", "iconfont icon-tool", link: "/tool/" },
   {
     text: "社区",

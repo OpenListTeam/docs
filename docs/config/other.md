@@ -68,4 +68,4 @@ The token that can be used to access all API.
    
    2. Opening method, `Toggle Checkbox` in the lower right corner--> select list file/folder--> `Download` at the bottom--> `send to Aria2`
    
-   3. But it is recommended not to download too much at one time. For example, downloading thousands of folders and tens of thousands of files at one time may cause AList to crash
+   3. But it is recommended not to download too much at one time. For example, downloading thousands of folders and tens of thousands of files at one time may cause OpenList to crash

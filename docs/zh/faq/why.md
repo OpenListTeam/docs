@@ -28,7 +28,7 @@ star: true
 
 ### **为什么我在日志中看到 `failed get aria2 version` 错误？**
 
-因为你没有安装 aria2 或者 aria2 的设置不对。不用担心，它不会影响 AList 的使用，你可以忽略它。
+因为你没有安装 aria2 或者 aria2 的设置不对。不用担心，它不会影响 OpenList 的使用，你可以忽略它。
 
 ### **为什么我在添加新存储时收到错误 “Failed create storage in database: UNIQUE constraint failed: x_storages.mount_path”？**
 
@@ -69,7 +69,7 @@ star: true
 
 与 PDF 预览相同，需要 HTTPS 和 CORS 支持，并且：
 
-- AList 使用浏览器的 stream API 来支持打包下载，所以需要浏览器支持。通常这个 API 会被主流浏览器支持，例如 Chrome、Firefox、Edge 等。
+- OpenList 使用浏览器的 stream API 来支持打包下载，所以需要浏览器支持。通常这个 API 会被主流浏览器支持，例如 Chrome、Firefox、Edge 等。
 
 ### **为什么我上传文件时显示 `Uploading in backend`？**
 
@@ -250,16 +250,16 @@ v2可以成功是因为v2会忽略空文件上传。
 （以上问题已经经过测试得出的结论）
 
 ### **为何 PikPak 下载文件不显示文件名？**
-因为 PikPak 的服务器在 content-disposition 头中没有设置文件名，所以这是 PikPak 的问题 而不是 AList，故无法解决
+因为 PikPak 的服务器在 content-disposition 头中没有设置文件名，所以这是 PikPak 的问题 而不是 OpenList，故无法解决
 
-### **如何查询自己的AList版本号**
+### **如何查询自己的OpenList版本号**
 
 1. 使用命令 `alist version`，控制台会输出
-2. AList后台 --> 设置 --> 站点 --> `版本`选项
+2. OpenList后台 --> 设置 --> 站点 --> `版本`选项
 
-为什么更新后还是旧版的AList，一般遇到这个问题的都是docker，可以[**参考这个 下面提到的QA回答**](../guide/install/docker.md#docker安装怎么更新)
+为什么更新后还是旧版的OpenList，一般遇到这个问题的都是docker，可以[**参考这个 下面提到的QA回答**](../guide/install/docker.md#docker安装怎么更新)
 
-### **AList的下载"Download"选项突然空白,没有内容**
+### **OpenList的下载"Download"选项突然空白,没有内容**
 
 检查你的插件，是否有广告拦截插件，例如：**AdGuard**等其他的
 

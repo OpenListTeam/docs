@@ -66,7 +66,7 @@ Recommended to use [ipa-renamer](https://github.com/Xhofe/ipa-renamer) to rename
 
 ## **2. TrollStore install**
 
- ==Requires AList version ≥ 3.12.2 and above==，Devices that support the installation of TrollStore (jailbroken devices are not explained here)
+ ==Requires OpenList version ≥ 3.12.2 and above==，Devices that support the installation of TrollStore (jailbroken devices are not explained here)
 
 For more devices, please see the table below. The content of the chart comes from [**TrollStore**](https://github.com/opa334/TrollStore)
 
@@ -128,14 +128,14 @@ title: Is there any benefit to this installation?
 flowchart TB
     A-->B
     subgraph A[original process]
-    C[First download the application from AList]-->D[find the downloaded software]
+    C[First download the application from OpenList]-->D[find the downloaded software]
     D-->E[click on the software and select share in the upper right corner]
     E-->F[find the troll icon]
     F-->G[jump into the troll software to install]
     G-->H[install and delete the software]
     end
     subgraph B[troll process]
-    I[Click the AList troll install button and click the pop-up window prompt]-->J[enter the troll app and wait for download]
+    I[Click the OpenList troll install button and click the pop-up window prompt]-->J[enter the troll app and wait for download]
     J-->K[after downloading, click the install button]
     end
 ```

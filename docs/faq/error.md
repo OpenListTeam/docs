@@ -1,6 +1,6 @@
 ---
 # This is the title of the article
-title: AList Error-Code
+title: OpenList Error-Code
 # This is the icon of the page
 icon: iconfont icon-question                                                                                        
 # This control sidebar order
@@ -21,7 +21,7 @@ star: true
 
 ## what is this?
 
-It is some error codes during the use of `AList`, and how to solve them (network problems or network disk change API and other problems may not be solved at the time and need human intervention)
+It is some error codes during the use of `OpenList`, and how to solve them (network problems or network disk change API and other problems may not be solved at the time and need human intervention)
 
 <br/>
 
@@ -43,13 +43,13 @@ It is some error codes during the use of `AList`, and how to solve them (network
 
 -----
 
-<Badge text="Q" type="warning" vertical="middle" />：Token is expired（**Appears when logging in to the AList account**）
+<Badge text="Q" type="warning" vertical="middle" />：Token is expired（**Appears when logging in to the OpenList account**）
 
 <br/>
 
-<Badge text="A" type="info" vertical="middle" />：It means that your `AList` login is valid for `48` hours by default, you can modify the configuration file `config.json`
+<Badge text="A" type="info" vertical="middle" />：It means that your `OpenList` login is valid for `48` hours by default, you can modify the configuration file `config.json`
 
-- If you are prompted to log in successfully when you log in and then this prompt is displayed again, check whether you have used CDN acceleration to cache the AList.
+- If you are prompted to log in successfully when you log in and then this prompt is displayed again, check whether you have used CDN acceleration to cache the OpenList.
 
 -----
 
@@ -115,7 +115,7 @@ It is some error codes during the use of `AList`, and how to solve them (network
 
 <br/>
 
-<Badge text="A" type="info" vertical="middle" />：The other party's `AList` site is not allowed to mount，[**View detailed instructions**](../guide/drivers/Alist%20V2%20V3.md#link)
+<Badge text="A" type="info" vertical="middle" />：The other party's `OpenList` site is not allowed to mount，[**View detailed instructions**](../guide/drivers/Alist%20V2%20V3.md#link)
 
 -----
 
@@ -169,7 +169,7 @@ It is some error codes during the use of `AList`, and how to solve them (network
 
 <br/>
 
-<Badge text="A" type="info" vertical="middle" />：If you enter the wrong password for 6 consecutive logins, it will be locked, and you can reset it by restarting AList.
+<Badge text="A" type="info" vertical="middle" />：If you enter the wrong password for 6 consecutive logins, it will be locked, and you can reset it by restarting OpenList.
 
 -----
 
@@ -189,15 +189,15 @@ It is some error codes during the use of `AList`, and how to solve them (network
 
 -----
 
-<Badge text="Q" type="warning" vertical="middle" />：failed to start: listen tcp 0.0.0.0:5244: bind: address already in use （**When starting the AList program**）
+<Badge text="Q" type="warning" vertical="middle" />：failed to start: listen tcp 0.0.0.0:5244: bind: address already in use （**When starting the OpenList program**）
 
 <br/>
 
-<Badge text="A" type="info" vertical="middle" />：Port number 5244 is already in use, check whether it is occupied (generally you have started an AList with port 5244), or modify the port number started by AList, [**How to modify**](../config/configuration.md#port)
+<Badge text="A" type="info" vertical="middle" />：Port number 5244 is already in use, check whether it is occupied (generally you have started an OpenList with port 5244), or modify the port number started by OpenList, [**How to modify**](../config/configuration.md#port)
 
 -----
 
-<Badge text="Q" type="warning" vertical="middle" />：**[When AList upload file](why.md#why-do-i-get-413-http-code-when-i-upload-a-file)**：Request failed with status code 413
+<Badge text="Q" type="warning" vertical="middle" />：**[When OpenList upload file](why.md#why-do-i-get-413-http-code-when-i-upload-a-file)**：Request failed with status code 413
 
 <br/>
 

@@ -163,9 +163,9 @@ Do not leave blank lines in the two configuration files, as this will also repor
 **config.yaml**
 
 ```yaml
-# Your own AList site, which can be local or remote server IP or domain name, but cannot have "/" at the end
+# Your own OpenList site, which can be local or remote server IP or domain name, but cannot have "/" at the end
 url: ALIST_URL
-# The three parameters of auth are your AList administrator account password and refresh token
+# The three parameters of auth are your OpenList administrator account password and refresh token
 auth:
     username: USERNAME
     password: PASSWORD

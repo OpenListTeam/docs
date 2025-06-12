@@ -54,7 +54,7 @@ category:
 - [x] [Mega.nz](https://mega.nz)
 - [x] [一刻相册](https://photo.baidu.com/)
 - [x] [TeraBox -海外百度](https://www.terabox.com/)
-- [x] [AList v2/v3](../guide/drivers/Alist%20V2%20V3.md)
+- [x] [OpenList v2/v3](../guide/drivers/Alist%20V2%20V3.md)
 - [x] SMB
 - [x] [别名](../guide/advanced/alias.md)
 - [x] [115](https://115.com/)
@@ -91,4 +91,4 @@ category:
 
 ## 许可
 
-`AList` 是在 AGPL-3.0 许可下许可的开源软件。
+`OpenList` 是在 AGPL-3.0 许可下许可的开源软件。

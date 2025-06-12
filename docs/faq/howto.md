@@ -120,13 +120,13 @@ Background --> Settings --> Preview --> Iframe preview, written behind the PDF
 Version 3.7.x and higher already support ".epub" reading
 But you need to add it manually (because the database has already been created, it is not good to overwrite it for you, and you will make mistakes)
 If it is the first installation and startup (version 3.7.x and higher), no need to add it manually
-If the secondary directory reverse generation is set, please add the corresponding prefix in [site_url](../config/configuration.md#site-url), and then restart AList to take effect
+If the secondary directory reverse generation is set, please add the corresponding prefix in [site_url](../config/configuration.md#site-url), and then restart OpenList to take effect
 
 ### **How to quickly locate bugs**
 
 If you find a bug, but the `log.log` log is not detailed, you can try to add the `--debug` parameter to start
 
-It is recommended to clear the log file `/log/log.log` in the **AList directory before starting with the `--debug` parameter**, so that developers can quickly locate problems later
+It is recommended to clear the log file `/log/log.log` in the **OpenList directory before starting with the `--debug` parameter**, so that developers can quickly locate problems later
 
 ::: danger
 When using the `--debug` parameter to start, there will be some sensitive data such as **`account password, refresh token`**, etc., so if you need to desensitize before sending it to others

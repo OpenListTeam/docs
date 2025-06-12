@@ -20,13 +20,13 @@ star: true
 
 WoPan address：**https://pan.wo.cn/**
 
-- :warning: AList v3.19.0 version and above can use this driver
+- :warning: OpenList v3.19.0 version and above can use this driver
 
 ::: tip
 
-AList WoPan is web-based platform is used to access WoPan storage. 
+OpenList WoPan is web-based platform is used to access WoPan storage. 
 
-After mounting WoPan storage using AList, please do not log in to the web version of the WoPan again, as this will log out the AList session and make the invalid.
+After mounting WoPan storage using OpenList, please do not log in to the web version of the WoPan again, as this will log out the OpenList session and make the invalid.
 
 Logging in on the mobile app does not pose any issue, as it can be done simultaneously without any conflicts.
 
@@ -64,7 +64,7 @@ Family cloud：add `Family ID` Unknown (wait for replenishment)
 
 
 
-### **AList fill in examples：**
+### **OpenList fill in examples：**
 
 Data obtained by using tools `Refresh_token Fill in the refresh token`, `Access_token fills in access_token`
 

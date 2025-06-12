@@ -45,7 +45,7 @@ FebBox：https://www.febbox.com
 
 生成地址：**https://www.febbox.com/open/clients**
 
-- 生成的客户端ID和秘钥和AList填写的顺序是相反的，注意别填错
+- 生成的客户端ID和秘钥和OpenList填写的顺序是相反的，注意别填错
 
 ![](/img/drivers/febbox/febox.png)
 

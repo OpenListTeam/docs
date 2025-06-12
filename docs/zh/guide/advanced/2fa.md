@@ -20,7 +20,7 @@ star: true
 
 要启用双因素身份验证，需要在手机上安装支持 TOTP 的验证器，例如 [Google Authenticator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2)，[Microsoft Authenticator](https://support.microsoft.com/zh-cn/account-billing/%E4%B8%8B%E8%BD%BD%E5%B9%B6%E5%AE%89%E8%A3%85microsoft-authenticator%E5%BA%94%E7%94%A8-351498fc-850a-45da-b7b6-27e523b8702a)
 
-然后登录 AList 管理并进入“个人资料”页面，点击“启用 2FA”按钮，用你的 2FA 应用扫描二维码，输入你的 2FA 应用生成的代码。
+然后登录 OpenList 管理并进入“个人资料”页面，点击“启用 2FA”按钮，用你的 2FA 应用扫描二维码，输入你的 2FA 应用生成的代码。
 
 最后，单击“验证”按钮启用 2FA。
 
@@ -50,6 +50,6 @@ star: true
 
 三、(>3.30.0)
 
->进入后台用户页面，可以看到 `取消两步验证` 的选项，取消后如果还有可以选择重新启动一下AList
+>进入后台用户页面，可以看到 `取消两步验证` 的选项，取消后如果还有可以选择重新启动一下OpenList
 >
 >- 需要使用新版本，如果没有 `取消两步验证` 的选项，说明你需要更新版本

@@ -20,7 +20,7 @@ star: true
 
 ### **Logo**
 
-The logo is displayed in the upper left corner of the page. The default is the `AList logo`.
+The logo is displayed in the upper left corner of the page. The default is the `OpenList logo`.
 
 - You can set two different ones at night and during the day, one link per line
 
@@ -28,7 +28,7 @@ The logo is displayed in the upper left corner of the page. The default is the `
 
 ### **Favicon**
 
-The favicon is displayed in the browser tab. The default is the `AList logo`.
+The favicon is displayed in the browser tab. The default is the `OpenList logo`.
 
 
 

@@ -42,11 +42,11 @@ star: true
 - **sqlite3** 容易触发 `database is locked`锁库无法写入文件
   - 解决`database is locked`方案：
     - 是因为数据库在构建索引，如果你还在构建过程中，请耐心等待
-    - 如果是已经索引完毕，是因为开启了[自动索引](#自动更新索引)导致的，请关闭使用[自动索引](#自动更新索引)，如果还是这个问题请关闭后重新启动AList
+    - 如果是已经索引完毕，是因为开启了[自动索引](#自动更新索引)导致的，请关闭使用[自动索引](#自动更新索引)，如果还是这个问题请关闭后重新启动OpenList
     - 或者将数据库切换为MySQL
 
 - `meilisearch`：暂时未深度体验也不太了解具体差异，给予专业人士使用或者自己去查询一翻，[查看PR链接](https://github.com/alist-org/alist/pull/6060)，唯一知道的是得[自己搭建](https://www.meilisearch.com/docs/learn/getting_started/installation)使用，支持很多种方法，但是并没有守护进程等懒人操作、不支持系统[依赖低于`GLIBC_2.27`](https://github.com/meilisearch/meilisearch/issues/4022)以下的Linux系统、如果是本机搭建会自动识别，如果是其它设备可以修改配置文件的**meilisearch**字段内容
-  - 守护进程：如果要使用可以自己按照手动启动AList的办法新建一个守护进程
+  - 守护进程：如果要使用可以自己按照手动启动OpenList的办法新建一个守护进程
   - 下载地址：https://github.com/meilisearch/meilisearch/releases
     - `meilisearch`文档地址：https://www.meilisearch.com/docs/learn/getting_started/installation
     - 参考链接：https://github.com/AlistGo/alist/discussions/6830
@@ -183,7 +183,7 @@ star: true
 
 正常用户都是没有修改数据库选项使用的是 `sqlite` 数据库来构建索引的，就会导致数据库文件特别大
 
-- 数据库文件在AList同级目录下的`data`文件夹，`data.db，data.db-shm，data.db-wal`
+- 数据库文件在OpenList同级目录下的`data`文件夹，`data.db，data.db-shm，data.db-wal`
 
 开启构建索引后，你构建的数量越多文件越大，最后不小心把机器的硬盘占满了，然后就点击了清除索引按钮，文件还是一样大这怎么办？
 
