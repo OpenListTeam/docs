@@ -3,37 +3,12 @@ import { NButtonGroup, NImage, NSpace, NButton, NDropdown } from "naive-ui"
 import { computed, ref } from "vue"
 // import { api } from "./api";
 
-const proxy = "https://ghfast.top/"
+const proxy = "https://example.com/"
 const res = await fetch(`https://ad-api.example.com/v0/app/latest`)
 const data = await res.json()
 const version = data.version as string
 
 const raw = [
-  {
-    key: "mac_arm64",
-    label: "MacOS (Apple Silicon)",
-    url: `https://github.com/alist-org/desktop-release/releases/latest/download/alist-desktop_${version}_aarch64.dmg`,
-  },
-  {
-    key: "mac_x64",
-    label: "MacOS (Intel)",
-    url: `https://github.com/alist-org/desktop-release/releases/latest/download/alist-desktop_${version}_x64.dmg`,
-  },
-  {
-    key: "win_x64",
-    label: "Windows (X64)",
-    url: `https://github.com/alist-org/desktop-release/releases/latest/download/alist-desktop_${version}_x64_en-US.msi`,
-  },
-  {
-    key: "win_arm64",
-    label: "Windows (ARM64)",
-    url: `https://github.com/alist-org/desktop-release/releases/latest/download/alist-desktop_${version}_arm64-setup.exe`,
-  },
-  {
-    key: "linux",
-    label: "Linux",
-    url: `https://github.com/alist-org/desktop-release/releases/latest/download/alist-desktop_${version}_amd64.deb`,
-  },
 ] as const
 
 type Plat = (typeof raw)[number]["key"]
