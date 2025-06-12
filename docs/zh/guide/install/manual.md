@@ -18,16 +18,16 @@ star: true
 # 手动安装
 
 ## **获取 OpenList**
-打开 [OpenList Release](https://github.com/Xhofe/alist/releases) 下载待部署系统对应的文件。最新版的前端已经和后端打包好了，不用再下载前端文件了。
+打开 [OpenList Release](https://github.com/Xhofe/openlist/releases) 下载待部署系统对应的文件。最新版的前端已经和后端打包好了，不用再下载前端文件了。
 
 
 
-xxxx 指的是不同系统/架构对应的名称，一般 Linux-x86/64 为 alist-linux-amd64
+xxxx 指的是不同系统/架构对应的名称，一般 Linux-x86/64 为 openlist-linux-amd64
 
-手动安装如果有如下提示：是因为[你的 GLIBC 版本太低](../../faq/why.md#lib64-libc-so-6-version-glibc-2-28-not-found-required-by-alist-或者-accept-function-not-implemented)，建议下载 musl 版本
+手动安装如果有如下提示：是因为[你的 GLIBC 版本太低](../../faq/why.md#lib64-libc-so-6-version-glibc-2-28-not-found-required-by-openlist-或者-accept-function-not-implemented)，建议下载 musl 版本
 
 ```txt
-lib64/libc.so.6: version `GLIBC_2.28' not found (required by ./alist)  
+lib64/libc.so.6: version `GLIBC_2.28' not found (required by ./openlist)  
 #或者
 accept: function not implemented
 ```
@@ -49,67 +49,67 @@ v3.25.0以上版本将密码改成加密方式存储的hash值，无法直接反
 
 ```bash
 # 解压下载的文件，得到可执行文件：
-tar -zxvf alist-xxxx.tar.gz
+tar -zxvf openlist-xxxx.tar.gz
 # 授予程序执行权限：
-chmod +x alist
+chmod +x openlist
 # 运行程序
-./alist server
+./openlist server
 
 # 获得管理员信息 以下两个不同版本，新版本也有随机生成和手动设置
 # 低于v3.25.0版本
-./alist admin
+./openlist admin
 
 # 高于v3.25.0版本
 # 随机生成一个密码
-./alist admin random
+./openlist admin random
 # 手动设置一个密码 `NEW_PASSWORD`是指你需要设置的密码
-./alist admin set NEW_PASSWORD
+./openlist admin set NEW_PASSWORD
 ```
 @tab macOS
 
 ```bash
 # 解压下载的文件，得到可执行文件：
-tar -zxvf alist-xxxx.tar.gz
+tar -zxvf openlist-xxxx.tar.gz
 # 授予程序执行权限：
-chmod +x alist
+chmod +x openlist
 # 运行程序
-./alist server
+./openlist server
 
 # 获得管理员信息 以下两个不同版本，新版本也有随机生成和手动设置
 # 低于v3.25.0版本
-./alist admin
+./openlist admin
 
 #高于v3.25.0版本
 # 随机生成一个密码
-./alist admin random
+./openlist admin random
 # 手动设置一个密码 `NEW_PASSWORD`是指你需要设置的密码
-./alist admin set NEW_PASSWORD
+./openlist admin set NEW_PASSWORD
 ```
 @tab Windows
 
 ```bash
 # 解压下载的文件，得到可执行文件：
-unzip alist-xxxx.zip
+unzip openlist-xxxx.zip
 # 运行程序
-.\alist.exe server
+.\openlist.exe server
 
 # 获得管理员信息 以下两个不同版本，新版本也有随机生成和手动设置
 # 低于v3.25.0版本
-.\alist.exe admin
+.\openlist.exe admin
 
 # 高于v3.25.0版本
 # 随机生成一个密码
-.\alist.exe admin random
+.\openlist.exe admin random
 # 手动设置一个密码 `NEW_PASSWORD`是指你需要设置的密码
-.\alist.exe admin set NEW_PASSWORD
+.\openlist.exe admin set NEW_PASSWORD
 ```
 @tab win(scoop)
 
 ```bash
 # 安装
-scoop install alist
+scoop install openlist
 # 运行
-alist server
+openlist server
 ```
 :::
 
@@ -121,17 +121,17 @@ alist server
 
 :::::tabs#os
 @tab Linux
-使用任意方式编辑 `/usr/lib/systemd/system/alist.service` 并添加如下内容，其中 path_alist 为 OpenList 所在的路径
+使用任意方式编辑 `/usr/lib/systemd/system/openlist.service` 并添加如下内容，其中 path_openlist 为 OpenList 所在的路径
 
 ```ini
 [Unit]
-Description=alist
+Description=openlist
 After=network.target
  
 [Service]
 Type=simple
-WorkingDirectory=path_alist
-ExecStart=path_alist/alist server
+WorkingDirectory=path_openlist
+ExecStart=path_openlist/openlist server
 Restart=on-failure
  
 [Install]
@@ -140,17 +140,17 @@ WantedBy=multi-user.target
 
 然后，执行 `systemctl daemon-reload` 重载配置，现在你可以使用这些命令来管理程序：
 
-- 启动: `systemctl start alist`
-- 关闭: `systemctl stop alist`
-- 配置开机自启: `systemctl enable alist`
-- 取消开机自启: `systemctl disable alist`
-- 状态: `systemctl status alist`
-- 重启: `systemctl restart alist`
+- 启动: `systemctl start openlist`
+- 关闭: `systemctl stop openlist`
+- 配置开机自启: `systemctl enable openlist`
+- 取消开机自启: `systemctl disable openlist`
+- 状态: `systemctl status openlist`
+- 重启: `systemctl restart openlist`
 
 守护进程不配置? [**视频教程**](https://www.bilibili.com/video/BV1rF41197Qv?t=187.0)
 
 @tab macOS
-使用任意方式编辑 `~/Library/LaunchAgents/ci.nn.alist.plist` 并添加如下内容，修改 `path_alist` 为 OpenList 所在的路径，`path/to/working/dir` 为 OpenList的工作路径
+使用任意方式编辑 `~/Library/LaunchAgents/ci.nn.openlist.plist` 并添加如下内容，修改 `path_openlist` 为 OpenList 所在的路径，`path/to/working/dir` 为 OpenList的工作路径
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -158,7 +158,7 @@ WantedBy=multi-user.target
 <plist version="1.0">
     <dict>
         <key>Label</key>
-        <string>ci.nn.alist</string>
+        <string>ci.nn.openlist</string>
         <key>KeepAlive</key>
         <true/>
         <key>ProcessType</key>
@@ -169,18 +169,18 @@ WantedBy=multi-user.target
         <string>path/to/working/dir</string>
         <key>ProgramArguments</key>
         <array>
-            <string>path_alist/alist</string>
+            <string>path_openlist/openlist</string>
             <string>server</string>
         </array>
     </dict>
 </plist>
 ```
 
-然后，执行 `launchctl load ~/Library/LaunchAgents/ci.nn.alist.plist` 加载配置，现在你可以使用这些命令来管理程序：
+然后，执行 `launchctl load ~/Library/LaunchAgents/ci.nn.openlist.plist` 加载配置，现在你可以使用这些命令来管理程序：
 
-- 开启: `launchctl start ~/Library/LaunchAgents/ci.nn.alist.plist`
-- 关闭: `launchctl stop ~/Library/LaunchAgents/ci.nn.alist.plist`
-- 卸载配置: `launchctl unload ~/Library/LaunchAgents/ci.nn.alist.plist`
+- 开启: `launchctl start ~/Library/LaunchAgents/ci.nn.openlist.plist`
+- 关闭: `launchctl stop ~/Library/LaunchAgents/ci.nn.openlist.plist`
+- 卸载配置: `launchctl unload ~/Library/LaunchAgents/ci.nn.openlist.plist`
 
 @tab Windows
 
@@ -188,13 +188,13 @@ WantedBy=multi-user.target
 
 1.  在 https://nssm.cc/download 下载最新版本的 `nssm`；
 2.  在解压后的文件夹内按住 Shift 并右击空白处，选择“在此处打开 Powershell 窗口”；
-3.  在弹出的窗口中输入 `.\nssm.exe install alist`；
-4.  Path 选择 alist.exe 的路径，如 `D:\alist\alist.exe`，Arguments 填 `server`；
+3.  在弹出的窗口中输入 `.\nssm.exe install openlist`；
+4.  Path 选择 openlist.exe 的路径，如 `D:\openlist\openlist.exe`，Arguments 填 `server`；
 5.  Details 选项卡中可以自定义标题和描述，可以选择服务的自启动模式（自动|延迟启动|手动|禁用）；
-6.  在 I/O 选项卡为 Output (stdout) 和 Output (stderr) 各自指定一个日志文件的路径，如 `D:\alist\stdout.log`，文件本身（`stdout.log`）可以不存在，但是指定的目录（`D:\alist`）必须存在；
+6.  在 I/O 选项卡为 Output (stdout) 和 Output (stderr) 各自指定一个日志文件的路径，如 `D:\openlist\stdout.log`，文件本身（`stdout.log`）可以不存在，但是指定的目录（`D:\openlist`）必须存在；
 7.  点击“Install Service”即可。
 
-此后可以直接在服务中启动 `alist`。
+此后可以直接在服务中启动 `openlist`。
 
 ### **方法2**
 
@@ -210,7 +210,7 @@ WantedBy=multi-user.target
 ```bash title="vbscript"
 Dim ws
 Set ws = Wscript.CreateObject("Wscript.Shell")
-ws.run "alist.exe server",vbhide
+ws.run "openlist.exe server",vbhide
 Wscript.quit
 ```
 
@@ -219,7 +219,7 @@ Wscript.quit
 ```bash title="vbscript"
 Dim ws
 Set ws = Wscript.CreateObject("Wscript.Shell")
-ws.run "taskkill /f /im alist.exe",0
+ws.run "taskkill /f /im openlist.exe",0
 Wscript.quit
 ```
 
@@ -240,11 +240,11 @@ Wscript.quit
 
 ```bash
 # 携带`--force-bin-dir`参数启动服务
-alist start
+openlist start
 # 通过pid停止服务
-alist stop
+openlist stop
 # 通过pid重启服务
-alist restart
+openlist restart
 ```
 
 :::

@@ -18,17 +18,17 @@ sticky: true
 star: true
 ---
 
-## **Get Alist**
-Open [OpenList Release](https://github.com/Xhofe/alist/releases) to download the files corresponding to the system to be deployed. The latest version of the front-end has been packaged with the back-end, so there is no need to download the front-end files again.
+## **Get OpenList**
+Open [OpenList Release](https://github.com/OpenListTeam/OpenList/releases) to download the files corresponding to the system to be deployed. The latest version of the front-end has been packaged with the back-end, so there is no need to download the front-end files again.
 
 
 
-The xxxx refers to the names corresponding to different systems/architectures, generally Linux-x86/64 is alist-linux-amd64. 
+The xxxx refers to the names corresponding to different systems/architectures, generally Linux-x86/64 is openlist-linux-amd64. 
 
-If there is a prompt as follows：It is because [your GLIBC version is too low](../../faq/why.md#lib64-libc-so-6-version-glibc-2-28-not-found-required-by-alist-or-accept-function-not-implemented), it is recommended to download the musl version
+If there is a prompt as follows：It is because [your GLIBC version is too low](../../faq/why.md#lib64-libc-so-6-version-glibc-2-28-not-found-required-by-openlist-or-accept-function-not-implemented), it is recommended to download the musl version
 
 ```txt
-lib64/libc.so.6: version `GLIBC_2.28' not found (required by ./alist)  
+lib64/libc.so.6: version `GLIBC_2.28' not found (required by ./openlist)  
 # or
 accept: function not implemented
 ```
@@ -46,64 +46,64 @@ Versions above v3.25.0 change the password to an encrypted hash value, and the p
 
 ```bash
 # Unzip the downloaded file to get the executable file:
-tar -zxvf alist-xxxx.tar.gz
+tar -zxvf openlist-xxxx.tar.gz
 # Grant program execution permissions:
-chmod +x alist
+chmod +x openlist
 # Run the program
-./alist server
+./openlist server
 
 # Obtain administrator information The following two different versions, the new version also has random generation and manual settings
 # Versions lower than v3.25.0
-./alist admin
+./openlist admin
 
 # higher than v3.25.0 version
 # Randomly generate a password
-./alist admin random
+./openlist admin random
 # Manually set a password `NEW_PASSWORD` refers to the password you need to set
-./alist admin set NEW_PASSWORD
+./openlist admin set NEW_PASSWORD
 ```
 @tab macOS
 ```bash
 # Unzip the downloaded file to get the executable file:
-tar -zxvf alist-xxxx.tar.gz
+tar -zxvf openlist-xxxx.tar.gz
 # Grant program execution permissions:
-chmod +x alist
+chmod +x openlist
 # Run the program
-./alist server
+./openlist server
 
 # Obtain administrator information The following two different versions, the new version also has random generation and manual settings
 # Versions lower than v3.25.0
-./alist admin
+./openlist admin
 
 # higher than v3.25.0 version
 # Randomly generate a password
-./alist admin random
+./openlist admin random
 # Manually set a password `NEW_PASSWORD` refers to the password you need to set
-./alist admin set NEW_PASSWORD
+./openlist admin set NEW_PASSWORD
 ```
 @tab Windows
 ```bash
 # Unzip the downloaded file to get the executable file:
-unzip alist-xxxx.zip
+unzip openlist-xxxx.zip
 # Run the program
-.\alist.exe server
+.\openlist.exe server
 
 # Obtain administrator information The following two different versions, the new version also has random generation and manual settings
 # Versions lower than v3.25.0
-.\alist.exe admin
+.\openlist.exe admin
 
 # higher than v3.25.0 version
 # Randomly generate a password
-.\alist.exe admin random
+.\openlist.exe admin random
 # Manually set a password `NEW_PASSWORD` refers to the password you need to set
-.\alist.exe admin set NEW_PASSWORD
+.\openlist.exe admin set NEW_PASSWORD
 ```
 @tab win(scoop)
 ```bash
 # Install
-scoop install alist
+scoop install openlist
 # Run
-alist server
+openlist server
 ```
 :::
 
@@ -111,34 +111,34 @@ alist server
 
 :::::tabs#os
 @tab linux
-`vim /usr/lib/systemd/system/alist.service` add the following content, where path_alist is the path where alist is located
+`vim /usr/lib/systemd/system/openlist.service` add the following content, where path_openlist is the path where openlist is located
 
 ```ini
 [Unit]
-Description=alist
+Description=openlist
 After=network.target
  
 [Service]
 Type=simple
-WorkingDirectory=path_alist
-ExecStart=path_alist/alist server
+WorkingDirectory=path_openlist
+ExecStart=path_openlist/openlist server
 Restart=on-failure
  
 [Install]
 WantedBy=multi-user.target
 ```
 Then `systemctl daemon-reload`, now you can use these commands to manage the program:
-- Start: `systemctl start alist`
-- Shut down: `systemctl stop alist`
-- Self-start: `systemctl enable alist`
-- Cancel Self-start: `systemctl disable alist`
-- Status: `systemctl status alist`
-- Restart: `systemctl restart alist`
+- Start: `systemctl start openlist`
+- Shut down: `systemctl stop openlist`
+- Self-start: `systemctl enable openlist`
+- Cancel Self-start: `systemctl disable openlist`
+- Status: `systemctl status openlist`
+- Restart: `systemctl restart openlist`
 
 Daemon will not use? [**Video Tutorial**](https://www.bilibili.com/video/BV1rF41197Qv?t=187.0)
 
 @tab macOS
-Edit `~/Library/LaunchAgents/ci.nn.alist.plist` in any way and add the following content, modify `path_alist` to be the path where OpenList is located, and `path/to/working/dir` to be the working path of OpenList
+Edit `~/Library/LaunchAgents/ci.nn.openlist.plist` in any way and add the following content, modify `path_openlist` to be the path where OpenList is located, and `path/to/working/dir` to be the working path of OpenList
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -146,7 +146,7 @@ Edit `~/Library/LaunchAgents/ci.nn.alist.plist` in any way and add the following
 <plist version="1.0">
      <dict>
          <key>Label</key>
-         <string>ci.nn.alist</string>
+         <string>ci.nn.openlist</string>
          <key>KeepAlive</key>
          <true/>
          <key>ProcessType</key>
@@ -157,18 +157,18 @@ Edit `~/Library/LaunchAgents/ci.nn.alist.plist` in any way and add the following
          <string>path/to/working/dir</string>
          <key>ProgramArguments</key>
          <array>
-             <string>path_alist/alist</string>
+             <string>path_openlist/openlist</string>
              <string>server</string>
          </array>
      </dict>
 </plist>
 ```
 
-Then, execute `launchctl load ~/Library/LaunchAgents/ci.nn.alist.plist` to load the configuration, now you can use these commands to manage the program:
+Then, execute `launchctl load ~/Library/LaunchAgents/ci.nn.openlist.plist` to load the configuration, now you can use these commands to manage the program:
 
-- Start: `launchctl start ~/Library/LaunchAgents/ci.nn.alist.plist`
-- Close: `launchctl stop ~/Library/LaunchAgents/ci.nn.alist.plist`
-- Unload configuration: `launchctl unload ~/Library/LaunchAgents/ci.nn.alist.plist`
+- Start: `launchctl start ~/Library/LaunchAgents/ci.nn.openlist.plist`
+- Close: `launchctl stop ~/Library/LaunchAgents/ci.nn.openlist.plist`
+- Unload configuration: `launchctl unload ~/Library/LaunchAgents/ci.nn.openlist.plist`
 
 @tab Windows
 
@@ -177,10 +177,10 @@ Then, execute `launchctl load ~/Library/LaunchAgents/ci.nn.alist.plist` to load 
 1.  Download the newest `nssm` from https://nssm.cc/download.
 2.  Unzip the archive and go to the diretory of `nssm.exe`.
 3.  Hold Shift and right click on the blank space, then release and press S or select "powershell here", you should now see a blue window named "Windows PowerShell".
-4.  Type `.\nssm.exe install alist`.
-5.  Select the path of `alist.exe` for "Path", e.g. `D:\alist\alist.exe`; type `server` for "Argument".
+4.  Type `.\nssm.exe install openlist`.
+5.  Select the path of `openlist.exe` for "Path", e.g. `D:\openlist\openlist.exe`; type `server` for "Argument".
 6.  You can custom "Display Name", "Description" and "Startup Type" in "Details" tab.
-7.  Go to "I/O" tab and select a file for both "Output (stdout)" and "Output (stderr)", e.g. `D:\alist\stdout.log`. The file itself (`stdout.log`) may not exist, but the folder (`D:\alist`) must exist.
+7.  Go to "I/O" tab and select a file for both "Output (stdout)" and "Output (stderr)", e.g. `D:\openlist\stdout.log`. The file itself (`stdout.log`) may not exist, but the folder (`D:\openlist`) must exist.
 8.  Click on "Install Service".
 
 You can now start the service from services.msc or task manager.
@@ -189,7 +189,7 @@ You can now start the service from services.msc or task manager.
 
 Use **`.VBS`** script to start and stop, create two scripts respectively start.vbs and stop.vbs
 
-Just double-click to start it in the folder at the same level as the Alist startup program, don't worry about no response, just go to the browser to access it
+Just double-click to start it in the folder at the same level as the OpenList startup program, don't worry about no response, just go to the browser to access it
 
 ::: info Two startup scripts
 
@@ -198,7 +198,7 @@ Just double-click to start it in the folder at the same level as the Alist start
 ```bash title="vbscript"
 Dim ws
 Set ws = Wscript.CreateObject("Wscript.Shell")
-ws.run "alist.exe server",vbhide
+ws.run "openlist.exe server",vbhide
 Wscript.quit
 ```
 
@@ -207,7 +207,7 @@ Wscript.quit
 ```bash title="vbscript"
 Dim ws
 Set ws = Wscript.CreateObject("Wscript.Shell")
-ws.run "taskkill /f /im alist.exe",0
+ws.run "taskkill /f /im openlist.exe",0
 Wscript.quit
 ```
 
@@ -228,11 +228,11 @@ For all platform, you can use follow command to silent start, stop and restart. 
 
 ```bash
 # start server with `--force-bin-dir`
-alist start
+openlist start
 # stop server by pid
-alist stop
+openlist stop
 # restart server by pid
-alist restart
+openlist restart
 ```
 
 :::
@@ -240,6 +240,6 @@ alist restart
 
 ## **How to update**
 
-Download the new version of Alist and replace the previous one.
+Download the new version of OpenList and replace the previous one.
 
 <!-- @include: script.md{87-265} -->
