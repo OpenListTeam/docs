@@ -77,19 +77,17 @@ A file list program that supports multiple storage, and supports web browsing an
 - [x] [GitHub API](../guide/drivers/github.md) / [GitHub Release](../guide/drivers/github_releases.md)
 - [x] [Misskey](https://misskey-hub.net/cn/docs/for-users/features/drive/)
 
-### Discussion
+### Discussions
 
-Please go to our [discussion forum](https://github.com/Xhofe/alist/discussions) for general questions, **issues are for bug reports and feature request only.**
+Please go to [Github Discussions](https://github.com/OpenListTeam/OpenList/discussions) for general questions, **Issues are for bug reports and feature request only.**
 
 ### Demo
 
-- https://al.example.com
+N/A
 
 ### Special sponsors
 
-- [VidHub](https://apps.apple.com/app/apple-store/id1659622164?pt=118612019&ct=alist&mt=8) - An elegant cloud video player within the Apple ecosystem. Support for iPhone, iPad, Mac, and Apple TV.
-- [亚洲云](https://www.asiayun.com/aff/QQCOOQKZ) - 高防服务器|服务器租用|福州高防|广东电信|香港服务器|美国服务器|海外服务器 - 国内靠谱的企业级云计算服务提供商 (sponsored Chinese API server)
-- [找资源](http://zhaoziyuan2.cc/) - 阿里云盘资源搜索引擎
+N/A
 
 ### License
 

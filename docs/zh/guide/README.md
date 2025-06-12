@@ -75,19 +75,17 @@ category:
 - [x] [GitHub API](../guide/drivers/github.md) / [GitHub Release](../guide/drivers/github_releases.md)
 - [x] [Misskey](https://misskey-hub.net/cn/docs/for-users/features/drive/)
 
-## Discussion
+## Discussions
 
-一般问题请到[讨论论坛](https://github.com/Xhofe/alist/discussions) ，**issue仅针对错误报告和功能请求。**
+一般问题请到 [Discussions](https://github.com/OpenListTeam/OpenList/discussions) ，**Issues 仅针对错误报告和功能请求。**
 
 ## 演示
 
-- https://al.example.com
+N/A
 
 ## 特别赞助
 
-- [VidHub](https://zh.okaapps.com/product/1659622164?ref=alist) - 苹果生态下优雅的网盘视频播放器，iPhone，iPad，Mac，Apple TV全平台支持。
-- [亚洲云](https://www.asiayun.com/aff/QQCOOQKZ) - 高防服务器|服务器租用|福州高防|广东电信|香港服务器|美国服务器|海外服务器 - 国内靠谱的企业级云计算服务提供商 (国内API服务器赞助)
-- [找资源](http://zhaoziyuan2.cc/) - 阿里云盘资源搜索引擎
+N/A
 
 ## 许可
 
