@@ -7,7 +7,7 @@ export default hopeTheme(
     docsDir: "docs",
     logo: "/logo.svg",
     repo: "OpenListTeam/docs",
-    // hostname: "https://alist.example.com",
+    // hostname: "https://docs.oplist.org",
     // 移动到 palette.scss 文件中
     // themeColor: {
     //   blue: "#2196f3",
