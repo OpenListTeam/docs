@@ -75,7 +75,7 @@ star: true
 
 There are two ways to choose based on your needs
 
-1. Using **https://github.com/jing332/OpenListFlutter**
+1. Using **https://github.com/jing332/AListFlutter**
 2. Use `termux` to run
 - Reference: **https://anwen-anyi.github.io/index/14-android_install.html**
 
