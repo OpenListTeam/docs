@@ -20,7 +20,7 @@ star: true
 
 ### **Aria2**
 
-Set Aria2 uri and Aria2 for offline download. Aria2 needs to be installed on the same server(container if use docker) as alist.
+Set Aria2 uri and Aria2 for offline download. Aria2 needs to be installed on the same server(container if use docker) as OpenList.
 
 <br/>
 
@@ -44,7 +44,7 @@ Allow the use of offline download tools such as 115/PikPak/Thunder in any storag
 
 - Otherwise, the file will be downloaded to the temporary directory configured by the user, and then transferred to the target directory
   - For example, in the front-end page of the `GoogleDrive` storage driver, calling `Pikpak offline-download` will first download to the Pikpak temporary folder directory set in the background, and then transfer from Pikpak to the `GoogleDrive` file after the Pikpak offline download is completed
-- **https://github.com/AlistGo/alist/pull/7716**
+- **https://github.com/OpenListTeam/OpenList/pull**
 
 <br/>
 
