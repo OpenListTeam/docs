@@ -23,11 +23,11 @@ star: true
 ::: tip
 After modifying the configuration file, restart OpenList for changes to take effect
 
-- Windows/MacOS: `<alist dir>/data/config.json`
-- Linux: one-click script directory, `/opt/alist/data/config.json` or `<alist dir>/data/config.json`
+- Windows/MacOS: `<OpenList dir>/data/config.json`
+- Linux: one-click script directory, `/opt/alist/data/config.json` or `<OpenList dir>/data/config.json`
 - Docker: `<docker container dir>/data/config.json`
-- openwrt: modify config on server if using `luci-app-alist` , otherwise `<alist dir>/data/config.json`
-- Other: `<alist dir>/data/config.json`
+- openwrt: modify config on server if using `luci-app-alist` , otherwise `<OpenList dir>/data/config.json`
+- Other: `<OpenList dir>/data/config.json`
 
 :::
 
@@ -187,20 +187,20 @@ Do not include the slash \(`/`\) at the end of the address. For example:
 
 The address of the CDN. Included `$version` values will be dynamically replaced by the version of OpenList. Existing dist resources are hosted on both npm and GitHub, which can be found at:
 
-- https://www.npmjs.com/package/alist-web
-- https://github.com/alist-org/web-dist
+- https://www.npmjs.com/package/openlist-web
+- https://github.com/OpenListTeam/web-dist
 
 Thus it is possible to use any npm or GitHub CDN path for this field. For example:
 
-- https://registry.npmmirror.com/alist-web/$version/files/dist/
-- https://cdn.jsdelivr.net/npm/alist-web@$version/dist/
-- https://unpkg.com/alist-web@$version/dist/
-- https://cdn.jsdelivr.net/gh/alist-org/web-dist@$version/dist/
-- https://cdn1.tianli0.top/npm/alist-web@$version/dist/
-- https://cdn1.tianli0.top/gh/alist-org/web-dist@$version/dist/
-- https://npm.elemecdn.com/alist-web@$version/dist/
-- https://jsd.onmicrosoft.cn/npm/alist-web@$version/dist/
-- https://jsd.onmicrosoft.cn/gh/alist-org/web-dist@$version/dist/
+- https://registry.npmmirror.com/openlist-web/$version/files/dist/
+- https://cdn.jsdelivr.net/npm/openlist-web@$version/dist/
+- https://unpkg.com/openlist-web@$version/dist/
+- https://cdn.jsdelivr.net/gh/OpenListTeam/web-dist@$version/dist/
+- https://cdn1.tianli0.top/npm/openlist-web@$version/dist/
+- https://cdn1.tianli0.top/gh/OpenListTeam/web-dist@$version/dist/
+- https://npm.elemecdn.com/openlist-web@$version/dist/
+- https://jsd.onmicrosoft.cn/npm/openlist-web@$version/dist/
+- https://jsd.onmicrosoft.cn/gh/OpenListTeam/web-dist@$version/dist/
 
 Keep empty to use local dist resources.
 
@@ -241,7 +241,7 @@ The database configuration, which is by default `sqlite3`. Available options are
     "db_file": "data\\data.db",     //Database location, used by sqlite3
     "table_prefix": "x_",           //database table name prefix
     "ssl_mode": "",     //To control the encryption options during the SSL handshake, the parameters can be searched by themselves, or check the answer from ChatGPT below
-    "dsn": ""           // https://github.com/alist-org/alist/pull/6031
+    "dsn": ""           // https://github.com/OpenListTeam/openlist
   },
 ```
 
@@ -306,7 +306,7 @@ In PostgreSQL, the `ssl_mode` parameter is used to specify how the client uses S
 
 Documentation link：https://www.meilisearch.com/docs
 
-Reference Links：https://github.com/AlistGo/alist/discussions/6830
+Reference Links：https://github.com/OpenListTeam/OpenList/discussions
 
 
 
@@ -362,8 +362,8 @@ Where data is stored when using  **`bleve`** index.
 
 If this item is set, the front -end file of this option is preferred to render, support the use of other front -end files, and the back -end continues to use the original application
 
-- https://github.com/alist-org/alist/issues/5531
-- https://github.com/alist-org/alist/discussions/6110
+- https://github.com/OpenListTeam/OpenList/issues
+- https://github.com/OpenListTeam/OpenList/discussions
 
 Upload the front -end file (dist) to the `data` folder of the application, and then fill in this way. The disadvantage is that if you update each time, you need to change the file manually
 
@@ -493,11 +493,11 @@ Configuration for background task threads.
 A new **transmission** configuration path is added to the background configuration: `/@manage/settings/traffic`
 
 - Supports limiting the number of threads and transmission uplink and downlink rates of ==6 tasks==
-- **https://github.com/AlistGo/alist/pull/7948**
+- **https://github.com/OpenListTeam/OpenList/pull**
 
 Operation principle: If `settings/traffic` does not have a thread number field (first run or just upgraded from an old version), `settings/traffic` will be initialized with the value of the config configuration file. If `settings/traffic` has a value, the thread configuration information of config will be ignored
 
-- **https://github.com/AlistGo/alist/pull/7948#issuecomment-2775174617**
+- **https://github.com/OpenListTeam/OpenList/pull**
 
 - Summary: For newly installed or upgraded versions, the values will be read from the configuration file to initialize the `traffic` configuration information. Subsequent modifications to the thread only need to be modified in the background.
 
