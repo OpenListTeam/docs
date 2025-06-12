@@ -3,7 +3,7 @@ home: true
 icon: iconfont icon-home
 title: Home
 heroImage: /logo.svg
-heroText: AList
+heroText: OpenList
 tagline: 🗂️ 一个支持多种存储的文件列表程序，使用 Gin 和 Solidjs。
 actions:
   - text: 开始💡
@@ -11,20 +11,20 @@ actions:
     type: primary
 
   - text: Github🌱
-    link: https://github.com/alist-org/alist
+    link: https://github.com/OpenListTeam/OpenList
 
 features:
   - title: 使用简单
     icon: iconfont icon-light
-    details: AList 从一开始就设计为易于安装，并且可以在所有平台上使用。
+    details: OpenList 从一开始就设计为易于安装，并且可以在所有平台上使用。
 
   - title: 多种存储
     icon: iconfont icon-storage
-    details: AList 支持多个存储提供商，包括本地存储、阿里云盘、OneDrive、Google Drive 等，且易于拓展。
+    details: OpenList 支持多个存储提供商，包括本地存储、阿里云盘、OneDrive、Google Drive 等，且易于拓展。
 
   - title: 支持 WebDAV
     icon: iconfont icon-waline
-    details: AList 支持所有 WebDAV 存储，这是一种用于访问文件的标准。
+    details: OpenList 支持所有 WebDAV 存储，这是一种用于访问文件的标准。
 
   - title: 黑暗模式
     icon: iconfont icon-contrast
@@ -44,11 +44,11 @@ features:
 
   - title: 单点登录
     icon: font-icon icon fa-solid fa-repeat-1
-    details: 使用单点登录快速登录AList
+    details: 使用单点登录快速登录OpenList
 
-  - title: 自动注册AList帐号
+  - title: 自动注册OpenList帐号
     icon: fa-solid fa-file-user
-    details: 使用单点登录自动注册为AList帐号快速注册
+    details: 使用单点登录自动注册为OpenList帐号快速注册
 
   - title: 离线下载
     icon: fa-solid fa-folder-arrow-down
@@ -63,6 +63,6 @@ features:
     details: 包括文本编辑器、README/HTML 渲染、文件永久链接、Cloudflare Workers 代理等
 
 copyright: false
-footer: <a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-bg.svg" alt="Deploys by Netlify" /> </a> <div>AGPL-3.0 Licensed | Copyright © 2022-present AList</div><script src="/adb.js" type="text/javascript"></script>
+footer: <a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-bg.svg" alt="Deploys by Netlify" /> </a> <div>AGPL-3.0 Licensed | Copyright © 2022-present The OpenList Team</div><script src="/adb.js" type="text/javascript"></script>
 ---
 
