@@ -39,15 +39,6 @@ const getLimit = async ()=>{
 }
 typeof fetch !== "undefined" && getLimit()
 </script>
-::: info 阿里云盘会员
-
-**阿里云盘会员：**[https://www.alipan.com/cpx/member](https://www.alipan.com/cpx/member?userCode=MzAwMDM1&disableNav=YES)
-
-- <i class="fa-solid fa-lightbulb fa-bounce" style="color: orange;"></i> 点击链接领取[**优惠券**](https://www.alipan.com/cpx/member?userCode=MzAwMDM1&disableNav=YES)，[**立即抢购**](https://www.alipan.com/cpx/member?userCode=MzAwMDM1&disableNav=YES) 
-
-<img src="https://r2.izyt.cc/ali/vip.png" alt="vip" style="zoom:30%;" />
-
-:::
 
 :::danger 请仔细阅读注意事项
 
@@ -84,12 +75,12 @@ typeof fetch !== "undefined" && getLimit()
 
 :::danger 关于阿里云open的OAuth验证API无法连接
 
-1.  由于原api `https://api.example.com`被sni阻断，导致国内无法连接的情况，故提供两个新的api供使用：
-    - `https://api-cf.example.com` (套了一层cloudflare)
-    - `https://api.xhofe.top` (辽宁多线， 由[亚洲云](https://www.asiayun.com/aff/QQCOOQKZ)赞助)
+1.  ~~由于原api `https://api.example.com`被sni阻断，导致国内无法连接的情况，故提供两个新的api供使用：~~
+    - ~~`https://api-cf.example.com` (套了一层cloudflare)~~
+    - ~~`https://api.example.com` (辽宁多线， 由[亚洲云](https://www.asiayun.com/aff/QQCOOQKZ)赞助)~~
 2.  需要将`aliyundrive_open`后台配置中的`Oauth令牌链接`更换为
-    - `https://api-cf.example.com/alist/ali_open/token`
-    - `https://api.xhofe.top/alist/ali_open/token`
+    - ~~`https://api-cf.example.com/alist/ali_open/token`~~
+    - ~~`https://api.xhofe.top/alist/ali_open/token`~~
     - ![](/img/drivers/aliyun/aliyun_api.png)
 
 3.  查看详情：https://github.com/alist-org/alist/discussions/4572
@@ -107,7 +98,7 @@ typeof fetch !== "undefined" && getLimit()
 
 前往：**https://alist.example.com/zh/tool/aliyundrive/request**
 
-
+（暂不可用）
 
 #### **获取示意图**
 

@@ -39,15 +39,6 @@ const getLimit = async ()=>{
 }
 typeof fetch !== "undefined" && getLimit()
 </script>
-::: info Aliyundrive VIP
-
-**Aliyundrive VIP**：[https://www.alipan.com/cpx/member](https://www.alipan.com/cpx/member?userCode=MzAwMDM1&disableNav=YES)
-
-- <i class="fa-solid fa-lightbulb fa-bounce" style="color: orange;"></i> Click the link to get [**Coupon**](https://www.alipan.com/cpx/member?userCode=MzAwMDM1&disableNav=YES),  [**immediately buy**](https://www.alipan.com/cpx/member?userCode=MzAwMDM1&disableNav=YES) 
-
-<img src="https://r2.izyt.cc/ali/vip.png" alt="vip" style="zoom:30%;" />
-
-:::
 
 :::danger Read the precautions carefully
 
@@ -83,13 +74,13 @@ typeof fetch !== "undefined" && getLimit()
 
 :::danger About Alibaba Cloud OAUTH verification API cannot be connected
 
-1. Since the original API `https://api.example.com` is blocked by SNI, resulting in the case that cannot be connected, two new APIs are provided for use:
-   - `https://api-cf.example.com` (A layer of Cloudflare)
-   - `https://api.xhofe.top` (LiaoNing multi -line， Sponsored by [Asia Cloud](https://www.asiayun.com/aff/QQCOOQKZ))
+1. ~~Since the original API `https://api.example.com` is blocked by SNI, resulting in the case that cannot be connected, two new APIs are provided for use:~~
+   - ~~`https://api-cf.example.com` (A layer of Cloudflare)~~
+   - ~~`https://api.example.com` (LiaoNing multi -line， Sponsored by [Asia Cloud](https://www.asiayun.com/aff/QQCOOQKZ))~~
 
 2. You need to replace the OAUTH token link in the ALIYUNDRIVE_OPEN configuration to
-   - `https://api-cf.example.com/alist/ali_open/token`
-   - `https://api.xhofe.top/alist/ali_open/token`
+   - ~~`https://api-cf.example.com/alist/ali_open/token`~~
+   - ~~`https://api.xhofe.top/alist/ali_open/token`~~
    - ![](/img/drivers/aliyun/aliyun_api.png)
 
 3. check the details：https://github.com/alist-org/alist/discussions/4572
@@ -106,6 +97,8 @@ typeof fetch !== "undefined" && getLimit()
 ## **refresh token**
 
 Go to：**https://alist.example.com/tool/aliyundrive/request**
+
+(Currently not available)
 
 #### **Get example graph**
 
