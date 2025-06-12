@@ -12,11 +12,10 @@ category:
 New versions (V3 and later) are not compatible with V2, so we recommend that you full reinstall Alist if you are upgrading from V2.
 :::
 
-[![](https://img.shields.io/github/release/Xhofe/alist?style=flat-square)](https://github.com/Xhofe/alist/releases/latest)
-[![GitHub Discussions](https://img.shields.io/github/discussions/Xhofe/alist?color=%23ED8936&style=flat-square)](https://github.com/Xhofe/alist/discussions)
-[![](https://img.shields.io/github/actions/workflow/status/Xhofe/alist/build.yml?style=flat-square)](https://github.com/Xhofe/alist/actions?query=workflow%3ABuild)
-[![](https://img.shields.io/github/downloads/Xhofe/alist/total?style=flat-square&color=%239F7AEA)](https://github.com/Xhofe/alist/releases)
-[![](https://img.shields.io/badge/%24-donate-ff69b4.svg?style=flat-square)](https://pay.xhofe.top)
+[![](https://img.shields.io/github/release/OpenListTeam/OpenList?style=flat-square)](https://github.com/OpenListTeam/OpenList/releases/latest)
+[![GitHub Discussions](https://img.shields.io/github/discussions/OpenListTeam/OpenList?color=%23ED8936&style=flat-square)](https://github.com/OpenListTeam/OpenList/discussions)
+[![](https://img.shields.io/github/actions/workflow/status/OpenListTeam/OpenList/build.yml?style=flat-square)](https://github.com/OpenListTeam/OpenList/actions?query=workflow%3ABuild)
+[![](https://img.shields.io/github/downloads/OpenListTeam/OpenList/total?style=flat-square&color=%239F7AEA)](https://github.com/OpenListTeam/OpenList/releases)
 
 ### What's this
 
@@ -31,7 +30,7 @@ A file list program that supports multiple storage, and supports web browsing an
 - [x] [OneDrive](./drivers/onedrive.md) /[APP](./drivers/onedrive_app.md)/ Sharepoint ([global](https://www.office.com/), [cn](https://portal.partner.microsoftonline.cn),de,us）
 - [x] [GoogleDrive](https://drive.google.com/)
 - [x] [123pan/Share/Link](https://www.123pan.com/)
-- [x] [Alist](https://github.com/Xhofe/alist)
+- [x] [OpenList](https://github.com/OpenListTeam/OpenList)
 - [x] FTP
 - [x] SFTP
 - [x] [PikPak / share](https://www.mypikpak.com/)
