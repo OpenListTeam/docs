@@ -106,17 +106,6 @@ export default hopeTheme(
           "https://npm.elemecdn.com/font6pro@6.4.0/css/all.min.css",
         ]
       },
-      comment: {
-        /**
-         * Using Giscus 评论
-         */
-        provider: "Giscus",
-        repo: "AlistGo/docs",
-        repoId: "R_kgDOHmaM-A",
-        category: "Announcements",
-        categoryId: "DIC_kwDOHmaM-M4CRRXl",
-
-      },
       // 临时弹窗
       notice: [
         {
