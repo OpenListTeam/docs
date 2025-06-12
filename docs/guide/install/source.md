@@ -30,10 +30,10 @@ This step is only for users who need to modify the source code by themselves. If
 First, you need to have an environment of `git`, `nodejs`, `pnpm`, `golang>=1.20`, `gcc`
 
 ### **Building the front end**
-Use `git clone --recurse-submodules https://github.com/alist-org/alist-web.git` command to clone this project, execute `pnpm install && pnpm build` to get the target file in the dist directory
+Use `git clone --recurse-submodules https://github.com/OpenListTeam/OpenList-Frontend.git` command to clone this project, execute `pnpm install && pnpm build` to get the target file in the dist directory
 
 ### **Build the backend**
-Clone https://github.com/alist-org/alist for this project, copy the `dist` directory of the previous step to the `public` directory under the project, and then:
+Clone https://github.com/OpenListTeam/OpenList for this project, copy the `dist` directory of the previous step to the `public` directory under the project, and then:
 ```bash
 appName="alist"
 builtAt="$(date +'%F %T %z')"
@@ -41,24 +41,18 @@ goVersion=$(go version | sed 's/go version //')
 gitAuthor=$(git show -s --format='format:%aN <%ae>' HEAD)
 gitCommit=$(git log --pretty=format:"%h" -1)
 version=$(git describe --long --tags --dirty --always)
-webVersion=$(wget -qO- -t1 -T2 "https://api.github.com/repos/alist-org/alist-web/releases/latest" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
+webVersion=$(wget -qO- -t1 -T2 "https://github.com/OpenListTeam/OpenList-Frontend.git" | grep "tag_name" | head -n 1 | awk -F ":" '{print $2}' | sed 's/\"//g;s/,//g;s/ //g')
 ldflags="\
 -w -s \
--X 'github.com/alist-org/alist/v3/internal/conf.BuiltAt=$builtAt' \
--X 'github.com/alist-org/alist/v3/internal/conf.GoVersion=$goVersion' \
--X 'github.com/alist-org/alist/v3/internal/conf.GitAuthor=$gitAuthor' \
--X 'github.com/alist-org/alist/v3/internal/conf.GitCommit=$gitCommit' \
--X 'github.com/alist-org/alist/v3/internal/conf.Version=$version' \
--X 'github.com/alist-org/alist/v3/internal/conf.WebVersion=$webVersion' \
+-X 'github.com/OpenListTeam/OpenList/v3/internal/conf.BuiltAt=$builtAt' \
+-X 'github.com/OpenListTeam/OpenList/v3/internal/conf.GoVersion=$goVersion' \
+-X 'github.com/OpenListTeam/OpenList/v3/internal/conf.GitAuthor=$gitAuthor' \
+-X 'github.com/OpenListTeam/OpenList/v3/internal/conf.GitCommit=$gitCommit' \
+-X 'github.com/OpenListTeam/OpenList/v3/internal/conf.Version=$version' \
+-X 'github.com/OpenListTeam/OpenList/v3/internal/conf.WebVersion=$webVersion' \
 "
 go build -ldflags="$ldflags" .
 ```
-
-
-
-
-
-
 
 ::: details compilation tutorial videos you may need
 
