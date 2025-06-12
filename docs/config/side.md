@@ -93,7 +93,7 @@ If you didn't find this feature, please update the version
 
    1. `Aria2 RPC URL` or `Aria2 RPC secret` This aria2 is used to download the files in the cloud disk to the local computer, not an ARIA2 used offline to download and use
       - Who needs this Aria2 who is installed locally, Of course, it also supports ARIA2 that is pushed to the remote server
-      - The ARIA2 used offline download requires the installation of Alist's machine to make offline download
+      - The ARIA2 used offline download requires the installation of OpenList's machine to make offline download
 
    
 
@@ -105,7 +105,7 @@ If you didn't find this feature, please update the version
 
    
 
-   4. **Show sidebar**：Add a list directory on the left side of the list like Windows Manager, which can jump to a deep folder faster [#5972](https://github.com/alist-org/alist/issues/5972)
+   4. **Show sidebar**：Add a list directory on the left side of the list like Windows Manager, which can jump to a deep folder faster [#5972](https://github.com/OpenListTeam/OpenList/issues)
 
       
 
@@ -142,7 +142,7 @@ If you didn't find this feature, please update the version
       - With `Alt or Option` hold
         - `Ctrl`、`Alt` is Windows
         - `command`、`Option` is Mac
-      - If the button option does not take effect, please check whether the browser plugin conflict :point_right: [Case](https://github.com/alist-org/alist-web/pull/154#issuecomment-1972681627)
+      - If the button option does not take effect, please check whether the browser plugin conflict :point_right: [Case](https://github.com/OpenListTeam/OpenList/pull)
 
       <i class="fa-solid fa-lightbulb fa-bounce" style="color: green;"></i> Tips：You can press the `Shift` key to select one, and then select one end. You can quickly select all the files in the middle
 
