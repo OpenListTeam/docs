@@ -3,7 +3,7 @@ home: true
 icon: iconfont icon-home
 title: Home
 heroImage: /logo.svg
-heroText: ALIST
+heroText: OpenList
 tagline: 🗂️ A file list program that supports multiple storage, powered by Gin and Solidjs.
 actions:
   - text: Get started💡
@@ -11,20 +11,20 @@ actions:
     type: primary
 
   - text: GitHub🌱
-    link: https://github.com/AlistTeam/alist
+    link: https://github.com/OpenListTeam/OpenList
 
 features:
   - title: Easy to Use
     icon: iconfont icon-light
-    details: Alist was designed from the ground up to be easily installed and it can be used on all platforms.
+    details: OpenList was designed from the ground up to be easily installed and it can be used on all platforms.
 
   - title: Multiple storage
     icon: iconfont icon-storage
-    details: Alist supports multiple storage providers, including local storage, Aliyundrive, Onedrive, Google Drive, etc., and is easily expand.
+    details: OpenList supports multiple storage providers, including local storage, Aliyundrive, Onedrive, Google Drive, etc., and is easily expand.
 
   - title: Support WebDAV
     icon: iconfont icon-waline
-    details: Alist supports all storage WebDAV, which is a standard for accessing files on.
+    details: OpenList supports all storage WebDAV, which is a standard for accessing files on.
 
   - title: Dark Mode
     icon: iconfont icon-contrast
@@ -44,11 +44,11 @@ features:
 
   - title: single sign-on
     icon: font-icon icon fa-solid fa-repeat-1
-    details: Use single sign-on to quickly log in to AList
+    details: Use single sign-on to quickly log in to OpenList
 
-  - title: Automatic registration of AList account
+  - title: Automatic registration of OpenList account
     icon: fa-solid fa-file-user
-    details: Use single sign-on to automatically register as an AList account to quickly register
+    details: Use single sign-on to automatically register as an OpenList account to quickly register
 
   - title: offline download
     icon: fa-solid fa-folder-arrow-down
@@ -63,6 +63,6 @@ features:
     details: Including text editor, readme/html render, file permalink, cloudflare workers proxy, etc.
 
 copyright: false
-footer: <a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-bg.svg" alt="Deploys by Netlify" /> </a> <div>AGPL-3.0 Licensed | Copyright © 2022-present AList</div><script src="/adb.js" type="text/javascript"></script>
+footer: <a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-bg.svg" alt="Deploys by Netlify" /> </a> <div>AGPL-3.0 Licensed | Copyright © 2022-present OpenList</div><script src="/adb.js" type="text/javascript"></script>
 ---
 
