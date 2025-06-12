@@ -112,7 +112,7 @@ export default hopeTheme(
          * Using Giscus 评论
          */
         provider: "Giscus",
-        repo: "AlistGo/docs",
+        repo: "OpenListTeam/docs",
         repoId: "R_kgDOO52WYA",
         category: "Giscus Comments",
         categoryId: "DIC_kwDOO52WYM4CrXlN",
