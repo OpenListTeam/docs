@@ -172,7 +172,7 @@ When the proxy is turned on without filling in this field, the local machine wil
 ::::tabs
 @tab cloudflare workers
 You can use `cloudflare workers` for proxy, just fill in the `cloudflare workers` address here.
-The workers code can be found at https://github.com/alist-org/alist-proxy/blob/main/alist-proxy.js. in:
+The workers code can be found at https://github.com/OpenListTeam/alist-proxy/blob/main/alist-proxy.js. in:
 
 - ADDRESS: your Alist address, The protocol header must be added, and cannot be followed by /. Such as `https://pan.example.com`;
 - TOKEN: you can get in `Other settings` in your Alist manage page;

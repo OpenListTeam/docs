@@ -167,7 +167,7 @@ flowchart LR
 @tab cloudflare workers
 可以使用 Cloudflare Workers 做代理，这里填写 Workers 地址即可。
 
-Workers 代码可以在 https://github.com/alist-org/alist-proxy/blob/main/alist-proxy.js 找到，实际使用时需要替换其中的这两个变量：
+Workers 代码可以在 https://github.com/OpenListTeam/alist-proxy/blob/main/alist-proxy.js 找到，实际使用时需要替换其中的这两个变量：
 
 - ADDRESS: 你的 OpenList 地址，必须加上协议头，后面不能跟 `/`。如 `https://pan.example.com`；
 - TOKEN: 在 OpenList 管理页面中进入“其他设置”得到；
