@@ -17,7 +17,7 @@ export default hopeTheme(
     // },
 
     author: {
-      name: "The OpenList Team Developers",
+      name: "The OpenList Projects Contributors",
       url: "https://github.com/OpenListTeam",
     },
 
