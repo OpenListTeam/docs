@@ -7,7 +7,7 @@ const __dirname = getDirname(import.meta.url);
 
 export default defineUserConfig({
   theme,
-  base: "/docs/", // For Github Pages
+  base: "/", // For Github Pages
   head: [
     [
       "link",
