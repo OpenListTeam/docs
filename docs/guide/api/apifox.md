@@ -18,6 +18,6 @@ star: true
 
 # online tool
 
-Go to [https://alist-v3.apifox.cn](https://alist-v3.apifox.cn) to view the online API documentation and support debugging.
+Go to [https://openlist.apifox.cn](https://openlist.apifox.cn) to view the online API documentation and support debugging.
 
 ![apifox](/img/api/apifox.png)
