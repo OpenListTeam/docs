@@ -40,30 +40,7 @@ const isApple = computed(() => {
 </script>
 
 <template>
-  <div class="ads-container">
-    <div class="wwads-container">
-      <div
-        class="wwads wwads-cn wwads-horizontal"
-        data-id="213"
-        style="width: 100% !important"
-        v-if="!isApple"
-      ></div>
-      <a v-else class="vidhub" :href="vidHub.url" target="_blank">
-        <div>
-          <img src="/img/ss/vidhub-logo.png" alt="" />
-          <div>
-            <div class="title">
-              <span>{{ vidHub.title }}</span>
-              <span class="tag">{{ vidHub.tag }}</span>
-            </div>
-            <div class="hero" v-for="hero in vidHub.hero" :key="hero">
-              {{ hero }}
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
+
 </template>
 
 <style scoped lang="scss">
@@ -161,17 +138,5 @@ const isApple = computed(() => {
 .ads-container {
   display: flex;
   justify-content: center;
-}
-
-.wwads-container {
-  padding-top: 10px !important;
-  padding-bottom: 0 !important;
-  :deep(img) {
-    display: unset;
-    max-width: unset;
-    max-height: unset;
-    margin: unset;
-  }
-  max-width: var(--home-page-width);
 }
 </style>
