@@ -25,7 +25,7 @@ export const zh = sidebar({
       text: "常见问题",
       icon: "iconfont icon-question",
       prefix: "faq/",
-      children: ["howto", "why"],
+      children: ["howto", "why", "remove_alist"],
     },
   ],
 });
