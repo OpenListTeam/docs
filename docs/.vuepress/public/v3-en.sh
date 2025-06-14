@@ -4,10 +4,10 @@
 # OpenList Manager Script
 #
 # Version: 1.0.0
-# Last Updated: 2024-12-24
+# Last Updated: 2025-06-14
 #
 # Description: 
-#   A management script for OpenList (https://openlist.example.com)
+#   A management script for OpenList (https://openlist.team)
 #   Provides installation, update, uninstallation and management functions
 #
 # Requirements:
@@ -16,7 +16,7 @@
 #   - curl, tar
 #   - x86_64 or arm64 architecture
 #
-# Author: Troray
+# Original Author: Troray
 # Repository: https://github.com/Troray/docs
 # License: MIT
 #

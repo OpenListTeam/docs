@@ -16,7 +16,7 @@
 #   - curl, tar
 #   - x86_64 or arm64 architecture
 #
-# Author: Troray
+# Original Author: Troray
 # Repository: https://github.com/Troray/docs
 # License: MIT
 #
