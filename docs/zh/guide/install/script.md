@@ -34,7 +34,7 @@ curl -fsSL "https://openlist.example.com/v3.sh" -o v3.sh && bash v3.sh
 **面板管理命令**
 
 使用命令：`openlist` 或者 `openlist-manager`
-![openlist-manager](/img/guide/openlist-manager.png)
+![openlist-manager](/img/guide/alist-manager.png)
 
 
 
