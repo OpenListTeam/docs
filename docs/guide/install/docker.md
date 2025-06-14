@@ -25,7 +25,7 @@ Note: The official OpenList Docker image has not yet been released. The Docker i
 #### **docker cli**
 
 ```bash
-docker run -d --restart=unless-stopped -v /etc/alist:/opt/alist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="alist" xhofe/alist:latest
+docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="openlist" xhofe/openlist:latest
 ```
 
 #### **docker compose**
@@ -33,11 +33,11 @@ docker run -d --restart=unless-stopped -v /etc/alist:/opt/alist/data -p 5244:524
 ```yaml
 version: '3.3'
 services:
-  alist:
-    image: 'xhofe/alist:beta'
-    container_name: alist
+  openlist:
+    image: 'openlistteam/openlist:beta'
+    container_name: openlist
     volumes:
-      - '/etc/alist:/opt/alist/data'
+      - '/etc/openlist:/opt/openlist/data'
     ports:
       - '5244:5244'
     environment:
@@ -59,11 +59,11 @@ services:
 
 #### **Image Versions**
 
-Stable version: `xhofe/alist:latest` or specify a specific version, such as `xhofe/alist:v3.41.0` `xhofe/alist:v3.40.0`
+Stable version: `openlistteam/openlist:latest` or specify a specific version, such as `openlistteam/openlist:v3.41.0` `openlistteam/openlist:v3.40.0`
 
-Latest image version, please refer to https://hub.docker.com/r/xhofe/alist/tags
+Latest image version, please refer to https://hub.docker.com/r/openlistteam/openlist/tags
 
-Dev version: `xhofe/alist:beta`
+Dev version: `openlistteam/openlist:beta`
 
 Pre-installed environment image suffix:
 
@@ -73,7 +73,7 @@ Pre-installed environment image suffix:
 | `ffmpeg` | Pre-installed FFmpeg image for generating thumbnail for local storage   |
 | `aria2`  | Pre-installed aria2 image for offline downloading.                      |
 
-You can append a suffix using the `-` symbol after any of the mirror tags to switch to an image with the corresponding environment. For example, `xhofe/alist:latest-aio` `xhofe/alist:beta-aria2` `xhofe/alist:v3.40.0-ffmpeg`
+You can append a suffix using the `-` symbol after any of the mirror tags to switch to an image with the corresponding environment. For example, `openlistteam/openlist:latest-aio` `openlistteam/openlist:beta-aria2` `openlistteam/openlist:v3.40.0-ffmpeg`
 
 If the thumbnail generation function still does not work when using the pre-installed ffmpeg, please confirm:
 
@@ -82,7 +82,7 @@ If the thumbnail generation function still does not work when using the pre-inst
 + The thumbnail switch in local storage driver settings is enabled
 + The configuration path for the thumbnail cache folder in local storage is correct, for example, `data/thumbnail`
 
-When using a pre-installed aria2 mirror, you might see errors like the following in the alist logs:
+When using a pre-installed aria2 mirror, you might see errors like the following in the openlist logs:
 
 ```
 ERRO[2022-11-20 12:05:19] error [unaligned 64-bit atomic operation] while run task  [download http://xxx.com/xxx.png to [/ftp](/)]
@@ -95,7 +95,7 @@ The solution is, if the CPU architecture is 64-bit, you can try to manually pull
 #### Lower than v3.25.0
 
 ```bash
-docker exec -it alist ./alist admin
+docker exec -it openlist ./openlist admin
 ```
 
 #### Higher than v3.25.0
@@ -104,9 +104,9 @@ Versions above 3.25.0 change the password to an encrypted hash value, and the pa
 
 ```bash
 # Randomly generate a password
-docker exec -it alist ./alist admin random
+docker exec -it openlist ./openlist admin random
 # Manually set a password, `NEW_PASSWORD` refers to the password you need to set
-docker exec -it alist ./alist admin set NEW_PASSWORD
+docker exec -it openlist ./openlist admin set NEW_PASSWORD
 ```
 
 ## **Update**
@@ -114,7 +114,7 @@ docker exec -it alist ./alist admin set NEW_PASSWORD
 1. docker ps -a #View the container (find the ID of the Alist container)
 2. docker stop ID #Stop Alist running, otherwise it cannot be deleted (this time the ID of the Alist container is d429749a6e69, it is different for each installation)
 3. docker rm ID #Delete the Alist container (the data is still there as long as you don't delete it manually)
-4. docker pull xhofe/alist:latest
+4. docker pull openlistteam/openlist:latest
 5. [Enter the installation command and click to view](#docker-cli)
 6. The update is complete, go and have a look.. It's that simple
 
@@ -129,12 +129,12 @@ docker exec -it alist ./alist admin set NEW_PASSWORD
 
 :::
 
-Q: My version is v3.x.x and I cannot upgrade to the latest version. `docker pull xhofe/alist:latest` does not work to pull the latest version. After changing to docker-compose, it is still version 3.x.x
+Q: My version is v3.x.x and I cannot upgrade to the latest version. `docker pull openlistteam/openlist:latest` does not work to pull the latest version. After changing to docker-compose, it is still version 3.x.x
 
 A: The reason is that your docker has set up a mirror, and the latest version cannot be updated from the mirror, so modify /etc/docker/daemon.json and delete "registry-mirrors": ["mirror accelerator address"]
 
 - If deletion doesn’t work, you can consider replacing it with a `mirror acceleration address`
-- Or simple and rude: when downloading, replace `xhofe/alist:latest` with `xhofe/alist:v3.16.3` (specify the version, the latest when writing the tutorial is 3.16.3)
+- Or simple and rude: when downloading, replace `openlistteam/openlist:latest` with `openlistteam/openlist:v3.16.3` (specify the version, the latest when writing the tutorial is 3.16.3)
 
 ### **Compile Image**
 
@@ -145,13 +145,13 @@ Install Docker, clone the repository, then navigate to the root directory of the
 @tab basic
 
 ```bash
-docker build -t xhofe/alist:latest .
+docker build -t openlistteam/openlist:latest .
 ```
 
 @tab build-arg
 
 ```bash
-docker build -t xhofe/alist:latest-ffmpeg --build-arg INSTALL_FFMPEG=true .
+docker build -t openlistteam/openlist:latest-ffmpeg --build-arg INSTALL_FFMPEG=true .
 ```
 
 :::

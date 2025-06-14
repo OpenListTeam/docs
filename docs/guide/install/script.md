@@ -26,66 +26,66 @@ Only for Linux-x86_64/arm64 platform.
 **Install**
 
 ```bash
-curl -fsSL "https://alist.example.com/v3-en.sh" -o v3-en.sh && bash v3-en.sh
+curl -fsSL "https://openlist.example.com/v3-en.sh" -o v3-en.sh && bash v3-en.sh
 ```
 ![v3-install](/img/guide/v3-install-en.png)
 
-**alist-manager**
+**openlist-manager**
 
-"Use command: alist or alist-manager"
-![alist-manager](/img/guide/alist-manager-en.png)
+"Use command: openlist or openlist-manager"
+![openlist-manager](/img/guide/alist-manager-en.png)
 
 
 @tab Beta
 **Install**
 ```bash
-curl -fsSL "https://alist.example.com/beta.sh" | bash -s install
+curl -fsSL "https://openlist.example.com/beta.sh" | bash -s install
 ```
 
 **Update**
 ```bash
-curl -fsSL "https://alist.example.com/beta.sh" | bash -s update
+curl -fsSL "https://openlist.example.com/beta.sh" | bash -s update
 ```
 
 **Uninstall**
 ```bash
-curl -fsSL "https://alist.example.com/beta.sh" | bash -s uninstall
+curl -fsSL "https://openlist.example.com/beta.sh" | bash -s uninstall
 ```
 
 :::
 
 ### **Custom path**
 
-The default installation is in `/opt/alist`. To customize the installation path, add the installation path as the second parameter, which must be an absolute path (if the path ends in alist, install directly to the given path, otherwise it will be installed in the given path alist Directory), such as installing to `/root`:
+The default installation is in `/opt/openlist`. To customize the installation path, add the installation path as the second parameter, which must be an absolute path (if the path ends in openlist, install directly to the given path, otherwise it will be installed in the given path openlist Directory), such as installing to `/root`:
 
 :::tabs
 
 @tab Latest
 ```bash
 # Install
-curl -fsSL "https://alist.example.com/v3-en.sh" -o v3-en.sh && bash v3-en.sh install /root
+curl -fsSL "https://openlist.example.com/v3-en.sh" -o v3-en.sh && bash v3-en.sh install /root
 # update
-curl -fsSL "https://alist.example.com/v3-en.sh" -o v3-en.sh && bash v3-en.sh update /root
+curl -fsSL "https://openlist.example.com/v3-en.sh" -o v3-en.sh && bash v3-en.sh update /root
 # Uninstall
-curl -fsSL "https://alist.example.com/v3-en.sh" -o v3-en.sh && bash v3-en.sh uninstall /root
+curl -fsSL "https://openlist.example.com/v3-en.sh" -o v3-en.sh && bash v3-en.sh uninstall /root
 ```
 
 @tab Beta
 ```bash
 # Install
-curl -fsSL "https://alist.example.com/beta.sh" | bash -s install /root
+curl -fsSL "https://openlist.example.com/beta.sh" | bash -s install /root
 # update
-curl -fsSL "https://alist.example.com/beta.sh" | bash -s update /root
+curl -fsSL "https://openlist.example.com/beta.sh" | bash -s update /root
 # Uninstall
-curl -fsSL "https://alist.example.com/beta.sh" | bash -s uninstall /root
+curl -fsSL "https://openlist.example.com/beta.sh" | bash -s uninstall /root
 ```
 
 :::
 
-- Start: `systemctl start alist`
-- Shut down: `systemctl stop alist`
-- Status: `systemctl status alist`
-- Restart: `systemctl restart alist`
+- Start: `systemctl start openlist`
+- Shut down: `systemctl stop openlist`
+- Status: `systemctl status openlist`
+- Restart: `systemctl restart openlist`
 
 
 
@@ -96,7 +96,7 @@ You need to enter the directory folder where the script installs OpenList and ex
 #### Lower than v3.25.0
 
 ```bash
-./alist admin
+./openlist admin
 ```
 
 
@@ -106,9 +106,9 @@ Versions above 3.25.0 change the password to an encrypted hash value, and the pa
 
 ```bash
 # Randomly generate a password
-./alist admin random
+./openlist admin random
 # Manually set a password, `NEW_PASSWORD` refers to the password you need to set
-./alist admin set NEW_PASSWORD
+./openlist admin set NEW_PASSWORD
 ```
 
 
@@ -130,11 +130,11 @@ If you stop by command ==You must first enter the folder where your OpenList is 
 If we don’t know which storage is causing the problem, we can list all storages through the command
 
 ```bash
-./alist storage list
+./openlist storage list
 ```
 
 ```bash{1}
-[root@OPSD-g8xXordx3B9f alist]# ./alist storage list
+[root@OPSD-g8xXordx3B9f openlist]# ./openlist storage list
 INFO[2023-11-23 17:54:10] reading config file: data/config.json
 INFO[2023-11-23 17:54:10] load config from env with prefix: OpenList_
 INFO[2023-11-23 17:54:10] init logrus...
@@ -152,11 +152,11 @@ After entering the query command, we will enter another mode and cannot operate.
 For example, because the storage `233` cannot be loaded, we enter the command to stop it, and then restart OpenList.
 
 ```bash
-./alist storage disable /233
+./openlist storage disable /233
 ```
 
 ```bash{1,5}
-[root@OPSD-g8xXordx3B9f alist]# ./alist storage disable /233
+[root@OPSD-g8xXordx3B9f openlist]# ./openlist storage disable /233
 INFO[2023-11-23 17:54:52] reading config file: data/config.json
 INFO[2023-11-23 17:54:52] load config from env with prefix: OpenList_
 INFO[2023-11-23 17:54:52] init logrus...
@@ -172,11 +172,11 @@ If you stop by command ==You must first enter the folder where your OpenList is 
 If we don’t know which storage is causing the problem, we can list all storages through the command
 
 ```bash
-alist.exe storage list
+openlist.exe storage list
 ```
 
 ```bash{1}
-C:\Users\admin\Desktop\alist>alist.exe storage list
+C:\Users\admin\Desktop\openlist>openlist.exe storage list
 INFO[2023-11-23 18:36:23] reading config file: data\config.json
 INFO[2023-11-23 18:36:23] load config from env with prefix: OpenList_
 INFO[2023-11-23 18:36:23] init logrus...
@@ -195,11 +195,11 @@ After entering the query command, we will enter another mode and cannot operate.
 For example, because the storage `open` cannot be loaded, we enter the command to stop it, and then restart OpenList.
 
 ```bash
-alist.exe storage disable /open
+openlist.exe storage disable /open
 ```
 
 ```bash{1,5}
-C:\Users\admin\Desktop\alist>alist.exe storage disable /open
+C:\Users\admin\Desktop\openlist>openlist.exe storage disable /open
 INFO[2023-11-23 18:41:43] reading config file: data\config.json
 INFO[2023-11-23 18:41:43] load config from env with prefix: OpenList_
 INFO[2023-11-23 18:41:43] init logrus...
@@ -219,13 +219,13 @@ If we don’t know which storage is causing the problem, we can list all storage
 List storage:
 
 ```bash
-alist storage list
+openlist storage list
 ```
 
 Stop storage:
 
 ```bash
-alist storage disable /Path
+openlist storage disable /Path
 ```
 
 
@@ -237,11 +237,11 @@ The `Docker` here currently only provides the default version installed using th
 If we don’t know which storage is causing the problem, we can list all storages through the command
 
 ```bash
-docker exec -it alist ./alist storage list
+docker exec -it openlist ./openlist storage list
 ```
 
 ```bash{1}
-[root@OPSD-g8xXordx3B9f alist]# docker exec -it alist ./alist storage list
+[root@OPSD-g8xXordx3B9f openlist]# docker exec -it openlist ./openlist storage list
 INFO[2023-11-23 11:50:08] reading config file: data/config.json
 INFO[2023-11-23 11:50:08] load config from env with prefix: OpenList_
 INFO[2023-11-23 11:50:08] init logrus...
@@ -262,11 +262,11 @@ After entering the query command, we will enter another mode and cannot operate.
 For example, because the storage `pikpak` cannot be loaded, we enter the command to stop it, and then restart OpenList.
 
 ```bash
-docker exec -it alist ./alist storage disable /pikpak
+docker exec -it openlist ./openlist storage disable /pikpak
 ```
 
 ```bash{1,5}
-[root@OPSD-g8xXordx3B9f alist]# docker exec -it alist ./alist storage disable /pikpak
+[root@OPSD-g8xXordx3B9f openlist]# docker exec -it openlist ./openlist storage disable /pikpak
 INFO[2023-11-23 17:54:52] reading config file: data/config.json
 INFO[2023-11-23 17:54:52] load config from env with prefix: OpenList_
 INFO[2023-11-23 17:54:52] init logrus...
@@ -280,13 +280,13 @@ Basically they are the same commands, only the prefix files are different, and t
 List storage:
 
 ```bash
-alist storage list
+openlist storage list
 ```
 
 Stop storage:
 
 ```bash
-alist storage disable /path
+openlist storage disable /path
 ```
 
 

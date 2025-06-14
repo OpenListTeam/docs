@@ -35,7 +35,7 @@ Use `git clone --recurse-submodules https://github.com/OpenListTeam/OpenList-Fro
 ### **Build the backend**
 Clone https://github.com/OpenListTeam/OpenList for this project, copy the `dist` directory of the previous step to the `public` directory under the project, and then:
 ```bash
-appName="alist"
+appName="openlist"
 builtAt="$(date +'%F %T %z')"
 goVersion=$(go version | sed 's/go version //')
 gitAuthor=$(git show -s --format='format:%aN <%ae>' HEAD)

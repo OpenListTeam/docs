@@ -26,8 +26,8 @@ star: true
 
 [https://anwen-anyi.github.io/](https://anwen-anyi.github.io/index/)
 
-[Google](https://www.google.com/search?q=alist)
+[Google](https://www.google.com/search?q=openlist)
 
-[Bing](https://www.bing.com/search?q=alist)
+[Bing](https://www.bing.com/search?q=openlist)
 
-[Baidu](https://www.baidu.com/baidu?wd=alist)
+[Baidu](https://www.baidu.com/baidu?wd=openlist)

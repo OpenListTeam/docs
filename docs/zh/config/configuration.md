@@ -24,9 +24,9 @@ star: true
 `config.json`内配置文件修改后都需要重启 OpenList 才会生效
 
 - Windows/Mac：和 OpenList 同级文件夹內的 `data/config.json`
-- Linux：一键脚本路径,、/opt/alist/`data/config.json`，手动安装 /xx 路径/`data/config.json`
+- Linux：一键脚本路径,、/opt/openlist/`data/config.json`，手动安装 /xx 路径/`data/config.json`
 - Docker：进入 Docker 容器内`data/config.json`
-- openwrt：如果使用的是 `luci-app-alist`,请在网页修改,其他自行找到 OpenList 执行文件同级目录`data/config.json`
+- openwrt：如果使用的是 `luci-app-openlist`,请在网页修改,其他自行找到 OpenList 执行文件同级目录`data/config.json`
 - 其他：找到 OpenList 同级文件夹內的 `data/config.json`
 
 :::
@@ -185,23 +185,23 @@ URL 链接结尾请勿携带 `/` ，参照如下示例，否则也将无法使�
 
 ### **cdn**
 
-CDN 地址，如果要使用 CDN，可以设置该字段，`$version` 会被替换为 `alist-web` 的实际版本
+CDN 地址，如果要使用 CDN，可以设置该字段，`$version` 会被替换为 `openlist-frontend` 的实际版本
 这是动态的。 现有的 dist 资源托管在 npm 和 GitHub 上，它们的位置是：
 
-- https://www.npmjs.com/package/alist-web
-- https://github.com/alist-org/web-dist
+- https://www.npmjs.com/package/openlist-frontend
+- https://github.com/OpenListTeam/web-dist
 
 所以你可以使用任何 npm 或 GitHub CDN 作为路径，例如：
 
-- https://registry.npmmirror.com/alist-web/$version/files/dist/
-- https://cdn.jsdelivr.net/npm/alist-web@$version/dist/
-- https://unpkg.com/alist-web@$version/dist/
-- https://cdn.jsdelivr.net/gh/alist-org/web-dist@$version/dist/
-- https://cdn1.tianli0.top/npm/alist-web@$version/dist/
-- https://cdn1.tianli0.top/gh/alist-org/web-dist@$version/dist/
-- https://npm.elemecdn.com/alist-web@$version/dist/
-- https://jsd.onmicrosoft.cn/npm/alist-web@$version/dist/
-- https://jsd.onmicrosoft.cn/gh/alist-org/web-dist@$version/dist/
+- https://registry.npmmirror.com/openlist-frontend/$version/files/dist/
+- https://cdn.jsdelivr.net/npm/openlist-frontend@$version/dist/
+- https://unpkg.com/openlist-frontend@$version/dist/
+- https://cdn.jsdelivr.net/gh/OpenListTeam/web-dist@$version/dist/
+- https://cdn1.tianli0.top/npm/openlist-frontend@$version/dist/
+- https://cdn1.tianli0.top/gh/OpenListTeam/web-dist@$version/dist/
+- https://npm.elemecdn.com/openlist-frontend@$version/dist/
+- https://jsd.onmicrosoft.cn/npm/openlist-frontend@$version/dist/
+- https://jsd.onmicrosoft.cn/gh/OpenListTeam/web-dist@$version/dist/
 
 您也可以将其设置为空以使用本地 dist。
 
@@ -335,7 +335,7 @@ MySQL 5.x 和 8.x 也不一样。如果使用服务商提供的免费/收费数�
     "key_file": "data\\key.key",    // 证书密钥文件路径
     "unix_file": "",        // Unix 监听套接字文件路径,默认的空的,如果你想使用 Unix socket,将其设置为非空
     "unix_file_perm": "",   // Unix 监听套接字文件，设置为合适的权限
-    "enable_h2c": false		// 为 alist 的 http 服务支持 HTTP/2 Cleartext (H2C) 协议。明文的 HTTP/2 协议,开启后支持 nginx 的 grpc_pass - https://github.com/AlistGo/alist/pull/8294
+    "enable_h2c": false		// 为 openlist 的 http 服务支持 HTTP/2 Cleartext (H2C) 协议。明文的 HTTP/2 协议,开启后支持 nginx 的 grpc_pass - https://github.com/AlistGo/alist/pull/8294
   },
 ```
 
@@ -348,7 +348,7 @@ MySQL 5.x 和 8.x 也不一样。如果使用服务商提供的免费/收费数�
 程序临时目录，默认 `data/temp`
 
 ::: danger
-temp_dir 为 alist 独占的临时文件夹，为避免程序中断产生垃圾文件会在每次启动时清空，故请不要手动在此文件夹内放置任何内容，也不要在使用 docker 时将此文件夹及其子文件夹映射至正在使用的文件夹。
+temp_dir 为 openlist 独占的临时文件夹，为避免程序中断产生垃圾文件会在每次启动时清空，故请不要手动在此文件夹内放置任何内容，也不要在使用 docker 时将此文件夹及其子文件夹映射至正在使用的文件夹。
 :::
 
 <br/>

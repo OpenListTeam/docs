@@ -49,7 +49,7 @@ export default hopeTheme(
         sidebar: sidebar.zh,
 
         footer: `<a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-bg.svg" alt="Deploys by Netlify" /> </a>
-      <script src="/adb.js" type="text/javascript"></script>`,
+      </script>`,
 
         displayFooter: true,
       },

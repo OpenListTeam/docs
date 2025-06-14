@@ -1,17 +1,17 @@
 #!/bin/bash
 # Modified from https://www.cooluc.com/alist-install.sh
 
-# INSTALL_PATH='/opt/alist'
+# INSTALL_PATH='/opt/openlist'
 
 if [ ! -n "$2" ];then
-    INSTALL_PATH='/opt/alist'
+    INSTALL_PATH='/opt/openlist'
 else
     if [[ $2 == */ ]];then
         INSTALL_PATH=${2%?}
     else INSTALL_PATH=$2
     fi
-    if ! [[ $INSTALL_PATH == */alist ]];then
-        INSTALL_PATH="$INSTALL_PATH/alist"
+    if ! [[ $INSTALL_PATH == */openlist ]];then
+        INSTALL_PATH="$INSTALL_PATH/openlist"
     fi
 fi
 
@@ -44,10 +44,10 @@ if [ "$(id -u)" != "0" ]; then
     echo -e "\r\n${RED_COLOR}出错了，请使用 root 权限重试！${RES}\r\n" 1>&2
     exit 1;
     elif [ "$ARCH" == "UNKNOWN" ];then
-    echo -e "\r\n${RED_COLOR}出错了${RES}，一键安装目前仅支持 x86_64和arm64 平台。\r\n其它平台请参考：${GREEN_COLOR}https://alist-doc.example.com${RES}\r\n"
+    echo -e "\r\n${RED_COLOR}出错了${RES}，一键安装目前仅支持 x86_64和arm64 平台。\r\n其它平台请参考：${GREEN_COLOR}https://openlist-doc.example.com${RES}\r\n"
     exit 1;
     elif ! command -v systemctl >/dev/null 2>&1; then
-    echo -e "\r\n${RED_COLOR}出错了${RES}，无法确定你当前的 Linux 发行版。\r\n建议手动安装：${GREEN_COLOR}https://alist-doc.example.com${RES}\r\n"
+    echo -e "\r\n${RED_COLOR}出错了${RES}，无法确定你当前的 Linux 发行版。\r\n建议手动安装：${GREEN_COLOR}https://openlist-doc.example.com${RES}\r\n"
     exit 1;
 else
     if command -v netstat >/dev/null 2>&1; then
@@ -66,7 +66,7 @@ else
 fi
 
 CHECK() {
-    if [ -f "$INSTALL_PATH/alist" ];then
+    if [ -f "$INSTALL_PATH/openlist" ];then
         echo "此位置已经安装，请选择其他位置，或使用更新命令"
         exit 0
     fi
@@ -82,41 +82,41 @@ CHECK() {
 
 
 INSTALL() {
-    # 下载 Alist 程序
-    echo -e "\r\n${GREEN_COLOR}下载 Alist v2.6.4 ...${RES}"
-    curl -L ${GH_PROXY}https://github.com/Xhofe/alist/releases/download/v2.6.4/alist-linux-musl-$ARCH.tar.gz -o /tmp/alist.tar.gz $CURL_BAR
-    tar zxf /tmp/alist.tar.gz -C $INSTALL_PATH/
+    # 下载 Openlist 程序
+    echo -e "\r\n${GREEN_COLOR}下载 Openlist v2.6.4 ...${RES}"
+    curl -L ${GH_PROXY}https://github.com/Xhofe/openlist/releases/download/v2.6.4/openlist-linux-musl-$ARCH.tar.gz -o /tmp/openlist.tar.gz $CURL_BAR
+    tar zxf /tmp/openlist.tar.gz -C $INSTALL_PATH/
     
-    if [ -f $INSTALL_PATH/alist-linux-musl-$ARCH ];then
-        mv $INSTALL_PATH/alist-linux-musl-$ARCH $INSTALL_PATH/alist
+    if [ -f $INSTALL_PATH/openlist-linux-musl-$ARCH ];then
+        mv $INSTALL_PATH/openlist-linux-musl-$ARCH $INSTALL_PATH/openlist
     else
-        echo -e "${RED_COLOR}下载 alist-linux-musl-$ARCH.tar.gz 失败！${RES}"
+        echo -e "${RED_COLOR}下载 openlist-linux-musl-$ARCH.tar.gz 失败！${RES}"
         exit 1;
     fi
     
     # 删除下载缓存
-    rm -f /tmp/alist*
+    rm -f /tmp/openlist*
 }
 
 INIT() {
-    if [ ! -f "$INSTALL_PATH/alist" ];then
-        echo -e "\r\n${RED_COLOR}出错了${RES}，当前系统未安装 Alist\r\n"
+    if [ ! -f "$INSTALL_PATH/openlist" ];then
+        echo -e "\r\n${RED_COLOR}出错了${RES}，当前系统未安装 Openlist\r\n"
         exit 1;
     else
-        rm -f $INSTALL_PATH/alist.db
+        rm -f $INSTALL_PATH/openlist.db
     fi
     
     # 创建 systemd
-cat >/etc/systemd/system/alist.service <<EOF
+cat >/etc/systemd/system/openlist.service <<EOF
 [Unit]
-Description=Alist service
+Description=Openlist service
 Wants=network.target
 After=network.target network.service
 
 [Service]
 Type=simple
 WorkingDirectory=$INSTALL_PATH
-ExecStart=$INSTALL_PATH/alist
+ExecStart=$INSTALL_PATH/openlist
 KillMode=process
 
 [Install]
@@ -125,71 +125,71 @@ EOF
     
     # 添加开机启动
     systemctl daemon-reload
-    systemctl enable alist >/dev/null 2>&1
-    systemctl restart alist
+    systemctl enable openlist >/dev/null 2>&1
+    systemctl restart openlist
 }
 
 SUCCESS() {
     clear
-    echo "Alist 安装成功！"
+    echo "Openlist 安装成功！"
     echo -e "\r\n访问地址：${GREEN_COLOR}http://YOUR_IP:5244/${RES}\r\n"
     
     echo -e "配置文件：${GREEN_COLOR}$INSTALL_PATH/data/config.json${RES}"
     
     sleep 1s
     cd $INSTALL_PATH
-    get_password=$(./alist -password 2>&1)
+    get_password=$(./openlist -password 2>&1)
     echo -e "初始管理密码：${GREEN_COLOR}$(echo $get_password | awk -F'your password: ' '{print $2}')${RES}"
     
     echo
-    echo -e "查看状态：${GREEN_COLOR}systemctl status alist${RES}"
-    echo -e "启动服务：${GREEN_COLOR}systemctl start alist${RES}"
-    echo -e "重启服务：${GREEN_COLOR}systemctl restart alist${RES}"
-    echo -e "停止服务：${GREEN_COLOR}systemctl stop alist${RES}"
-    echo -e "\r\n温馨提示：如果端口无法正常访问，请检查 \033[36m服务器安全组、本机防火墙、Alist状态\033[0m"
+    echo -e "查看状态：${GREEN_COLOR}systemctl status openlist${RES}"
+    echo -e "启动服务：${GREEN_COLOR}systemctl start openlist${RES}"
+    echo -e "重启服务：${GREEN_COLOR}systemctl restart openlist${RES}"
+    echo -e "停止服务：${GREEN_COLOR}systemctl stop openlist${RES}"
+    echo -e "\r\n温馨提示：如果端口无法正常访问，请检查 \033[36m服务器安全组、本机防火墙、Openlist状态\033[0m"
     echo
 }
 
 UNINSTALL() {
-    echo -e "\r\n${GREEN_COLOR}卸载 Alist ...${RES}\r\n"
+    echo -e "\r\n${GREEN_COLOR}卸载 Openlist ...${RES}\r\n"
     echo -e "${GREEN_COLOR}停止进程${RES}"
-    systemctl disable alist >/dev/null 2>&1
-    systemctl stop alist >/dev/null 2>&1
+    systemctl disable openlist >/dev/null 2>&1
+    systemctl stop openlist >/dev/null 2>&1
     echo -e "${GREEN_COLOR}清除残留文件${RES}"
-    rm -rf $INSTALL_PATH /etc/systemd/system/alist.service
+    rm -rf $INSTALL_PATH /etc/systemd/system/openlist.service
     # 兼容之前的版本
-    rm -f /lib/systemd/system/alist.service
+    rm -f /lib/systemd/system/openlist.service
     systemctl daemon-reload
-    echo -e "\r\n${GREEN_COLOR}Alist 已在系统中移除！${RES}\r\n"
+    echo -e "\r\n${GREEN_COLOR}Openlist 已在系统中移除！${RES}\r\n"
 }
 
 UPDATE() {
-    if [ ! -f "$INSTALL_PATH/alist" ];then
-        echo -e "\r\n${RED_COLOR}出错了${RES}，当前系统未安装 Alist\r\n"
+    if [ ! -f "$INSTALL_PATH/openlist" ];then
+        echo -e "\r\n${RED_COLOR}出错了${RES}，当前系统未安装 Openlist\r\n"
         exit 1;
     else
         echo
-        echo -e "${GREEN_COLOR}停止 Alist 进程${RES}\r\n"
-        systemctl stop alist
-        # 备份 alist 二进制文件，供下载更新失败回退
-        cp $INSTALL_PATH/alist /tmp/alist.bak
-        echo -e "${GREEN_COLOR}下载 Alist v2.6.4 ...${RES}"
-        curl -L ${GH_PROXY}https://github.com/Xhofe/alist/releases/download/v2.6.4/alist-linux-musl-$ARCH.tar.gz -o /tmp/alist.tar.gz $CURL_BAR
-        tar zxf /tmp/alist.tar.gz -C $INSTALL_PATH/
-        if [ -f $INSTALL_PATH/alist-linux-musl-$ARCH ];then
-            mv $INSTALL_PATH/alist-linux-musl-$ARCH $INSTALL_PATH/alist
+        echo -e "${GREEN_COLOR}停止 Openlist 进程${RES}\r\n"
+        systemctl stop openlist
+        # 备份 openlist 二进制文件，供下载更新失败回退
+        cp $INSTALL_PATH/openlist /tmp/openlist.bak
+        echo -e "${GREEN_COLOR}下载 Openlist v2.6.4 ...${RES}"
+        curl -L ${GH_PROXY}https://github.com/Xhofe/openlist/releases/download/v2.6.4/openlist-linux-musl-$ARCH.tar.gz -o /tmp/openlist.tar.gz $CURL_BAR
+        tar zxf /tmp/openlist.tar.gz -C $INSTALL_PATH/
+        if [ -f $INSTALL_PATH/openlist-linux-musl-$ARCH ];then
+            mv $INSTALL_PATH/openlist-linux-musl-$ARCH $INSTALL_PATH/openlist
         else
-            echo -e "${RED_COLOR}下载 alist-linux-musl-$ARCH.tar.gz 出错，更新失败！${RES}"
+            echo -e "${RED_COLOR}下载 openlist-linux-musl-$ARCH.tar.gz 出错，更新失败！${RES}"
             echo "回退所有更改 ..."
-            mv /tmp/alist.bak $INSTALL_PATH/alist
-            systemctl start alist
+            mv /tmp/openlist.bak $INSTALL_PATH/openlist
+            systemctl start openlist
             exit 1;
         fi
-        echo -e "\r\n${GREEN_COLOR}启动 Alist 进程${RES}"
-        systemctl start alist
-        echo -e "\r\n${GREEN_COLOR}Alist 已更新到最新V2版本！${RES}\r\n"
+        echo -e "\r\n${GREEN_COLOR}启动 Openlist 进程${RES}"
+        systemctl start openlist
+        echo -e "\r\n${GREEN_COLOR}Openlist 已更新到最新V2版本！${RES}\r\n"
         # 删除临时文件
-        rm -f /tmp/alist*
+        rm -f /tmp/openlist*
     fi
 }
 
@@ -214,7 +214,7 @@ if [ "$1" = "uninstall" ];then
     CHECK
     INSTALL
     INIT
-    if [ -f "$INSTALL_PATH/alist" ];then
+    if [ -f "$INSTALL_PATH/openlist" ];then
         SUCCESS
     else
         echo -e "${RED_COLOR} 安装失败${RES}"

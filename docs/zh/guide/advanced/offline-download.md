@@ -36,9 +36,9 @@ star: true
 
 如果你使用 **docker**，请自行映射以下两个默认路径（映射至宿主机相同的目录）
 
-- **/opt/alist/data/temp/aria2**
+- **/opt/openlist/data/temp/aria2**
 
-- **/opt/alist/data/temp/qBittorrent**
+- **/opt/openlist/data/temp/qBittorrent**
 
 :::
 
@@ -79,7 +79,7 @@ OpenList版本 ≥ 3.42.0 的查看 [允许所有云盘调用其他云盘的离�
 
 首先我们先要在 **`qBittorrent`** 客户端配置好预设值
 
-根据[源码](https://github.com/alist-org/alist/blob/main/internal/bootstrap/data/setting.go#L159-L162)我们知道预设值分别是 admin:adminadmin@localhost:8080/
+根据[源码](https://github.com/OpenListTeam/OpenList/blob/main/internal/bootstrap/data/setting.go#L159-L162)我们知道预设值分别是 admin:adminadmin@localhost:8080/
 
 - **ip**：localhost
 - **port**：8080
@@ -97,7 +97,7 @@ OpenList版本 ≥ 3.42.0 的查看 [允许所有云盘调用其他云盘的离�
 
 
 3.  使用 **`qBittorrent`** 来离线 `.torrent` 类型的文件
-   - 虽然不可以直接添加离线`.torrent` 类型的文件，可以曲线救国 参考:[查看方法](https://github.com/alist-org/alist/issues/2459#issuecomment-1354870010)
+   - 虽然不可以直接添加离线`.torrent` 类型的文件，可以曲线救国 参考:[查看方法](https://github.com/OpenListTeam/OpenList/issues/2459#issuecomment-1354870010)
 
 4.  可以自行配置下载完毕后不进行删除，进行做种，默认为`0`会上传完毕后立即删除
    - 修改位置：**Alist后台** --> **设置** --> **Qbittorrent 做种时间** 选项，设置你自己需要配置的时间单位是`分钟`，到了设置的做种时间后会自动删除

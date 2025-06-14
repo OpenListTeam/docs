@@ -39,7 +39,7 @@ star: true
 克隆 https://github.com/OpenListTeam/OpenList ，将上一步的 `dist` 目录复制到项目下的 `public` 目录下，然后执行：
 
 ```bash
-appName="alist"
+appName="openlist"
 builtAt="$(date +'%F %T %z')"
 goVersion=$(go version | sed 's/go version //')
 gitAuthor=$(git show -s --format='format:%aN <%ae>' HEAD)

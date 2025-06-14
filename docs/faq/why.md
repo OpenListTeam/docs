@@ -87,17 +87,17 @@ Same as pdf preview, requires https+cors support,and:
 
 There is a half-hour cache by default, which can be modified on the Add Storage page. If you need to refresh immediately, click the refresh button in the lower right corner of the directory that needs to be refreshed.
 
-### **Why is it still incorrect although I input the password that get by `./alist admin` in terminal?**
+### **Why is it still incorrect although I input the password that get by `./openlist admin` in terminal?**
 
-Check whether the directory you run `./alist admin` and start alist is the same. alist reads the configuration in the current directory where you run the program by default, so running in different directorys will result in different data being read.
+Check whether the directory you run `./openlist admin` and start openlist is the same. openlist reads the configuration in the current directory where you run the program by default, so running in different directorys will result in different data being read.
 
 ----
 
 - **Here take Windows as an example**: For example, your Alist file is in the **`D:\Test\Alist\`** folder, and then you directly start the CMD command running window on the desktop, and then put the D drive Drag the Alist inside to the command running window to start, and then the configuration file it generates is actually in **`C:\Windows\System32`** here (because CMD is here by default), and then you Obtaining the password is also obtaining the password in this folder. At the same time, because Alist reads the password in the configuration file in the same directory as Alist, it is naturally wrong for you to log in with the password.
-   - ![faq](/img/faq/alist-admin.png)
+   - ![faq](/img/faq/openlist-admin.png)
 - Solution: You need to go to the folder where Alist is located to start or check the password, for example, the above is in **`D:\Test\Alist\`**, you have to manually go to this folder and then enter Enter the startup command or the command to view the password to obtain the correct password
    - **Windows**: After going to the directory where Alist is located, enter CMD in the top address bar and press Enter, and then use the command to obtain the password
-     - ![faq](/img/faq/alist-admin.gif)
+     - ![faq](/img/faq/openlist-admin.gif)
    - **Linux**: Use the CD command to go to the directory where Alist is located to get the correct password
 
 ### **Why does it prompt System error: SyntaxError: Invalid regular expression: /?/: Nothing to repeat**
@@ -217,7 +217,7 @@ How to add **`Readme`** instructions to an empty folder
 
 What is the use of creating this blank folder? It can be used in conjunction with [**How to set up visitors to access the content after logging in, use the first method**](#how-do-i-set-it-so-that-visitors-can-only-see-the-content-after-logging-in)
 
-### **lib64/libc.so.6: version `GLIBC_2.28' not found (required by ./alist) or accept: function not implemented**
+### **lib64/libc.so.6: version `GLIBC_2.28' not found (required by ./openlist) or accept: function not implemented**
 
 
 Consider using the **musl** version as an alternative due to the version of the **glibc** on your platform is too low
@@ -257,7 +257,7 @@ Because PikPak's server does not set the filename in the `content-disposition` h
 
 ### **How to query your own OpenList version number**
 
-1. Use the command `alist version`, the console will output
+1. Use the command `openlist version`, the console will output
 2. OpenList Manage --> Settings --> Site --> `Version` option
 
 Why is the old version of OpenList still after the update? Generally, docker encounters this problem. You can [**refer to the QA answer mentioned below**](../guide/install/docker.md#how-to-update-docker-installation)
