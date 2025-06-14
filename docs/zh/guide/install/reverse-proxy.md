@@ -20,7 +20,7 @@ star: true
 
 # 反向代理
 
-程序默认监听 5244 端口。如有修改，请一并修改下列配置中的端口号。如果你使用反向代理，建议你设置[site_url](../../config/configuration.md#site_url)，以帮助alist更好的工作。
+程序默认监听 5244 端口。如有修改，请一并修改下列配置中的端口号。如果你使用反向代理，建议你设置[site_url](../../config/configuration.md#site_url)，以帮助 alist 更好的工作。
 
 > 如果你想使用子目录，参考[这里](../../faq/howto.md#如何对子目录进行反向代理)
 
@@ -47,13 +47,13 @@ location / {
 }
 ```
 
-如果需要使用HTTP/3，需要将对应`HOST`行修改为：
+如果需要使用 HTTP/3，需要将对应 `HOST` 行修改为：
 
 ```bash title="conf"
 proxy_set_header Host $host:$server_port;
 ```
 
-这样修改后的配置同时也可以兼容HTTP/2及更低版本的请求。
+这样修改后的配置同时也可以兼容 HTTP/2 及更低版本的请求。
 
 :::warning
 如果使用宝塔面板，请务必删除以下默认配置
@@ -64,7 +64,7 @@ proxy_set_header Host $host:$server_port;
 - location ~ .\*\.(js|css)?$
 ```
 
-并在`/www/server/nginx/conf/proxy.conf`中或对应网站配置文件中设置禁用Nginx缓存，否则默认配置下访问较大文件时Nginx会先尝试将远程文件缓存至本机，导致播放失败
+并在 `/www/server/nginx/conf/proxy.conf` 中或对应网站配置文件中设置禁用 Nginx 缓存，否则默认配置下访问较大文件时 Nginx 会先尝试将远程文件缓存至本机，导致播放失败
 
 ```bash title="conf"
 proxy_cache cache_one; # 删除这一行
@@ -130,4 +130,4 @@ example.com {
 
 ![bt_reverse_proxy](/img/guide/reverse_proxy/bt_reverse_proxy.png)
 
-> 如需申请`SSL`证书，可先在`SSL`选项中申请证书，然后在设置反向代理。或者设置反向代理之后，关闭反向代理功能，申请`SSL`证书后再次开启代理。
+> 如需申请 `SSL` 证书，可先在 `SSL` 选项中申请证书，然后在设置反向代理。或者设置反向代理之后，关闭反向代理功能，申请 `SSL` 证书后再次开启代理。

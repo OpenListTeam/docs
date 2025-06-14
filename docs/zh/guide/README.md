@@ -25,14 +25,14 @@ category:
 
 - [x] [本机存储](../guide/drivers/local.md)
 - [x] [Crypt](/zh/guide/drivers/Crypt.md)
-- [x] [阿里云盘Open](../guide/drivers/aliyundrive_open.md)
+- [x] [阿里云盘 Open](../guide/drivers/aliyundrive_open.md)
 - [x] [阿里云盘](https://www.alipan.com/)
 - [x] [OneDrive](./drivers/onedrive.md) /[APP](./drivers/onedrive_app.md)/ SharePoint（[国际版](https://www.office.com/), [世纪互联](https://portal.partner.microsoftonline.cn),de,us）
 - [x] [GoogleDrive](https://drive.google.com/)
-- [x] [123云盘/分享/直链](https://www.123pan.com/)
+- [x] [123 云盘 / 分享 / 直链](https://www.123pan.com/)
 - [x] FTP / SFTP
 - [x] [PikPak / 分享](https://www.mypikpak.com/)
-- [x] [S3[对象存储]](../guide/drivers/s3.md)
+- [x] [S3 [对象存储]](../guide/drivers/s3.md)
 - [x] [多吉云](../guide/drivers/s3.md#添加对象存储示例及官方文档)
 - [x] [又拍云对象存储](https://www.upyun.com/products/file-storage)
 - [x] WebDAV(支持无API的OneDrive/SharePoint)
@@ -52,7 +52,7 @@ category:
 - [x] [谷歌相册](https://photos.google.com/)
 - [x] [Mega.nz](https://mega.nz)
 - [x] [一刻相册](https://photo.baidu.com/)
-- [x] [TeraBox -海外百度](https://www.terabox.com/)
+- [x] [TeraBox - 海外百度](https://www.terabox.com/)
 - [x] [OpenList v2/v3](../guide/drivers/Alist%20V2%20V3.md)
 - [x] SMB
 - [x] [别名](../guide/advanced/alias.md)
@@ -62,14 +62,14 @@ category:
 - [x] [Trainbit](https://trainbit.com/)
 - [x] [UrlTree](../guide/drivers/UrlTree.md)
 - [x] IPFS
-- [x] [UC网盘/TV](https://drive.uc.cn/)
+- [x] [UC 网盘 / TV](https://drive.uc.cn/)
 - [x] [Dropbox](https://www.dropbox.com)
 - [x] [腾讯微云](https://www.weiyun.com/)
 - [ ] [腾讯智能创作平台](https://app.v.tencent.com/)
 - [x] [超星星小组盘](../guide/drivers/chaoxing.md)
 - [x] [曲奇云盘](https://quqi.com)
 - [x] [网易云音乐云盘](../guide/drivers/163music.md)
-- [x] [6盘](../guide/drivers/halalcloud.md)
+- [x] [6 盘](../guide/drivers/halalcloud.md)
 - [x] [联想家庭储存链接分享](https://pc.lenovo.com.cn)
 - [x] [GitHub API](../guide/drivers/github.md) / [GitHub Release](../guide/drivers/github_releases.md)
 - [x] [Misskey](https://misskey-hub.net/cn/docs/for-users/features/drive/)
