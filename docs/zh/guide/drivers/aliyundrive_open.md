@@ -32,7 +32,7 @@ import { api } from "@Api"
 const minutes = ref<string|number>("unknown")
 const max = ref<string|number>("unknown")
 const getLimit = async ()=>{
-  const resp = await fetch(`https://api.nn.ci/alist/ali_open/limit`)   //后期解决，先硬编码
+  const resp = await fetch(`${api()}/alist/ali_open/limit`)
   const res = await resp.json()
   minutes.value = res.minutes
   max.value = res.max

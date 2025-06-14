@@ -1,7 +1,7 @@
 export const apis: Record<string, string> = {
-  cf: "api.oplist.org",  // max 10, minutes 60, need further investigation
-  cn: "",
-  de: ""
+  cf: "https://api.nn.ci",  // max 10, minutes 60, need further investigation
+  cn: "https://api.xhofe.top",
+  de: "http://api-my-api-5hw5ou-b810d8-80-75-218-107.traefik.me"
 };
 
 if (typeof location !== "undefined") {
