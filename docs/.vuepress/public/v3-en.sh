@@ -1,13 +1,13 @@
 #!/bin/bash
 ###############################################################################
 #
-# Alist Manager Script
+# OpenList Manager Script
 #
 # Version: 1.0.0
 # Last Updated: 2024-12-24
 #
 # Description: 
-#   A management script for Alist (https://alist.example.com)
+#   A management script for OpenList (https://openlist.example.com)
 #   Provides installation, update, uninstallation and management functions
 #
 # Requirements:
@@ -39,7 +39,7 @@ fi
 #######################
 # GitHub settings
 GH_PROXY=''  # Can be modified if proxy is needed
-GH_DOWNLOAD_URL="${GH_PROXY}https://github.com/alist-org/alist/releases/latest/download"
+GH_DOWNLOAD_URL="${GH_PROXY}https://github.com/OpenListTeam/OpenList/releases/latest/download"
 #######################
 
 # Color configuration
@@ -48,28 +48,28 @@ GREEN_COLOR='\e[1;32m'
 YELLOW_COLOR='\e[1;33m'
 RES='\e[0m'
 
-# Function to get installed Alist path
+# Function to get installed OpenList path
 GET_INSTALLED_PATH() {
     # Get working directory from service file
-    if [ -f "/etc/systemd/system/alist.service" ]; then
-        installed_path=$(grep "WorkingDirectory=" /etc/systemd/system/alist.service | cut -d'=' -f2)
-        if [ -f "$installed_path/alist" ]; then
+    if [ -f "/etc/systemd/system/openlist.service" ]; then
+        installed_path=$(grep "WorkingDirectory=" /etc/systemd/system/openlist.service | cut -d'=' -f2)
+        if [ -f "$installed_path/openlist" ]; then
             echo "$installed_path"
             return 0
         fi
     fi
     
     # Return default path if not found
-    echo "/opt/alist"
+    echo "/opt/openlist"
 }
 
 # Set installation path
 if [ ! -n "$2" ]; then
-    INSTALL_PATH='/opt/alist'
+    INSTALL_PATH='/opt/openlist'
 else
     INSTALL_PATH=${2%/}
-    if ! [[ $INSTALL_PATH == */alist ]]; then
-        INSTALL_PATH="$INSTALL_PATH/alist"
+    if ! [[ $INSTALL_PATH == */openlist ]]; then
+        INSTALL_PATH="$INSTALL_PATH/openlist"
     fi
     
     # Create parent directory if it doesn't exist
@@ -136,7 +136,7 @@ CHECK() {
   fi
 
   # Check if already installed
-  if [ -f "$INSTALL_PATH/alist" ]; then
+  if [ -f "$INSTALL_PATH/openlist" ]; then
     echo "Already installed in this location. Please choose another location or use update command"
     exit 0
   fi
@@ -190,28 +190,28 @@ INSTALL() {
   # Save current directory
   CURRENT_DIR=$(pwd)
   
-  # Download Alist program
-  echo -e "\r\n${GREEN_COLOR}Downloading Alist...${RES}"
+  # Download OpenList program
+  echo -e "\r\n${GREEN_COLOR}Downloading OpenList...${RES}"
   
   # Download from GitHub source
-  if ! download_file "${GH_DOWNLOAD_URL}/alist-linux-musl-$ARCH.tar.gz" "/tmp/alist.tar.gz"; then
+  if ! download_file "${GH_DOWNLOAD_URL}/openlist-linux-musl-$ARCH.tar.gz" "/tmp/openlist.tar.gz"; then
     echo -e "${RED_COLOR}Download failed!${RES}"
     exit 1
   fi
 
   # Extract files
-  if ! tar zxf /tmp/alist.tar.gz -C $INSTALL_PATH/; then
+  if ! tar zxf /tmp/openlist.tar.gz -C $INSTALL_PATH/; then
     echo -e "${RED_COLOR}Extraction failed!${RES}"
-    rm -f /tmp/alist.tar.gz
+    rm -f /tmp/openlist.tar.gz
     exit 1
   fi
 
-  if [ -f $INSTALL_PATH/alist ]; then
+  if [ -f $INSTALL_PATH/openlist ]; then
     echo -e "${GREEN_COLOR}Download successful, installing...${RES}"
     
     # Get initial account info (temporarily change directory)
     cd $INSTALL_PATH
-    ACCOUNT_INFO=$($INSTALL_PATH/alist admin random 2>&1)
+    ACCOUNT_INFO=$($INSTALL_PATH/openlist admin random 2>&1)
     ADMIN_USER=$(echo "$ACCOUNT_INFO" | grep "username:" | sed 's/.*username://')
     ADMIN_PASS=$(echo "$ACCOUNT_INFO" | grep "password:" | sed 's/.*password://')
     # Return to original directory
@@ -224,26 +224,26 @@ INSTALL() {
   fi
 
   # Clean up temporary files
-  rm -f /tmp/alist*
+  rm -f /tmp/openlist*
 }
 
 INIT() {
-  if [ ! -f "$INSTALL_PATH/alist" ]; then
-    echo -e "\r\n${RED_COLOR}Error${RES}: Alist is not installed on this system\r\n"
+  if [ ! -f "$INSTALL_PATH/openlist" ]; then
+    echo -e "\r\n${RED_COLOR}Error${RES}: OpenList is not installed on this system\r\n"
     exit 1
   fi
 
   # Create systemd service file
-  cat >/etc/systemd/system/alist.service <<EOF
+  cat >/etc/systemd/system/openlist.service <<EOF
 [Unit]
-Description=Alist service
+Description=OpenList service
 Wants=network.target
 After=network.target network.service
 
 [Service]
 Type=simple
 WorkingDirectory=$INSTALL_PATH
-ExecStart=$INSTALL_PATH/alist server
+ExecStart=$INSTALL_PATH/openlist server
 KillMode=process
 
 [Install]
@@ -251,7 +251,7 @@ WantedBy=multi-user.target
 EOF
 
   systemctl daemon-reload
-  systemctl enable alist >/dev/null 2>&1
+  systemctl enable openlist >/dev/null 2>&1
 }
 
 SUCCESS() {
@@ -268,7 +268,7 @@ SUCCESS() {
   PUBLIC_IP=$(curl -s4 ip.sb || curl -s4 ifconfig.me || echo "Failed to get")
   
   echo -e "┌────────────────────────────────────────────────────┐"
-  print_line "Alist installed successfully!"
+  print_line "OpenList installed successfully!"
   print_line ""
   print_line "Access URLs:"
   print_line "  LAN: http://${LOCAL_IP}:5244/"
@@ -284,12 +284,12 @@ SUCCESS() {
   
   # Install command line tool
   if ! INSTALL_CLI; then
-    echo -e "${YELLOW_COLOR}Warning: Command line tool installation failed, but Alist will work normally${RES}"
+    echo -e "${YELLOW_COLOR}Warning: Command line tool installation failed, but OpenList will work normally${RES}"
   fi
   
   echo -e "\n${GREEN_COLOR}Starting service...${RES}"
-  systemctl restart alist
-  echo -e "Management: Type ${GREEN_COLOR}alist${RES} anywhere to open management menu"
+  systemctl restart openlist
+  echo -e "Management: Type ${GREEN_COLOR}openlist${RES} anywhere to open management menu"
   
   echo -e "\n${YELLOW_COLOR}Note: If port is not accessible, please check server security group, firewall and service status${RES}"
   echo
@@ -297,82 +297,82 @@ SUCCESS() {
 }
 
 UPDATE() {
-    if [ ! -f "$INSTALL_PATH/alist" ]; then
-        echo -e "\r\n${RED_COLOR}Error: Alist not found in $INSTALL_PATH${RES}\r\n"
+    if [ ! -f "$INSTALL_PATH/openlist" ]; then
+        echo -e "\r\n${RED_COLOR}Error: OpenList not found in $INSTALL_PATH${RES}\r\n"
         exit 1
     fi
 
-    echo -e "${GREEN_COLOR}Starting Alist update...${RES}"
+    echo -e "${GREEN_COLOR}Starting OpenList update...${RES}"
 
-    # Stop Alist service
-    echo -e "${GREEN_COLOR}Stopping Alist process${RES}\r\n"
-    systemctl stop alist
+    # Stop OpenList service
+    echo -e "${GREEN_COLOR}Stopping OpenList process${RES}\r\n"
+    systemctl stop openlist
 
     # Backup binary
-    cp $INSTALL_PATH/alist /tmp/alist.bak
+    cp $INSTALL_PATH/openlist /tmp/openlist.bak
 
     # Download new version
-    echo -e "${GREEN_COLOR}Downloading Alist...${RES}"
-    if ! download_file "${GH_DOWNLOAD_URL}/alist-linux-musl-$ARCH.tar.gz" "/tmp/alist.tar.gz"; then
+    echo -e "${GREEN_COLOR}Downloading OpenList...${RES}"
+    if ! download_file "${GH_DOWNLOAD_URL}/openlist-linux-musl-$ARCH.tar.gz" "/tmp/openlist.tar.gz"; then
         echo -e "${RED_COLOR}Download failed, update aborted${RES}"
         echo -e "${GREEN_COLOR}Restoring previous version...${RES}"
-        mv /tmp/alist.bak $INSTALL_PATH/alist
-        systemctl start alist
+        mv /tmp/openlist.bak $INSTALL_PATH/openlist
+        systemctl start openlist
         exit 1
     fi
 
     # Extract files
-    if ! tar zxf /tmp/alist.tar.gz -C $INSTALL_PATH/; then
+    if ! tar zxf /tmp/openlist.tar.gz -C $INSTALL_PATH/; then
         echo -e "${RED_COLOR}Extraction failed, update aborted${RES}"
         echo -e "${GREEN_COLOR}Restoring previous version...${RES}"
-        mv /tmp/alist.bak $INSTALL_PATH/alist
-        systemctl start alist
-        rm -f /tmp/alist.tar.gz
+        mv /tmp/openlist.bak $INSTALL_PATH/openlist
+        systemctl start openlist
+        rm -f /tmp/openlist.tar.gz
         exit 1
     fi
 
     # Verify update success
-    if [ -f $INSTALL_PATH/alist ]; then
+    if [ -f $INSTALL_PATH/openlist ]; then
         echo -e "${GREEN_COLOR}Download successful, updating...${RES}"
     else
         echo -e "${RED_COLOR}Update failed!${RES}"
         echo -e "${GREEN_COLOR}Restoring previous version...${RES}"
-        mv /tmp/alist.bak $INSTALL_PATH/alist
-        systemctl start alist
-        rm -f /tmp/alist.tar.gz
+        mv /tmp/openlist.bak $INSTALL_PATH/openlist
+        systemctl start openlist
+        rm -f /tmp/openlist.tar.gz
         exit 1
     fi
 
     # Clean up temporary files
-    rm -f /tmp/alist.tar.gz /tmp/alist.bak
+    rm -f /tmp/openlist.tar.gz /tmp/openlist.bak
 
-    # Restart Alist service
-    echo -e "${GREEN_COLOR}Starting Alist process${RES}\r\n"
-    systemctl restart alist
+    # Restart OpenList service
+    echo -e "${GREEN_COLOR}Starting OpenList process${RES}\r\n"
+    systemctl restart openlist
 
     echo -e "${GREEN_COLOR}Update completed!${RES}"
 }
 
 UNINSTALL() {
-    if [ ! -f "$INSTALL_PATH/alist" ]; then
-        echo -e "\r\n${RED_COLOR}Error: Alist not found in $INSTALL_PATH${RES}\r\n"
+    if [ ! -f "$INSTALL_PATH/openlist" ]; then
+        echo -e "\r\n${RED_COLOR}Error: OpenList not found in $INSTALL_PATH${RES}\r\n"
         exit 1
     fi
     
-    echo -e "${RED_COLOR}Warning: This will delete Alist directory, database files and command line tools!${RES}"
+    echo -e "${RED_COLOR}Warning: This will delete OpenList directory, database files and command line tools!${RES}"
     read -p "Confirm uninstall? [Y/n]: " choice
     
     case "${choice:-y}" in
         [yY]|"")
             echo -e "${GREEN_COLOR}Starting uninstall...${RES}"
             
-            echo -e "${GREEN_COLOR}Stopping Alist process${RES}"
-            systemctl stop alist
-            systemctl disable alist
+            echo -e "${GREEN_COLOR}Stopping OpenList process${RES}"
+            systemctl stop openlist
+            systemctl disable openlist
             
-            echo -e "${GREEN_COLOR}Removing Alist files${RES}"
+            echo -e "${GREEN_COLOR}Removing OpenList files${RES}"
             rm -rf $INSTALL_PATH
-            rm -f /etc/systemd/system/alist.service
+            rm -f /etc/systemd/system/openlist.service
             systemctl daemon-reload
             
             # Remove management script and command link
@@ -385,7 +385,7 @@ UNINSTALL() {
                 }
             fi
             
-            echo -e "${GREEN_COLOR}Alist has been completely uninstalled${RES}"
+            echo -e "${GREEN_COLOR}OpenList has been completely uninstalled${RES}"
             ;;
         *)
             echo -e "${GREEN_COLOR}Uninstall cancelled${RES}"
@@ -394,8 +394,8 @@ UNINSTALL() {
 }
 
 RESET_PASSWORD() {
-    if [ ! -f "$INSTALL_PATH/alist" ]; then
-        echo -e "\r\n${RED_COLOR}Error: Alist is not installed, please install first!${RES}\r\n"
+    if [ ! -f "$INSTALL_PATH/openlist" ]; then
+        echo -e "\r\n${RED_COLOR}Error: OpenList is not installed, please install first!${RES}\r\n"
         exit 1
     fi
 
@@ -406,14 +406,14 @@ RESET_PASSWORD() {
     echo
     read -p "Enter option [0-2]: " choice
 
-    # Switch to Alist directory
+    # Switch to OpenList directory
     cd $INSTALL_PATH
 
     case "$choice" in
         1)
             echo -e "${GREEN_COLOR}Generating random password...${RES}"
             echo -e "\n${GREEN_COLOR}Account Info:${RES}"
-            ./alist admin random 2>&1 | grep -E "username:|password:" | sed 's/.*username:/Username: /' | sed 's/.*password:/Password: /'
+            ./openlist admin random 2>&1 | grep -E "username:|password:" | sed 's/.*username:/Username: /' | sed 's/.*password:/Password: /'
             exit 0
             ;;
         2)
@@ -424,7 +424,7 @@ RESET_PASSWORD() {
             fi
             echo -e "${GREEN_COLOR}Setting new password...${RES}"
             echo -e "\n${GREEN_COLOR}Account Info:${RES}"
-            ./alist admin set "$new_password" 2>&1 | grep -E "username:|password:" | sed 's/.*username:/Username: /' | sed 's/.*password:/Password: /'
+            ./openlist admin set "$new_password" 2>&1 | grep -E "username:|password:" | sed 's/.*username:/Username: /' | sed 's/.*password:/Password: /'
             exit 0
             ;;
         0)
@@ -438,8 +438,8 @@ RESET_PASSWORD() {
 }
 
 # Add management script path configuration
-MANAGER_PATH="/usr/local/sbin/alist-manager"  # Management script path
-COMMAND_LINK="/usr/local/bin/alist"          # Command link path
+MANAGER_PATH="/usr/local/sbin/openlist-manager"  # Management script path
+COMMAND_LINK="/usr/local/bin/openlist"          # Command link path
 
 # Modify INSTALL_CLI function
 INSTALL_CLI() {
@@ -503,8 +503,8 @@ INSTALL_CLI() {
     
     echo -e "${GREEN_COLOR}Command line tools installed successfully!${RES}"
     echo -e "\nYou can now use these commands:"
-    echo -e "1. ${GREEN_COLOR}alist${RES}          - Quick command"
-    echo -e "2. ${GREEN_COLOR}alist-manager${RES}  - Full command"
+    echo -e "1. ${GREEN_COLOR}openlist${RES}          - Quick command"
+    echo -e "2. ${GREEN_COLOR}openlist-manager${RES}  - Full command"
     return 0
 }
 
@@ -512,17 +512,17 @@ SHOW_MENU() {
   # Get actual installation path
   INSTALL_PATH=$(GET_INSTALLED_PATH)
 
-  echo -e "\nWelcome to Alist Manager\n"
-  echo -e "${GREEN_COLOR}1. Install Alist${RES}"
-  echo -e "${GREEN_COLOR}2. Update Alist${RES}"
-  echo -e "${GREEN_COLOR}3. Uninstall Alist${RES}"
+  echo -e "\nWelcome to OpenList Manager\n"
+  echo -e "${GREEN_COLOR}1. Install OpenList${RES}"
+  echo -e "${GREEN_COLOR}2. Update OpenList${RES}"
+  echo -e "${GREEN_COLOR}3. Uninstall OpenList${RES}"
   echo -e "${GREEN_COLOR}-------------------${RES}"
   echo -e "${GREEN_COLOR}4. Check Status${RES}"
   echo -e "${GREEN_COLOR}5. Reset Password${RES}"
   echo -e "${GREEN_COLOR}-------------------${RES}"
-  echo -e "${GREEN_COLOR}6. Start Alist${RES}"
-  echo -e "${GREEN_COLOR}7. Stop Alist${RES}"
-  echo -e "${GREEN_COLOR}8. Restart Alist${RES}"
+  echo -e "${GREEN_COLOR}6. Start OpenList${RES}"
+  echo -e "${GREEN_COLOR}7. Stop OpenList${RES}"
+  echo -e "${GREEN_COLOR}8. Restart OpenList${RES}"
   echo -e "${GREEN_COLOR}-------------------${RES}"
   echo -e "${GREEN_COLOR}0. Exit${RES}"
   echo
@@ -531,7 +531,7 @@ SHOW_MENU() {
   case "$choice" in
     1)
       # Reset to default path when installing
-      INSTALL_PATH='/opt/alist'
+      INSTALL_PATH='/opt/openlist'
       CHECK
       INSTALL
       INIT
@@ -547,15 +547,15 @@ SHOW_MENU() {
       exit 0
       ;;
     4)
-      if [ ! -f "$INSTALL_PATH/alist" ]; then
-        echo -e "\r\n${RED_COLOR}Error: Alist is not installed, please install first!${RES}\r\n"
+      if [ ! -f "$INSTALL_PATH/openlist" ]; then
+        echo -e "\r\n${RED_COLOR}Error: OpenList is not installed, please install first!${RES}\r\n"
         return 1
       fi
       # Check service status
-      if systemctl is-active alist >/dev/null 2>&1; then
-        echo -e "${GREEN_COLOR}Alist current status: Running${RES}"
+      if systemctl is-active openlist >/dev/null 2>&1; then
+        echo -e "${GREEN_COLOR}OpenList current status: Running${RES}"
       else
-        echo -e "${RED_COLOR}Alist current status: Stopped${RES}"
+        echo -e "${RED_COLOR}OpenList current status: Stopped${RES}"
       fi
       return 0
       ;;
@@ -564,30 +564,30 @@ SHOW_MENU() {
       return 0
       ;;
     6)
-      if [ ! -f "$INSTALL_PATH/alist" ]; then
-        echo -e "\r\n${RED_COLOR}Error: Alist is not installed, please install first!${RES}\r\n"
+      if [ ! -f "$INSTALL_PATH/openlist" ]; then
+        echo -e "\r\n${RED_COLOR}Error: OpenList is not installed, please install first!${RES}\r\n"
         return 1
       fi
-      systemctl start alist
-      echo -e "${GREEN_COLOR}Alist has been started${RES}"
+      systemctl start openlist
+      echo -e "${GREEN_COLOR}OpenList has been started${RES}"
       return 0
       ;;
     7)
-      if [ ! -f "$INSTALL_PATH/alist" ]; then
-        echo -e "\r\n${RED_COLOR}Error: Alist is not installed, please install first!${RES}\r\n"
+      if [ ! -f "$INSTALL_PATH/openlist" ]; then
+        echo -e "\r\n${RED_COLOR}Error: OpenList is not installed, please install first!${RES}\r\n"
         return 1
       fi
-      systemctl stop alist
-      echo -e "${GREEN_COLOR}Alist has been stopped${RES}"
+      systemctl stop openlist
+      echo -e "${GREEN_COLOR}OpenList has been stopped${RES}"
       return 0
       ;;
     8)
-      if [ ! -f "$INSTALL_PATH/alist" ]; then
-        echo -e "\r\n${RED_COLOR}Error: Alist is not installed, please install first!${RES}\r\n"
+      if [ ! -f "$INSTALL_PATH/openlist" ]; then
+        echo -e "\r\n${RED_COLOR}Error: OpenList is not installed, please install first!${RES}\r\n"
         return 1
       fi
-      systemctl restart alist
-      echo -e "${GREEN_COLOR}Alist has been restarted${RES}"
+      systemctl restart openlist
+      echo -e "${GREEN_COLOR}OpenList has been restarted${RES}"
       return 0
       ;;
     0)
@@ -634,8 +634,8 @@ elif [ "$1" = "uninstall" ]; then
   UNINSTALL
 else
   echo -e "${RED_COLOR}Invalid command${RES}"
-  echo -e "Usage: $0 install [path]    # Install Alist"
-  echo -e "      $0 update           # Update Alist"
-  echo -e "      $0 uninstall       # Uninstall Alist"
+  echo -e "Usage: $0 install [path]    # Install OpenList"
+  echo -e "      $0 update           # Update OpenList"
+  echo -e "      $0 uninstall       # Uninstall OpenList"
   echo -e "      $0                 # Show interactive menu"
 fi
