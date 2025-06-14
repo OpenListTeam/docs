@@ -6,8 +6,8 @@ export const en = navbar([
   { text: "Config", icon: "iconfont icon-config", link: "/config/" },
   { text: "FAQ", icon: "iconfont icon-question", link: "/faq/" },
   { text: "Pricing", icon: "iconfont icon-tag", link: "/pricing" },
-  { text: "Terms", icon: "iconfont icon-tag", link: "/terms" },
-  { text: "Privacy", icon: "iconfont icon-tag", link: "/privacy" },
+  { text: "Terms", icon: "iconfont icon-creative", link: "/terms" },
+  { text: "Privacy", icon: "iconfont icon-creative", link: "/privacy" },
   // { text: "Tool", icon: "tool", link: "/tool/" },
   {
     text: "Community",
