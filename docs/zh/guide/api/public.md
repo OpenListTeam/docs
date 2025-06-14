@@ -53,7 +53,7 @@ GET /api/public/settings
     "allow_mounted": "false",
     "announcement": "",
     "audio_autoplay": "true",
-    "audio_cover": "https://jsd.example.com/gh/OpenListTeam/logo@main/logo.svg",
+    "audio_cover": "https://cdn.jsdelivr.net/gh/OpenListTeam/logo@main/logo.svg",
     "auto_update_index": "false",
     "default_page_size": "30",
     "external_previews": "{}",
