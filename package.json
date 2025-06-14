@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.19.75",
-    "@vuepress/client": "2.0.0-rc.19",
+    "@vuepress/client": "2.0.0-rc.23",
     "@vuepress/plugin-docsearch": "2.0.0-rc.74",
     "@vuepress/utils": "2.0.0-rc.19",
     "artplayer": "^5.2.2",
