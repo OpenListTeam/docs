@@ -40,7 +40,7 @@ The extensions of the files you want to separately set to download through proxy
 
 ### **Proxy ignore headers**
 
-For details, please check:  **https://github.com/alist-org/alist/issues/2763**
+For details, please check:  **https://github.com/OpenListTeam/OpenList/issues**
 
 ### **External previews**
 
@@ -61,7 +61,7 @@ For the external url, we provide some variables for you to use:
 Basic variable:
 
 - `$url`: the file url
-- `$durl`: the file of alist URL
+- `$durl`: the file of OpenList URL
 - `$name`: the file name
 
 Extended variables:
@@ -104,8 +104,8 @@ If you want to use self-deployed onlyoffice to preview office files, you can add
 ```
 Deploying and using `OnlyOffice` Reference:
 
-- https://github.com/AlistGo/alist/discussions/3255
-- https://github.com/AlistGo/alist/discussions/8271
+- https://github.com/OpenListTeam/OpenList/discussions
+- https://github.com/OpenListTeam/OpenList/discussions
 
 :::
 
