@@ -94,7 +94,7 @@ Check whether the directory you run `./openlist admin` and start openlist is the
 ----
 
 - **Here take Windows as an example**: For example, your Alist file is in the **`D:\Test\Alist\`** folder, and then you directly start the CMD command running window on the desktop, and then put the D drive Drag the Alist inside to the command running window to start, and then the configuration file it generates is actually in **`C:\Windows\System32`** here (because CMD is here by default), and then you Obtaining the password is also obtaining the password in this folder. At the same time, because Alist reads the password in the configuration file in the same directory as Alist, it is naturally wrong for you to log in with the password.
-   - ![faq](/img/faq/openlist-admin.png)
+   - ![faq](/img/faq/alist-admin.png)
 - Solution: You need to go to the folder where Alist is located to start or check the password, for example, the above is in **`D:\Test\Alist\`**, you have to manually go to this folder and then enter Enter the startup command or the command to view the password to obtain the correct password
    - **Windows**: After going to the directory where Alist is located, enter CMD in the top address bar and press Enter, and then use the command to obtain the password
      - ![faq](/img/faq/openlist-admin.gif)
