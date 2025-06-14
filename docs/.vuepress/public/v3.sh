@@ -1,7 +1,7 @@
 #!/bin/bash
 ###############################################################################
 #
-# Alist Manager Script
+# OpenList Manager Script
 #
 # Version: 1.0.0
 # Last Updated: 2025-06-14
@@ -47,7 +47,7 @@ GREEN_COLOR='\e[1;32m'
 YELLOW_COLOR='\e[1;33m'
 RES='\e[0m'
 
-# 添加一个函数来获取已安装的 Alist 路径
+# 添加一个函数来获取已安装的 OpenList 路径
 GET_INSTALLED_PATH() {
     # 从 service 文件中获取工作目录
     if [ -f "/etc/systemd/system/openlist.service" ]; then
@@ -206,8 +206,8 @@ INSTALL() {
     echo -e "${GREEN_COLOR}使用默认 GitHub 地址进行下载${RES}"
   fi
 
-  # 下载 Alist 程序
-  echo -e "\r\n${GREEN_COLOR}下载 Alist ...${RES}"
+  # 下载 OpenList 程序
+  echo -e "\r\n${GREEN_COLOR}下载 OpenList ...${RES}"
   
   # 使用拼接后的 GitHub 下载地址
   # TODO: Change to actual url when release!
@@ -269,7 +269,7 @@ WantedBy=multi-user.target
 EOF
 
   systemctl daemon-reload
-  systemctl enable alist >/dev/null 2>&1
+  systemctl enable openlist >/dev/null 2>&1
 }
 
 SUCCESS() {
@@ -339,7 +339,7 @@ UPDATE() {
         echo -e "${GREEN_COLOR}使用默认 GitHub 地址进行下载${RES}"
     fi
 
-    # 停止 Alist 服务
+    # 停止 OpenList 服务
     echo -e "${GREEN_COLOR}停止 OpenList 进程${RES}\r\n"
     systemctl stop openlist
 
@@ -381,7 +381,7 @@ UPDATE() {
     # 清理临时文件
     rm -f /tmp/openlist.tar.gz /tmp/openlist.bak
 
-    # 重启 Alist 服务
+    # 重启 OpenList 服务
     echo -e "${GREEN_COLOR}启动 OpenList 进程${RES}\r\n"
     systemctl restart openlist
 
@@ -429,7 +429,7 @@ UNINSTALL() {
 }
 
 RESET_PASSWORD() {
-    if [ ! -f "$INSTALL_PATH/alist" ]; then
+    if [ ! -f "$INSTALL_PATH/openlist" ]; then
         echo -e "\r\n${RED_COLOR}错误：系统未安装 OpenList，请先安装！${RES}\r\n"
         exit 1
     fi
@@ -441,7 +441,7 @@ RESET_PASSWORD() {
     echo
     read -p "请输入选项 [0-2]: " choice
 
-    # 切换到 Alist 目录
+    # 切换到 OpenList 目录
     cd $INSTALL_PATH
 
     case "$choice" in
