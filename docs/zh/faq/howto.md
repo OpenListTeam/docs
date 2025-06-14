@@ -24,14 +24,14 @@ star: true
 
 ### **如何对子目录进行反向代理？**
 
-使用 nginx 反向代理到 https://example.com/alist 的示例：
+使用 nginx 反向代理到 https://example.com/openlist 的示例：
 
 - 正常安装
-- 将 [site_url](../config/configuration.md#site_url) 设置为 `https://example.com/alist` 或者仅`/alist`, 然后重启alist
+- 将 [site_url](../config/configuration.md#site_url) 设置为 `https://example.com/openlist` 或者仅`/openlist`, 然后重启alist
 - 在 nginx 中添加反向代理配置
 
 ```nginx
-location /alist/ {
+location /openlist/ {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     proxy_set_header Host $http_host;
@@ -39,7 +39,7 @@ location /alist/ {
     proxy_set_header Range $http_range;
 	  proxy_set_header If-Range $http_if_range;
     proxy_redirect off;
-    proxy_pass http://127.0.0.1:5244/alist/;
+    proxy_pass http://127.0.0.1:5244/openlist/;
     # the max size of file to upload
     client_max_body_size 20000m;
 }
@@ -47,7 +47,7 @@ location /alist/ {
 
 ### **忘记密码怎么办？**
 
-如果您是站点的所有者，您可以通过在终端中运行 `./alist admin` 来获取管理员账号信息。
+如果您是站点的所有者，您可以通过在终端中运行 `./openlist admin` 来获取管理员账号信息。
 
 否则，您可以要求站点所有者重置密码。
 
@@ -58,7 +58,7 @@ location /alist/ {
 #### **低于v3.25.0版本**
 
 ```bash
-./alist admin
+./openlist admin
 ```
 
 
@@ -68,9 +68,9 @@ location /alist/ {
 
 ```bash
 # 随机生成一个密码
-./alist admin random
+./openlist admin random
 # 手动设置一个密码,`NEW_PASSWORD`是指你需要设置的密码
-./alist admin set NEW_PASSWORD
+./openlist admin set NEW_PASSWORD
 ```
 
 ### **如何修改监听端口 ​**
@@ -136,9 +136,9 @@ location /alist/ {
 :::
 
 
-- **Windows**：`alist.exe server --debug`
-- **Linux**：`./alist server --debug`
+- **Windows**：`openlist.exe server --debug`
+- **Linux**：`./openlist server --debug`
 - **Mac**：暂时未知，可能也是可以加 `--debug` 参数启动
-- **Docker**：`docker exec -it alist ./alist server --debug`
+- **Docker**：`docker exec -it openlist ./openlist server --debug`
 
 启动后拿到相关日志，如何停止?  `Ctrl+c` 可以使程序停止运行（或者简单粗暴直接关闭程序）

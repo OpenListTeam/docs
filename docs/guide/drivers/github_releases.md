@@ -33,12 +33,12 @@ The simplest usage is to directly write `owner/repository`, only one can be fill
 ##### Input
 
 ``` 
-alistGo/alist
+OpenListTeam/OpenList
 ```
 
 The effect is the same as the following:
 ``` 
-/:alistGo/alist
+/:openlistteam/openlist
 ```
 
 @tab 2
@@ -48,15 +48,15 @@ Mount to a subdirectory, you can mount multiple repositories
 ##### Input
 
 ``` 
-/alist-gh:alistGo/alist
-/alist-web-gh:alistGo/alist-web
+/openlist-gh:OpenListTeam/OpenList
+/openlist-frontend-gh:OpenListTeam/OpenList-Frontend
 ```
 
 The leading `/` can be omitted:
 
 ``` 
-alist-gh:alistGo/alist
-alist-web-gh:alistGo/alist-web
+openlist-gh:OpenListTeam/OpenList
+openlist-frontend-gh:openListteam/openlist-frontend
 ```
 
 :::
@@ -69,20 +69,20 @@ alist-web-gh:alistGo/alist-web
 
 Off switch：
 ```
-alist/
-├── alist-linux-amd64.tar.gz
-└── alist-windows-amd64.zip
+openlist/
+├── openlist-linux-amd64.tar.gz
+└── openlist-windows-amd64.zip
 ```
 
 On switch：
 ```
-alist/
+openlist/
 ├── v3.41.0/
-│   ├── alist-linux-amd64.tar.gz
-│   └── alist-windows-amd64.zip
+│   ├── openlist-linux-amd64.tar.gz
+│   └── openlist-windows-amd64.zip
 ├── v3.40.0/
-│   ├── alist-linux-amd64.tar.gz
-│   └── alist-windows-amd64.zip
+│   ├── openlist-linux-amd64.tar.gz
+│   └── openlist-windows-amd64.zip
 ├── LICENSE
 ├── README.md
 └── README_cn.md
@@ -108,23 +108,23 @@ Log in GitHub and visit: <https://github.com/settings/tokens>
 
 Off switch:
 ```
-alist/
-├── alist-linux-amd64.tar.gz
-└── alist-windows-amd64.zip
+openlist/
+├── openlist-linux-amd64.tar.gz
+└── openlist-windows-amd64.zip
 ```
 
 On switch：
 ```
-alist/
+openlist/
 ├── v3.41.0/
-│   ├── alist-linux-amd64.tar.gz
-│   └── alist-windows-amd64.zip
+│   ├── openlist-linux-amd64.tar.gz
+│   └── openlist-windows-amd64.zip
 ├── v3.40.0/
-│   ├── alist-linux-amd64.tar.gz
-│   └── alist-windows-amd64.zip
+│   ├── openlist-linux-amd64.tar.gz
+│   └── openlist-windows-amd64.zip
 └── v3.39.4/
-    ├── alist-linux-amd64.tar.gz
-    └── alist-windows-amd64.zip
+    ├── openlist-linux-amd64.tar.gz
+    └── openlist-windows-amd64.zip
 ```
 
 <br/>

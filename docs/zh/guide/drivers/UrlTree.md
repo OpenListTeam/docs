@@ -50,7 +50,7 @@ star: true
 
 ``` 
 http://pic.rmb.bdstatic.com/bjh/aff9c9c8817d943d6857a73188958d45.jpeg
-https://raw.githubusercontent.com/alist-org/alist/main/README_cn.md
+https://raw.githubusercontent.com/OpenListTeam/OpenList/main/README_cn.md
 ```
 
 ##### 输出
@@ -72,17 +72,17 @@ https://raw.githubusercontent.com/alist-org/alist/main/README_cn.md
 http://pic.rmb.bdstatic.com/bjh/aff9c9c8817d943d6857a73188958d45.jpeg
 folder:
   http://pic.rmb.bdstatic.com/bjh/aff9c9c8817d943d6857a73188958d45.jpeg
-  https://raw.githubusercontent.com/alist-org/alist/main/README_cn.md
+  https://raw.githubusercontent.com/OpenListTeam/OpenList/main/README_cn.md
 ```
 ``` 
 http://pic.rmb.bdstatic.com/bjh/aff9c9c8817d943d6857a73188958d45.jpeg
 folder:
   http://pic.rmb.bdstatic.com/bjh/aff9c9c8817d943d6857a73188958d45.jpeg
-  https://raw.githubusercontent.com/alist-org/alist/main/README_cn.md
+  https://raw.githubusercontent.com/OpenListTeam/OpenList/main/README_cn.md
 http://pic.rmb.bdstatic.com/bjh/a66923e9bfefd03c2998ee998d3b55e7.jpeg
 folde2r:
   http://pic.rmb.bdstatic.com/bjh/e919290bf3b8396817d369cedf33b8cd.jpeg
-  https://raw.githubusercontent.com/alist-org/alist/main/CONTRIBUTING.md
+  https://raw.githubusercontent.com/OpenListTeam/OpenList/main/CONTRIBUTING.md
 ```
 
 ##### 输出
@@ -119,14 +119,14 @@ folde2r:
 
 ```
 新名称.jpeg:1024:http://pic.rmb.bdstatic.com/bjh/aff9c9c8817d943d6857a73188958d45.jpeg
-新名称2.md:2048:https://raw.githubusercontent.com/alist-org/alist/main/README_cn.md
+新名称2.md:2048:https://raw.githubusercontent.com/OpenListTeam/OpenList/main/README_cn.md
 ```
 
 文件大小不用写也是可以重新命名的
 
 ```
 新名称.jpeg:1024:http://pic.rmb.bdstatic.com/bjh/aff9c9c8817d943d6857a73188958d45.jpeg
-新名称2.md:2048:https://raw.githubusercontent.com/alist-org/alist/main/README_cn.md
+新名称2.md:2048:https://raw.githubusercontent.com/OpenListTeam/OpenList/main/README_cn.md
 ```
 
 
@@ -140,7 +140,7 @@ folde2r:
 ```
 folder:
   http://pic.rmb.bdstatic.com/bjh/aff9c9c8817d943d6857a73188958d45.jpeg
-  https://raw.githubusercontent.com/alist-org/alist/main/README_cn.md
+  https://raw.githubusercontent.com/OpenListTeam/OpenList/main/README_cn.md
 ```
 
 
@@ -218,7 +218,7 @@ folder22:
 <Badge text="5" type="info" vertical="middle" />全部整合起来的举例用法，有常规的，有分类，有重命名，有标注文件大小
 
 ```
-https://jsd.example.com/gh/alist-org/alist/README.md
+https://jsd.example.com/gh/OpenListTeam/OpenList/README.md
 文档:
   Readme.md:https://pic.rmb.bdstatic.com/bjh/说明.md
   Doc:

@@ -20,7 +20,7 @@ star: true
 
 ### **Version**
 
-The version of the `alist`, readonly.
+The version of the `openlist`, readonly.
 
 
 
@@ -28,7 +28,7 @@ The version of the `alist`, readonly.
 
 > Deprecated in v3.0.2 and later, moved to [site_url](./configuration.md#site-url)
 
-The address of your `alist`, such as `https://pan.example.com`.This address will be used in some places in the program, If you do not set this field, Some features may not work properly, such as:
+The address of your `openlist`, such as `https://pan.example.com`.This address will be used in some places in the program, If you do not set this field, Some features may not work properly, such as:
 
 Do not carry `/` at the end of the URL link, correct example:heavy_check_mark: :`https://pan.example.com`, wrong example: `https://pan.example.com/` :x:,Otherwise the following functions will not be available
 
@@ -44,19 +44,19 @@ Do not carry `/` at the end of the URL link, correct example:heavy_check_mark: :
 
 > Deprecated in v3.0.2 and later, moved to [site_url](./configuration.md#site-url)
 
-Default `/`, if you want reverse proxy with sub directory(see [reverse proxy with sub directory](../faq/howto.md#how-to-reverse-proxy-with-sub-directory) for details), such as `https://pan.example.com/alist`, you should set this field to `alist`, at the same time you need to set `Api url` to `https://pan.example.com/alist`.
+Default `/`, if you want reverse proxy with sub directory(see [reverse proxy with sub directory](../faq/howto.md#how-to-reverse-proxy-with-sub-directory) for details), such as `https://pan.example.com/openlist`, you should set this field to `openlist`, at the same time you need to set `Api url` to `https://pan.example.com/openlist`.
 
 
 
 ### **Site title**
 
-The title of the `alist`, such as `Alist`.
+The title of the `openlist`, such as `Alist`.
 
 
 
 ### **Announcement**
 
-The announcement of the `alist`, such as `### Hello\nWelcome to use Alist`. We suggest you add a title in front of the content, such as `### Hello`, so that the content will not be covered by `Close Button`.
+The announcement of the `openlist`, such as `### Hello\nWelcome to use Alist`. We suggest you add a title in front of the content, such as `### Hello`, so that the content will not be covered by `Close Button`.
 
 - If you don't want to display it, you can clear the contents of the announcement to not display it.
 
@@ -81,7 +81,7 @@ If you think the `x` button in the upper right corner is in the way, you can use
 
 ### **Default page size**
 
-The default page size of the `alist` if `Pagination type` doesn't set to `All`, such as `20`.
+The default page size of the `openlist` if `Pagination type` doesn't set to `All`, such as `20`.
 
 
 

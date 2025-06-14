@@ -1,10 +1,10 @@
 version: '3.3'
 services:
-    alist:
-        image: 'xhofe/alist:latest'
-        container_name: alist
+    openlist:
+        image: 'openlistteam/openlist:latest'
+        container_name: openlist
         volumes:
-            - './:/opt/alist/data'
+            - './:/opt/openlist/data'
         ports:
             - '5244:5244'
         environment:

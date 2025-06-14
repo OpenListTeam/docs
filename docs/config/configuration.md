@@ -23,11 +23,11 @@ star: true
 ::: tip
 After modifying the configuration file, restart OpenList for changes to take effect
 
-- Windows/MacOS: `<alist dir>/data/config.json`
-- Linux: one-click script directory, `/opt/alist/data/config.json` or `<alist dir>/data/config.json`
+- Windows/MacOS: `<openlist dir>/data/config.json`
+- Linux: one-click script directory, `/opt/openlist/data/config.json` or `<openlist dir>/data/config.json`
 - Docker: `<docker container dir>/data/config.json`
-- openwrt: modify config on server if using `luci-app-alist` , otherwise `<alist dir>/data/config.json`
-- Other: `<alist dir>/data/config.json`
+- openwrt: modify config on server if using `luci-app-openlist` , otherwise `<openlist dir>/data/config.json`
+- Other: `<openlist dir>/data/config.json`
 
 :::
 
@@ -187,20 +187,20 @@ Do not include the slash \(`/`\) at the end of the address. For example:
 
 The address of the CDN. Included `$version` values will be dynamically replaced by the version of OpenList. Existing dist resources are hosted on both npm and GitHub, which can be found at:
 
-- https://www.npmjs.com/package/alist-web
-- https://github.com/alist-org/web-dist
+- https://www.npmjs.com/package/openlist-frontend
+- https://github.com/OpenListTeam/web-dist
 
 Thus it is possible to use any npm or GitHub CDN path for this field. For example:
 
-- https://registry.npmmirror.com/alist-web/$version/files/dist/
-- https://cdn.jsdelivr.net/npm/alist-web@$version/dist/
-- https://unpkg.com/alist-web@$version/dist/
-- https://cdn.jsdelivr.net/gh/alist-org/web-dist@$version/dist/
-- https://cdn1.tianli0.top/npm/alist-web@$version/dist/
-- https://cdn1.tianli0.top/gh/alist-org/web-dist@$version/dist/
-- https://npm.elemecdn.com/alist-web@$version/dist/
-- https://jsd.onmicrosoft.cn/npm/alist-web@$version/dist/
-- https://jsd.onmicrosoft.cn/gh/alist-org/web-dist@$version/dist/
+- https://registry.npmmirror.com/openList-frontend/$version/files/dist/
+- https://cdn.jsdelivr.net/npm/openList-frontend@$version/dist/
+- https://unpkg.com/openList-frontend@$version/dist/
+- https://cdn.jsdelivr.net/gh/OpenListTeam/web-dist@$version/dist/
+- https://cdn1.tianli0.top/npm/openList-frontend@$version/dist/
+- https://cdn1.tianli0.top/gh/OpenListTeam/web-dist@$version/dist/
+- https://npm.elemecdn.com/openList-frontend@$version/dist/
+- https://jsd.onmicrosoft.cn/npm/openList-frontend@$version/dist/
+- https://jsd.onmicrosoft.cn/gh/OpenListTeam/web-dist@$version/dist/
 
 Keep empty to use local dist resources.
 

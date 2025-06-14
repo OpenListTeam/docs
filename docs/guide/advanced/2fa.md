@@ -42,9 +42,9 @@ two、
 
 > How to enter the folder where Alist is located
 >
-> - 1. **Windows**: Go to the folder where Alist is located and enter: **alist.exe cancel2fa**
-> - 2. **Linux**: Enter the folder where Alist is located and input, **./alist cancel2fa**
-> - 3. **docker**: docker directly input **docker exec -it alist ./alist cancel2fa**
+> - 1. **Windows**: Go to the folder where Alist is located and enter: **openlist.exe cancel2fa**
+> - 2. **Linux**: Enter the folder where Alist is located and input, **./openlist cancel2fa**
+> - 3. **docker**: docker directly input **docker exec -it openlist ./openlist cancel2fa**
 >
 >  **After the above input is deleted, it is found that there is still a restart~**
 

@@ -24,13 +24,13 @@ Add a [meta](../guide/advanced/meta.md) record.
 
 ### **How to reverse proxy with sub directory?**
 
-An example of using nginx to reverse proxy to https://example.com/alist:
+An example of using nginx to reverse proxy to https://example.com/openlist:
 - Normal installation
-- Set [site_url](../config/configuration.md#site_url) to `https://example.com/alist` or just `/alist` then restart alist
+- Set [site_url](../config/configuration.md#site_url) to `https://example.com/openlist` or just `/openlist` then restart openlist
 - Add a reverse proxy record in nginx
 
 ```nginx
-location /alist/ {
+location /openlist/ {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header X-Forwarded-Proto $scheme;
     proxy_set_header Host $http_host;
@@ -38,7 +38,7 @@ location /alist/ {
     proxy_set_header Range $http_range;
 	  proxy_set_header If-Range $http_if_range;
     proxy_redirect off;
-    proxy_pass http://127.0.0.1:5244/alist/;
+    proxy_pass http://127.0.0.1:5244/openlist/;
     # the max size of file to upload
     client_max_body_size 20000m;
 }
@@ -46,17 +46,17 @@ location /alist/ {
 
 ### **How to get password if i forget it?**
 
-If you are the owner of the site, you can get the admin's info by run `./alist admin` in the terminal.
+If you are the owner of the site, you can get the admin's info by run `./openlist admin` in the terminal.
 Otherwise you can ask the owner to reset the password.
 
 :::tip
-You need to stop alist server first if the version of your alist is v3.9.0 or later as this pr: https://github.com/alist-org/alist/pull/3074
+You need to stop openlist server first if the version of your openlist is v3.9.0 or later as this pr: https://github.com/alist-org/alist/pull/3074
 :::
 
 #### Lower than v3.25.0
 
 ```bash
-./alist admin
+./openlist admin
 ```
 
 #### Higher than v3.25.0
@@ -65,9 +65,9 @@ Versions above 3.25.0 change the password to an encrypted hash value, and the pa
 
 ```bash
 # Randomly generate a password
-./alist admin random
+./openlist admin random
 # Manually set a password, `NEW_PASSWORD` refers to the password you need to set
-./alist admin set NEW_PASSWORD
+./openlist admin set NEW_PASSWORD
 ```
 
 ### **How to modify the listening port​**
@@ -132,9 +132,9 @@ It is recommended to clear the log file `/log/log.log` in the **OpenList directo
 When using the `--debug` parameter to start, there will be some sensitive data such as **`account password, refresh token`**, etc., so if you need to desensitize before sending it to others
 :::
 
-- **Windows**：`alist.exe server --debug`
-- **Linux**：`./alist server --debug`
+- **Windows**：`openlist.exe server --debug`
+- **Linux**：`./openlist server --debug`
 - **Mac**: Temporarily unknown, maybe it is started with the `--debug` parameter
-- **Docker**：`docker exec -it alist ./alist server --debug`
+- **Docker**：`docker exec -it openlist ./openlist server --debug`
 
 How to stop the relevant logs after startup? `Ctrl+c` can stop the program (or simply close the program directly)

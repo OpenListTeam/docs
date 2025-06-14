@@ -61,7 +61,7 @@ For the external url, we provide some variables for you to use:
 Basic variable:
 
 - `$url`: the file url
-- `$durl`: the file of alist URL
+- `$durl`: the file of openlist URL
 - `$name`: the file name
 
 Extended variables:
