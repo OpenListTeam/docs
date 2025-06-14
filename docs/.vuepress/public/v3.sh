@@ -210,7 +210,7 @@ INSTALL() {
   echo -e "\r\n${GREEN_COLOR}下载 Alist ...${RES}"
   
   # 使用拼接后的 GitHub 下载地址
-  # TODO: Change to actual url when relase!
+  # TODO: Change to actual url when release!
   if ! download_file "${GH_DOWNLOAD_URL}/openlist-linux-musl-$ARCH.tar.gz" "/tmp/openlist.tar.gz"; then
     echo -e "${RED_COLOR}下载失败！${RES}"
     exit 1
