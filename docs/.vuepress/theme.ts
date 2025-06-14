@@ -17,7 +17,7 @@ export default hopeTheme(
     // },
 
     author: {
-      name: "The OpenList Team Developers",
+      name: "The OpenList Projects Contributors",
       url: "https://github.com/OpenListTeam",
     },
 
@@ -31,9 +31,7 @@ export default hopeTheme(
         // sidebar
         sidebar: sidebar.en,
 
-        footer: `<a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-bg.svg" alt="Deploys by Netlify" /> </a>
-      <script src="/adb.js" type="text/javascript"></script>
-      `,
+        footer: ``,
 
         displayFooter: true,
       },
@@ -48,8 +46,7 @@ export default hopeTheme(
         // sidebar
         sidebar: sidebar.zh,
 
-        footer: `<a href="https://www.netlify.com"> <img src="https://www.netlify.com/v3/img/components/netlify-color-bg.svg" alt="Deploys by Netlify" /> </a>
-      <script src="/adb.js" type="text/javascript"></script>`,
+        footer: ``,
 
         displayFooter: true,
       },

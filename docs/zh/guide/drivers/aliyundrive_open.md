@@ -22,7 +22,7 @@ star: true
 
 :::tip
 
-阿里云盘 open，使用的是官方授权 API 开发。
+阿里云盘 Open 基于官方授权 API 开发。
 
 :::
 
@@ -32,10 +32,11 @@ import { api } from "@Api"
 const minutes = ref<string|number>("unknown")
 const max = ref<string|number>("unknown")
 const getLimit = async ()=>{
-  const resp = await fetch(`${api()}/alist/ali_open/limit`)
-  const res = await resp.json()
-  minutes.value = res.minutes
-  max.value = res.max
+  // TODO: https://github.com/OpenListTeam/cf-worker-api/issues/6
+  // const resp = await fetch(`${api()}/alist/ali_open/limit`)
+  // const res = await resp.json()
+  minutes.value = 60
+  max.value = 10
 }
 typeof fetch !== "undefined" && getLimit()
 </script>
@@ -73,6 +74,7 @@ typeof fetch !== "undefined" && getLimit()
 :::
 
 
+<!--
 :::danger 关于阿里云open的OAuth验证API无法连接
 
 1.  ~~由于原api `https://api.example.com`被sni阻断，导致国内无法连接的情况，故提供两个新的api供使用：~~
@@ -90,24 +92,29 @@ typeof fetch !== "undefined" && getLimit()
 
 
 :::
+-->
 
 
 
 
 ## **刷新令牌**
 
-前往：**https://alist.example.com/zh/tool/aliyundrive/request**
-
-（暂不可用）
+前往：**https://api.oplist.org**
 
 #### **获取示意图**
 
+::: tip
+开发中, 教程暂未更新, 敬请期待!
+:::
+
+<!--
 以下两种方式都可以获得 **refresh_token**
 
 <div class="image-preview">  
     <img src="/img/drivers/aliyun/token1.png" alt="Go to login" title="Go to login-登录云盘帐号"/>
     <img src="/img/drivers/aliyun/token2.png" alt="Scan QrCode" title="Scan QrCode-扫描获取"/>
 </div>
+-->
 
 
 ## **根文件夹ID**

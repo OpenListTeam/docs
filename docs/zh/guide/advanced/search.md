@@ -26,7 +26,7 @@ star: true
 2. 保存索引后，单击`构建索引`来构建索引;
 3. 现在你可以通过点击页面右上角的搜索块或使用快捷键`Ctrl + K`来搜索文件。
 
- :exclamation::exclamation::exclamation: 若不按照上述提示开启会提示：**Search not available**
+ :exclamation: 若不按照上述提示开启会提示：**Search not available**
 
 :::
 

@@ -23,7 +23,7 @@ headerDepth: 5
 
 ::: tip
 
-Developed using the official [**115 Open Platform API**](https://open.115.com)
+Developed with the official [**115 Open Platform API**](https://open.115.com)
 
 :::
 
@@ -39,18 +39,11 @@ Please use your account in a standardized manner. Do not use it for distribution
 
 ## **Get refresh token**
 
-- **https://alist.example.com/tool/115/token**
+- **https://api.oplist.org**
 
-Scan the QR code with your phone and click the blue button to get `refresh token`
-
-When filling in the drive information, you only need to fill in **`refresh token`**, and you don’t need to fill in `access token`
-
-![](/img/drivers/115/115_b.png#light)
-![](/img/drivers/115/115_h.png#dark)
-
-<br/>
-
-
+::: tip
+Still under active development, please stay tuned!
+:::
 
 ### **Precautions**
 
@@ -78,14 +71,9 @@ An account can obtain `Refresh token` twice from the same application. After the
 
 ### **Get a refresh token using another APP ID**
 
-For example, use your own developer application ID to obtain a refresh token. Before obtaining a refresh token, fill in the application`APP ID` and then click the Get Refresh Token button.
-
-![](/img/drivers/115/115_b_t.png#light)
-![](/img/drivers/115/115_h_t.png#dark)
-
-
-
-<br/>
+::: tip
+Still under active development, please stay tuned!
+:::
 
 ## **Root folder ID**
 

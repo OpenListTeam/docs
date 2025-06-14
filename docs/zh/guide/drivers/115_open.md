@@ -23,13 +23,13 @@ headerDepth: 5
 
 ::: tip
 
-使用官方  [**115开放平台 API**](https://open.115.com) 开发
+使用官方 [**115开放平台 API**](https://open.115.com) 开发
 
 :::
 
 ::: danger 请仔细阅读注意事项
 
-请规范使用帐号，请勿包含但不限于 **`多人共享使用`**、**`图床、软件床`** 和 **`视频外链到视频网站播放`** 等分发服务以及一些没有提到的不规范使用的方式导致帐号被封禁后果自负
+请规范使用帐号，包含但不限于 **`多人共享使用`**、**`图床、软件床`** 和 **`视频外链到视频网站播放`** 等分发服务以及一些没有提到的不规范使用的方式导致帐号被封禁的，后果自负
 
 :::
 
@@ -39,18 +39,11 @@ headerDepth: 5
 
 ## **获取刷新令牌**
 
-- **https://alist.example.com/zh/tool/115/token**
+- **https://api.oplist.org**
 
-手机扫码后点击蓝色按钮即可获取 `refresh token`
-
-填写时只需要填写 **`refresh token`** 就可以，不需要填写 `access token`
-
-![](/img/drivers/115/115_b.png#light)
-![](/img/drivers/115/115_h.png#dark)
-
-<br/>
-
-
+::: tip
+开发中, 教程暂未更新, 敬请期待!
+:::
 
 ### **注意事项**
 
@@ -80,16 +73,9 @@ failed get objs: failed to list objs: code: 40140116, message: no auth
 
 ### **使用其他 APP ID 获取刷新令牌**
 
-例如使用自己申请的开发者应用ID获取刷新令牌，在获取刷新令牌前先填写应用`APP ID`再点击获取刷新令牌按钮
-
-![](/img/drivers/115/115_b_t.png#light)
-![](/img/drivers/115/115_h_t.png#dark)
-
-
-
-<br/>
-
-
+::: tip
+开发中, 教程暂未更新, 敬请期待!
+:::
 
 ## **根文件夹ID**
 

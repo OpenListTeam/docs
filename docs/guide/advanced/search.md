@@ -26,7 +26,7 @@ star: true
 2. After the index is saved, click `Build indexes` to build the index.
 3. Now you can search for files by click the search block on the top right corner of the page or by using the shortcut `Ctrl + K`.
 
-:exclamation::exclamation::exclamation: If you do not follow the above prompts, the prompt will be opened: **Search Not available**
+:exclamation: If you do not follow the above prompts, the prompt will be opened: **Search Not available**
 
 :::
 

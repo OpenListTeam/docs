@@ -29,13 +29,13 @@ headerDepth: 5
 If your account does not support the API, (for example, the school account has not verified the administrator, or the administrator has disabled the API), then you can also mount it through webdav. For details, see [webdav](webdav.md)
 :::
 
-First open https://alist.example.com/tool/onedrive/request
+First open https://api.oplist.org/
 
 ### **Create an application**
 > You can also choose to skip this step and use the client provided by default, but requires the approval of the organization administrator.
 
 - On the page that opens, select the region and click Create Application
-- After logging in, select `Register Application`, enter `Name`, and select `Accounts and Individuals in Any Organization Directory` (note that you don't look at the location selection but the text here. Some people may be the middle option, don't select a single Tenant or other options, otherwise it will cause problems when logging in), enter the redirect URL as <https://alist.example.com/tool/onedrive/callback>, `register`, and then you can get client_id
+- After logging in, select `Register Application`, enter `Name`, and select `Accounts and Individuals in Any Organization Directory` (note that you don't look at the location selection but the text here. Some people may be the middle option, don't select a single Tenant or other options, otherwise it will cause problems when logging in), enter the redirect URL as <https://api.oplist.org/onedrive/callback>, `register`, and then you can get client_id
   ![client_id](/img/drivers/onedrive-register-app.png)
 - After registering the application, select `Certificate and Password`, click `New Client Password`, enter a string of passwords, select the one with the longest time, and click `Add`
   (Note: The password entered after adding will disappear, please record the value of client_secret)

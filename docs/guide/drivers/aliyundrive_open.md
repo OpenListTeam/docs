@@ -22,7 +22,7 @@ star: true
 
 :::tip
 
-Aliyundrive Open, using the official authorization API development.
+Aliyundrive Open, developed based on the official authorization API.
 
 :::
 
@@ -32,10 +32,11 @@ import { api } from "@Api"
 const minutes = ref<string|number>("unknown")
 const max = ref<string|number>("unknown")
 const getLimit = async ()=>{
-  const resp = await fetch(`${api()}/alist/ali_open/limit`)
-  const res = await resp.json()
-  minutes.value = res.minutes
-  max.value = res.max
+  // TODO: https://github.com/OpenListTeam/cf-worker-api/issues/6
+  // const resp = await fetch(`${api()}/alist/ali_open/limit`)
+  // const res = await resp.json()
+  minutes.value = 60
+  max.value = 10
 }
 typeof fetch !== "undefined" && getLimit()
 </script>
@@ -72,6 +73,7 @@ typeof fetch !== "undefined" && getLimit()
 
 :::
 
+<!--
 :::danger About Alibaba Cloud OAUTH verification API cannot be connected
 
 1. ~~Since the original API `https://api.example.com` is blocked by SNI, resulting in the case that cannot be connected, two new APIs are provided for use:~~
@@ -91,23 +93,28 @@ typeof fetch !== "undefined" && getLimit()
 
 
 :::
+-->
 
 
 
 ## **refresh token**
 
-Go to：**https://alist.example.com/tool/aliyundrive/request**
-
-(Currently not available)
+Go to：**https://api.oplist.org**
 
 #### **Get example graph**
 
+::: tip
+Still under active development, please stay tuned!
+:::
+
+<!--
 **refresh_token** can be obtained in the following two ways
 
 <div class="image-preview">  
     <img src="/img/drivers/aliyun/token1.png" alt="Go to login" title="Go to login"/>
     <img src="/img/drivers/aliyun/token2.png" alt="Scan QrCode" title="Scan QrCode"/>
 </div>
+-->
 
 
 ### **Root folder file_id**

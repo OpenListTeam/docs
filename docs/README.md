@@ -63,5 +63,5 @@ features:
     details: Including text editor, readme/html render, file permalink, cloudflare workers proxy, etc.
 
 copyright: false
-footer: <div>AGPL-3.0 Licensed | Copyright © 2022-present The OpenList Team</div><script src="/adb.js" type="text/javascript"></script>
+footer: <div>AGPL-3.0 Licensed | Copyright © 2022-present The OpenList Team</div>
 ---

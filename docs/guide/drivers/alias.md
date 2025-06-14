@@ -185,8 +185,7 @@ This is because Windows is case-insensitive, video and Video will be considered 
 
 You need to enable `Web Proxy` or` Webdav Native Proxy` to take effect
 
-- Currently only applicable to：`alias`、`139Yun`、`OpenList V3`
-  - Function Description：**https://github.com/alist-org/alist/pull/6496#issue-2309839607**
+After enabling this option in alias mode, it can satisfy certain scenarios, such as enabling 302 redirects support for 139Yun, reducing unnecessary load when downloading or playing videos, etc.
 
 <br/>
 
@@ -248,4 +247,12 @@ If you really do n’t understand, you can test it yourself and then install the
 
 ### **Download concurrency、Download part size**
 
-You need to enable the proxy to take effect, for details, see:**https://github.com/AlistGo/alist/pull/7829**
+This enables multi-threaded concurrent downloading support.
+
+You need to enable `proxy` first.
+
+::: danger
+
+Please do not abuse, otherwise you will be responsible for any abnormal consequences of your cloud storage account!
+
+:::
