@@ -18,6 +18,7 @@ const content = isZh
         '但您的IP地址、访问时间等信息可能会被您的ISP或网络中转节点收集，这属于互联网基础设施的正常行为，我们无法控制。',
         '如有任何隐私相关疑问，欢迎随时联系我们。'
       ]
+      lastUpdated: '最后更新：2025年6月14日'
     }
   : {
       title: 'Privacy Policy',
@@ -33,6 +34,7 @@ const content = isZh
         'However, your IP address and visit time may be collected by your ISP or transit nodes as part of normal Internet infrastructure behavior, which is beyond our control.',
         'If you have any privacy-related concerns, please feel free to contact us.'
       ]
+      lastUpdated: 'Last Updated: June 14, 2025'
     }
 </script>
 

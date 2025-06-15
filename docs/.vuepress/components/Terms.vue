@@ -17,6 +17,7 @@ const content = isZh
       agplTitle: 'AGPL 授权声明',
       agplNote:
         '本软件受 <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU Affero General Public License v3.0 (AGPL-3.0)</a> 许可协议保护。您可以自由使用、修改和分发本软件，但必须遵守 AGPL-3.0 的相关条款，包括在分发和提供服务时公开源代码。详情请参阅上述链接。'
+      lastUpdated: '最后更新：2025年6月14日'
     }
   : {
       title: 'Terms of Service',
@@ -31,6 +32,7 @@ const content = isZh
       agplTitle: 'AGPL License Notice',
       agplNote:
         'This software is licensed under the <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">GNU Affero General Public License v3.0 (AGPL-3.0)</a>. You are free to use, modify, and distribute the software, but must comply with AGPL-3.0 terms, including disclosing source code when distributing or offering as a service. See the link above for details.'
+      lastUpdated: 'Last Updated: June 14, 2025'
     }
 </script>
 
