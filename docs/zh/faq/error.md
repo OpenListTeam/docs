@@ -111,14 +111,6 @@ star: true
 
 -----
 
-<Badge text="Q" type="warning" vertical="middle" />：Failed load storage: failed init storage: the site does not allow mounted
-
-<br/>
-
-<Badge text="A" type="info" vertical="middle" />：对方的`OpenList`站点不允许挂载，[**查看详细说明**](../guide/drivers/Alist%20V2%20V3.md#链接)
-
------
-
 <Badge text="Q" type="warning" vertical="middle" />：failed get objs: failed to list objs: Sorry, sharing is not available in the current region（**PikPak/分享**）
 
 <br/>
