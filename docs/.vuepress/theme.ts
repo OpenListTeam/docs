@@ -8,13 +8,6 @@ export default hopeTheme(
     logo: "/logo.svg",
     repo: "OpenListTeam/docs",
     // hostname: "https://docs.oplist.org",
-    // 移动到 palette.scss 文件中
-    // themeColor: {
-    //   blue: "#2196f3",
-    //   red: "#f26d6d",
-    //   green: "#3eaf7c",
-    //   orange: "#fb9b5f",
-    // },
 
     author: {
       name: "The OpenList Projects Contributors",
@@ -25,14 +18,9 @@ export default hopeTheme(
 
     locales: {
       "/": {
-        // navbar
         navbar: navbar.en,
-
-        // sidebar
         sidebar: sidebar.en,
-
         footer: ``,
-
         displayFooter: true,
       },
 
@@ -40,38 +28,25 @@ export default hopeTheme(
        * Chinese locale config
        */
       "/zh/": {
-        // navbar
         navbar: navbar.zh,
-
-        // sidebar
         sidebar: sidebar.zh,
-
-        footer: ``,
-
+        footer: '',
         displayFooter: true,
       },
     },
     markdown: {
-      imgMark: true,      //支持图片标记
-      imgLazyload: true,  //支持图片懒加载
-      // figure: true,       //支持图片描述
-      imgSize: true,      //支持图片大小
-      tabs: true,         //支持表格
-      gfm: true,          //支持完整的 GFM 语法
-      tasklist: true,     //支持任务列表
-      include: true,      //支持 include 语法
-      align: true,        //支持对齐
-      mark: true,         //支持标记
-      sub: true,          //支持下标
-      sup: true,          //支持上标
-      flowchart: true,    //支持流程图
-      demo: true,         //支持 demo
-      mermaid: true,      //支持 Mermaid
-      chartjs: true,      //支持 Chart.js
-      echarts: true,      //支持 ECharts
-      plantuml: true,     //支持 PlantUML
-      codeTabs: true,     //支持代码块分组
-      // container: true,
+      imgMark: true,
+      imgLazyload: true,
+      tabs: true,
+      gfm: true,
+      tasklist: true,
+      include: true,
+      mark: true,
+      sub: true,
+      sup: true,
+      flowchart: true,
+      mermaid: true,
+      codeTabs: true,
     },
     plugins: {
       // 水印选项 
@@ -166,9 +141,6 @@ export default hopeTheme(
     },
   },
   {
-    check: true,
-    compact: true,
     custom: true,
-    debug: false,
   }
 );

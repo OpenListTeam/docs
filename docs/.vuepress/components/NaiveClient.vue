@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-
 import NaiveConfig from './NaiveConfig.vue';
-import { ClientOnly } from '@vuepress/client';
+import { ClientOnly } from 'vuepress/client';
 import { Suspense } from 'vue'
 import { NSpace, NSpin } from 'naive-ui'
 

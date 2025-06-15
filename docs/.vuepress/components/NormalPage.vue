@@ -10,9 +10,9 @@
 </template>
 <script setup lang="ts">
 import NormalPage from "vuepress-theme-hope/components/NormalPage";
-import { usePageFrontmatter } from "@vuepress/client";
+import { usePageFrontmatter } from "vuepress/client";
 import { computed } from "vue";
-import { usePageData } from '@vuepress/client'
+import { usePageData } from 'vuepress/client'
 import NaiveClient from './NaiveClient.vue'
 import ApiSelect from "./api/ApiSelect.vue";
 

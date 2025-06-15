@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { usePageData } from "@vuepress/client"
+import { usePageData } from "vuepress/client"
 import { computed } from "vue"
 
 const pageData = usePageData()

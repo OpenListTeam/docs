@@ -19,7 +19,7 @@
 </template>
 <script setup lang="ts">
 import Sidebar from "vuepress-theme-hope/modules/sidebar/components/Sidebar";
-import { usePageData } from "@vuepress/client";
+import { usePageData } from "vuepress/client";
 import { computed } from "vue";
 import ApiSelect from "./api/ApiSelect.vue";
 
