@@ -1,7 +1,11 @@
 {
   "name": "openlist-doc",
   "version": "3.0.0",
-  "description": "Documentation for OpenList v3",
+  "description": "Documentation for OpenList",
+  "author": {
+    "name": "The OpenList Projects Contributors",
+    "url": "https://github.com/OpenListTeam"
+  },
   "license": "AGPL-3.0",
   "packageManager": "pnpm@9.15.9",
   "scripts": {
