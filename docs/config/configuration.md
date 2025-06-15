@@ -188,7 +188,7 @@ Do not include the slash \(`/`\) at the end of the address. For example:
 The address of the CDN. Included `$version` values will be dynamically replaced by the version of OpenList. Existing dist resources are hosted on both npm and GitHub, which can be found at:
 
 - https://www.npmjs.com/package/openlist-frontend
-- https://github.com/OpenListTeam/web-dist
+- https://github.com/OpenListTeam/openlist-frontend
 
 Thus it is possible to use any npm or GitHub CDN path for this field. For example:
 
@@ -197,10 +197,7 @@ Thus it is possible to use any npm or GitHub CDN path for this field. For exampl
 - https://unpkg.com/openList-frontend@$version/dist/
 - https://cdn.jsdelivr.net/gh/OpenListTeam/web-dist@$version/dist/
 - https://cdn1.tianli0.top/npm/openList-frontend@$version/dist/
-- https://cdn1.tianli0.top/gh/OpenListTeam/web-dist@$version/dist/
-- https://npm.elemecdn.com/openList-frontend@$version/dist/
 - https://jsd.onmicrosoft.cn/npm/openList-frontend@$version/dist/
-- https://jsd.onmicrosoft.cn/gh/OpenListTeam/web-dist@$version/dist/
 
 Keep empty to use local dist resources.
 

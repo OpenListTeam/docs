@@ -48,15 +48,15 @@ OpenListTeam/OpenList
 ##### 输入
 
 ``` 
-/OpenList-gh:OpenListTeam/OpenList
-/OpenList-web-gh:OpenListTeam/OpenList-web
+openlist-gh:OpenListTeam/OpenList
+openlist-frontend-gh:openListteam/openlist-frontend
 ```
 
 最前面的 `/` 可以省略：
 
 ``` 
-OpenList-gh:OpenListTeam/OpenList
-OpenList-web-gh:OpenListTeam/OpenList-web
+openlist-gh:OpenListTeam/OpenList
+openlist-frontend-gh:openListteam/openlist-frontend
 ```
 
 :::

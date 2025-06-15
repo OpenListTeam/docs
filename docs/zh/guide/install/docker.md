@@ -25,7 +25,7 @@ star: true
 #### **docker cli**
 
 ```bash
-docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="openlist" xhofe/openlist:latest
+docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="openlist" ghcr.io/openlistteam/openlist:latest
 ```
 
 #### **docker compose**
@@ -34,7 +34,7 @@ docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 52
 version: '3.3'
 services:
   openlist:
-    image: 'openlistteam/openlist:beta'
+    image: 'ghcr.io/openlistteam/openlist:beta'
     container_name: openlist
     volumes:
       - '/etc/openlist:/opt/openlist/data'
@@ -59,11 +59,11 @@ services:
 
 #### **镜像版本**
 
-稳定版：`openlistteam/openlist:latest` 或指定本版，如 `openlistteam/openlist:v3.41.0` `openlistteam/openlist:v3.40.0`
+稳定版：`ghcr.io/openlistteam/openlist:latest` 或指定本版，如 `ghcr.io/openlistteam/openlist:beta`(Latest暂未上线)
 
 最新镜像版本，请参阅 https://hub.docker.com/r/openlistteam/openlist/tags
 
-开发版：`openlistteam/openlist:beta`
+开发版：`ghcr.io/openlistteam/openlist:beta`
 
 预装环境镜像后缀:
 
@@ -73,7 +73,7 @@ services:
 | `ffmpeg`  | 预装 ffmpeg 的镜像，用于本地存储缩略图 |
 | `aria2`   | 预装 aria2 的镜像，用于离线下载     |
 
-你可以在上述任意镜像标签后面，使用 `-` 符号附加后缀以切换到附带环境的镜像。如 `openlistteam/openlist:latest-aio` `openlistteam/openlist:beta-aria2` `openlistteam/openlist:v3.40.0-ffmpeg`
+你可以在上述任意镜像标签后面，使用 `-` 符号附加后缀以切换到附带环境的镜像。如 `ghcr.io/openlistteam/openlist:latest-aio` `ghcr.io/openlistteam/openlist:beta-aria2` `ghcr.io/openlistteam/openlist:v3.40.0-ffmpeg`
 
 如果使用预装 ffmpeg 镜像缩略图功能仍无法使用，请确认:
 
@@ -120,7 +120,7 @@ docker exec -it openlist ./openlist admin set NEW_PASSWORD
 
 3. docker rm ID #删除Alist容器(数据还在只要你不手动删除)
 
-4. docker pull openlistteam/openlist:latest
+4. docker pull ghcr.io/openlistteam/openlist:latest
 
 5. [输入安装命令点击查看](#docker-cli)
 
@@ -137,12 +137,12 @@ docker exec -it openlist ./openlist admin set NEW_PASSWORD
 
 :::
 
-Q：我的版本是v3.x.x 怎么也升级不到最新版 `docker pull openlistteam/openlist:latest`拉取最新不行 改成docker-compose安装还是3.x.x版本
+Q：我的版本是v3.x.x 怎么也升级不到最新版 `docker pull ghcr.io/openlistteam/openlist:latest`拉取最新不行 改成docker-compose安装还是3.x.x版本
 
 A：原因是你的docker设置了镜像，从镜像更新不到最新版本，改一下/etc/docker/daemon.json，删除"registry-mirrors": ["镜像加速器地址"]
 
 - 删除若不行，可以考虑更换一个`镜像加速地址`
-- 或者简单粗暴：下载时将`openlistteam/openlist:latest` 替换为`openlistteam/openlist:v3.16.3`（指定版本，写教程时最新的是3.16.3）
+- 或者简单粗暴：下载时将`ghcr.io/openlistteam/openlist:latest` 替换为`ghcr.io/openlistteam/openlist:v3.16.3`（指定版本，写教程时最新的是3.16.3）
 
 ### **编译镜像**
 
@@ -153,13 +153,13 @@ A：原因是你的docker设置了镜像，从镜像更新不到最新版本，�
 @tab basic
 
 ```bash
-docker build -t openlistteam/openlist:latest .
+docker build -t ghcr.io/openlistteam/openlist:latest .
 ```
 
 @tab build-arg
 
 ```bash
-docker build -t openlistteam/openlist:latest-ffmpeg --build-arg INSTALL_FFMPEG=true .
+docker build -t ghcr.io/openlistteam/openlist:latest-ffmpeg --build-arg INSTALL_FFMPEG=true .
 ```
 
 :::

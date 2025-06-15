@@ -25,7 +25,7 @@ Note: The official OpenList Docker image has not yet been released. The Docker i
 #### **docker cli**
 
 ```bash
-docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="openlist" xhofe/openlist:latest
+docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="openlist" ghcr.io/openlistteam/openlist:latest
 ```
 
 #### **docker compose**
@@ -34,7 +34,7 @@ docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 52
 version: '3.3'
 services:
   openlist:
-    image: 'openlistteam/openlist:beta'
+    image: 'ghcr.io/openlistteam/openlist:beta'
     container_name: openlist
     volumes:
       - '/etc/openlist:/opt/openlist/data'
@@ -59,7 +59,7 @@ services:
 
 #### **Image Versions**
 
-Stable version: `openlistteam/openlist:latest` or specify a specific version, such as `openlistteam/openlist:v3.41.0` `openlistteam/openlist:v3.40.0`
+Stable version: `ghcr.io/openlistteam/openlist:latest` or specify beta version, such as `ghcr.io/openlistteam/openlist:beta` (latest is not online)
 
 Latest image version, please refer to https://hub.docker.com/r/openlistteam/openlist/tags
 
@@ -129,12 +129,12 @@ docker exec -it openlist ./openlist admin set NEW_PASSWORD
 
 :::
 
-Q: My version is v3.x.x and I cannot upgrade to the latest version. `docker pull openlistteam/openlist:latest` does not work to pull the latest version. After changing to docker-compose, it is still version 3.x.x
+Q: My version is v3.x.x and I cannot upgrade to the latest version. `docker pull ghcr.io/openlistteam/openlist:latest` does not work to pull the latest version. After changing to docker-compose, it is still version 3.x.x
 
 A: The reason is that your docker has set up a mirror, and the latest version cannot be updated from the mirror, so modify /etc/docker/daemon.json and delete "registry-mirrors": ["mirror accelerator address"]
 
 - If deletion doesn’t work, you can consider replacing it with a `mirror acceleration address`
-- Or simple and rude: when downloading, replace `openlistteam/openlist:latest` with `openlistteam/openlist:v3.16.3` (specify the version, the latest when writing the tutorial is 3.16.3)
+- Or simple and rude: when downloading, replace `ghcr.io/openlistteam/openlist:latest` with `ghcr.io/openlistteam/openlist:v3.16.3` (specify the version, the latest when writing the tutorial is 3.16.3)
 
 ### **Compile Image**
 
@@ -145,13 +145,13 @@ Install Docker, clone the repository, then navigate to the root directory of the
 @tab basic
 
 ```bash
-docker build -t openlistteam/openlist:latest .
+docker build -t ghcr.io/openlistteam/openlist:latest .
 ```
 
 @tab build-arg
 
 ```bash
-docker build -t openlistteam/openlist:latest-ffmpeg --build-arg INSTALL_FFMPEG=true .
+docker build -t ghcr.io/openlistteam/openlist:latest-ffmpeg --build-arg INSTALL_FFMPEG=true .
 ```
 
 :::
