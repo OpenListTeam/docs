@@ -73,7 +73,7 @@ Pre-installed environment image suffix:
 | `ffmpeg` | Pre-installed FFmpeg image for generating thumbnail for local storage   |
 | `aria2`  | Pre-installed aria2 image for offline downloading.                      |
 
-You can append a suffix using the `-` symbol after any of the mirror tags to switch to an image with the corresponding environment. For example, `openlistteam/openlist:latest-aio` `openlistteam/openlist:beta-aria2` `openlistteam/openlist:v4.0.0-ffmpeg`
+You can append a suffix using the `-` symbol after any of the mirror tags to switch to an image with the corresponding environment. For example, `openlistteam/openlist:latest-aio` `openlistteam/openlist:latest-aria2` `openlistteam/openlist:latest-ffmpeg`
 
 If the thumbnail generation function still does not work when using the pre-installed ffmpeg, please confirm:
 
@@ -134,7 +134,7 @@ Q: My version is v3.x.x and I cannot upgrade to the latest version. `docker pull
 A: The reason is that your docker has set up a mirror, and the latest version cannot be updated from the mirror, so modify /etc/docker/daemon.json and delete "registry-mirrors": ["mirror accelerator address"]
 
 - If deletion doesn’t work, you can consider replacing it with a `mirror acceleration address`
-- Or simple and rude: when downloading, replace `openlistteam/openlist:latest` with `openlistteam/openlist:v4.0.0` (specify the version, the latest when writing the tutorial is 3.16.3)
+- Or simple and rude: when downloading, replace `openlistteam/openlist:latest` with `openlistteam/openlist:v4.0.0` (specify the version, the latest when writing the tutorial is 4.0.0)
 
 ### **Compile Image**
 
