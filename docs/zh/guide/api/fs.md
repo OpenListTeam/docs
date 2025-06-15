@@ -152,7 +152,7 @@ file: []
   "data": {
     "task": {
       "id": "sdH2LbjyWRk",
-      "name": "upload animated_zoom.gif to [/data](/alist)",
+      "name": "upload animated_zoom.gif to [/data](/openlist)",
       "state": 0,
       "status": "uploading",
       "progress": 0,
@@ -905,7 +905,7 @@ string
   "data": {
     "task": {
       "id": "sdH2LbjyWRk",
-      "name": "upload animated_zoom.gif to [/data](/alist)",
+      "name": "upload animated_zoom.gif to [/data](/openlist)",
       "state": 0,
       "status": "uploading",
       "progress": 0,

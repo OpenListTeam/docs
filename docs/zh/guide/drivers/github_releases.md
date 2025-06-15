@@ -33,12 +33,12 @@ GitHub API 速率限制：未经身份验证的请求的主要速率限制为每
 ##### 输入
 
 ``` 
-alistGo/alist
+OpenListTeam/OpenList
 ```
 
 与下面的写法效果一致：
 ``` 
-/:alistGo/alist
+/:OpenListTeam/OpenList
 ```
 
 @tab 2
@@ -48,15 +48,15 @@ alistGo/alist
 ##### 输入
 
 ``` 
-/alist-gh:alistGo/alist
-/alist-web-gh:alistGo/alist-web
+openlist-gh:OpenListTeam/OpenList
+openlist-frontend-gh:openListteam/openlist-frontend
 ```
 
 最前面的 `/` 可以省略：
 
 ``` 
-alist-gh:alistGo/alist
-alist-web-gh:alistGo/alist-web
+openlist-gh:OpenListTeam/OpenList
+openlist-frontend-gh:openListteam/openlist-frontend
 ```
 
 :::
@@ -69,20 +69,20 @@ alist-web-gh:alistGo/alist-web
 
 开启前：
 ```
-alist/
-├── alist-linux-amd64.tar.gz
-└── alist-windows-amd64.zip
+openlist/
+├── openlist-linux-amd64.tar.gz
+└── openlist-windows-amd64.zip
 ```
 
 开启后：
 ```
-alist/
+openlist/
 ├── v3.41.0/
-│   ├── alist-linux-amd64.tar.gz
-│   └── alist-windows-amd64.zip
+│   ├── openlist-linux-amd64.tar.gz
+│   └── openlist-windows-amd64.zip
 ├── v3.40.0/
-│   ├── alist-linux-amd64.tar.gz
-│   └── alist-windows-amd64.zip
+│   ├── openlist-linux-amd64.tar.gz
+│   └── openlist-windows-amd64.zip
 ├── LICENSE
 ├── README.md
 └── README_cn.md
@@ -106,23 +106,23 @@ alist/
 
 开启前：
 ```
-alist/
-├── alist-linux-amd64.tar.gz
-└── alist-windows-amd64.zip
+openlist/
+├── openlist-linux-amd64.tar.gz
+└── openlist-windows-amd64.zip
 ```
 
 开启后：
 ```
-alist/
+openlist/
 ├── v3.41.0/
-│   ├── alist-linux-amd64.tar.gz
-│   └── alist-windows-amd64.zip
+│   ├── openlist-linux-amd64.tar.gz
+│   └── openlist-windows-amd64.zip
 ├── v3.40.0/
-│   ├── alist-linux-amd64.tar.gz
-│   └── alist-windows-amd64.zip
+│   ├── openlist-linux-amd64.tar.gz
+│   └── openlist-windows-amd64.zip
 └── v3.39.4/
-    ├── alist-linux-amd64.tar.gz
-    └── alist-windows-amd64.zip
+    ├── openlist-linux-amd64.tar.gz
+    └── openlist-windows-amd64.zip
 ```
 
 <br/>

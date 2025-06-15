@@ -27,59 +27,59 @@ star: true
 @tab 正式版
 **安装**
 ```bash
-curl -fsSL "https://alist.example.com/v3.sh" -o v3.sh && bash v3.sh
+curl -fsSL "https://docs.openlist.team/v3.sh" -o v3.sh && bash v3.sh
 ```
 ![v3-install](/img/guide/v3-install.png)
 
 **面板管理命令**
 
-使用命令：`alist` 或者 `alist-manager`
-![alist-manager](/img/guide/alist-manager.png)
+使用命令：`openlist` 或者 `openlist-manager`
+![openlist-manager](/img/guide/alist-manager.png)
 
 
 
 @tab 测试版
 **安装**
 ```bash
-curl -fsSL "https://alist.example.com/beta.sh" | bash -s install
+curl -fsSL "https://docs.openlist.team/beta.sh" | bash -s install
 ```
 
 **更新**
 ```bash
-curl -fsSL "https://alist.example.com/beta.sh" | bash -s update
+curl -fsSL "https://docs.openlist.team/beta.sh" | bash -s update
 ```
 
 **卸载**
 ```bash
-curl -fsSL "https://alist.example.com/beta.sh" | bash -s uninstall
+curl -fsSL "https://docs.openlist.team/beta.sh" | bash -s uninstall
 ```
 
 :::
 
 ## **自定义路径**
 
-默认安装在 `/opt/alist` 中。 自定义安装路径，将安装路径作为第二个参数添加，必须是绝对路径（如果路径以 alist 结尾，则直接安装到给定路径，否则会安装在给定路径 alist 目录下），如 安装到 `/root`：
+默认安装在 `/opt/openlist` 中。 自定义安装路径，将安装路径作为第二个参数添加，必须是绝对路径（如果路径以 openlist 结尾，则直接安装到给定路径，否则会安装在给定路径 openlist 目录下），如 安装到 `/root`：
 
 :::tabs
 
 @tab 正式版
 ```bash
 # Install
-curl -fsSL "https://alist.example.com/v3.sh" -o v3.sh && bash v3.sh install /root
+curl -fsSL "https://docs.openlist.team/v3.sh" -o v3.sh && bash v3.sh install /root
 # update
-curl -fsSL "https://alist.example.com/v3.sh" -o v3.sh && bash v3.sh update /root
+curl -fsSL "https://docs.openlist.team/v3.sh" -o v3.sh && bash v3.sh update /root
 # Uninstall
-curl -fsSL "https://alist.example.com/v3.sh" -o v3.sh && bash v3.sh uninstall /root
+curl -fsSL "https://docs.openlist.team/v3.sh" -o v3.sh && bash v3.sh uninstall /root
 ```
 
 @tab 测试版
 ```bash
 # Install
-curl -fsSL "https://alist.example.com/beta.sh" | bash -s install /root
+curl -fsSL "https://docs.openlist.team/beta.sh" | bash -s install /root
 # update
-curl -fsSL "https://alist.example.com/beta.sh" | bash -s update /root
+curl -fsSL "https://docs.openlist.team/beta.sh" | bash -s update /root
 # Uninstall
-curl -fsSL "https://alist.example.com/beta.sh" | bash -s uninstall /root
+curl -fsSL "https://docs.openlist.team/beta.sh" | bash -s uninstall /root
 ```
 
 :::
@@ -88,10 +88,10 @@ curl -fsSL "https://alist.example.com/beta.sh" | bash -s uninstall /root
 
 
 
-- 启动: `systemctl start alist`
-- 关闭: `systemctl stop alist`
-- 状态: `systemctl status alist`
-- 重启: `systemctl restart alist`
+- 启动: `systemctl start openlist`
+- 关闭: `systemctl stop openlist`
+- 状态: `systemctl status openlist`
+- 重启: `systemctl restart openlist`
 
 
 
@@ -102,7 +102,7 @@ curl -fsSL "https://alist.example.com/beta.sh" | bash -s uninstall /root
 #### 低于v3.25.0版本
 
 ```bash
-./alist admin
+./openlist admin
 ```
 
 
@@ -112,9 +112,9 @@ curl -fsSL "https://alist.example.com/beta.sh" | bash -s uninstall /root
 
 ```bash
 # 随机生成一个密码
-./alist admin random
+./openlist admin random
 # 手动设置一个密码,`NEW_PASSWORD`是指你需要设置的密码
-./alist admin set NEW_PASSWORD
+./openlist admin set NEW_PASSWORD
 ```
 
 
@@ -136,11 +136,11 @@ curl -fsSL "https://alist.example.com/beta.sh" | bash -s uninstall /root
 如果我们不知道是那个存储原因导致的，可以通过命令列出所有的存储
 
 ```bash
-./alist storage list
+./openlist storage list
 ```
 
 ```bash{1}
-[root@OPSD-g8xXordx3B9f alist]# ./alist storage list
+[root@OPSD-g8xXordx3B9f openlist]# ./openlist storage list
 INFO[2023-11-23 17:54:10] reading config file: data/config.json
 INFO[2023-11-23 17:54:10] load config from env with prefix: OpenList_
 INFO[2023-11-23 17:54:10] init logrus...
@@ -158,11 +158,11 @@ INFO[2023-11-23 17:54:10] Found 2 storages
 例如我们是因为 `233` 这个存储停止的，我们就输入命令来停止，然后在 重启一下OpenList就可以了
 
 ```bash
-./alist storage disable /233
+./openlist storage disable /233
 ```
 
 ```bash{1,5}
-[root@OPSD-g8xXordx3B9f alist]# ./alist storage disable /233
+[root@OPSD-g8xXordx3B9f openlist]# ./openlist storage disable /233
 INFO[2023-11-23 17:54:52] reading config file: data/config.json
 INFO[2023-11-23 17:54:52] load config from env with prefix: OpenList_
 INFO[2023-11-23 17:54:52] init logrus...
@@ -178,11 +178,11 @@ INFO[2023-11-23 17:54:52] Storage with mount path [/233] have been disabled
 如果我们不知道是那个存储原因导致的，可以通过命令列出所有的存储
 
 ```bash
-alist.exe storage list
+openlist.exe storage list
 ```
 
 ```bash{1}
-C:\Users\admin\Desktop\alist>alist.exe storage list
+C:\Users\admin\Desktop\openlist>openlist.exe storage list
 INFO[2023-11-23 18:36:23] reading config file: data\config.json
 INFO[2023-11-23 18:36:23] load config from env with prefix: OpenList_
 INFO[2023-11-23 18:36:23] init logrus...
@@ -201,11 +201,11 @@ INFO[2023-11-23 18:36:23] Found 13 storages
 例如我们是因为 `open` 这个存储停止的，我们就输入命令来停止，然后在 重启一下OpenList就可以了
 
 ```bash
-alist.exe storage disable /open
+openlist.exe storage disable /open
 ```
 
 ```bash{1,5}
-C:\Users\admin\Desktop\alist>alist.exe storage disable /open
+C:\Users\admin\Desktop\openlist>openlist.exe storage disable /open
 INFO[2023-11-23 18:41:43] reading config file: data\config.json
 INFO[2023-11-23 18:41:43] load config from env with prefix: OpenList_
 INFO[2023-11-23 18:41:43] init logrus...
@@ -223,13 +223,13 @@ INFO[2023-11-23 18:41:43] Storage with mount path [/open] have been disabled
 列出存储:
 
 ```bash
-alist storage list
+openlist storage list
 ```
 
 停止存储:
 
 ```bash
-alist storage disable /Path
+openlist storage disable /Path
 ```
 
 
@@ -241,11 +241,11 @@ alist storage disable /Path
 如果我们不知道是那个存储原因导致的，可以通过命令列出所有的存储
 
 ```bash
-docker exec -it alist ./alist storage list
+docker exec -it openlist ./openlist storage list
 ```
 
 ```bash{1}
-[root@OPSD-g8xXordx3B9f alist]# docker exec -it alist ./alist storage list
+[root@OPSD-g8xXordx3B9f openlist]# docker exec -it openlist ./openlist storage list
 INFO[2023-11-23 11:50:08] reading config file: data/config.json
 INFO[2023-11-23 11:50:08] load config from env with prefix: OpenList_
 INFO[2023-11-23 11:50:08] init logrus...
@@ -266,11 +266,11 @@ INFO[2023-11-23 11:50:08] Found 8 storages
 例如我们是因为 `pikpak` 这个存储停止的，我们就输入命令来停止，然后在 重启一下OpenList就可以了
 
 ```bash
-docker exec -it alist ./alist storage disable /pikpak
+docker exec -it openlist ./openlist storage disable /pikpak
 ```
 
 ```bash{1,5}
-[root@OPSD-g8xXordx3B9f alist]# docker exec -it alist ./alist storage disable /pikpak
+[root@OPSD-g8xXordx3B9f openlist]# docker exec -it openlist ./openlist storage disable /pikpak
 INFO[2023-11-23 17:54:52] reading config file: data/config.json
 INFO[2023-11-23 17:54:52] load config from env with prefix: OpenList_
 INFO[2023-11-23 17:54:52] init logrus...
@@ -284,13 +284,13 @@ INFO[2023-11-23 17:54:52] Storage with mount path [/pikpak] have been disabled
 查询存储:
 
 ```bash
-alist storage list
+openlist storage list
 ```
 
 停止存储:
 
 ```bash
-alist storage disable /path
+openlist storage disable /path
 ```
 
 

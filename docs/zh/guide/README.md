@@ -53,7 +53,6 @@ category:
 - [x] [Mega.nz](https://mega.nz)
 - [x] [一刻相册](https://photo.baidu.com/)
 - [x] [TeraBox -海外百度](https://www.terabox.com/)
-- [x] [OpenList v2/v3](../guide/drivers/Alist%20V2%20V3.md)
 - [x] SMB
 - [x] [别名](../guide/advanced/alias.md)
 - [x] [115](https://115.com/)

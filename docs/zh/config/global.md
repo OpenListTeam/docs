@@ -79,7 +79,11 @@ star: true
 
 ## **ocr api**
 
-用于识别验证码。你可以自己部署：https://hub.docker.com/r/xhofe/ddddocr_server 默认的 ocr api 部署在 [koyeb](https://app.koyeb.com/) 上（无可用性保证），不建议在生产环境中使用。
+用于识别验证码。你可以自己部署：https://hub.docker.com/r/cloudlinksu/openlist-ocr-server 
+
+默认的 ocr api 部署在 [huggingface](https://huggingface.co/spaces/Susus21/openlist-ocr/tree/main) 上。
+
+你可复制huggingface仓库自建：[克隆huggingface仓库](https://huggingface.co/spaces/Susus21/openlist-ocr/tree/main?duplicate=true),自建成功后的hf域名为https://{username}-{repositroy-name}.hf.space/ocr/file/json
 
 <br/>
 

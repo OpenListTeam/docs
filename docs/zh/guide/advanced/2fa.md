@@ -42,9 +42,9 @@ star: true
 
 >如何进入Alist所在的文件夹
 >
->   1. **Windows**：进入到Alist所在的文件夹输入：**alist.exe cancel2fa**
->  2. **Linux**	   ：也一样进入Alist所在的文件夹输入，**./alist cancel2fa**
->  3. **docker**	：docker直接输入 **docker exec -it alist ./alist cancel2fa**
+>   1. **Windows**：进入到Alist所在的文件夹输入：**openlist.exe cancel2fa**
+>  2. **Linux**	   ：也一样进入Alist所在的文件夹输入，**./openlist cancel2fa**
+>  3. **docker**	：docker直接输入 **docker exec -it openlist ./openlist cancel2fa**
 >
 > **以上输入删除后发现还有重启即可~**
 

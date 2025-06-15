@@ -111,14 +111,6 @@ It is some error codes during the use of `OpenList`, and how to solve them (netw
 
 -----
 
-<Badge text="Q" type="warning" vertical="middle" />：Failed load storage: failed init storage: the site does not allow mounted
-
-<br/>
-
-<Badge text="A" type="info" vertical="middle" />：The other party's `OpenList` site is not allowed to mount，[**View detailed instructions**](../guide/drivers/Alist%20V2%20V3.md#link)
-
------
-
 <Badge text="Q" type="warning" vertical="middle" />：failed get objs: failed to list objs: Sorry, sharing is not available in the current region（**PikPak/share**）
 
 <br/>
