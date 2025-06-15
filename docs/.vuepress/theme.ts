@@ -20,7 +20,7 @@ export default hopeTheme(
       "/": {
         navbar: navbar.en,
         sidebar: sidebar.en,
-        footer: ``,
+        footer: '',
         displayFooter: true,
       },
 
@@ -49,8 +49,6 @@ export default hopeTheme(
       codeTabs: true,
     },
     plugins: {
-      // 水印选项 
-      // 参考配置：https://zhensherlock.github.io/watermark-js-plus/zh/config
       watermark:{
         enabled: false,
       },
@@ -67,11 +65,9 @@ export default hopeTheme(
           toc: false,
         }),
       },
-      // 
       components: {
         components: ["ArtPlayer", "BiliBili", "Badge", "VPCard"],
       },
-      // 图标
       icon: {
         assets: [
           "//at.alicdn.com/t/c/font_2410206_5vb9zlyghj.css",
@@ -80,9 +76,6 @@ export default hopeTheme(
         ]
       },
       comment: {
-        /**
-         * Using Giscus 评论
-         */
         provider: "Giscus",
         repo: "OpenListTeam/docs",
         repoId: "R_kgDOO52WYA",
