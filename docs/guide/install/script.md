@@ -26,7 +26,7 @@ Only for Linux-x86_64/arm64 platform.
 **Install**
 
 ```bash
-curl -fsSL "https://openlist.example.com/v3-en.sh" -o v3-en.sh && bash v3-en.sh
+curl -fsSL "https://docs.openlist.team/v3-en.sh" -o v3-en.sh && bash v3-en.sh
 ```
 ![v3-install](/img/guide/v3-install-en.png)
 
@@ -39,17 +39,17 @@ curl -fsSL "https://openlist.example.com/v3-en.sh" -o v3-en.sh && bash v3-en.sh
 @tab Beta
 **Install**
 ```bash
-curl -fsSL "https://openlist.example.com/beta.sh" | bash -s install
+curl -fsSL "https://docs.openlist.team/beta.sh" | bash -s install
 ```
 
 **Update**
 ```bash
-curl -fsSL "https://openlist.example.com/beta.sh" | bash -s update
+curl -fsSL "https://docs.openlist.team/beta.sh" | bash -s update
 ```
 
 **Uninstall**
 ```bash
-curl -fsSL "https://openlist.example.com/beta.sh" | bash -s uninstall
+curl -fsSL "https://docs.openlist.team/beta.sh" | bash -s uninstall
 ```
 
 :::
@@ -63,21 +63,21 @@ The default installation is in `/opt/openlist`. To customize the installation pa
 @tab Latest
 ```bash
 # Install
-curl -fsSL "https://openlist.example.com/v3-en.sh" -o v3-en.sh && bash v3-en.sh install /root
+curl -fsSL "https://docs.openlist.team/v3-en.sh" -o v3-en.sh && bash v3-en.sh install /root
 # update
-curl -fsSL "https://openlist.example.com/v3-en.sh" -o v3-en.sh && bash v3-en.sh update /root
+curl -fsSL "https://docs.openlist.team/v3-en.sh" -o v3-en.sh && bash v3-en.sh update /root
 # Uninstall
-curl -fsSL "https://openlist.example.com/v3-en.sh" -o v3-en.sh && bash v3-en.sh uninstall /root
+curl -fsSL "https://docs.openlist.team/v3-en.sh" -o v3-en.sh && bash v3-en.sh uninstall /root
 ```
 
 @tab Beta
 ```bash
 # Install
-curl -fsSL "https://openlist.example.com/beta.sh" | bash -s install /root
+curl -fsSL "https://docs.openlist.team/beta.sh" | bash -s install /root
 # update
-curl -fsSL "https://openlist.example.com/beta.sh" | bash -s update /root
+curl -fsSL "https://docs.openlist.team/beta.sh" | bash -s update /root
 # Uninstall
-curl -fsSL "https://openlist.example.com/beta.sh" | bash -s uninstall /root
+curl -fsSL "https://docs.openlist.team/beta.sh" | bash -s uninstall /root
 ```
 
 :::
