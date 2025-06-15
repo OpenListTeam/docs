@@ -16,7 +16,7 @@ sticky: true
 star: true
 ---
 
-# alias别名
+# 别名（alias）
 
 
 我们先看一张示意图
@@ -188,12 +188,13 @@ star: true
 
 
 
-### **代理range**
+### **代理 range**
 
-需要先启用 `Web代理` 或者 `Webdav本地代理` 才会生效
+## **代理 range**
 
-- 目前仅适用于：`别名`、`中国移动云盘`、`OpenList V3`
-  - 具体功能说明：**https://github.com/alist-org/alist/pull/6496#issue-2309839607**
+需要先启用 `Web 代理` 或者 `WebDAV 本地代理` 才会生效。
+
+别名模式下开启这个选项后，可满足某些场景，例如下载或播放视频等用 139Yun 走 302，减少不必要的负载。
 
 <br/>
 
@@ -255,4 +256,12 @@ a/5.bin     b/6.css             alias/5.bin
 
 ### **下载并发、下载分片大小**
 
-需要开启代理才会生效，详情查看：**https://github.com/AlistGo/alist/pull/7829**
+需要开启代理才会生效，可多线程并发下载。
+
+具体限制
+
+::: danger
+
+请不要滥用，否则云盘账号异常后果自负！
+
+:::

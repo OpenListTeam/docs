@@ -18,6 +18,6 @@ star: true
 
 # 在线调试
 
-前往[https://alist-v3.apifox.cn](https://alist-v3.apifox.cn)查看在线API文档，并支持调试。
+前往 [https://openlist.apifox.cn](https://openlist.apifox.cn) 查看在线 API 文档，并支持调试。
 
 ![apifox](/img/api/apifox.png)

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="OpenList使用条款">
+    <meta name="keywords" content="OpenList,使用条款,Terms">
+    <title>OpenList 使用条款</title>
+    <style>
+        * {
+            font-family: JetBrains Mono, Noto Sans SC, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", system-ui, -apple-system, emoji, monospace;
+            font-feature-settings: "liga" off, "calt" off !important;
+            -webkit-font-smoothing: antialiased !important;
+            text-rendering: optimizeLegibility !important
+        }
+
+        html,
+        body,
+        root {
+            margin: 0 auto;
+            min-width: 100dvw;
+            max-width: 100dvw;
+            width: 100dvw;
+            height: 100dvh;
+            min-height: 100dvh;
+            max-height: 100dvh
+        }
+
+        :root {
+            --border: #DDDDDD;
+            --primary: #3F51B5;
+            --secondary: #F50057;
+            --text-light: #666666;
+            --text: #333333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: #3f51b5;
+            border-radius: 1rem;
+            box-shadow: 0px 0px .5rem 0px #000000;
+            color: white;
+            margin: 1.5rem 0 2rem 0;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .header-content {
+            max-width: 75%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0;
+            padding: 1rem;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .last-updated {
+            font-style: italic;
+            margin: .5rem 0;
+            text-align: right;
+        }
+
+        .policy-container {
+            border-radius: 1rem;
+            box-shadow: 0px 0px .5rem 0px #000000;
+            padding: 1rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .policy-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: .3rem;
+            height: 100%;
+            background: var(--primary);
+        }
+
+        h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .divider {
+            height: 1px;
+            background: var(--border);
+        }
+
+        .callout {
+            background: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            border-radius: .4rem;
+            margin: 30px 0;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        b {
+            font-weight: 700;
+            color: #2c387e;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                max-width: 90%;
+            }
+
+            .policy-container {
+                padding: 25px 20px 25px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>使用条款</h1>
+                <p class="subtitle">请在使用我们的服务前仔细阅读以下条款和条件</p>
+            </div>
+        </header>
+        <div class="policy-container">
+            <p class="last-updated">最后更新: 2025年6月14日</p>
+            <p>欢迎使用本服务。请在使用前仔细阅读以下条款。使用本服务即表示您同意遵守本使用条款。</p>
+            <h3>条款内容</h3>
+            <div class="divider"></div>
+            <ul>
+                <li>本服务仅供合法用途，用户不得利用本服务从事任何违法活动。</li>
+                <li>用户应自行承担因使用本服务而产生的所有风险和责任。</li>
+                <li>我们有权在不提前通知的情况下，随时修改、暂停或终止本服务。</li>
+                <li>本服务按"现状"提供，不对其可用性、准确性或适用性作任何明示或暗示的保证。</li>
+                <li>如有任何疑问，请随时联系我们。</li>
+            </ul>
+            <h3>AGPL 授权声明</h3>
+            <div class="divider"></div>
+            <div class="callout">
+                本软件受
+                <a href="https://www.gnu.org/licenses/agpl-3.0.html" target="_blank">
+                    GNU Affero General Public License v3.0 (AGPL-3.0)
+                </a>
+                许可协议保护。您可以自由使用、修改和分发本软件，
+                但必须遵守 AGPL-3.0 的相关条款，包括在分发和提供服务时公开源代码。
+                详情请参阅上述链接。
+            </div>
+        </div>
+        <footer>
+            <p>&copy; OpenListTeam - All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

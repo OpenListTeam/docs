@@ -18,7 +18,7 @@ star: true
 # 手动安装
 
 ## **获取 OpenList**
-打开 [OpenList Release](https://github.com/Xhofe/openlist/releases) 下载待部署系统对应的文件。最新版的前端已经和后端打包好了，不用再下载前端文件了。
+打开 [OpenList Release](https://github.com/OpenListTeam/OpenList/releases) 下载待部署系统对应的文件。最新版的前端已经和后端打包好了，不用再下载前端文件了。
 
 
 
