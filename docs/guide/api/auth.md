@@ -77,7 +77,7 @@ POST /api/auth/login
 
 POST /api/auth/login/hash
 
-获取某个用户的临时JWt token，传入的密码需要在添加`-https://github.com/OpenListTeam/OpenList`后缀后再进行sha256
+获取某个用户的临时JWt token，传入的密码需要在添加`-https://github.com/alist-org/alist`后缀后再进行sha256
 
 > Body 请求参数
 
@@ -94,7 +94,7 @@ POST /api/auth/login/hash
 | ---------- | ---- | ------ | ---- | ---------- | ----------------------------------------------------------------------- |
 | body       | body | object | 否   |            | none                                                                    |
 | » username | body | string | 是   | 用户名     | 用户名                                                                  |
-| » password | body | string | 是   | 密码       | hash后密码，获取方式为`sha256(密码-https://github.com/OpenListTeam/OpenList)` |
+| » password | body | string | 是   | 密码       | hash后密码，获取方式为`sha256(密码-https://github.com/alist-org/alist)` |
 | » otp_code | body | string | 否   | 二步验证码 | 二步验证码                                                              |
 
 ### 返回示例
