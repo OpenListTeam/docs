@@ -10,7 +10,7 @@ export default hopeTheme(
     // hostname: "https://docs.oplist.org",
 
     author: {
-      name: "The OpenList Projects Contributors",
+      name: "The OpenList Projects Contributor",
       url: "https://github.com/OpenListTeam",
     },
 
@@ -20,7 +20,8 @@ export default hopeTheme(
       "/": {
         navbar: navbar.en,
         sidebar: sidebar.en,
-        footer: '',
+        copyright: false,
+        footer: 'AGPL-3.0 Licensed | Copyright © 2022-present The OpenList Team',
         displayFooter: true,
       },
 
@@ -30,7 +31,8 @@ export default hopeTheme(
       "/zh/": {
         navbar: navbar.zh,
         sidebar: sidebar.zh,
-        footer: '',
+        copyright: false,
+        footer: 'AGPL-3.0 Licensed | Copyright © 2022-present The OpenList Team',
         displayFooter: true,
       },
     },
