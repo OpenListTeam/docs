@@ -25,7 +25,7 @@ star: true
 #### **docker cli**
 
 ```bash
-docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="openlist" openlistteam/openlist:latest
+docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="openlist" openlistteam/openlist:beta
 ```
 
 #### **docker compose**
@@ -73,7 +73,7 @@ services:
 | `ffmpeg`  | 预装 ffmpeg 的镜像，用于本地存储缩略图 |
 | `aria2`   | 预装 aria2 的镜像，用于离线下载     |
 
-你可以在上述任意镜像标签后面，使用 `-` 符号附加后缀以切换到附带环境的镜像。如 `openlistteam/openlist:latest-aio` `openlistteam/openlist:latest-aria2` `openlistteam/openlist:latest-ffmpeg`
+你可以在上述任意镜像标签后面，使用 `-` 符号附加后缀以切换到附带环境的镜像。如 `openlistteam/openlist:latest-aio` `openlistteam/openlist:latest-aria2` `openlistteam/openlist:latest-ffmpeg`(Latest暂未上线)
 
 如果使用预装 ffmpeg 镜像缩略图功能仍无法使用，请确认:
 
@@ -120,7 +120,7 @@ docker exec -it openlist ./openlist admin set NEW_PASSWORD
 
 3. docker rm ID #删除Alist容器(数据还在只要你不手动删除)
 
-4. docker pull openlistteam/openlist:latest
+4. docker pull openlistteam/openlist:beta
 
 5. [输入安装命令点击查看](#docker-cli)
 
@@ -137,12 +137,12 @@ docker exec -it openlist ./openlist admin set NEW_PASSWORD
 
 :::
 
-Q：我的版本是v3.x.x 怎么也升级不到最新版 `docker pull openlistteam/openlist:latest`拉取最新不行 改成docker-compose安装还是3.x.x版本
+Q：我的版本是v3.x.x 怎么也升级不到最新版 `docker pull openlistteam/openlist:beta`拉取最新不行 改成docker-compose安装还是3.x.x版本
 
 A：原因是你的docker设置了镜像，从镜像更新不到最新版本，改一下/etc/docker/daemon.json，删除"registry-mirrors": ["镜像加速器地址"]
 
 - 删除若不行，可以考虑更换一个`镜像加速地址`
-- 或者简单粗暴：下载时将`openlistteam/openlist:latest` 替换为`openlistteam/openlist:v4.0.0`（指定版本，写教程时最新的是4.0.0）
+- 或者简单粗暴：下载时将`openlistteam/openlist:beta` 替换为`openlistteam/openlist:v4.0.0`（指定版本，写教程时最新的是4.0.0）
 
 ### **编译镜像**
 
@@ -153,13 +153,13 @@ A：原因是你的docker设置了镜像，从镜像更新不到最新版本，�
 @tab basic
 
 ```bash
-docker build -t openlistteam/openlist:latest .
+docker build -t openlistteam/openlist:beta .
 ```
 
 @tab build-arg
 
 ```bash
-docker build -t openlistteam/openlist:latest-ffmpeg --build-arg INSTALL_FFMPEG=true .
+docker build -t openlistteam/openlist:beta-ffmpeg --build-arg INSTALL_FFMPEG=true .
 ```
 
 :::

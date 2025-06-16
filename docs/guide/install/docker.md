@@ -25,7 +25,7 @@ Note: The official OpenList Docker image has not yet been released. The Docker i
 #### **docker cli**
 
 ```bash
-docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="openlist" openlistteam/openlist:latest
+docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="openlist" openlistteam/openlist:bata
 ```
 
 #### **docker compose**
@@ -73,7 +73,7 @@ Pre-installed environment image suffix:
 | `ffmpeg` | Pre-installed FFmpeg image for generating thumbnail for local storage   |
 | `aria2`  | Pre-installed aria2 image for offline downloading.                      |
 
-You can append a suffix using the `-` symbol after any of the mirror tags to switch to an image with the corresponding environment. For example, `openlistteam/openlist:latest-aio` `openlistteam/openlist:latest-aria2` `openlistteam/openlist:latest-ffmpeg`
+You can append a suffix using the `-` symbol after any of the mirror tags to switch to an image with the corresponding environment. For example, `openlistteam/openlist:latest-aio` `openlistteam/openlist:latest-aria2` `openlistteam/openlist:latest-ffmpeg`(latest is not online)
 
 If the thumbnail generation function still does not work when using the pre-installed ffmpeg, please confirm:
 
@@ -114,7 +114,7 @@ docker exec -it openlist ./openlist admin set NEW_PASSWORD
 1. docker ps -a #View the container (find the ID of the Alist container)
 2. docker stop ID #Stop Alist running, otherwise it cannot be deleted (this time the ID of the Alist container is d429749a6e69, it is different for each installation)
 3. docker rm ID #Delete the Alist container (the data is still there as long as you don't delete it manually)
-4. docker pull openlistteam/openlist:latest
+4. docker pull openlistteam/openlist:beta
 5. [Enter the installation command and click to view](#docker-cli)
 6. The update is complete, go and have a look.. It's that simple
 
@@ -145,13 +145,13 @@ Install Docker, clone the repository, then navigate to the root directory of the
 @tab basic
 
 ```bash
-docker build -t openlistteam/openlist:latest .
+docker build -t openlistteam/openlist:beta .
 ```
 
 @tab build-arg
 
 ```bash
-docker build -t openlistteam/openlist:latest-ffmpeg --build-arg INSTALL_FFMPEG=true .
+docker build -t openlistteam/openlist:beta-ffmpeg --build-arg INSTALL_FFMPEG=true .
 ```
 
 :::

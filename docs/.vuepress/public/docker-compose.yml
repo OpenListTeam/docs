@@ -1,7 +1,7 @@
 version: '3.3'
 services:
     openlist:
-        image: 'openlistteam/openlist:latest'
+        image: 'openlistteam/openlist:beta'
         container_name: openlist
         volumes:
             - './:/opt/openlist/data'
