@@ -10,7 +10,7 @@ export default hopeTheme(
     // hostname: "https://docs.oplist.org",
 
     author: {
-      name: "The OpenList Projects Contributor",
+      name: "The OpenList Projects Contributors",
       url: "https://github.com/OpenListTeam",
     },
 
