@@ -8,10 +8,6 @@ category:
 
 # Introduction
 
-:::warning
-New versions (V3 and later) are not compatible with V2, so we recommend that you full reinstall Alist if you are upgrading from V2.
-:::
-
 [![](https://img.shields.io/github/release/OpenListTeam/OpenList?style=flat-square)](https://github.com/OpenListTeam/OpenList/releases/latest)
 [![GitHub Discussions](https://img.shields.io/github/discussions/OpenListTeam/OpenList?color=%23ED8936&style=flat-square)](https://github.com/OpenListTeam/OpenList/discussions)
 [![](https://img.shields.io/github/actions/workflow/status/OpenListTeam/OpenList/build.yml?style=flat-square)](https://github.com/OpenListTeam/OpenList/actions?query=workflow%3ABuild)
