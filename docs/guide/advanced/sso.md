@@ -197,7 +197,9 @@ Remember to write and save the background parameters of OpenList. After writing 
 
 If it has been configured, just ignore this picture (you can zoom in if you can’t see it clearly)
 
-![Google](/img/drivers/google/Google-6.png)
+![google-ouath-00](/img/drivers/google/google-ouath-00.png)
+![google-ouath-01](/img/drivers/google/google-ouath-01.png)
+![google-ouath-02](/img/drivers/google/google-ouath-02.png)
 
 ### **Completely fill in the reference schematic**
 

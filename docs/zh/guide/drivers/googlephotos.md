@@ -42,7 +42,7 @@ star: true
 
 此选项记得勾选不然会报错，下面的注意事项当中有说明
 
-![Googlephotos](/img/drivers/google/Google-photos2.png)
+<!-- ![Googlephotos](/img/drivers/google/Google-photos2.png) -->
 
 :::
 
@@ -65,7 +65,7 @@ star: true
 
 #### **填写示意图**
 
-![Googlephotos](/img/drivers/google/Google-photos3.png)
+<!-- ![Googlephotos](/img/drivers/google/Google-photos3.png) -->
 
 
 
@@ -80,7 +80,7 @@ star: true
 
 ### **挂载展示**
 
-![Googlephotos](/img/drivers/google/Google-photosend.png)
+<!-- ![Googlephotos](/img/drivers/google/Google-photosend.png) -->
 
 
 

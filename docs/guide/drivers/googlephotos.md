@@ -42,7 +42,7 @@ Let's click **Continue** on the left
 
 Remember to check this option, otherwise an error will be reported, as explained in the following precautions
 
-![Googlephotos](/img/drivers/google/Google-photos2.png)
+<!-- ![Googlephotos](/img/drivers/google/Google-photos2.png) -->
 
 :::
 
@@ -65,7 +65,7 @@ We fill in **https://alist.example.com/tool/google/album** to get a single catal
 
 #### **Fill in the example diagram**
 
-![Googlephotos](/img/drivers/google/Google-photos3.png)#get-client-id-client-secret)
+<!-- ![Googlephotos](/img/drivers/google/Google-photos3.png)#get-client-id-client-secret) -->
 
 
 
@@ -80,7 +80,7 @@ We fill in **https://alist.example.com/tool/google/album** to get a single catal
 
 ### **Finish**
 
-![Googlephotos](/img/drivers/google/Google-photosend.png)
+<!-- ![Googlephotos](/img/drivers/google/Google-photosend.png) -->
 
 
 

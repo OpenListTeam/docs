@@ -190,7 +190,9 @@ Alist 后台参数也记得写好保存，写好保存后也要回到个人资�
 
 如已配置好 忽略本图即可(如果看不清楚可以放大)
 
-![Google](/img/drivers/google/Google-6.png)
+![google-ouath-00](/img/drivers/google/google-ouath-00.png)
+![google-ouath-01](/img/drivers/google/google-ouath-01.png)
+![google-ouath-02](/img/drivers/google/google-ouath-02.png)
 
 #### **完整填写参考示意图**
 
