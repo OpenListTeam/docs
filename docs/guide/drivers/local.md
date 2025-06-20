@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: streamline:local-storage-folder-remix
 # This control sidebar order
 order: 2
 # A page can have multiple categories

@@ -2,7 +2,7 @@
 # This is the title of the article
 # title: One-click Script
 # This is the icon of the page
-icon: fa-solid fa-file-binary
+icon: hugeicons:internet
 # This control sidebar order
 order: 12
 # A page can have multiple categories

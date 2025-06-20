@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-link
+icon: heroicons-outline:save-as
 # This control sidebar order
 order: 10
 # A page can have multiple categories

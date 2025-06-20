@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: /img/storegeico/pan.wo.cn.ico
 # This control sidebar order
 order: 46
 # A page can have multiple categories

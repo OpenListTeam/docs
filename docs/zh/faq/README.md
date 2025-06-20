@@ -1,7 +1,7 @@
 ---
 title: FAQ
 index: false
-icon: iconfont icon-question
+icon: zondicons:question
 category:
   - FAQ
 ---

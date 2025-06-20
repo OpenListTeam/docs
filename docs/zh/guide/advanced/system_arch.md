@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: mingcute:link-line
 # This control sidebar order
 order: 13
 # A page can have multiple categories

@@ -1,7 +1,7 @@
 ---
 title: Changelog
 toc: false
-icon: iconfont icon-change
+icon: material-symbols:update-rounded
 order: 43
 # A page can have multiple categories
 category:

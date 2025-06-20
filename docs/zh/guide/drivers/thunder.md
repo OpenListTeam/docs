@@ -1,8 +1,8 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: /img/storegeico/pan.xunlei.ico
 # This control sidebar order
-order: 151
+order: 20
 # A page can have multiple categories
 category:
   - Guide

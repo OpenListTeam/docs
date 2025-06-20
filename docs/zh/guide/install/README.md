@@ -1,6 +1,6 @@
 ---
 title: 安装
-icon: iconfont icon-install
+icon: icon-park-solid:install
 index: false
 dir:
   order: 1

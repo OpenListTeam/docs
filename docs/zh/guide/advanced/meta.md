@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-set
+icon: fluent:document-key-20-filled
 # This control sidebar order
 order: 7
 # A page can have multiple categories

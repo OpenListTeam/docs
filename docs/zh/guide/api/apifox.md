@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-setting
+icon: icon-park-outline:setting-web
 # This control sidebar order
 order: 1
 # A page can have multiple categories

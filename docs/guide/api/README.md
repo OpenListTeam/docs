@@ -1,6 +1,6 @@
 ---
 title: API
-icon: iconfont icon-token
+icon: eos-icons:api
 index: false
 dir:
   order: 5

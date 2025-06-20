@@ -1,8 +1,8 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: /img/storegeico/pan.baidu.com.png
 # This control sidebar order
-order: 66
+order: 10
 # A page can have multiple categories
 category:
   - Guide

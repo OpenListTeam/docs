@@ -1,8 +1,8 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: hugeicons:encrypt
 # This control sidebar order
-order: 96
+order: 5
 # A page can have multiple categories
 category:
   - Guide

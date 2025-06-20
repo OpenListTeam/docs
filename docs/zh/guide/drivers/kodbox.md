@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: /img/storegeico/kodcloud.com.ico
 # This control sidebar order
 order: 226
 # A page can have multiple categories

@@ -1,8 +1,8 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: mdi:rename
 # This control sidebar order
-order: 246
+order: 5
 # A page can have multiple categories
 category:
   - Guide

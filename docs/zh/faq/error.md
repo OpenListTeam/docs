@@ -2,7 +2,7 @@
 # This is the title of the article
 title: OpenList错误码整合
 # This is the icon of the page
-icon: iconfont icon-question
+icon: fluent-mdl2:status-error-full
 # This control sidebar order
 order: 4
 # A page can have multiple categories

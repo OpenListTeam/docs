@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-file
+icon: fluent-mdl2:sync-status-solid
 # This control sidebar order
 order: 3
 # A page can have multiple categories

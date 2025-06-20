@@ -1,6 +1,6 @@
 ---
 title: admin
-icon: fa-solid fa-user-tie
+icon: wpf:administrator
 index: false
 ---
 

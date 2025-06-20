@@ -1,7 +1,7 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
-# The sidebar ordering
+icon: /img/storegeico/misskey-hub.net.svg
+# This control sidebar order
 order: 261
 # A page can have multiple categories
 category:

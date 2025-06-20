@@ -9,19 +9,16 @@ export const en = sidebar({
     "",
     {
       text: "Guide",
-      icon: "iconfont icon-creative",
       prefix: "guide/",
       children: ["api/","install/", "drivers/", "advanced/"],
     },
     {
       text: "Config",
-      icon: "iconfont icon-config",
       prefix: "config/",
       children: ["", "configuration"],
     },
     {
       text: "FAQ",
-      icon: "iconfont icon-question",
       prefix: "faq/",
       children: ["howto", "why"],
     },

@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: fa-regular fa-sidebar-flip
+icon: ph:sidebar-fill
 # This control sidebar order
 order: 15
 # A page can have multiple categories

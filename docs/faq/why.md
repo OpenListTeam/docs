@@ -2,7 +2,7 @@
 # This is the title of the article
 title: Why
 # This is the icon of the page
-icon: iconfont icon-repair
+icon: mynaui:tool-solid
 # This control sidebar order
 order: 1
 # A page can have multiple categories

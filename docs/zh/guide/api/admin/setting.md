@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-setting
+icon: lets-icons:setting-fill
 # This control sidebar order
 order: 5
 # A page can have multiple categories

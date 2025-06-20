@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-people
+icon: solar:user-bold
 # This control sidebar order
 order: 1
 # A page can have multiple categories

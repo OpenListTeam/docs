@@ -1,8 +1,8 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: /img/storegeico/mega.nz.ico
 # This control sidebar order
-order: 211
+order: 20
 # A page can have multiple categories
 category:
   - Guide

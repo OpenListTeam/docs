@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-computer
+icon: fluent:desktop-mac-24-filled
 # This control sidebar order
 order: 6
 # A page can have multiple categories

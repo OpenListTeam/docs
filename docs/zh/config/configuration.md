@@ -2,7 +2,7 @@
 # This is the title of the article
 title: 配置文件
 # This is the icon of the page
-icon: iconfont icon-json
+icon: eos-icons:configuration-file
 # This control sidebar order
 order: 1
 # A page can have multiple categories

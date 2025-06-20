@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: fa-solid fa-x
+icon: /img/storegeico/www.mediatrack.cn.ico
 # This control sidebar order
 order: 186
 # A page can have multiple categories

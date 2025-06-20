@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-code
+icon: material-symbols:developer-mode-tv
 # This control sidebar order
 order: 999
 # A page can have multiple categories

@@ -2,7 +2,7 @@
 # This is the title of the article
 # title: One-click Script
 # This is the icon of the page
-icon: iconfont icon-page
+icon: garden:arrow-reverse-stroke-12
 # This control sidebar order
 order: 11
 # A page can have multiple categories

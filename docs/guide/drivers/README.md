@@ -1,6 +1,6 @@
 ---
 title: Storage
-icon: iconfont icon-storage
+icon: ic:round-storage
 index: false
 dir:
   order: 3

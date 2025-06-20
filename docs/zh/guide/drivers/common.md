@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: fluent:shape-union-24-filled
 # This control sidebar order
 order: 1
 # A page can have multiple categories

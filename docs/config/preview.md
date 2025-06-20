@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-preview
+icon: mdi:eye
 # This control sidebar order
 order: 7
 # A page can have multiple categories

@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-speed
+icon: material-symbols:balance-rounded
 # This control sidebar order
 order: 7
 # A page can have multiple categories

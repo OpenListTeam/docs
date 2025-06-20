@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-style
+icon: material-symbols:styler
 # This control sidebar order
 order: 5
 # A page can have multiple categories

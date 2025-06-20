@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: /img/storegeico/www.upyun.com.png
 # This control sidebar order
 order: 101
 # A page can have multiple categories

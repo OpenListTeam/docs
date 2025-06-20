@@ -71,11 +71,11 @@ export default hopeTheme(
         components: ["ArtPlayer", "BiliBili", "Badge", "VPCard"],
       },
       icon: {
-        assets: [
-          "//at.alicdn.com/t/c/font_2410206_5vb9zlyghj.css",
-          "https://npm.elemecdn.com/font6pro@6.4.0/css/fontawesome.min.css",
-          "https://npm.elemecdn.com/font6pro@6.4.0/css/all.min.css",
-        ]
+        // assets: [
+        //   "//at.alicdn.com/t/c/font_2410206_5vb9zlyghj.css",
+        //   "https://npm.elemecdn.com/font6pro@6.4.0/css/fontawesome.min.css",
+        //   "https://npm.elemecdn.com/font6pro@6.4.0/css/all.min.css",
+        // ]
       },
       comment: {
         provider: "Giscus",

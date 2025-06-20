@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: /img/storegeico/music.163.com.ico
 # This control sidebar order
 order: 166
 # A page can have multiple categories

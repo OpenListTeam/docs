@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: /img/storegeico/www.seafile.com.png
 # This control sidebar order
 order: 216
 # A page can have multiple categories

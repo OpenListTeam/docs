@@ -1,7 +1,7 @@
 ---
 title: Config
 index: false
-icon: iconfont icon-config
+icon: fa6-solid:gears
 category:
   - Config
 ---

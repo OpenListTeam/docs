@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: /img/storegeico/favicon-github.com-3-32x32.svg
 # This control sidebar order
 order: 271
 # A page can have multiple categories

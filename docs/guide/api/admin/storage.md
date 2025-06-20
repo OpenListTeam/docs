@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-folder
+icon: fluent:storage-32-filled
 # This control sidebar order
 order: 4
 # A page can have multiple categories

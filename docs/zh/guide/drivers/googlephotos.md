@@ -1,8 +1,8 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: /img/storegeico/photos.google.com96.png
 # This control sidebar order
-order: 116
+order: 20
 # A page can have multiple categories
 category:
   - Guide

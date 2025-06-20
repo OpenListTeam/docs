@@ -1,8 +1,8 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: /img/storegeico/www.weiyun.com.png
 # This control sidebar order
-order: 131
+order: 20
 # A page can have multiple categories
 category:
   - Guide

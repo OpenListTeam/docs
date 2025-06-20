@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-state
+icon: /img/storegeico/pc.lenovo.com.cn.png
 # This control sidebar order
 order: 156
 # A page can have multiple categories

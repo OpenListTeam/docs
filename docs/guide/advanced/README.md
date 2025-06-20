@@ -1,6 +1,6 @@
 ---
 title: Advanced
-icon: iconfont icon-advance
+icon: proicons:diamond
 index: false
 dir:
   order: 5

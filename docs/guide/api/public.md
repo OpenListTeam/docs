@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-token
+icon: octicon:feed-public-16
 # This control sidebar order
 order: 4
 # A page can have multiple categories

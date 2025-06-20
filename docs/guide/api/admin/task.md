@@ -1,6 +1,6 @@
 ---
 # This is the icon of the page
-icon: iconfont icon-file
+icon: mingcute:task-fill
 # This control sidebar order
 order: 6
 # A page can have multiple categories
@@ -15,6 +15,7 @@ tag:
 sticky: true
 # this page will appear in starred articles
 star: false
+index: false
 ---
 
 # task
