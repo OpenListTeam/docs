@@ -23,6 +23,7 @@ star: true
 徽标显示在页面的左上角。 默认为 OpenList Logo
 
 - 可以分别设置夜间和白天两个不同的，方法一行一个链接
+- 从alist导入的配置会改为alist图标，需要修改为openlist图标可以使用这个链接，https://cdn.jsdelivr.net/gh/OpenListTeam/Logo@main/logo.svg。
 
 
 
