@@ -100,58 +100,11 @@ export default defineUserConfig({
       __dirname,
       "./components/Sidebar.vue"
     ),
-    "@Onedrive/Request": path.resolve(
-      __dirname,
-      "./components/onedrive/Request.vue"
-    ),
-    "@Onedrive/Callback": path.resolve(
-      __dirname,
-      "./components/onedrive/Callback.vue"
-    ),
-    "@Onedrive/WebDav": path.resolve(
-      __dirname,
-      "./components/onedrive/WebDav.vue"
-    ),
-    "@Baidu/Callback": path.resolve(
-      __dirname,
-      "./components/baidu/Callback.vue"
-    ),
-    "@Yandex/Callback": path.resolve(
-      __dirname,
-      "./components/yandex/Callback.vue"
-    ),
-    "@Google/Request": path.resolve(
-      __dirname,
-      "./components/google/Request.vue"
-    ),
-    "@Google/Callback": path.resolve(
-      __dirname,
-      "./components/google/Callback.vue"
-    ),
-    "@Google/Album": path.resolve(__dirname, "./components/google/Album.vue"),
-    "@Aliyundrive/Request": path.resolve(
-      __dirname,
-      "./components/aliyundrive/Request.vue"
-    ),
-    "@Aliyundrive/Callback": path.resolve(
-      __dirname,
-      "./components/aliyundrive/Callback.vue"
-    ),
-    "@Wopan/Token": path.resolve(__dirname, "./components/wopan/Token.vue"),
     "@Pricing": path.resolve(__dirname, "./components/Pricing.vue"),
     "@Terms": path.resolve(__dirname, "./components/Terms.vue"),
     "@Privacy": path.resolve(__dirname, "./components/Privacy.vue"),
     "@Desktop": path.resolve(__dirname, "./components/Desktop.vue"),
     "@Changelog": path.resolve(__dirname, "./components/changelog/index.vue"),
     "@Api": path.resolve(__dirname, "./components/api/index.ts"),
-    "@Dropbox/Request": path.resolve(
-      __dirname,
-      "./components/dropbox/Request.vue"
-    ),
-    "@Dropbox/Callback": path.resolve(
-      __dirname,
-      "./components/dropbox/Callback.vue"
-    ),
-    "@115/Token": path.resolve(__dirname, "./components/115/Token.vue"),
   },
 });
