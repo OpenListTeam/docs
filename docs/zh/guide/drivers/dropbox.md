@@ -24,29 +24,67 @@ Dropbox官网：https://www.dropbox.com/
 
 
 ## **获取刷新令牌**
+  - 获取方式如下
+  - 自建`客户端ID`和`秘钥`时，记得授权
+  - 首先[点击这里](https://www.dropbox.com/developers/apps?_tk=pilot_lp&_ad=topbar4&_camp=myapps)进入dropbox的应用管理界面，点击创建应用
+  ![进入界面](/img/drivers/dropbox/1.png)
+  - 进入应用后按下图配置应用类型
+  ![应用类型](/img/drivers/dropbox/2.png)
+  - 在红框里可以获得id和secret，上面是id，下面是secret。
+  ![参数位置](/img/drivers/dropbox/6.png)
+  - 配置回调地址，如果你有权限洁癖，不想使用外部回调地址，可以在此处配置本地地址，或者按照红框外的来
+  ![回调地址](/img/drivers/dropbox/3.png)
+  - 最后，进入权限配置界面，配置app的权限
+  ![权限配置](/img/drivers/dropbox/4.png)
+  - [点击这里](https://api.oplist.org/)进入token获取工具，选择dropbox后填入自己的id和secret，完成授权后可以获得刷新令牌。
+  - 在Openlist配置界面，填入刷新令牌、id和secret即可使用，注意刷新令牌的长度大致为40-50个字符。
+  ![openlist配置](/img/drivers/dropbox/5.png)
+  - 如果你有强烈的隐私意识，dropbox支持本地回调，可以使用以下全程由GPT提供的脚本快速实现，只和dropbox的服务器进行通信。
+  - **注意：由于回调地址是本地，而你并没有建立真正的本地回调服务器，所以请自己从浏览器地址栏获取返回的权限码**
+  - **请自行解决py运行的环境问题，或者使用上面搭建好的回调服务器**
+  ```python
+  import requests
+  import webbrowser
 
-前往：**https://alist.example.com/tool/dropbox/request.html**
+  # 请替换为你自己的 Dropbox App 信息
+  CLIENT_ID = 'your_app_key'
+  CLIENT_SECRET = 'your_app_secret'
+  REDIRECT_URI = 'http://localhost:114514'
 
-- 有两种方式，一种是直接使用OpenList提供的，一种是自己新建应用
-  - 获取方式如下（推荐使用第二种^{右侧的}^因为OpenList提供的已经无法新建用户了）
-  - 使用右侧自建`客户端ID`和`秘钥`时，记得授权^{第三张图}^
+  # 第一步：获取授权码
+  auth_url = (
+    f"https://www.dropbox.com/oauth2/authorize"
+    f"?client_id={CLIENT_ID}"
+    f"&redirect_uri={REDIRECT_URI}"
+    f"&response_type=code"
+    f"&token_access_type=offline"  # 必须：获取 refresh_token 的关键参数
+  )
 
-<div class="image-preview">  
-    <img src="/img/drivers/dropbox/dropbox-1.png" alt="使用自带的获取token" title="使用自带的获取token"/>
-    <img src="/img/drivers/dropbox/dropbox-2.png" alt="自己新建客户端获取token" title="自己新建客户端获取token"/>
-    <img src="/img/drivers/dropbox/dropbox-2-2.png" alt="自己新建客户端获取token" title="自己新建客户端获取token"/>
-</div>
+  print("👉 请访问以下链接进行授权：\n")
+  print(auth_url)
+  webbrowser.open(auth_url)
 
+  auth_code = input("\n✅ 授权完成后，将跳转链接中的 ?code= 后面的授权码粘贴到此处：\n> ").strip()
 
-- 如果使用自己新建的应用需要填写`客户端ID`和`客户端秘钥`
+  # 第二步：交换 access_token + refresh_token
+  token_url = "https://api.dropboxapi.com/oauth2/token"
+  data = {
+    'code': auth_code,
+    'grant_type': 'authorization_code',
+    'client_id': CLIENT_ID,
+    'client_secret': CLIENT_SECRET,
+    'redirect_uri': REDIRECT_URI
+  }
 
-- 获取方式如上图右图（创建应用链接：**https://www.dropbox.com/developers/apps** ）
+  response = requests.post(token_url, data=data)
+  response.raise_for_status()
 
-- 回调参数链接：**https://alist.example.com/tool/dropbox/callback**
+  tokens = response.json()
 
-参考链接：[**点击查看**](https://github.com/alist-org/alist/commit/cfee536b96f38e5ba3f3575fab4e89f6c0e1bc5b#commitcomment-119688700)
-
-
+  # ✅ 最终只输出刷新令牌
+  print("\n🎉 获取成功！你的 Dropbox refresh_token 是：\n")
+  print(tokens.get("refresh_token"))
+  ```
 
 ## **根文件夹ID**
 

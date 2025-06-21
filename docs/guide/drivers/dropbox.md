@@ -25,29 +25,67 @@ Dropbox Official：https://www.dropbox.com/
 
 ## **Get refresh token**
 
-Go to：**https://alist.example.com/tool/dropbox/request.html**
+- The steps are as follows:
+  - If you create your own `Client ID` and `Secret`, remember to authorize them.
+  - First, [click here](https://www.dropbox.com/developers/apps?_tk=pilot_lp&_ad=topbar4&_camp=myapps) to enter the Dropbox app management page and click "Create App".
+  ![Enter the page](/img/drivers/dropbox/1.png)
+  - After entering the app, configure the app type as shown below.
+  ![App type](/img/drivers/dropbox/2.png)
+  - You can get the id and secret in the red box: the upper one is the id, the lower one is the secret.
+  ![Parameter location](/img/drivers/dropbox/6.png)
+  - Configure the callback URL. If you are strict about permissions and do not want to use an external callback address, you can set a local address here, or use the one outside the red box.
+  ![Callback URL](/img/drivers/dropbox/3.png)
+  - Finally, go to the permissions configuration page to set the app's permissions.
+  ![Permission configuration](/img/drivers/dropbox/4.png)
+  - [Click here](https://api.oplist.org/) to enter the token acquisition tool. Select Dropbox, fill in your id and secret, and after authorization you can get the refresh token.
+  - In the Openlist configuration page, enter the refresh token, id, and secret to use. Note that the refresh token is about 40-50 characters long.
+  ![Openlist configuration](/img/drivers/dropbox/5.png)
+  - If you are highly privacy-conscious, Dropbox supports local callback. You can use the following script provided by GPT to quickly implement it, communicating only with Dropbox servers.
+  - **Note: Since the callback address is local and you have not set up a real local callback server, please manually copy the authorization code from the browser address bar.**
+  - **Please resolve Python environment issues yourself, or use the callback server provided above.**
+  ```python
+  import requests
+  import webbrowser
 
-- There are two ways, one is provided directly using OpenList, and the other is to create a new application by yourself
-  - The method of getting as follows (Recommend the first type^{right}^Because the OpenList provided can no longer create new users)
-  - When using the self-built `client ID` and `secret key` on the right, remember to authorize^{the_third_picture}^
+  # Please replace with your own Dropbox App information
+  CLIENT_ID = 'your_app_key'
+  CLIENT_SECRET = 'your_app_secret'
+  REDIRECT_URI = 'http://localhost:114514'
 
-<div class="image-preview">  
-    <img src="/img/drivers/dropbox/dropbox-1.png" alt="Use OpenList default to get token" title="Use OpenList default to get token"/>
-    <img src="/img/drivers/dropbox/dropbox-2.png" alt="Create your own new application to obtain the client to get token" title="Create your own new application to obtain the client to get token"/>
-    <img src="/img/drivers/dropbox/dropbox-2-2.png" alt="Create your own new application to obtain the client to get token" title="Create your own new application to obtain the client to get token"/>
-</div>
+  # Step 1: Get authorization code
+  auth_url = (
+    f"https://www.dropbox.com/oauth2/authorize"
+    f"?client_id={CLIENT_ID}"
+    f"&redirect_uri={REDIRECT_URI}"
+    f"&response_type=code"
+    f"&token_access_type=offline"  # Required: key parameter to get refresh_token
+  )
 
+  print("👉 Please visit the following link to authorize:\n")
+  print(auth_url)
+  webbrowser.open(auth_url)
 
+  auth_code = input("\n✅ After authorization, paste the code after ?code= in the redirected URL here:\n> ").strip()
 
-- If you use your own new applications, you need to fill in the `client id` and the `client secret key`
+  # Step 2: Exchange for access_token + refresh_token
+  token_url = "https://api.dropboxapi.com/oauth2/token"
+  data = {
+    'code': auth_code,
+    'grant_type': 'authorization_code',
+    'client_id': CLIENT_ID,
+    'client_secret': CLIENT_SECRET,
+    'redirect_uri': REDIRECT_URI
+  }
 
-- The method is shown in the right side of the example above(Create an application link：**https://www.dropbox.com/developers/apps**)
+  response = requests.post(token_url, data=data)
+  response.raise_for_status()
 
-- Redirect URLs：**https://alist.example.com/tool/dropbox/callback**
+  tokens = response.json()
 
-Reference link: [**Click to view**](https://github.com/alist-org/alist/commit/cfee536b96f38e5ba3f3575fab4e89f6c0e1bc5b#commitcomment-119688700)
-
-
+  # ✅ Only output the refresh token
+  print("\n🎉 Success! Your Dropbox refresh_token is:\n")
+  print(tokens.get("refresh_token"))
+  ```
 
 ## **Root folder file_id**
 
