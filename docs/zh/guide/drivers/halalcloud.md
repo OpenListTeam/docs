@@ -20,6 +20,11 @@ star: true
 
 # 6盘
 
+
+:::warning Openlist 暂未适配 6盘
+![](/img/drivers/halalcloud/halalcloud_error.png)
+:::
+
 - `6盘（halalcloud）` 官方网站：[https://2dland.cn](https://2dland.cn/)
 
   - 网盘登录：https://drive.2dland.cn
