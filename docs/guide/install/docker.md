@@ -25,7 +25,7 @@ Note: The official OpenList Docker image has not yet been released. The Docker i
 #### **docker cli**
 
 ```bash
-docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="openlist" openlistteam/openlist:beta
+docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 5244:5244 -e PUID=0 -e PGID=0 -e UMASK=022 --name="openlist" openlistteam/openlist:latest
 ```
 
 #### **docker compose**
@@ -34,7 +34,7 @@ docker run -d --restart=unless-stopped -v /etc/openlist:/opt/openlist/data -p 52
 version: '3.3'
 services:
   openlist:
-    image: 'openlistteam/openlist:beta'
+    image: 'openlistteam/openlist:latest'
     container_name: openlist
     volumes:
       - '/etc/openlist:/opt/openlist/data'
