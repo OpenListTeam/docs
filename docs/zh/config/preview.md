@@ -110,9 +110,7 @@ interface {
 
 
 :::tip
-如果你想使用自部署的kkFileView预览以下格式文件：
-
-可以在这里添加如下配置：
+如果你想使用自部署的kkFileView预览更多格式文件，可以在这里添加如下配置：
 ```json
 {
   "doc,docx,xls,xlsx,xlsm,ppt,pptx,csv,tsv,dotm,xlt,xltm,dot,dotx,xlam,xla,pages": 
