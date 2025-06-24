@@ -107,7 +107,24 @@ Deploying and using `OnlyOffice` Reference:
 - https://github.com/AlistGo/alist/discussions/3255
 - https://github.com/AlistGo/alist/discussions/8271
 
+:::tip
+If you want to use self-deployed kkFileView to preview more file formats,You can add the following configuration here:
+
+```json
+{
+  "doc,docx,xls,xlsx,xlsm,ppt,pptx,csv,tsv,dotm,xlt,xltm,dot,dotx,xlam,xla,pages": 
+  { 
+    "kkFileView": "https://kk.domain.com:8012/onlinePreview?url=$eb_url"
+  }
+}
+```
+
+Potential issues when deploying and using kkFileView:
+
+- Browser security policies prohibit mixed protocol usage. kkFileView uses HTTP by default. When accessing openlist via HTTPS, the browser may not support transmission. You can set base.url to HTTPS by adding environment variables, or modify base.url to HTTPS in /opt/kkFileView-4.x.0/config/application.properties of kkFileView.
+- When openlist embedded in an iframe communicates with lower-version kkFileView, cross-origin issues may occur due to different domain names. This can be resolved by configuring the Access-Control-Allow-Origin header in reverse proxy.
 :::
+
 
 ### **Audio cover**
 
