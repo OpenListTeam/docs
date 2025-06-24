@@ -108,6 +108,27 @@ interface {
 - https://github.com/AlistGo/alist/discussions/3255
 - https://github.com/AlistGo/alist/discussions/8271
 
+
+:::tip
+如果你想使用自部署的kkFileView预览以下格式文件：
+
+可以在这里添加如下配置：
+```json
+{
+  "doc,docx,xls,xlsx,xlsm,ppt,pptx,csv,tsv,dotm,xlt,xltm,dot,dotx,xlam,xla,pages": 
+  { 
+    "kkFileView": "https://kk.domain.com:8012/onlinePreview?url=$eb_url"
+  }
+}
+```
+部署和使用 `kkFileView` 可能存在以下问题：
+
+- 浏览器安全策略禁止混合使用协议，kkFileView默认使用http进行传输，当使用https访问openlist时，浏览器不支持传输，
+  可通过添加环境变量设置base.url为https
+  或修改kkFileView中的/opt/kkFileView-4.x.0/config/application.properties中的base.url为https
+
+- 嵌入iframe的openlist与低版本kkFileView传输时域名不同存在跨域问题，可通过反向代理配置Access-Control-Allow-Origin请求头解决
+
 :::
 
 ## **音频封面**
