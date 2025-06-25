@@ -94,7 +94,6 @@ GET /api/admin/driver/names
         "S3",
         "Thunder",
         "PikPak",
-        "BaiduShare",
         "Aliyundrive",
         "Dropbox",
         "NeteaseMusic",

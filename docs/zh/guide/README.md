@@ -39,7 +39,7 @@ category:
 - [x] [中国联通云盘](https://pan.wo.cn)
 - [x] [四川电信魔盘](https://mopan.sc.189.cn/mopan/#/downloadPc)
 - [x] [Yandex.Disk](https://disk.yandex.com/)
-- [x] [百度网盘](https://pan.baidu.com/) / [分享](./drivers/baidu_share.md)
+- [x] [百度网盘](https://pan.baidu.com/)
 - [x] [夸克网盘/TV](https://pan.quark.cn)
 - [x] [迅雷网盘 / X / 浏览器](../guide/drivers/thunder.md)
 - [x] [蓝奏云](https://www.lanzou.com/)、[蓝奏云优享版](https://www.ilanzou.com)
