@@ -73,10 +73,11 @@ star: true
 
 ## **Android install OpenList**
 
-There are two ways to choose based on your needs
+There are three ways to choose based on your needs
 
 1. Using **https://github.com/jing332/AListFlutter**
-2. Use `termux` to run
+2. Using **https://github.com/LeoHaoVIP/AListLiteAndroid**
+3. Use `termux` to run
 - Reference: **https://anwen-anyi.github.io/index/14-android_install.html**
 
 <i class="fa-solid fa-seal-exclamation fa-beat" style="color: #ff0000;"></i> Note: Remember to authorize the APP, set the background running and battery saving policy to unlimited, otherwise it may be killed in the background, causing it to be suddenly interrupted and unusable during background use.
