@@ -71,10 +71,11 @@ star: true
 
 ## **Android 安装 OpenList**
 
-有两种办法根据自己的需求选择
+有三种办法根据自己的需求选择
 
 1. 使用 **https://github.com/jing332/AListFlutter**
-2. 使用 `termux` 运行
+2. 使用 **https://github.com/LeoHaoVIP/AListLiteAndroid**
+3. 使用 `termux` 运行
    - 参考：**https://anwen-anyi.github.io/index/14-android_install.html**
 
 <i class="fa-solid fa-seal-exclamation fa-beat" style="color: #ff0000;"></i> 注意事项：记得给APP授权，后台运行、电池省电策略设置为无限制，否则可能会被杀后台导致挂在后台使用期间突然中断无法使用
