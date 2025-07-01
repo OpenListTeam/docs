@@ -187,17 +187,17 @@ Do not include the slash \(`/`\) at the end of the address. For example:
 
 The address of the CDN. Included `$version` values will be dynamically replaced by the version of OpenList. Existing dist resources are hosted on both npm and GitHub, which can be found at:
 
-- https://www.npmjs.com/package/openlist-frontend
-- https://github.com/OpenListTeam/openlist-frontend
+- https://www.npmjs.com/package/@openlist-frontend/openlist-frontend
+- https://github.com/OpenListTeam/OpenList-Frontend
 
 Thus it is possible to use any npm or GitHub CDN path for this field. For example:
 
-- https://registry.npmmirror.com/openList-frontend/$version/files/dist/
-- https://cdn.jsdelivr.net/npm/openList-frontend@$version/dist/
-- https://unpkg.com/openList-frontend@$version/dist/
-- https://cdn.jsdelivr.net/gh/OpenListTeam/web-dist@$version/dist/
-- https://cdn1.tianli0.top/npm/openList-frontend@$version/dist/
-- https://jsd.onmicrosoft.cn/npm/openList-frontend@$version/dist/
+- https://registry.npmmirror.com/@openlist-frontend/openlist-frontend/$version/files/dist/
+- https://cdn.jsdelivr.net/npm/@openlist-frontend/openlist-frontend@$version/dist/
+- https://unpkg.com/@openlist-frontend/openlist-frontend@$version/dist/
+- https://cdn.jsdelivr.net/gh/OpenListTeam/OpenList-Frontend@$version/dist/
+- https://cdn1.tianli0.top/npm/@openlist-frontend/openlist-frontend@$version/dist/
+- https://jsd.onmicrosoft.cn/npm/@openlist-frontend/openlist-frontend@$version/dist/
 
 Keep empty to use local dist resources.
 
