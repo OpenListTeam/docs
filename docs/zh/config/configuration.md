@@ -185,6 +185,10 @@ URL 链接结尾请勿携带 `/` ，参照如下示例，否则也将无法使�
 
 ### **cdn**
 
+::: warning
+请注意，beta版本的OpenList目前尚无可用的CDN,如需使用CDN,请使用正式版本
+:::
+
 CDN 地址，如果要使用 CDN，可以设置该字段，`$version` 会被替换为 `openlist-frontend` 的实际版本
 这是动态的。 现有的 dist 资源托管在 npm 和 GitHub 上，它们的位置是：
 

@@ -185,6 +185,10 @@ Do not include the slash \(`/`\) at the end of the address. For example:
 
 ### **cdn**
 
+::: warning
+Please note that the beta version of OpenList currently does not have an available CDN. If you need to use a CDN, please use the official version.  
+:::
+
 The address of the CDN. Included `$version` values will be dynamically replaced by the version of OpenList. Existing dist resources are hosted on both npm and GitHub, which can be found at:
 
 - https://www.npmjs.com/package/@openlist-frontend/openlist-frontend
