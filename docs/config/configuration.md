@@ -195,9 +195,8 @@ Thus it is possible to use any npm or GitHub CDN path for this field. For exampl
 - https://registry.npmmirror.com/@openlist-frontend/openlist-frontend/$version/files/dist/
 - https://cdn.jsdelivr.net/npm/@openlist-frontend/openlist-frontend@$version/dist/
 - https://unpkg.com/@openlist-frontend/openlist-frontend@$version/dist/
-- https://cdn.jsdelivr.net/gh/OpenListTeam/OpenList-Frontend@$version/dist/
-- https://cdn1.tianli0.top/npm/@openlist-frontend/openlist-frontend@$version/dist/
-- https://jsd.onmicrosoft.cn/npm/@openlist-frontend/openlist-frontend@$version/dist/
+- ~~ https://cdn.jsdelivr.net/gh/OpenListTeam/OpenList-Frontend@$version/dist/ ~~
+- ~~ https://jsd.onmicrosoft.cn/npm/@openlist-frontend/openlist-frontend@$version/dist/ ~~
 
 Keep empty to use local dist resources.
 

@@ -196,12 +196,10 @@ CDN 地址，如果要使用 CDN，可以设置该字段，`$version` 会被替�
 - https://registry.npmmirror.com/@openlist-frontend/openlist-frontend/$version/files/dist/
 - https://cdn.jsdelivr.net/npm/@openlist-frontend/openlist-frontend@$version/dist/
 - https://unpkg.com/@openlist-frontend/openlist-frontend@$version/dist/
-- https://cdn.jsdelivr.net/gh/OpenListTeam/OpenList-Frontend@$version/dist/
-- https://cdn1.tianli0.top/npm/@openlist-frontend/openlist-frontend@$version/dist/
-- https://cdn1.tianli0.top/gh/OpenListTeam/OpenList-Frontend@$version/dist/
-- https://npm.elemecdn.com/@openlist-frontend/openlist-frontend@$version/dist/
-- https://jsd.onmicrosoft.cn/npm/@openlist-frontend/openlist-frontend@$version/dist/
-- https://jsd.onmicrosoft.cn/gh/OpenListTeam/OpenList-Frontend@$version/dist/
+- ~~ https://cdn.jsdelivr.net/gh/OpenListTeam/OpenList-Frontend@$version/dist/ ~~
+- ~~ https://npm.elemecdn.com/@openlist-frontend/openlist-frontend@$version/dist/ ~~
+- ~~ https://jsd.onmicrosoft.cn/npm/@openlist-frontend/openlist-frontend@$version/dist/ ~~
+- ~~ https://jsd.onmicrosoft.cn/gh/OpenListTeam/OpenList-Frontend@$version/dist/ ~~
 
 您也可以将其设置为空以使用本地 dist。
 
