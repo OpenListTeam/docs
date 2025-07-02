@@ -16,7 +16,7 @@ tag:
 sticky: true
 # this page will appear in starred articles
 star: true
-headerDepth: 5
+toc: [2,6]
 ---
 
 # OneDrive / 分享

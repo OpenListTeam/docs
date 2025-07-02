@@ -49,6 +49,7 @@ export default hopeTheme(
       sup: true,
       flowchart: true,
       mermaid: true,
+      echarts: true,
       codeTabs: true,
     },
     plugins: {

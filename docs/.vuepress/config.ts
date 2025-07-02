@@ -72,11 +72,6 @@ export default defineUserConfig({
       description: "OpenList v3 的文档",
     },
   },
-  markdown: {
-    headers: {
-      level: [2, 3, 4, 5, 6]
-    }
-  },
   plugins: [
 
   ],
