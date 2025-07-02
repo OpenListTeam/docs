@@ -37,6 +37,7 @@ export default hopeTheme(
       },
     },
     markdown: {
+      spoiler: true,
       imgMark: true,
       imgLazyload: true,
       tabs: true,

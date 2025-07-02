@@ -22,9 +22,18 @@ star: true
 
 **https://pan.quark.cn**
 
-:::danger
+::::danger
 Due to the speed limit of Quark Cloud,Quick Cloud must use local agents for transmission now,[For details, see](https://github.com/alist-org/alist/issues/4318#issuecomment-1536214188)
+
+::: tip
+
+**V4.0.7 version has added open 302 redirection**
+
 :::
+
+::::
+
+
 
 ## **Quark Cloud**
 
@@ -33,6 +42,37 @@ Due to the speed limit of Quark Cloud,Quick Cloud must use local agents for tran
 Press F12 to open "Debug", select "Network", select any request on the left, and find the one with the `Cookie` parameter.
 
 ![quark](/img/drivers/quark/quark_cookie.png)
+
+<br/>
+
+
+
+### **Use transcoding address**
+
+:::tip
+
+When the LAN environment/server uplink bandwidth is sufficient, it is not recommended to enable the `Use transcoding address` option.
+
+:::
+
+After opening, the video file address will be obtained through the `Use transcoding address`, with the highest support for `4K` image quality, the link **supports 302 redirection **, and the video source network disk transcoding compressed image quality
+
+- Note: After opening, **get the transcoding video file, and its file size is different from the original video file size**, because the network disk service provider has transcoding and compression
+- It is recommended to match
+- - `Web Proxy`: option is off
+- - `WebDAV Policy`: Use the `302 Redirect` option
+- - `Use transcoding address` : option is enabled
+
+<br/>
+
+
+
+### **Only list video file**
+
+After opening, only folders and video files are displayed. It is recommended to use them in conjunction with the above `Use transcoding address`
+
+![quark-file-b](/img/drivers/quark/quark_file_b.png#light)
+![quark-file-h](/img/drivers/quark/quark_file_h.png#dark)
 
 <br/>
 
@@ -60,14 +100,18 @@ Note that only Cookies captured in Chrome is available, use Firefox's Cookies ma
 title: Which download method is used by default?
 ---
 flowchart TB
-    style c1 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff
+    style a1 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff
     style a2 fill:#ff7575,stroke:#333,stroke-width:4px
     subgraph ide1 [ ]
-    c1
+    a1
     end
-    c1[local proxy]:::someclass==mandatory===>a2[user equipment]
+    a1[302]:::someclass====|default|a2[user equipment]
     classDef someclass fill:#f96
+    c1[local proxy]-.alternative.->a2[user equipment]
+    b1[Download proxy URL]-.alternative.->a2[user equipment]
+    click a1 "../drivers/common.html#webdav-policy"
     click b1 "../drivers/common.html#webdav-policy"
+    click c1 "../drivers/common.html#webdav-policy"
 ```
 
 illustrate：[**alist/issues/4318**](https://github.com/alist-org/alist/issues/4318#issuecomment-1536214188)
@@ -127,6 +171,56 @@ flowchart TB
     c1[local proxy]-.alternative.->a2[user equipment]
     b1[Download proxy URL]-.alternative.->a2[user equipment]
     click a1 "../drivers/common.html#webdav-policy"
+    click b1 "../drivers/common.html#webdav-policy"
+    click c1 "../drivers/common.html#webdav-policy"
+```
+
+
+
+
+
+<br/>
+
+## **Quark Open**
+
+### AppID、SignKey
+
+- **https://api.oplist.org** Authorization page selection **夸克网盘 (OAuth2) Verify login**
+
+  - **AppId**，**SignKey**，It is not convenient to provide it directly, `find a way to get it yourself`:crying_cat_face:
+
+
+![quark-b](/img/drivers/quark/quark_token_b.png#light)
+![quark-h](/img/drivers/quark/quark_token_h.png#dark)
+
+<br/>
+
+
+
+### **Use online api**
+
+Token refresh Use the online interface in the `Api url address` to refresh the token. Due to the lack of relevant documents, local refresh has not been implemented at present. You can only use **Use online api** to refresh the token.
+
+<br/>
+
+
+
+### **The default download method used**
+
+
+```mermaid
+---
+title: Which download method is used by default?
+---
+flowchart TB
+    style c1 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff
+    style a2 fill:#ff7575,stroke:#333,stroke-width:4px
+    subgraph ide1 [ ]
+    c1
+    end
+    c1[local proxy]:::someclass==default===>a2[user equipment]
+    classDef someclass fill:#f96
+    b1[Download proxy URL]-.alternative.->a2[user equipment]
     click b1 "../drivers/common.html#webdav-policy"
     click c1 "../drivers/common.html#webdav-policy"
 ```

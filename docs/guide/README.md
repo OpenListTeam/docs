@@ -42,7 +42,7 @@ A file list program that supports multiple storage, and supports web browsing an
 - [x] [MoPan](https://mopan.sc.189.cn/mopan/#/downloadPc)
 - [x] [YandexDisk](https://disk.yandex.com/)
 - [x] [BaiduNetdisk](https://pan.baidu.com/)
-- [x] [Quark/TV](https://pan.quark.cn/)
+- [x] [Quark/TV/Open](https://pan.quark.cn/)
 - [x] [Thunder / X Browser](../guide/drivers/thunder.md)
 - [x] [Lanzou](https://www.lanzou.com/)、[NewLanzou](https://www.ilanzou.com)
 - [x] [Feiji Cloud](https://feijipan.com/)
