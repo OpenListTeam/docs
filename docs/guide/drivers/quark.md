@@ -18,7 +18,7 @@ sticky: true
 star: true
 ---
 
-# Quark / TV
+# Quark / TV / Open
 
 **https://pan.quark.cn**
 
