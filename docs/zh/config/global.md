@@ -81,9 +81,9 @@ star: true
 
 用于识别验证码。你可以自己部署：https://hub.docker.com/r/openlistteam/ocr_api_server 
 
-默认的 ocr api 部署在 [huggingface](https://huggingface.co/spaces/Susus21/openlist-ocr/tree/main) 上。
+默认的 ocr api 部署在 [huggingface](https://huggingface.co/spaces/openlistteam/ocr_api_server/tree/main) 上。
 
-你可复制huggingface仓库自建：[克隆huggingface仓库](https://huggingface.co/spaces/Susus21/openlist-ocr/tree/main?duplicate=true),自建成功后的hf域名为https://{username}-{repositroy-name}.hf.space/ocr/file/json
+你可复制huggingface仓库自建：[克隆huggingface仓库](https://huggingface.co/spaces/openlistteam/ocr_api_server/tree/main?duplicate=true),自建成功后的hf域名为https://{username}-{repositroy-name}.hf.space/ocr/file/json
 
 <br/>
 
