@@ -78,7 +78,7 @@ What you don't want to show in the error message, One regular expression (in `Go
 
 ### **Ocr api**
 
-Used to identify verification codes. You can deploy yourself: https://hub.docker.com/r/cloudlinksu/openlist-ocr-server. 
+Used to identify verification codes. You can deploy yourself: https://hub.docker.com/r/openlistteam/ocr_api_server. 
 
 The default ocr api is deployed on the [huggingface](https://huggingface.co/spaces/Susus21/openlist-ocr/tree/main).You can clone the huggingface repository to build your own: [clone the huggingface repository](https://huggingface.co/spaces/Susus21/openlist-ocr/tree/main?duplicate=true).
 

@@ -79,7 +79,7 @@ star: true
 
 ## **ocr api**
 
-用于识别验证码。你可以自己部署：https://hub.docker.com/r/cloudlinksu/openlist-ocr-server 
+用于识别验证码。你可以自己部署：https://hub.docker.com/r/openlistteam/ocr_api_server 
 
 默认的 ocr api 部署在 [huggingface](https://huggingface.co/spaces/Susus21/openlist-ocr/tree/main) 上。
 
