@@ -73,7 +73,7 @@ star: true
 
 有三种办法根据自己的需求选择
 
-1. 使用 **https://github.com/jing332/AListFlutter**
+1. 使用 **https://github.com/OpenListApp/OpenListApp**
 2. 使用 **https://github.com/LeoHaoVIP/AListLiteAndroid**
 3. 使用 `termux` 运行
    - 参考：**https://anwen-anyi.github.io/index/14-android_install.html**
