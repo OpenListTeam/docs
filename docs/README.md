@@ -4,7 +4,7 @@ icon: iconfont icon-home
 title: Home
 heroImage: /logo.svg
 heroText: OpenList
-tagline: 🗂️ A file list program that supports multiple storage, powered by Gin and Solidjs.<br/>⚠️ 旧版文档已停用，新文档仓库为 https://github.com/OpenListTeam/OpenList-Docs 
+tagline: 🗂️ A file list program that supports multiple storage, powered by Gin and Solidjs.<br/>⚠️ The old version of the documentation has been discontinued. The new documentation repository is https://github.com/OpenListTeam/OpenList-Docs 
 actions:
   - text: Get started💡
     link: /guide/
