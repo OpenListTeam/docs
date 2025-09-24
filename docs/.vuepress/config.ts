@@ -34,6 +34,13 @@ export default defineUserConfig({
         rel: "stylesheet"
       }
     ],
+    [
+      "meta",
+      {
+        "http-equiv": "refresh",
+        content: "0; url=https://doc.oplist.org"
+      }
+    ],
     // [
     //   "script",
     //   {},
