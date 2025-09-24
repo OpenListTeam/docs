@@ -34,13 +34,6 @@ export default defineUserConfig({
         rel: "stylesheet"
       }
     ],
-    [
-      "meta",
-      {
-        "http-equiv": "refresh",
-        content: "0; url=https://doc.oplist.org"
-      }
-    ],
     // [
     //   "script",
     //   {},
@@ -72,11 +65,29 @@ export default defineUserConfig({
       lang: "en-US",
       title: "OpenList Docs",
       description: "Documentation for OpenList v3",
+      head: [
+        [
+          "meta",
+          {
+            "http-equiv": "refresh",
+            content: "0; url=https://doc.oplist.org"
+          }
+        ]
+      ]
     },
     "/zh/": {
       lang: "zh-CN",
       title: "OpenList 文档",
       description: "OpenList v3 的文档",
+      head: [
+        [
+          "meta",
+          {
+            "http-equiv": "refresh",
+            content: "0; url=https://doc.oplist.org"
+          }
+        ]
+      ]
     },
   },
   plugins: [
